@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>いばしょ・きっかけ MAP｜中高生の活動支援拠点をさがす</title>
+<meta name="description" content="全国の中高生が使える支援団体・プログラム・活動拠点・施設を、地域と活動内容からさがせる検索サイトです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#133B3C;
+  --ink-soft:#4B6360;
+  --muted:#7C8F8B;
+  --line:#E1E6DF;
+  --bg:#F5F6F0;
+  --surface:#FFFFFF;
+  --green:#17976A;
+  --green-deep:#0F7A54;
+  --green-tint:#E6F3EC;
+  --amber:#FFB627;
+  --amber-tint:#FFF3D6;
+  --coral:#E86A45;
+  --coral-tint:#FBE6DE;
+  --slate-tint:#EEF1EF;
+  --shadow:0 1px 2px rgba(19,59,60,.05), 0 8px 24px -12px rgba(19,59,60,.18);
+  --shadow-lift:0 6px 16px rgba(19,59,60,.08), 0 20px 40px -18px rgba(19,59,60,.28);
+  --radius:18px;
+  --font-jp:"Noto Sans JP",system-ui,sans-serif;
+  --font-round:"Zen Maru Gothic","Noto Sans JP",sans-serif;
+  --font-num:"Outfit",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-jp);line-height:1.7;
+  font-feature-settings:"palt";
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 88% -20%, rgba(255,182,39,.28), transparent 55%),
+    radial-gradient(130% 100% at -10% 0%, rgba(23,151,106,.20), transparent 50%),
+    linear-gradient(180deg,#F9FAF5,#F5F6F0);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{max-width:1120px;margin:0 auto;padding:34px 20px 26px}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--font-round);font-weight:700;font-size:1.02rem;letter-spacing:.02em}
+.brand .pin{
+  width:26px;height:26px;flex:none;border-radius:9px 9px 9px 3px;
+  background:var(--green);position:relative;transform:rotate(-6deg);
+  box-shadow:0 4px 10px -3px rgba(23,151,106,.6);
+}
+.brand .pin::after{content:"";position:absolute;inset:0;margin:auto;width:8px;height:8px;background:#fff;border-radius:50%}
+.hero h1{
+  font-family:var(--font-round);font-weight:900;
+  font-size:clamp(1.9rem,6.4vw,3.15rem);line-height:1.24;
+  margin:22px 0 0;letter-spacing:.01em;
+  animation:rise .7s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero h1 .hl{position:relative;white-space:nowrap;color:var(--green-deep)}
+.hero h1 .hl::after{
+  content:"";position:absolute;left:-2px;right:-2px;bottom:.06em;height:.34em;z-index:-1;
+  background:var(--amber);border-radius:6px;opacity:.55;transform:rotate(-1deg);
+}
+.hero p.lead{
+  margin:14px 0 0;max-width:40ch;color:var(--ink-soft);font-size:1.02rem;
+  animation:rise .7s .08s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero .stat{
+  display:inline-flex;align-items:baseline;gap:8px;margin-top:18px;
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  padding:7px 16px 7px 14px;box-shadow:var(--shadow);
+  animation:rise .7s .16s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero .stat b{font-family:var(--font-num);font-size:1.28rem;color:var(--green-deep);font-weight:700}
+.hero .stat span{font-size:.82rem;color:var(--muted)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- search bar ---------- */
+.searchwrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.searchbar{
+  position:relative;margin-top:20px;
+}
+.searchbar input{
+  width:100%;border:2px solid var(--line);background:var(--surface);
+  border-radius:16px;padding:16px 46px 16px 48px;font-size:1.02rem;color:var(--ink);
+  box-shadow:var(--shadow);transition:border-color .15s, box-shadow .15s;
+}
+.searchbar input::placeholder{color:#9AAAA6}
+.searchbar input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px var(--green-tint)}
+.searchbar .ic{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
+.searchbar .clr{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  border:none;background:var(--slate-tint);color:var(--ink-soft);
+  width:28px;height:28px;border-radius:50%;font-size:15px;line-height:1;display:none;
+}
+.searchbar .clr.show{display:block}
+
+/* ---------- filter panel ---------- */
+.sticky{position:relative;background:var(--bg);border-bottom:1px solid var(--line)}
+.filters{max-width:1120px;margin:0 auto;padding:12px 16px 6px}
+.fgroup{margin-bottom:10px}
+.flabel{
+  display:flex;align-items:center;gap:6px;font-size:.74rem;font-weight:700;color:var(--ink-soft);
+  letter-spacing:.02em;margin-bottom:6px;text-transform:none;
+}
+.flabel .dot{width:5px;height:5px;border-radius:50%;background:var(--amber);flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+/* horizontal scroll rows on mobile: keep each group to a single swipeable line */
+.chips.hscroll{
+  flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  margin:0 -16px;padding:2px 16px;scroll-snap-type:x proximity;
+}
+.chips.hscroll::-webkit-scrollbar{display:none}
+.chips.hscroll .chip{flex:none;scroll-snap-align:start}
+@media(min-width:640px){
+  /* keep single-row scroll on desktop too, but show a thin scrollbar for discoverability */
+  .chips.hscroll{margin:0;padding:2px 0 6px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+  .chips.hscroll::-webkit-scrollbar{display:block;height:7px}
+  .chips.hscroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+  .chips.hscroll::-webkit-scrollbar-thumb:hover{background:#C7D2CB}
+}
+.chip{
+  border:1.5px solid var(--line);background:var(--surface);color:var(--ink-soft);
+  padding:7px 13px;border-radius:999px;font-size:.86rem;font-weight:500;
+  transition:all .14s;white-space:nowrap;line-height:1.3;
+}
+.chip:hover{border-color:var(--green);color:var(--green-deep)}
+.chip[aria-pressed="true"]{
+  background:var(--green);border-color:var(--green);color:#fff;
+  box-shadow:0 4px 12px -4px rgba(23,151,106,.7);
+}
+.chip.amber[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#5A3E00;box-shadow:0 4px 12px -4px rgba(255,182,39,.7)}
+.chip .n{font-family:var(--font-num);font-size:.76em;opacity:.7;margin-left:5px}
+
+.row{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:flex-start}
+.row .fgroup{margin-bottom:0}
+select{
+  appearance:none;-webkit-appearance:none;
+  border:1.5px solid var(--line);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237C8F8B' d='M6 8 0 0h12z'/%3E%3C/svg%3E") no-repeat right 14px center;
+  border-radius:12px;padding:9px 36px 9px 14px;font-size:.92rem;color:var(--ink);min-width:170px;
+}
+select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-tint)}
+
+.more-btn{
+  border:none;background:none;color:var(--green-deep);font-weight:700;font-size:.86rem;
+  padding:6px 2px;display:inline-flex;align-items:center;gap:5px;
+}
+.more-btn .caret{transition:transform .2s}
+.more-btn[aria-expanded="true"] .caret{transform:rotate(180deg)}
+
+.advanced{display:none;padding-top:4px}
+.advanced.open{display:block;animation:fade .25s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* toolbar */
+.toolbar{
+  max-width:1120px;margin:0 auto;padding:10px 20px 4px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between;
+}
+.count{font-size:.95rem;color:var(--ink-soft)}
+.count b{font-family:var(--font-num);font-size:1.35rem;color:var(--green-deep);margin:0 3px}
+.toolbar-r{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.switch{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:var(--ink-soft);user-select:none;cursor:pointer}
+.switch input{position:absolute;opacity:0;pointer-events:none}
+.switch .track{width:38px;height:22px;border-radius:999px;background:var(--line);position:relative;transition:background .18s;flex:none}
+.switch .track::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .18s}
+.switch input:checked + .track{background:var(--green)}
+.switch input:checked + .track::after{transform:translateX(16px)}
+.switch input:focus-visible + .track{box-shadow:0 0 0 3px var(--green-tint)}
+.clear-all{border:1.5px solid var(--line);background:var(--surface);color:var(--ink-soft);border-radius:999px;padding:7px 15px;font-size:.84rem;font-weight:500}
+.clear-all:hover{border-color:var(--coral);color:var(--coral)}
+
+/* ---------- results ---------- */
+.results{max-width:1120px;margin:0 auto;padding:14px 20px 60px}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr}}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 18px 16px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:11px;
+  transition:transform .16s, box-shadow .16s, border-color .16s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:#CFE3D7}
+.card-head{display:flex;flex-direction:column;gap:6px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:7px;letter-spacing:.02em}
+.b-cat{background:var(--green-tint);color:var(--green-deep)}
+.b-online{background:#E7EEF9;color:#2C5AA0}
+.status{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:7px;display:inline-flex;align-items:center;gap:4px}
+.s-rec{background:var(--green-tint);color:var(--green-deep)}
+.s-cond{background:var(--amber-tint);color:#8A5A00}
+.s-ref{background:var(--slate-tint);color:var(--muted)}
+.s-hold{background:var(--coral-tint);color:var(--coral)}
+.card h3{font-family:var(--font-round);font-weight:700;font-size:1.1rem;line-height:1.4;margin:2px 0 0}
+.place{display:flex;align-items:center;gap:5px;font-size:.82rem;color:var(--muted);flex-wrap:wrap}
+.place .sep{opacity:.5}
+.intro{font-size:.94rem;color:var(--ink);line-height:1.72;margin:0}
+.meta{display:flex;flex-direction:column;gap:5px;font-size:.8rem;color:var(--ink-soft);margin-top:1px}
+.meta .mrow{display:flex;gap:7px}
+.meta .mk{color:var(--muted);flex:none}
+.tagline{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-size:.73rem;color:var(--green-deep);background:var(--green-tint);border-radius:6px;padding:2px 7px}
+.note{font-size:.76rem;color:#8A5A00;background:var(--amber-tint);border-radius:9px;padding:7px 10px;line-height:1.55}
+.actions{display:flex;gap:8px;margin-top:auto;padding-top:4px}
+.btn{
+  flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border-radius:11px;padding:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:all .14s;
+}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-deep)}
+.btn-ghost{background:var(--surface);color:var(--ink-soft);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green-deep)}
+.btn svg{width:15px;height:15px}
+
+/* empty */
+.empty{text-align:center;padding:70px 20px;color:var(--muted)}
+.empty .em{font-size:2.6rem;margin-bottom:10px}
+.empty b{color:var(--ink)}
+
+footer{border-top:1px solid var(--line);background:var(--surface)}
+.foot{max-width:1120px;margin:0 auto;padding:26px 20px;font-size:.8rem;color:var(--muted);line-height:1.8}
+.foot .legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+
+@media(max-width:639px){
+  .hero-inner{padding:22px 16px 16px}
+  .hero h1{margin-top:14px}
+  .hero p.lead{font-size:.94rem;margin-top:10px}
+  .hero .stat{margin-top:13px}
+  .searchwrap{padding:0 16px}
+  .searchbar{margin-top:14px}
+  .searchbar input{padding:14px 44px}
+  .toolbar{padding:8px 16px 4px}
+  .results{padding:12px 16px 52px}
+}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:6px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand"><span class="pin"></span>いばしょ・きっかけ MAP</div>
+    <h1>どこで、なにを<br><span class="hl">はじめる</span>？</h1>
+    <p class="lead">全国の中高生が使える居場所・プログラム・活動拠点を、住んでいる地域と「やってみたいこと」からさがせます。</p>
+    <div class="stat"><b id="totalCount">—</b><span>件の拠点・プログラムを掲載中</span></div>
+  </div>
+  <div class="searchwrap">
+    <div class="searchbar">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      <input id="q" type="search" placeholder="キーワードでさがす（名前・活動・地名・タグ）" autocomplete="off" aria-label="キーワード検索">
+      <button class="clr" id="qClear" aria-label="キーワードを消す">✕</button>
+    </div>
+  </div>
+</header>
+
+<div class="sticky" id="sticky">
+  <div class="filters">
+    <div class="fgroup">
+      <div class="flabel"><span class="dot"></span>地方でしぼる</div>
+      <div class="chips hscroll" id="regionChips"></div>
+    </div>
+
+    <div class="fgroup">
+      <div class="flabel"><span class="dot"></span>やってみたいこと（活動分野・複数OK）</div>
+      <div class="chips hscroll" id="fieldChips"></div>
+      <button class="more-btn" id="moreFields" aria-expanded="false">もっと見る <span class="caret">▾</span></button>
+    </div>
+
+    <button class="more-btn" id="moreAdv" aria-expanded="false" style="margin-bottom:6px">くわしくしぼる <span class="caret">▾</span></button>
+    <div class="advanced" id="advanced">
+      <div class="row" style="margin-bottom:14px">
+        <div class="fgroup">
+          <div class="flabel">都道府県</div>
+          <select id="prefSel" aria-label="都道府県で絞り込み"><option value="">すべての都道府県</option></select>
+        </div>
+        <div class="fgroup">
+          <div class="flabel">だれ向け</div>
+          <div class="chips" id="targetChips"></div>
+        </div>
+      </div>
+      <div class="fgroup" style="margin-bottom:14px">
+        <div class="flabel">種類</div>
+        <div class="chips" id="catChips"></div>
+      </div>
+      <div class="fgroup">
+        <div class="flabel">利用のしかた</div>
+        <div class="chips" id="useChips"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="count"><b id="count">0</b>件 みつかりました</div>
+    <div class="toolbar-r">
+      <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
+      <button class="clear-all" id="clearAll">じょうけんをクリア</button>
+    </div>
+  </div>
+</div>
+
+<main class="results">
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" style="display:none">
+    <div class="em">🔎</div>
+    <p><b>じょうけんに合う拠点がみつかりませんでした。</b><br>キーワードやしぼり込みを少なくして、もう一度おためしください。</p>
+  </div>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="legend">
+      <span class="status s-rec">掲載推奨</span>
+      <span class="status s-cond">条件つき</span>
+      <span class="status s-ref">参考情報</span>
+      <span class="status s-hold">要確認</span>
+    </div>
+    掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。<br>
+    「条件つき」「参考情報」「要確認」の拠点は、利用に条件がある場合があります。紹介文のとおりに利用できるか、事前にご確認ください。
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  var DATA = (window.YSDATA||[]).map(function(r,i){ r._i=i; return r; });
+  var REGION_ORDER=["北海道","東北","関東","中部","近畿","中国","四国","九州","沖縄","全国オンライン"];
+  var CATS=["支援団体","プログラム","活動拠点","使用できる施設"];
+  var PREF_ORDER=["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"];
+  var STATUS_META={
+    "掲載推奨":{cls:"s-rec",label:"掲載推奨"},
+    "条件付き掲載":{cls:"s-cond",label:"条件つき"},
+    "参考情報":{cls:"s-ref",label:"参考情報"},
+    "掲載保留":{cls:"s-hold",label:"要確認"}
+  };
+  var DEFAULT_STATUS={"掲載推奨":1,"条件付き掲載":1};
+
+  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false};
+
+  var $=function(s){return document.querySelector(s)};
+  function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
+  function norm(s){return (s||"").toLowerCase();}
+
+  // ---- build vocab ----
+  function countBy(key){var m={};DATA.forEach(function(r){(r[key]||[]).forEach(function(t){m[t]=(m[t]||0)+1;});});return m;}
+  var fieldCounts=countBy("fieldTags");
+  var fieldSorted=Object.keys(fieldCounts).sort(function(a,b){return fieldCounts[b]-fieldCounts[a];});
+  var TOP_FIELDS=16;
+
+  // total
+  $("#totalCount").textContent=DATA.length.toLocaleString();
+
+  // region chips
+  var rc=$("#regionChips");
+  REGION_ORDER.forEach(function(rg){
+    var n=DATA.filter(function(r){return r.region===rg;}).length;
+    if(!n) return;
+    var b=el("button","chip",rg);
+    var s=el("span","n","("+n+")");b.appendChild(s);
+    b.setAttribute("aria-pressed","false");
+    b.onclick=function(){state.region=state.region===rg?"":rg;syncRegion();render();};
+    b.dataset.rg=rg;rc.appendChild(b);
+  });
+  function syncRegion(){[].forEach.call(rc.children,function(b){b.setAttribute("aria-pressed",String(b.dataset.rg===state.region));});}
+
+  // field chips
+  var fc=$("#fieldChips");
+  fieldSorted.forEach(function(t,idx){
+    var b=el("button","chip",t);
+    b.appendChild(el("span","n",String(fieldCounts[t])));
+    b.setAttribute("aria-pressed","false");
+    b.dataset.tag=t;
+    if(idx>=TOP_FIELDS)b.classList.add("extra"),b.style.display="none";
+    b.onclick=function(){toggle(state.fields,t);syncMulti(fc,state.fields,"tag");render();};
+    fc.appendChild(b);
+  });
+  $("#moreFields").onclick=function(){
+    var exp=this.getAttribute("aria-expanded")==="true";
+    this.setAttribute("aria-expanded",String(!exp));
+    [].forEach.call(fc.querySelectorAll(".extra"),function(b){b.style.display=exp?"none":"";});
+    this.firstChild.textContent=exp?"もっと見る ":"とじる ";
+  };
+
+  // pref select
+  var ps=$("#prefSel");
+  var present={};DATA.forEach(function(r){present[r.pref]=1;});
+  PREF_ORDER.forEach(function(p){if(present[p]){var o=el("option",null,p);o.value=p;ps.appendChild(o);delete present[p];}});
+  var wide=Object.keys(present).sort();
+  if(wide.length){
+    var og=document.createElement("optgroup");og.label="広域・全国";
+    wide.forEach(function(p){var o=el("option",null,p);o.value=p;og.appendChild(o);});
+    ps.appendChild(og);
+  }
+  ps.onchange=function(){state.pref=this.value;render();};
+
+  // target chips
+  var tc=$("#targetChips");
+  [["中学生","中学生"],["高校生","高校生"]].forEach(function(pair){
+    var b=el("button","chip",pair[0]);b.setAttribute("aria-pressed","false");b.dataset.tag=pair[1];
+    b.onclick=function(){toggle(state.targets,pair[1]);syncMulti(tc,state.targets,"tag");render();};
+    tc.appendChild(b);
+  });
+
+  // cat chips
+  var cc=$("#catChips");
+  CATS.forEach(function(c){
+    var n=DATA.filter(function(r){return (r.cats||[]).indexOf(c)>=0;}).length;
+    var b=el("button","chip",c);b.appendChild(el("span","n","("+n+")"));
+    b.setAttribute("aria-pressed","false");b.dataset.tag=c;
+    b.onclick=function(){toggle(state.cats,c);syncMulti(cc,state.cats,"tag");render();};
+    cc.appendChild(b);
+  });
+
+  // use chips (quick)
+  var uc=$("#useChips");
+  [["個人利用可","個人でも使える"],["無料","無料で使える"],["宿泊可","宿泊できる"],["オンライン","オンライン"]].forEach(function(pair){
+    var b=el("button","chip amber",pair[1]);b.setAttribute("aria-pressed","false");b.dataset.tag=pair[0];
+    b.onclick=function(){toggle(state.uses,pair[0]);syncMulti(uc,state.uses,"tag");render();};
+    uc.appendChild(b);
+  });
+
+  function toggle(arr,v){var i=arr.indexOf(v);if(i<0)arr.push(v);else arr.splice(i,1);}
+  function syncMulti(container,arr,attr){[].forEach.call(container.children,function(b){if(b.dataset[attr])b.setAttribute("aria-pressed",String(arr.indexOf(b.dataset[attr])>=0));});}
+
+  // search
+  var qi=$("#q"),qc=$("#qClear");
+  qi.oninput=function(){state.q=this.value.trim();qc.classList.toggle("show",!!this.value);render();};
+  qc.onclick=function(){qi.value="";state.q="";qc.classList.remove("show");qi.focus();render();};
+
+  $("#showAll").onchange=function(){state.showAll=this.checked;render();};
+  $("#moreAdv").onclick=function(){var exp=this.getAttribute("aria-expanded")==="true";this.setAttribute("aria-expanded",String(!exp));$("#advanced").classList.toggle("open",!exp);this.firstChild.textContent=exp?"くわしくしぼる ":"とじる ";};
+
+  $("#clearAll").onclick=function(){
+    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false};
+    qi.value="";qc.classList.remove("show");ps.value="";$("#showAll").checked=false;
+    syncRegion();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
+    render();
+  };
+
+  // ---- filtering ----
+  function matches(r){
+    if(!state.showAll && !DEFAULT_STATUS[r.status]) return false;
+    if(state.region && r.region!==state.region) return false;
+    if(state.pref && r.pref!==state.pref) return false;
+    if(state.cats.length && !state.cats.every(function(c){return (r.cats||[]).indexOf(c)>=0;})) return false;
+    if(state.uses.length && !state.uses.every(function(u){return (r.useTags||[]).some(function(t){return t.indexOf(u)>=0;});})) return false;
+    if(state.fields.length && !state.fields.some(function(f){return (r.fieldTags||[]).indexOf(f)>=0;})) return false;
+    if(state.targets.length){
+      var hay=((r.targets||[]).join(",")+","+(r.useTags||[]).join(","));
+      if(!state.targets.some(function(t){return hay.indexOf(t)>=0;})) return false;
+    }
+    if(state.q){
+      var q=norm(state.q);
+      var hay=norm([r.name,r.intro,r.summary,r.city,r.pref,r.region,(r.fieldTags||[]).join(" "),(r.useTags||[]).join(" ")].join(" "));
+      if(hay.indexOf(q)<0) return false;
+    }
+    return true;
+  }
+
+  function mapUrl(r){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.address||r.name)+" "+r.name);}
+
+  var SVG_EXT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+  var SVG_MAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
+
+  function card(r){
+    var c=el("div","card");
+    var head=el("div","card-head");
+    var badges=el("div","badges");
+    (r.cats||[]).forEach(function(ct){badges.appendChild(el("span","badge b-cat",ct));});
+    if(r.region==="全国オンライン")badges.appendChild(el("span","badge b-online","オンライン"));
+    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
+    badges.appendChild(el("span","status "+sm.cls,sm.label));
+    head.appendChild(badges);
+    head.appendChild(el("h3",null,r.name));
+    var place=el("div","place");
+    var parts=[r.region,r.pref,r.city].filter(function(x,i,a){return x && a.indexOf(x)===i;});
+    parts.forEach(function(p,i){if(i)place.appendChild(el("span","sep","·"));place.appendChild(el("span",null,p));});
+    head.appendChild(place);
+    c.appendChild(head);
+
+    c.appendChild(el("p","intro",r.intro));
+
+    if(r.fieldTags && r.fieldTags.length){
+      var tl=el("div","tagline");
+      r.fieldTags.slice(0,4).forEach(function(t){tl.appendChild(el("span","tag",t));});
+      c.appendChild(tl);
+    }
+
+    var meta=el("div","meta");
+    if(r.targets && r.targets.length){var m=el("div","mrow");m.appendChild(el("span","mk","対象"));m.appendChild(el("span",null,r.targets.slice(0,4).join("・")));meta.appendChild(m);}
+    if(r.station){var m2=el("div","mrow");m2.appendChild(el("span","mk","アクセス"));m2.appendChild(el("span",null,r.station));meta.appendChild(m2);}
+    if(meta.children.length)c.appendChild(meta);
+
+    if(r.status==="条件付き掲載"){
+      c.appendChild(el("div","note","利用に条件がある場合があります。参加前に公式サイトでご確認ください。"));
+    }else if(r.status==="掲載保留"||r.status==="参考情報"){
+      c.appendChild(el("div","note","情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。"));
+    }
+
+    var act=el("div","actions");
+    if(r.url){
+      var a=el("a","btn btn-primary");a.href=r.url;a.target="_blank";a.rel="noopener";a.innerHTML=SVG_EXT+"公式サイト";act.appendChild(a);
+    }
+    if(r.address){
+      var mb=el("a","btn btn-ghost");mb.href=mapUrl(r);mb.target="_blank";mb.rel="noopener";mb.innerHTML=SVG_MAP+"地図";act.appendChild(mb);
+    }
+    if(act.children.length)c.appendChild(act);
+    return c;
+  }
+
+  var grid=$("#grid"),empty=$("#empty"),countEl=$("#count");
+  function render(){
+    var list=DATA.filter(matches);
+    countEl.textContent=list.length.toLocaleString();
+    grid.innerHTML="";
+    if(!list.length){empty.style.display="";return;}
+    empty.style.display="none";
+    var frag=document.createDocumentFragment();
+    list.forEach(function(r){frag.appendChild(card(r));});
+    grid.appendChild(frag);
+  }
+
+  render();
+})();
+</script>
+</body>
+</html>
