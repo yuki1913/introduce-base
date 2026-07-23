@@ -518,6 +518,66 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 .map-empty{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
 @media(max-width:520px){.leaflet-popup-content{width:220px!important}}
 
+/* ===== diagnosis CTA ===== */
+.quiz-cta{max-width:1180px;margin:34px auto 0;padding:0 20px}
+.quiz-cta-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  background:linear-gradient(120deg,var(--primary) 0%,#E8781F 55%,var(--accent) 130%);
+  border-radius:18px;padding:22px 26px;color:#fff;box-shadow:0 12px 30px -12px rgba(217,92,32,.6);
+}
+.quiz-cta-eyebrow{font-size:.82rem;font-weight:700;opacity:.9;margin-bottom:4px}
+.quiz-cta-title{font-family:var(--font-display);font-weight:400;font-size:1.3rem;line-height:1.4}
+.quiz-cta-btn{
+  flex:none;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--primary-deep);
+  border:none;border-radius:999px;padding:13px 22px;font-size:.95rem;font-weight:700;cursor:pointer;transition:transform .14s,box-shadow .14s;box-shadow:0 6px 16px -6px rgba(0,0,0,.4);
+}
+.quiz-cta-btn svg{width:17px;height:17px}
+.quiz-cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -8px rgba(0,0,0,.5)}
+@media(max-width:560px){.quiz-cta-title{font-size:1.1rem}.quiz-cta-btn{width:100%;justify-content:center}}
+
+/* ===== quiz modal ===== */
+.quiz-card{
+  max-width:560px;margin:0 auto;background:var(--surface);border-radius:22px;overflow:hidden;
+  box-shadow:0 30px 70px -20px rgba(0,0,0,.5);animation:dpop .28s cubic-bezier(.2,.7,.2,1) both;
+}
+.quiz-head{padding:20px 22px 0;position:relative}
+.quiz-close{position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:50%;background:var(--slate-tint);color:var(--ink);font-size:18px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer}
+.quiz-progress{display:flex;gap:6px;margin-bottom:16px}
+.quiz-progress i{height:5px;border-radius:999px;flex:1;background:var(--line)}
+.quiz-progress i.on{background:var(--primary)}
+.quiz-step{padding:0 22px 22px}
+.quiz-q{font-family:var(--font-display);font-weight:400;font-size:1.4rem;color:var(--ink);line-height:1.4;margin-bottom:4px}
+.quiz-sub{font-size:.85rem;color:var(--muted);margin-bottom:18px}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quiz-opt{
+  display:flex;flex-direction:column;align-items:center;gap:7px;padding:18px 12px;border:1.5px solid var(--line);border-radius:14px;
+  background:var(--surface);cursor:pointer;font-weight:700;font-size:.92rem;color:var(--ink);transition:all .14s;text-align:center;
+}
+.quiz-opt .em{font-size:1.7rem;line-height:1}
+.quiz-opt:hover{border-color:var(--primary);background:var(--primary-tint)}
+.quiz-opt.sel{border-color:var(--primary);background:var(--primary);color:#fff;box-shadow:0 6px 16px -6px rgba(217,92,32,.7)}
+.quiz-foot{display:flex;gap:10px;padding:0 22px 22px;align-items:center}
+.quiz-back{background:none;border:none;color:var(--muted);font-weight:700;cursor:pointer;padding:10px}
+.quiz-next{flex:1;background:var(--primary);color:#fff;border:none;border-radius:12px;padding:14px;font-size:.95rem;font-weight:700;cursor:pointer}
+.quiz-next:disabled{opacity:.4;cursor:not-allowed}
+.quiz-next:not(:disabled):hover{background:var(--primary-deep)}
+.quiz-result{padding:8px 22px 24px;text-align:center}
+.quiz-result .big{font-family:var(--font-display);font-size:2.6rem;color:var(--primary-deep);line-height:1;margin:6px 0}
+.quiz-result p{color:var(--ink-soft);margin-bottom:18px}
+@media(max-width:560px){.quiz-overlay{padding:0}.quiz-card{border-radius:0;min-height:100vh}}
+
+/* ===== near button (現在地) ===== */
+.near-btn{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--primary);background:var(--surface);color:var(--primary-deep);border-radius:999px;padding:7px 14px;font-size:.84rem;font-weight:700;cursor:pointer;transition:all .14s}
+.near-btn svg{width:15px;height:15px}
+.near-btn:hover{background:var(--primary-tint)}
+.near-btn.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.near-btn.loading{opacity:.6;pointer-events:none}
+@media(max-width:520px){.near-btn span{display:none}.near-btn{padding:8px}}
+.dist-badge{position:absolute;right:10px;bottom:10px;z-index:2;background:var(--primary);color:#fff;font-family:var(--font-num);font-weight:700;font-size:.76rem;padding:3px 9px;border-radius:999px;box-shadow:0 2px 8px -1px rgba(217,92,32,.6);display:inline-flex;align-items:center;gap:3px}
+.near-banner{max-width:1180px;margin:0 auto;padding:0 20px 4px}
+.near-banner .nb{display:inline-flex;align-items:center;gap:8px;background:var(--primary-tint);color:var(--primary-deep);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:700}
+.near-banner .nb button{background:none;border:none;color:var(--primary-deep);font-weight:700;cursor:pointer;text-decoration:underline}
+
 /* ===== card logo ===== */
 .card-logo{position:absolute;left:12px;bottom:12px;width:44px;height:44px;border-radius:12px;background:#fff;padding:4px;box-shadow:0 3px 10px -2px rgba(15,41,40,.4);object-fit:contain;z-index:2}
 .card{cursor:pointer}
@@ -686,6 +746,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   <div class="view-toggle" id="viewToggleLegacy" hidden></div>
 
   <div class="toolbar-r">
+    <button class="near-btn" id="nearBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>近くをさがす</span></button>
     <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
     <button class="clear-all" id="clearAll">条件をクリア</button>
   </div>
@@ -696,6 +757,17 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   <div class="map-hint" id="mapHint">地方や都道府県をえらぶと、その地域にズームします。ピンをタップすると詳細が見られます。</div>
   <div id="map"></div>
 </section>
+
+<!-- ===== DIAGNOSIS CTA ===== -->
+<div class="quiz-cta" id="quizCta">
+  <div class="quiz-cta-inner">
+    <div class="quiz-cta-txt">
+      <div class="quiz-cta-eyebrow">🧭 迷ったら、これ</div>
+      <div class="quiz-cta-title">3つの質問で、あなたにピッタリの場所をさがす</div>
+    </div>
+    <button class="quiz-cta-btn" id="quizStart">診断をはじめる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+</div>
 
 <!-- ===== CATEGORY BANNERS ===== -->
 <div class="cat-section" id="catSection">
@@ -716,6 +788,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
       <h2 id="resultsTitle">すべての拠点・プログラム</h2>
     </div>
   </div>
+  <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">📍 現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">
     <div class="empty-icon">🔎</div>
@@ -727,6 +800,12 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 <div class="detail-overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-label="拠点の詳細">
   <div class="detail-card" id="detailCard"></div>
 </div>
+
+<!-- ===== QUIZ MODAL ===== -->
+<div class="detail-overlay" id="quizOverlay" role="dialog" aria-modal="true" aria-label="かんたん診断">
+  <div class="quiz-card" id="quizCard"></div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <footer>
@@ -805,7 +884,10 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
 
-  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:"list"};
+  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:"list",userLoc:null,sortByDist:false};
+
+  function distKm(a,b,c,d){var R=6371,dLa=(c-a)*Math.PI/180,dLo=(d-b)*Math.PI/180,la1=a*Math.PI/180,la2=c*Math.PI/180;var x=Math.sin(dLa/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dLo/2)**2;return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
+  function fmtDist(km){return km<1?Math.round(km*1000)+"m":(km<10?km.toFixed(1):Math.round(km))+"km";}
 
   var $=function(s){return document.querySelector(s)};
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
@@ -916,10 +998,35 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   qc.onclick=function(){qi.value="";state.q="";qc.classList.remove("show");qi.focus();render();};
   qi.addEventListener("keydown",function(e){if(e.key==="Enter"&&!e.nativeEvent?.isComposing&&e.keyCode!==229){e.preventDefault();}});
 
+  // ===== 近くをさがす（現在地） =====
+  var nearBtn=$("#nearBtn");
+  function setNear(on){
+    state.sortByDist=on;
+    nearBtn.classList.toggle("active",on);
+    $("#nearBanner").style.display=on?"":"none";
+  }
+  nearBtn.onclick=function(){
+    if(state.sortByDist){ setNear(false); render(); return; }
+    if(!navigator.geolocation){ showToast("この端末では位置情報が使えません"); return; }
+    nearBtn.classList.add("loading");
+    navigator.geolocation.getCurrentPosition(function(pos){
+      nearBtn.classList.remove("loading");
+      state.userLoc={lat:pos.coords.latitude,lng:pos.coords.longitude};
+      setNear(true);
+      if(state.view==="map"){ var lb=document.querySelector('#viewToggle .vt[data-view=list]'); if(lb) lb.click(); } else { render(); }
+      showToast("現在地から近い順に並べました");
+    },function(){
+      nearBtn.classList.remove("loading");
+      showToast("位置情報を取得できませんでした");
+    },{enableHighAccuracy:true,timeout:8000,maximumAge:60000});
+  };
+  $("#nearClear").onclick=function(){ setNear(false); render(); };
+
   $("#showAll").onchange=function(){state.showAll=this.checked;render();};
   $("#clearAll").onclick=function(){
-    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:state.view};
+    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:state.view,userLoc:state.userLoc,sortByDist:false};
     qi.value="";qc.classList.remove("show");ps.value="";$("#showAll").checked=false;
+    nearBtn.classList.remove("active");$("#nearBanner").style.display="none";
     syncHeroChips();syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
     syncCatCards();
     render();
@@ -1033,6 +1140,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     pills.appendChild(el("span","pill st "+sm.cls,sm.label));
     photoWrap.appendChild(pills);
     if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
+    if(r._dist!=null){var db=el("div","dist-badge","📍 約"+fmtDist(r._dist));photoWrap.appendChild(db);}
     c.appendChild(photoWrap);
 
     // ---- body ----
@@ -1256,6 +1364,14 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   function render(){
     var list=DATA.filter(matches);
     countEl.textContent=list.length.toLocaleString();
+    // 現在地から近い順
+    if(state.sortByDist && state.userLoc){
+      var u=state.userLoc;
+      list.forEach(function(r){ r._dist=(r.lat!=null)?distKm(u.lat,u.lng,r.lat,r.lng):null; });
+      list.sort(function(a,b){ if(a._dist==null&&b._dist==null)return 0; if(a._dist==null)return 1; if(b._dist==null)return -1; return a._dist-b._dist; });
+    } else {
+      list.forEach(function(r){ r._dist=undefined; });
+    }
     if(state.view==="map"){ updateMap(list); return; }
     grid.innerHTML="";
     if(!list.length){empty.style.display="";return;}
@@ -1360,6 +1476,75 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     var id=(e.state&&e.state.id)|| (new URLSearchParams(location.search)).get("id");
     if(id&&BYID[id]) openDetail(BYID[id],false); else closeDetail(false);
   });
+
+  // ===== QUIZ (かんたん診断) =====
+  var quizOverlay=$("#quizOverlay"), quizCard=$("#quizCard");
+  var QUIZ=[
+    {key:"target", q:"あなたは？", sub:"対象で少ししぼります", opts:[
+      {v:"中学生",label:"中学生",em:"🎒"},{v:"高校生",label:"高校生",em:"📗"},{v:"",label:"どちらでも",em:"✨"}]},
+    {key:"cat", q:"どんなことに興味ある？", sub:"ひとつ選んでね", opts:
+      CAT_KEYS.map(function(k){return {v:k,label:CAT_LABELS[k],em:CAT_EMOJIS[k]};}).concat([{v:"",label:"まだ決めてない",em:"🤔"}])},
+    {key:"region", q:"どのあたりでさがす？", sub:"住んでいる地方など", opts:
+      [{v:"",label:"どこでも",em:"🗾"}].concat(REGION_ORDER.map(function(g){return {v:g,label:g,em:(g==="全国オンライン"?"💻":"📍")};}))}
+  ];
+  var quizAns={}, quizStep=0;
+
+  function quizCountWith(ans){
+    return DATA.filter(function(r){
+      if(!DEFAULT_STATUS[r.status]) return false;
+      if(ans.region && r.region!==ans.region) return false;
+      if(ans.cat){ var fs=CAT_FIELD_MAP[ans.cat]||[]; if(!fs.some(function(f){return (r.fieldTags||[]).indexOf(f)>=0;})) return false; }
+      if(ans.target){ var hay=(r.targets||[]).join(",")+","+(r.useTags||[]).join(","); if(hay.indexOf(ans.target)<0) return false; }
+      return true;
+    }).length;
+  }
+  function renderQuiz(){
+    var prog='<div class="quiz-progress">'+QUIZ.map(function(_,i){return '<i class="'+(i<=quizStep?"on":"")+'"></i>';}).join('')+'</div>';
+    if(quizStep<QUIZ.length){
+      var s=QUIZ[quizStep];
+      var opts=s.opts.map(function(o){
+        var sel=(quizAns[s.key]===o.v)?" sel":"";
+        return '<button class="quiz-opt'+sel+'" data-v="'+esc(o.v)+'"><span class="em">'+o.em+'</span>'+esc(o.label)+'</button>';
+      }).join('');
+      quizCard.innerHTML='<div class="quiz-head"><button class="quiz-close" id="quizClose">✕</button>'+prog+'</div>'
+        +'<div class="quiz-step"><div class="quiz-q">'+esc(s.q)+'</div><div class="quiz-sub">'+esc(s.sub)+'</div>'
+        +'<div class="quiz-opts">'+opts+'</div></div>'
+        +'<div class="quiz-foot">'+(quizStep>0?'<button class="quiz-back" id="quizBack">← もどる</button>':'')+'</div>';
+      [].forEach.call(quizCard.querySelectorAll(".quiz-opt"),function(b){
+        b.onclick=function(){ quizAns[s.key]=b.dataset.v; quizStep++; renderQuiz(); };
+      });
+    } else {
+      var n=quizCountWith(quizAns);
+      quizCard.innerHTML='<div class="quiz-head"><button class="quiz-close" id="quizClose">✕</button>'+prog+'</div>'
+        +'<div class="quiz-result"><div style="font-size:2.4rem">🎉</div><div class="quiz-sub" style="margin:0">あなたにおすすめ</div>'
+        +'<div class="big">'+n+'</div><p>件の拠点・プログラムが見つかりました</p>'
+        +'<button class="quiz-next" id="quizShow">結果を見る</button></div>'
+        +'<div class="quiz-foot"><button class="quiz-back" id="quizBack">← もどる</button></div>';
+      $("#quizShow").onclick=function(){ applyQuiz(quizAns); };
+    }
+    var bk=$("#quizBack"); if(bk) bk.onclick=function(){ if(quizStep>0)quizStep--; renderQuiz(); };
+    $("#quizClose").onclick=function(){ closeQuiz(); };
+  }
+  function openQuiz(){ quizAns={}; quizStep=0; renderQuiz(); quizOverlay.classList.add("open"); document.body.style.overflow="hidden"; }
+  function closeQuiz(){ quizOverlay.classList.remove("open"); document.body.style.overflow=""; }
+  function applyQuiz(ans){
+    state.targets = ans.target?[ans.target]:[];
+    state.catFilter = ans.cat||"";
+    state.fields = ans.cat?(CAT_FIELD_MAP[ans.cat]||[]):[];
+    state.region = ans.region||"";
+    state.pref=""; ps.value="";
+    syncHeroChips(); syncRegionChips(); syncCatCards();
+    syncMulti(fc,state.fields,"tag"); syncMulti(tc,state.targets,"tag");
+    closeQuiz();
+    if(state.view!=="list"){ var lb=document.querySelector('#viewToggle .vt[data-view=list]'); if(lb) lb.click(); }
+    render();
+    var rt=$("#resultsTitle"); if(rt) rt.textContent="あなたにおすすめの拠点";
+    $("#resultsWrap").scrollIntoView({behavior:"smooth",block:"start"});
+    showToast("あなたに合う拠点を表示しました");
+  }
+  $("#quizStart").onclick=openQuiz;
+  quizOverlay.onclick=function(e){ if(e.target===quizOverlay) closeQuiz(); };
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&quizOverlay.classList.contains("open")) closeQuiz(); });
 
   render();
 
