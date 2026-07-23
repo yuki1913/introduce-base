@@ -1,2 +1,8 @@
+# 依存パッケージ（ローカルCLI用。リポジトリには不要）
+node_modules/
+package.json
+package-lock.json
+
+# Vercel / 環境変数
 .vercel
 .env*
