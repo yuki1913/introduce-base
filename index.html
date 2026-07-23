@@ -13,22 +13,23 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 <style>
 :root{
-  --ink:#0F2928;
-  --ink-soft:#4B6360;
-  --muted:#7C8F8B;
-  --line:#E1E6DF;
-  --bg:#F4F6F1;
+  --ink:#2A1A0E;
+  --ink-soft:#5C3D20;
+  --muted:#9A7B60;
+  --line:#EAE0D6;
+  --bg:#FDF8F3;
   --surface:#FFFFFF;
-  --green:#17976A;
-  --green-deep:#0D7A54;
-  --green-tint:#E4F3EC;
+  --primary:#E8620A;
+  --primary-deep:#C04E06;
+  --primary-tint:#FDF0E8;
   --amber:#FFB627;
+  --amber-deep:#E09200;
   --amber-tint:#FFF4D6;
-  --coral:#E86A45;
-  --coral-tint:#FBE6DE;
-  --slate-tint:#EEF1EF;
-  --shadow:0 1px 3px rgba(15,41,40,.06), 0 6px 20px -10px rgba(15,41,40,.14);
-  --shadow-lift:0 6px 20px rgba(15,41,40,.1), 0 24px 44px -18px rgba(15,41,40,.24);
+  --coral:#F04E2F;
+  --coral-tint:#FDE8E3;
+  --slate-tint:#F3EDE6;
+  --shadow:0 1px 3px rgba(42,26,14,.06), 0 6px 20px -10px rgba(42,26,14,.14);
+  --shadow-lift:0 6px 20px rgba(42,26,14,.1), 0 24px 44px -18px rgba(42,26,14,.22);
   --radius:14px;
   --font-jp:"Noto Sans JP",system-ui,sans-serif;
   --font-round:"Zen Maru Gothic","Noto Sans JP",sans-serif;
@@ -61,20 +62,20 @@ img{display:block;max-width:100%}
 }
 .brand-pin{
   width:28px;height:28px;flex:none;border-radius:9px 9px 9px 3px;
-  background:var(--green);position:relative;transform:rotate(-6deg);
-  box-shadow:0 4px 12px -3px rgba(23,151,106,.55);
+  background:var(--primary);position:relative;transform:rotate(-6deg);
+  box-shadow:0 4px 12px -3px rgba(232,98,10,.55);
 }
 .brand-pin::after{content:"";position:absolute;inset:0;margin:auto;width:9px;height:9px;background:#fff;border-radius:50%}
 .header-stat{
   font-size:.82rem;color:var(--ink-soft);
   display:flex;align-items:center;gap:6px;
 }
-.header-stat b{font-family:var(--font-num);font-size:1rem;color:var(--green-deep);font-weight:700}
+.header-stat b{font-family:var(--font-num);font-size:1rem;color:var(--primary-deep);font-weight:700}
 
 /* ===== HERO ===== */
 .hero{
   position:relative;overflow:hidden;
-  background:#0F2928;
+  background:#2A1200;
   min-height:440px;
   display:flex;align-items:stretch;
 }
@@ -84,7 +85,7 @@ img{display:block;max-width:100%}
 }
 .hero-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(100deg,rgba(10,35,34,.88) 40%,rgba(10,35,34,.3) 100%);
+  background:linear-gradient(100deg,rgba(42,18,0,.90) 40%,rgba(42,18,0,.35) 100%);
 }
 .hero-inner{
   position:relative;z-index:1;
@@ -136,7 +137,7 @@ img{display:block;max-width:100%}
   font-family:var(--font-jp);
 }
 .searchbar input::placeholder{color:#9AAAA6}
-.searchbar input:focus{outline:none;border-color:var(--green);background:var(--surface);box-shadow:0 0 0 4px var(--green-tint)}
+.searchbar input:focus{outline:none;border-color:var(--primary);background:var(--surface);box-shadow:0 0 0 4px var(--primary-tint)}
 .searchbar .ic{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:20px;height:20px;color:var(--muted)}
 .searchbar .clr{
   position:absolute;right:10px;top:50%;transform:translateY(-50%);
@@ -154,7 +155,7 @@ img{display:block;max-width:100%}
   transition:color .14s,border-color .14s;
 }
 .ftab:hover{color:var(--ink)}
-.ftab.active{color:var(--green-deep);border-color:var(--green)}
+.ftab.active{color:var(--primary-deep);border-color:var(--primary)}
 
 /* filter panels */
 .filter-panel{display:none;padding:14px 0 18px;animation:fade .2s ease both}
@@ -176,8 +177,8 @@ img{display:block;max-width:100%}
   padding:6px 13px;border-radius:999px;font-size:.84rem;font-weight:500;
   transition:all .13s;white-space:nowrap;line-height:1.3;
 }
-.chip:hover{border-color:var(--green);color:var(--green-deep)}
-.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff;box-shadow:0 3px 10px -3px rgba(23,151,106,.65)}
+.chip:hover{border-color:var(--primary);color:var(--primary-deep)}
+.chip[aria-pressed="true"]{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 3px 10px -3px rgba(232,98,10,.55)}
 .chip.amber[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:#3A2800;box-shadow:0 3px 10px -3px rgba(255,182,39,.65)}
 .chip .n{font-family:var(--font-num);font-size:.74em;opacity:.65;margin-left:4px}
 select{
@@ -186,22 +187,30 @@ select{
   border-radius:10px;padding:8px 36px 8px 13px;font-size:.9rem;color:var(--ink);min-width:160px;
   font-family:var(--font-jp);
 }
-select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-tint)}
+select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-tint)}
 
 /* Toolbar */
 .toolbar{
-  max-width:1180px;margin:0 auto;padding:12px 20px 10px;
+  max-width:1180px;margin:0 auto;padding:14px 20px 12px;
   display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between;
   background:var(--bg);
 }
+@media(max-width:639px){
+  .toolbar{
+    flex-direction:column;align-items:stretch;gap:10px;padding:12px 14px;
+  }
+  .view-toggle-wrap{width:100%;}
+  .view-toggle-wrap .vt{flex:1;justify-content:center;padding:11px 8px;}
+  .toolbar-r{justify-content:space-between;}
+}
 .count{font-size:.95rem;color:var(--ink-soft)}
-.count b{font-family:var(--font-num);font-size:1.3rem;color:var(--green-deep);margin:0 3px}
+.count b{font-family:var(--font-num);font-size:1.3rem;color:var(--primary-deep);margin:0 3px}
 .toolbar-r{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .switch{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:var(--ink-soft);user-select:none;cursor:pointer}
 .switch input{position:absolute;opacity:0;pointer-events:none}
 .switch .track{width:38px;height:22px;border-radius:999px;background:var(--line);position:relative;transition:background .18s;flex:none}
 .switch .track::after{content:"";position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.22);transition:transform .18s}
-.switch input:checked + .track{background:var(--green)}
+.switch input:checked + .track{background:var(--primary)}
 .switch input:checked + .track::after{transform:translateX(16px)}
 .clear-all{border:1.5px solid var(--line);background:var(--surface);color:var(--ink-soft);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:500;cursor:pointer}
 .clear-all:hover{border-color:var(--coral);color:var(--coral)}
@@ -215,7 +224,7 @@ select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--g
   font-family:var(--font-round);font-weight:900;font-size:1.3rem;color:var(--ink);
 }
 .section-head .sub{font-size:.82rem;color:var(--muted)}
-.section-divider{width:36px;height:3px;background:var(--green);border-radius:2px;margin-bottom:14px}
+.section-divider{width:36px;height:3px;background:var(--primary);border-radius:2px;margin-bottom:14px}
 
 .feature-grid{
   display:grid;
@@ -282,7 +291,7 @@ select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--g
 }
 .cat-card-label .emoji{font-size:1rem}
 .cat-card.active img{filter:brightness(.8)}
-.cat-card.active .cat-card-label{background:var(--green);color:#fff}
+.cat-card.active .cat-card-label{background:var(--primary);color:#fff}
 
 /* ===== RESULTS ===== */
 .results-wrap{max-width:1180px;margin:0 auto;padding:8px 20px 60px}
@@ -298,7 +307,7 @@ select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--g
   display:flex;flex-direction:column;
   transition:transform .18s cubic-bezier(.2,.7,.2,1),box-shadow .18s,border-color .18s;
 }
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:#C8DFCF}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:#F5C8A8}
 
 /* card photo / cover */
 .card-photo{
@@ -369,10 +378,10 @@ select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--g
   border-radius:10px;padding:10px;font-size:.82rem;font-weight:700;text-decoration:none;transition:all .13s;
   cursor:pointer;border:none;
 }
-.btn-primary{background:var(--green);color:#fff;box-shadow:0 3px 10px -4px rgba(23,151,106,.75)}
-.btn-primary:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 3px 10px -4px rgba(232,98,10,.6)}
+.btn-primary:hover{background:var(--primary-deep);transform:translateY(-1px)}
 .btn-ghost{background:var(--surface);color:var(--ink-soft);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--green);color:var(--green-deep)}
+.btn-ghost:hover{border-color:var(--primary);color:var(--primary-deep)}
 .btn svg{width:14px;height:14px}
 
 /* empty */
@@ -385,7 +394,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 .foot{max-width:1180px;margin:0 auto;padding:28px 20px;font-size:.8rem;color:var(--muted);line-height:1.9}
 .foot .legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
 .foot .legend .status{font-size:.71rem;font-weight:700;padding:3px 10px;border-radius:7px}
-.s-rec{background:var(--green-tint);color:var(--green-deep)}
+.s-rec{background:var(--primary-tint);color:var(--primary-deep)}
 .s-cond{background:var(--amber-tint);color:#8A5A00}
 .s-ref{background:var(--slate-tint);color:var(--muted)}
 .s-hold{background:var(--coral-tint);color:var(--coral)}
@@ -405,21 +414,36 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   .toolbar{padding:10px 14px 8px}
 }
 /* ===== VIEW TOGGLE (list / map) ===== */
-.view-toggle{display:inline-flex;background:var(--slate-tint);border-radius:999px;padding:3px;gap:2px}
-.view-toggle .vt{
-  border:none;background:none;color:var(--ink-soft);font-weight:700;font-size:.82rem;
-  padding:6px 15px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;transition:all .15s;
+.view-toggle-wrap{
+  display:flex;align-items:center;gap:0;
+  background:var(--surface);border:2px solid var(--line);
+  border-radius:14px;overflow:hidden;
+  box-shadow:var(--shadow);
 }
-.view-toggle .vt svg{width:15px;height:15px}
-.view-toggle .vt.active{background:var(--surface);color:var(--green-deep);box-shadow:0 1px 3px rgba(15,41,40,.16)}
+.view-toggle-wrap .vt{
+  border:none;background:none;color:var(--muted);font-weight:700;font-size:.9rem;
+  padding:10px 22px;display:inline-flex;align-items:center;gap:8px;
+  transition:all .18s;white-space:nowrap;
+  border-right:2px solid var(--line);
+  font-family:var(--font-round);
+}
+.view-toggle-wrap .vt:last-child{border-right:none;}
+.view-toggle-wrap .vt svg{width:18px;height:18px;flex:none}
+.view-toggle-wrap .vt.active{
+  background:var(--primary);color:#fff;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+}
+.view-toggle-wrap .vt:not(.active):hover{background:var(--primary-tint);color:var(--primary-deep)}
+/* keep old selector for JS compatibility */
+.view-toggle{display:none}
 
 /* ===== MAP ===== */
 .map-section{max-width:1180px;margin:6px auto 0;padding:0 20px 50px}
 .map-hint{
-  font-size:.85rem;color:var(--ink-soft);background:var(--green-tint);
+  font-size:.85rem;color:var(--ink-soft);background:var(--primary-tint);
   border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px;line-height:1.6;
 }
-.map-hint b{color:var(--green-deep);font-family:var(--font-num)}
+.map-hint b{color:var(--primary-deep);font-family:var(--font-num)}
 #map{
   height:min(74vh,660px);width:100%;border-radius:22px;
   border:1px solid #d8e6df;box-shadow:var(--shadow-lift);z-index:0;
@@ -441,23 +465,23 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 .ys-region{
   position:absolute;transform:translate(-50%,-50%);
   display:flex;align-items:center;gap:7px;white-space:nowrap;cursor:pointer;
-  background:linear-gradient(135deg,#1FAE77,#11835B);color:#fff;
+  background:linear-gradient(135deg,#F07030,#C04E06);color:#fff;
   padding:8px 15px;border-radius:999px;border:2.5px solid #fff;
-  box-shadow:0 0 0 5px rgba(23,151,106,.16),0 6px 16px -3px rgba(15,41,40,.42);
+  box-shadow:0 0 0 5px rgba(232,98,10,.18),0 6px 16px -3px rgba(42,26,14,.42);
   font-family:var(--font-round);font-weight:700;font-size:.96rem;
   transition:transform .15s,box-shadow .15s;
 }
-.ys-region:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 0 6px rgba(23,151,106,.24),0 9px 22px -4px rgba(15,41,40,.5)}
+.ys-region:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 0 6px rgba(232,98,10,.28),0 9px 22px -4px rgba(42,26,14,.5)}
 .ys-region .rc{font-family:var(--font-num);background:rgba(255,255,255,.24);border-radius:999px;padding:2px 8px;font-size:.82em}
-.map-back{color:var(--green-deep);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
-.map-back:hover{color:var(--green)}
+.map-back{color:var(--primary-deep);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.map-back:hover{color:var(--primary)}
 /* clusters — brand green orbs with a soft ring */
 .marker-cluster{background:transparent!important}
 .marker-cluster div{
   width:38px;height:38px;margin:1px 0 0 1px;border-radius:50%;
-  background:linear-gradient(135deg,#1FAE77,#11835B);color:#fff;
+  background:linear-gradient(135deg,#F07030,#C04E06);color:#fff;
   border:2px solid rgba(255,255,255,.92);
-  box-shadow:0 0 0 5px rgba(23,151,106,.18),0 5px 14px -3px rgba(15,41,40,.4);
+  box-shadow:0 0 0 5px rgba(232,98,10,.2),0 5px 14px -3px rgba(42,26,14,.4);
   display:flex;align-items:center;justify-content:center;
   font-family:var(--font-num);font-weight:700;font-size:14px;
 }
@@ -466,7 +490,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 .leaflet-bar{border:none!important;border-radius:12px!important;overflow:hidden;box-shadow:0 3px 12px -3px rgba(15,41,40,.3)!important}
 .leaflet-bar a{background:var(--surface);color:var(--ink-soft);width:36px;height:36px;line-height:36px;font-size:19px;border-bottom:1px solid var(--line)!important}
 .leaflet-bar a:last-child{border-bottom:none!important}
-.leaflet-bar a:hover{background:var(--green-tint);color:var(--green-deep)}
+.leaflet-bar a:hover{background:var(--primary-tint);color:var(--primary-deep)}
 .leaflet-control-attribution{background:rgba(255,255,255,.78)!important;font-size:10px;color:var(--muted);border-radius:8px 0 0 0}
 .leaflet-control-attribution a{color:var(--ink-soft)}
 /* popup */
@@ -484,14 +508,14 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 .ys-pop-act a{
   flex:1;text-align:center;font-size:.78rem;font-weight:700;padding:8px;border-radius:9px;text-decoration:none;transition:all .13s;
 }
-.ys-pop-act .p1{background:var(--green);color:#fff}
-.ys-pop-act .p1:hover{background:var(--green-deep)}
+.ys-pop-act .p1{background:var(--primary);color:#fff}
+.ys-pop-act .p1:hover{background:var(--primary-deep)}
 .ys-pop-act .p2{background:var(--surface);color:var(--ink-soft);border:1.5px solid var(--line)}
-.ys-pop-act .p2:hover{border-color:var(--green);color:var(--green-deep)}
+.ys-pop-act .p2:hover{border-color:var(--primary);color:var(--primary-deep)}
 .map-empty{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
 @media(max-width:520px){.leaflet-popup-content{width:220px!important}}
 
-:focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:6px}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px;border-radius:6px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -577,11 +601,22 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 <!-- toolbar -->
 <div class="toolbar">
   <div class="count"><b id="count">0</b>件 みつかりました</div>
+
+  <!-- 目立つビュー切替タブ -->
+  <div class="view-toggle-wrap" id="viewToggle" role="tablist" aria-label="表示切替">
+    <button class="vt active" data-view="list" aria-selected="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      リスト表示
+    </button>
+    <button class="vt" data-view="map" aria-selected="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>
+      地図で見る
+    </button>
+  </div>
+  <!-- hidden legacy toggle (keeps JS selector working) -->
+  <div class="view-toggle" id="viewToggleLegacy" hidden></div>
+
   <div class="toolbar-r">
-    <div class="view-toggle" id="viewToggle" role="tablist" aria-label="表示切替">
-      <button class="vt active" data-view="list" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>リスト</button>
-      <button class="vt" data-view="map" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>地図</button>
-    </div>
     <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
     <button class="clear-all" id="clearAll">条件をクリア</button>
   </div>
@@ -981,7 +1016,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   var grid=$("#grid"),empty=$("#empty"),countEl=$("#count");
 
   // ===== MAP =====
-  var HUE_COLOR={green:"#1B9E6B",blue:"#2E6FD0",orange:"#F5811F",purple:"#6C4FD4",pink:"#F15C74",teal:"#0E9E93"};
+  var HUE_COLOR={green:"#E8620A",blue:"#E07828",orange:"#F5811F",purple:"#D06030",pink:"#E84848",teal:"#D07828"};
   var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false;
   var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
   var JAPAN_MAXBOUNDS=[[22.5,120.5],[47.2,151.5]];    // これ以上は外に出られない
