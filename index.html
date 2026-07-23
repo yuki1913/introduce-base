@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 <style>
 :root{
   --ink:#0F2928;
@@ -401,6 +404,93 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   .searchbar{margin-bottom:12px}
   .toolbar{padding:10px 14px 8px}
 }
+/* ===== VIEW TOGGLE (list / map) ===== */
+.view-toggle{display:inline-flex;background:var(--slate-tint);border-radius:999px;padding:3px;gap:2px}
+.view-toggle .vt{
+  border:none;background:none;color:var(--ink-soft);font-weight:700;font-size:.82rem;
+  padding:6px 15px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;transition:all .15s;
+}
+.view-toggle .vt svg{width:15px;height:15px}
+.view-toggle .vt.active{background:var(--surface);color:var(--green-deep);box-shadow:0 1px 3px rgba(15,41,40,.16)}
+
+/* ===== MAP ===== */
+.map-section{max-width:1180px;margin:6px auto 0;padding:0 20px 50px}
+.map-hint{
+  font-size:.85rem;color:var(--ink-soft);background:var(--green-tint);
+  border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px;line-height:1.6;
+}
+.map-hint b{color:var(--green-deep);font-family:var(--font-num)}
+#map{
+  height:min(74vh,660px);width:100%;border-radius:22px;
+  border:1px solid #d8e6df;box-shadow:var(--shadow-lift);z-index:0;
+  background:linear-gradient(155deg,#eaf5f0 0%,#dcecf1 55%,#d3e6ee 100%);
+}
+.leaflet-container{font-family:var(--font-jp);position:relative;z-index:1;background:transparent}
+/* 陸地を紙のように浮かせる影 */
+.leaflet-land-pane{filter:drop-shadow(0 10px 16px rgba(20,74,62,.20)) drop-shadow(0 2px 4px rgba(20,74,62,.12))}
+/* custom pin — branded circle + soft halo, pops on the light basemap */
+.ys-pin{
+  width:32px;height:32px;border-radius:50%;
+  border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;
+  font-size:16px;line-height:1;
+  box-shadow:0 0 0 3px rgba(255,255,255,.5),0 4px 11px -2px rgba(15,41,40,.45);
+}
+.ys-pin:hover{z-index:1000}
+/* region-select bubbles (step 1) */
+.ys-region-marker{background:none!important;border:none!important}
+.ys-region{
+  position:absolute;transform:translate(-50%,-50%);
+  display:flex;align-items:center;gap:7px;white-space:nowrap;cursor:pointer;
+  background:linear-gradient(135deg,#1FAE77,#11835B);color:#fff;
+  padding:8px 15px;border-radius:999px;border:2.5px solid #fff;
+  box-shadow:0 0 0 5px rgba(23,151,106,.16),0 6px 16px -3px rgba(15,41,40,.42);
+  font-family:var(--font-round);font-weight:700;font-size:.96rem;
+  transition:transform .15s,box-shadow .15s;
+}
+.ys-region:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 0 6px rgba(23,151,106,.24),0 9px 22px -4px rgba(15,41,40,.5)}
+.ys-region .rc{font-family:var(--font-num);background:rgba(255,255,255,.24);border-radius:999px;padding:2px 8px;font-size:.82em}
+.map-back{color:var(--green-deep);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.map-back:hover{color:var(--green)}
+/* clusters — brand green orbs with a soft ring */
+.marker-cluster{background:transparent!important}
+.marker-cluster div{
+  width:38px;height:38px;margin:1px 0 0 1px;border-radius:50%;
+  background:linear-gradient(135deg,#1FAE77,#11835B);color:#fff;
+  border:2px solid rgba(255,255,255,.92);
+  box-shadow:0 0 0 5px rgba(23,151,106,.18),0 5px 14px -3px rgba(15,41,40,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-num);font-weight:700;font-size:14px;
+}
+.marker-cluster span{line-height:1}
+/* zoom control — soft rounded, on-brand */
+.leaflet-bar{border:none!important;border-radius:12px!important;overflow:hidden;box-shadow:0 3px 12px -3px rgba(15,41,40,.3)!important}
+.leaflet-bar a{background:var(--surface);color:var(--ink-soft);width:36px;height:36px;line-height:36px;font-size:19px;border-bottom:1px solid var(--line)!important}
+.leaflet-bar a:last-child{border-bottom:none!important}
+.leaflet-bar a:hover{background:var(--green-tint);color:var(--green-deep)}
+.leaflet-control-attribution{background:rgba(255,255,255,.78)!important;font-size:10px;color:var(--muted);border-radius:8px 0 0 0}
+.leaflet-control-attribution a{color:var(--ink-soft)}
+/* popup */
+.leaflet-popup-content-wrapper{border-radius:14px;padding:0;overflow:hidden;box-shadow:var(--shadow-lift)}
+.leaflet-popup-content{margin:0;width:266px!important;line-height:1.6}
+.ys-pop-photo{height:112px;position:relative;overflow:hidden;background:var(--line)}
+.ys-pop-photo img{width:100%;height:100%;object-fit:cover}
+.ys-pop-pills{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;gap:6px}
+.ys-pop-pills .pill{font-size:.66rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.94)}
+.ys-pop-body{padding:11px 13px 13px}
+.ys-pop-body h4{font-family:var(--font-round);font-weight:700;font-size:1rem;color:var(--ink);margin:0 0 4px;line-height:1.4}
+.ys-pop-place{font-size:.76rem;color:var(--muted);margin-bottom:7px}
+.ys-pop-intro{font-size:.8rem;color:var(--ink);margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ys-pop-act{display:flex;gap:7px}
+.ys-pop-act a{
+  flex:1;text-align:center;font-size:.78rem;font-weight:700;padding:8px;border-radius:9px;text-decoration:none;transition:all .13s;
+}
+.ys-pop-act .p1{background:var(--green);color:#fff}
+.ys-pop-act .p1:hover{background:var(--green-deep)}
+.ys-pop-act .p2{background:var(--surface);color:var(--ink-soft);border:1.5px solid var(--line)}
+.ys-pop-act .p2:hover{border-color:var(--green);color:var(--green-deep)}
+.map-empty{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
+@media(max-width:520px){.leaflet-popup-content{width:220px!important}}
+
 :focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:6px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -488,10 +578,20 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 <div class="toolbar">
   <div class="count"><b id="count">0</b>件 みつかりました</div>
   <div class="toolbar-r">
+    <div class="view-toggle" id="viewToggle" role="tablist" aria-label="表示切替">
+      <button class="vt active" data-view="list" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>リスト</button>
+      <button class="vt" data-view="map" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>地図</button>
+    </div>
     <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
     <button class="clear-all" id="clearAll">条件をクリア</button>
   </div>
 </div>
+
+<!-- ===== MAP VIEW ===== -->
+<section class="map-section" id="mapSection" hidden aria-label="地図でさがす">
+  <div class="map-hint" id="mapHint">地方や都道府県をえらぶと、その地域にズームします。ピンをタップすると詳細が見られます。</div>
+  <div id="map"></div>
+</section>
 
 <!-- ===== CATEGORY BANNERS ===== -->
 <div class="cat-section" id="catSection">
@@ -532,6 +632,9 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="geo.js"></script>
 <script src="data.js"></script>
 <script>
 (function(){
@@ -591,7 +694,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
 
-  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:""};
+  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:"list"};
 
   var $=function(s){return document.querySelector(s)};
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
@@ -704,7 +807,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
   $("#showAll").onchange=function(){state.showAll=this.checked;render();};
   $("#clearAll").onclick=function(){
-    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:""};
+    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:state.view};
     qi.value="";qc.classList.remove("show");ps.value="";$("#showAll").checked=false;
     syncHeroChips();syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
     syncCatCards();
@@ -876,9 +979,171 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   }
 
   var grid=$("#grid"),empty=$("#empty"),countEl=$("#count");
+
+  // ===== MAP =====
+  var HUE_COLOR={green:"#1B9E6B",blue:"#2E6FD0",orange:"#F5811F",purple:"#6C4FD4",pink:"#F15C74",teal:"#0E9E93"};
+  var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false;
+  var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
+  var JAPAN_MAXBOUNDS=[[22.5,120.5],[47.2,151.5]];    // これ以上は外に出られない
+
+  // ---- 都道府県境界（マスク用）----
+  var GEO=window.JAPANGEO||{features:[]};
+  var GEO_BY_REGION={};
+  GEO.features.forEach(function(f){(GEO_BY_REGION[f.properties.region]=GEO_BY_REGION[f.properties.region]||[]).push(f);});
+  var WORLD_RING=[[90,-180],[90,180],[-90,180],[-90,-180]];
+  var MASK_FILL="#e6ebe4";
+  function holesFor(feats){
+    var holes=[];
+    feats.forEach(function(f){f.geometry.coordinates.forEach(function(poly){
+      holes.push(poly[0].map(function(pt){return [pt[1],pt[0]];}));
+    });});
+    return holes;
+  }
+  // 指定範囲(全国 or 地方)の陸地を白く塗り、県境を描く（海は#mapの背景グラデ）。境界を返す
+  function applyMask(feats){
+    if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;}
+    if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;}
+    maskLayer=L.geoJSON(feats,{pane:"land",style:{fillColor:"#ffffff",fillOpacity:1,stroke:false},interactive:false}).addTo(map);
+    outlineLayer=L.geoJSON(feats,{pane:"border",style:{color:"#bcd6c7",weight:1,opacity:1,fill:false},interactive:false}).addTo(map);
+    return outlineLayer.getBounds();
+  }
+  // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
+  var REGION_CENTROID=(function(){
+    var acc={},cnt={};
+    DATA.forEach(function(r){
+      if(r.lat==null||r.region==="全国オンライン")return;
+      acc[r.region]=acc[r.region]||[0,0]; acc[r.region][0]+=r.lat; acc[r.region][1]+=r.lng;
+      cnt[r.region]=(cnt[r.region]||0)+1;
+    });
+    var c={}; Object.keys(acc).forEach(function(g){c[g]=[acc[g][0]/cnt[g],acc[g][1]/cnt[g]];});
+    return c;
+  })();
+  // 地方バブルの表示位置（重なり回避のため手調整。沖縄は九州南西の海上に寄せる）
+  var REGION_LABEL_POS={
+    "北海道":[43.4,142.9],"東北":[39.4,141.6],"関東":[35.4,142.0],"中部":[37.3,137.1],
+    "近畿":[34.4,136.9],"中国":[35.3,131.8],"四国":[32.7,133.4],"九州":[32.0,130.0],"沖縄":[29.5,129.1]
+  };
+  function esc(s){return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+  function markerIcon(cv){
+    var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
+    return L.divIcon({
+      html:'<div class="ys-pin" style="background:'+color+'">'+cv.emoji+'</div>',
+      className:"", iconSize:[32,32], iconAnchor:[16,16], popupAnchor:[0,-16]
+    });
+  }
+  function popupHtml(r){
+    var cv=coverOf(r);
+    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
+    var photo=(r.image||getPhotoUrl(cv));
+    var place=[r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
+    var h='<div class="ys-pop">';
+    h+='<div class="ys-pop-photo"><img src="'+esc(photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+      +'<div class="ys-pop-pills"><span class="pill">'+esc(cv.emoji+" "+cv.label)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
+    h+='<div class="ys-pop-body">';
+    h+='<h4>'+esc(r.name)+'</h4>';
+    h+='<div class="ys-pop-place">📍 '+esc(place)+'</div>';
+    if(r.intro) h+='<p class="ys-pop-intro">'+esc(r.intro)+'</p>';
+    h+='<div class="ys-pop-act">';
+    if(r.url) h+='<a class="p1" href="'+esc(r.url)+'" target="_blank" rel="noopener">公式サイト</a>';
+    if(r.address) h+='<a class="p2" href="'+esc(mapUrl(r))+'" target="_blank" rel="noopener">地図で開く</a>';
+    h+='</div></div></div>';
+    return h;
+  }
+  function initMap(){
+    map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxZoom:12,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
+    map.createPane("land"); map.getPane("land").style.zIndex=250;      // 陸地（影つき）
+    map.createPane("border"); map.getPane("border").style.zIndex=350;  // 県境ライン
+    map.attributionControl.setPrefix("").addAttribution('境界: <a href="https://github.com/dataofjapan/land" target="_blank" rel="noopener">dataofjapan/land</a>');
+    cluster=L.markerClusterGroup({maxClusterRadius:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true});
+    regionLayer=L.layerGroup();
+    map.addLayer(cluster); map.addLayer(regionLayer);
+    mapInited=true;
+  }
+
+  function selectRegion(g){ state.region=g; syncRegionChips(); syncHeroChips(); render(); }
+
+  var PREF_TO_REGION={};
+  GEO.features.forEach(function(f){PREF_TO_REGION[f.properties.nam_ja]=f.properties.region;});
+
+  function updateMap(list){
+    if(!mapInited) return;
+    cluster.clearLayers(); regionLayer.clearLayers();
+    var hint=$("#mapHint");
+
+    // ---- STEP 1: 地方えらび（地方・都道府県が未選択のとき）＝ 日本の陸地だけ表示 ----
+    if(!state.region && !state.pref){
+      applyMask(GEO.features);
+      map.setMaxBounds(JAPAN_MAXBOUNDS);
+      var byReg={};
+      list.forEach(function(r){ if(r.lat!=null&&r.region!=="全国オンライン") byReg[r.region]=(byReg[r.region]||0)+1; });
+      var used=[];
+      REGION_ORDER.forEach(function(g){
+        if(g==="全国オンライン") return;
+        var c=REGION_LABEL_POS[g]||REGION_CENTROID[g], n=byReg[g]||0;
+        if(!c||!n) return;
+        var icon=L.divIcon({html:'<div class="ys-region">'+g+'<span class="rc">'+n+'</span></div>',className:"ys-region-marker",iconSize:[1,1],iconAnchor:[0,0]});
+        var m=L.marker(c,{icon:icon,title:g+"をえらぶ"});
+        m.on("click",function(){ selectRegion(g); });
+        regionLayer.addLayer(m); used.push(c);
+      });
+      map.invalidateSize();
+      if(used.length) map.fitBounds(used,{padding:[60,70]}); else map.fitBounds(JAPAN_BOUNDS);
+      hint.innerHTML='まずは地図で見たい <b>地方</b> をタップしてください。えらぶと、その地方だけの地図になります。';
+      return;
+    }
+
+    // ---- STEP 2: 選んだ地方だけ表示＋各拠点 ----
+    var maskRegion=state.region||PREF_TO_REGION[state.pref]||"";
+    var feats=GEO_BY_REGION[maskRegion]||[];
+    var rbounds=null;
+    if(feats.length){ rbounds=applyMask(feats); map.setMaxBounds(rbounds.pad(0.35)); }
+    else { if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;} if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;} map.setMaxBounds(JAPAN_MAXBOUNDS); }
+
+    var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
+    pts.forEach(function(r){
+      cluster.addLayer(L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r)),title:r.name}).bindPopup(popupHtml(r),{maxWidth:280,minWidth:230}));
+    });
+    var off=list.length-pts.length;
+    var where=state.pref||state.region||"";
+    hint.innerHTML='<span class="map-back" id="mapBack">← 地方を選びなおす</span>　'
+      +'<b>'+where+'</b> の地図：<b>'+pts.length+'</b> 拠点'
+      +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細';
+    var back=document.getElementById("mapBack");
+    if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); syncHeroChips(); render(); };
+
+    map.invalidateSize();
+    if(rbounds){ map.fitBounds(rbounds,{padding:[24,24]}); }
+    else if(pts.length){ map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14}); }
+    else { map.fitBounds(JAPAN_BOUNDS,{padding:[8,8]}); }
+  }
+
+  // view toggle
+  var catSection=$("#catSection"), resultsWrap=$("#resultsWrap"), mapSection=$("#mapSection");
+  var vtBtns=document.querySelectorAll("#viewToggle .vt");
+  vtBtns.forEach(function(b){
+    b.onclick=function(){
+      var v=b.dataset.view;
+      if(v===state.view) return;
+      state.view=v;
+      vtBtns.forEach(function(x){var on=x.dataset.view===v;x.classList.toggle("active",on);x.setAttribute("aria-selected",String(on));});
+      var mapMode=(v==="map");
+      mapSection.hidden=!mapMode;
+      catSection.style.display=mapMode?"none":"";
+      resultsWrap.style.display=mapMode?"none":"";
+      if(mapMode){
+        if(!mapInited) initMap();
+        setTimeout(function(){map.invalidateSize();render();},60);
+      } else {
+        render();
+      }
+    };
+  });
+
   function render(){
     var list=DATA.filter(matches);
     countEl.textContent=list.length.toLocaleString();
+    if(state.view==="map"){ updateMap(list); return; }
     grid.innerHTML="";
     if(!list.length){empty.style.display="";return;}
     empty.style.display="none";
