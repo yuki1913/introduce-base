@@ -631,6 +631,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="geo.js"></script>
 <script src="data.js"></script>
 <script>
 (function(){
@@ -978,9 +979,31 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
   // ===== MAP =====
   var HUE_COLOR={green:"#1B9E6B",blue:"#2E6FD0",orange:"#F5811F",purple:"#6C4FD4",pink:"#F15C74",teal:"#0E9E93"};
-  var map=null, cluster=null, regionLayer=null, mapInited=false;
+  var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false;
   var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
   var JAPAN_MAXBOUNDS=[[22.5,120.5],[47.2,151.5]];    // これ以上は外に出られない
+
+  // ---- 都道府県境界（マスク用）----
+  var GEO=window.JAPANGEO||{features:[]};
+  var GEO_BY_REGION={};
+  GEO.features.forEach(function(f){(GEO_BY_REGION[f.properties.region]=GEO_BY_REGION[f.properties.region]||[]).push(f);});
+  var WORLD_RING=[[90,-180],[90,180],[-90,180],[-90,-180]];
+  var MASK_FILL="#e6ebe4";
+  function holesFor(feats){
+    var holes=[];
+    feats.forEach(function(f){f.geometry.coordinates.forEach(function(poly){
+      holes.push(poly[0].map(function(pt){return [pt[1],pt[0]];}));
+    });});
+    return holes;
+  }
+  // 指定範囲(全国 or 地方)だけを見せるマスク＋境界線を描く。境界を返す
+  function applyMask(feats){
+    if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;}
+    if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;}
+    maskLayer=L.polygon([WORLD_RING].concat(holesFor(feats)),{stroke:false,fillColor:MASK_FILL,fillOpacity:1,interactive:false,className:"ys-mask"}).addTo(map);
+    outlineLayer=L.geoJSON(feats,{style:{color:"#1B9E6B",weight:1,opacity:.45,fill:false},interactive:false}).addTo(map);
+    return outlineLayer.getBounds();
+  }
   // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
   var REGION_CENTROID=(function(){
     var acc={},cnt={};
@@ -1038,13 +1061,18 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
   function selectRegion(g){ state.region=g; syncRegionChips(); syncHeroChips(); render(); }
 
+  var PREF_TO_REGION={};
+  GEO.features.forEach(function(f){PREF_TO_REGION[f.properties.nam_ja]=f.properties.region;});
+
   function updateMap(list){
     if(!mapInited) return;
     cluster.clearLayers(); regionLayer.clearLayers();
     var hint=$("#mapHint");
 
-    // ---- STEP 1: 地方えらび（地方・都道府県が未選択のとき）----
+    // ---- STEP 1: 地方えらび（地方・都道府県が未選択のとき）＝ 日本の陸地だけ表示 ----
     if(!state.region && !state.pref){
+      applyMask(GEO.features);
+      map.setMaxBounds(JAPAN_MAXBOUNDS);
       var byReg={};
       list.forEach(function(r){ if(r.lat!=null&&r.region!=="全国オンライン") byReg[r.region]=(byReg[r.region]||0)+1; });
       var used=[];
@@ -1059,11 +1087,17 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
       });
       map.invalidateSize();
       if(used.length) map.fitBounds(used,{padding:[60,70]}); else map.fitBounds(JAPAN_BOUNDS);
-      hint.innerHTML='まずは地図で見たい <b>地方</b> をタップしてください。えらぶと各拠点が表示されます。';
+      hint.innerHTML='まずは地図で見たい <b>地方</b> をタップしてください。えらぶと、その地方だけの地図になります。';
       return;
     }
 
-    // ---- STEP 2: 各拠点の表示（今までどおり）----
+    // ---- STEP 2: 選んだ地方だけ表示＋各拠点 ----
+    var maskRegion=state.region||PREF_TO_REGION[state.pref]||"";
+    var feats=GEO_BY_REGION[maskRegion]||[];
+    var rbounds=null;
+    if(feats.length){ rbounds=applyMask(feats); map.setMaxBounds(rbounds.pad(0.35)); }
+    else { if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;} if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;} map.setMaxBounds(JAPAN_MAXBOUNDS); }
+
     var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
     pts.forEach(function(r){
       cluster.addLayer(L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r)),title:r.name}).bindPopup(popupHtml(r),{maxWidth:280,minWidth:230}));
@@ -1075,8 +1109,10 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
       +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細';
     var back=document.getElementById("mapBack");
     if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); syncHeroChips(); render(); };
+
     map.invalidateSize();
-    if(pts.length){ map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14}); }
+    if(rbounds){ map.fitBounds(rbounds,{padding:[24,24]}); }
+    else if(pts.length){ map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14}); }
     else { map.fitBounds(JAPAN_BOUNDS,{padding:[8,8]}); }
   }
 
