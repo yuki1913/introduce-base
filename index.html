@@ -421,18 +421,36 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 }
 .map-hint b{color:var(--green-deep);font-family:var(--font-num)}
 #map{
-  height:min(72vh,640px);width:100%;border-radius:var(--radius);
-  border:1px solid var(--line);box-shadow:var(--shadow);z-index:0;background:#e8ece6;
+  height:min(74vh,660px);width:100%;border-radius:20px;
+  border:1px solid var(--line);box-shadow:var(--shadow-lift);z-index:0;background:#eef0ec;
 }
-.leaflet-container{font-family:var(--font-jp);position:relative;z-index:1}
-/* custom pin */
+.leaflet-container{font-family:var(--font-jp);position:relative;z-index:1;background:#eef0ec}
+/* custom pin — branded circle + soft halo, pops on the light basemap */
 .ys-pin{
-  width:32px;height:32px;border-radius:50%;border:2.5px solid #fff;
-  box-shadow:0 2px 7px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  border:2.5px solid #fff;display:flex;align-items:center;justify-content:center;
   font-size:16px;line-height:1;
+  box-shadow:0 0 0 3px rgba(255,255,255,.5),0 4px 11px -2px rgba(15,41,40,.45);
 }
-.marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(23,151,106,.28)}
-.marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{background:var(--green);color:#fff;font-family:var(--font-num);font-weight:700}
+.ys-pin:hover{z-index:1000}
+/* clusters — brand green orbs with a soft ring */
+.marker-cluster{background:transparent!important}
+.marker-cluster div{
+  width:38px;height:38px;margin:1px 0 0 1px;border-radius:50%;
+  background:linear-gradient(135deg,#1FAE77,#11835B);color:#fff;
+  border:2px solid rgba(255,255,255,.92);
+  box-shadow:0 0 0 5px rgba(23,151,106,.18),0 5px 14px -3px rgba(15,41,40,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-num);font-weight:700;font-size:14px;
+}
+.marker-cluster span{line-height:1}
+/* zoom control — soft rounded, on-brand */
+.leaflet-bar{border:none!important;border-radius:12px!important;overflow:hidden;box-shadow:0 3px 12px -3px rgba(15,41,40,.3)!important}
+.leaflet-bar a{background:var(--surface);color:var(--ink-soft);width:36px;height:36px;line-height:36px;font-size:19px;border-bottom:1px solid var(--line)!important}
+.leaflet-bar a:last-child{border-bottom:none!important}
+.leaflet-bar a:hover{background:var(--green-tint);color:var(--green-deep)}
+.leaflet-control-attribution{background:rgba(255,255,255,.78)!important;font-size:10px;color:var(--muted);border-radius:8px 0 0 0}
+.leaflet-control-attribution a{color:var(--ink-soft)}
 /* popup */
 .leaflet-popup-content-wrapper{border-radius:14px;padding:0;overflow:hidden;box-shadow:var(--shadow-lift)}
 .leaflet-popup-content{margin:0;width:266px!important;line-height:1.6}
@@ -975,8 +993,9 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   }
   function initMap(){
     map=L.map("map",{scrollWheelZoom:true,zoomControl:true}).setView([37.6,137.4],5);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
-      maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
+      maxZoom:19, subdomains:"abcd",
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }).addTo(map);
     cluster=L.markerClusterGroup({maxClusterRadius:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true});
     map.addLayer(cluster);

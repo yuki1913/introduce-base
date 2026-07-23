@@ -3892,8 +3892,8 @@
   "infoUrl": "https://www.city.saitama.lg.jp/003/002/006/p072844.html",
   "address": "桜木ルーム：さいたま市大宮区桜木町2-190,南浦和ルーム：さいたま市南区南浦和2-27-16",
   "station": "JR大宮駅,JR南浦和駅から徒歩",
-  "lat": 42.839661,
-  "lng": 141.613831
+  "lat": 35.906464,
+  "lng": 139.620438
  },
  {
   "id": "KT-021",
@@ -10917,8 +10917,8 @@
   "infoUrl": "https://www.dreampossibility.com/whatwedo/project/youthcenter/",
   "address": "所在地非公開（公式の利用案内に従う）",
   "station": "利用案内で確認（所在地非公開）",
-  "lat": 35.856865,
-  "lng": 140.456619
+  "lat": 34.705555,
+  "lng": 135.509995
  },
  {
   "id": "KN-015",
@@ -13210,8 +13210,8 @@
   "infoUrl": "https://www.pcf.city.hiroshima.jp/hpcf/peacestudy/YPV/2026/details.pdf",
   "address": "広島平和記念資料館周辺,研修会場は募集要項参照",
   "station": "広島電鉄 原爆ドーム前電停",
-  "lat": 37.058601,
-  "lng": 138.275986
+  "lat": 34.392235,
+  "lng": 132.450974
  },
  {
   "id": "CG-028",
@@ -14346,8 +14346,8 @@
   "infoUrl": "https://www.kagawa-u.ac.jp/cooperation-community/course/20433/",
   "address": "香川大学各キャンパス,科目ごとに会場確認",
   "station": "科目の開催キャンパスによる",
-  "lat": 42.659107,
-  "lng": 140.789734
+  "lat": 34.343601,
+  "lng": 134.038727
  },
  {
   "id": "SK-016",
@@ -15517,8 +15517,8 @@
   "infoUrl": "https://www.pref.saga.lg.jp/kyouiku/kiji003108682/3\\_108682\\_326178\\_up\\_tvg6781d.pdf",
   "address": "県内7か所のSAGA DI LAB,会場は年度案内参照",
   "station": "各拠点による",
-  "lat": 36.233395,
-  "lng": 137.982178
+  "lat": 33.263512,
+  "lng": 130.300888
  },
  {
   "id": "KY-013",
@@ -16111,8 +16111,8 @@
   "infoUrl": "https://nnavi.pref.nagasaki.jp/",
   "address": "出島メッセ長崎,長崎県長崎市尾上町4-1",
   "station": "JR長崎駅 西口直結",
-  "lat": 38.450909,
-  "lng": 141.523651
+  "lat": 32.753601,
+  "lng": 129.868149
  },
  {
   "id": "KY-027",
