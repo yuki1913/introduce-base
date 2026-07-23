@@ -433,6 +433,21 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   box-shadow:0 0 0 3px rgba(255,255,255,.5),0 4px 11px -2px rgba(15,41,40,.45);
 }
 .ys-pin:hover{z-index:1000}
+/* region-select bubbles (step 1) */
+.ys-region-marker{background:none!important;border:none!important}
+.ys-region{
+  position:absolute;transform:translate(-50%,-50%);
+  display:flex;align-items:center;gap:7px;white-space:nowrap;cursor:pointer;
+  background:linear-gradient(135deg,#1FAE77,#11835B);color:#fff;
+  padding:8px 15px;border-radius:999px;border:2.5px solid #fff;
+  box-shadow:0 0 0 5px rgba(23,151,106,.16),0 6px 16px -3px rgba(15,41,40,.42);
+  font-family:var(--font-round);font-weight:700;font-size:.96rem;
+  transition:transform .15s,box-shadow .15s;
+}
+.ys-region:hover{transform:translate(-50%,-50%) scale(1.07);box-shadow:0 0 0 6px rgba(23,151,106,.24),0 9px 22px -4px rgba(15,41,40,.5)}
+.ys-region .rc{font-family:var(--font-num);background:rgba(255,255,255,.24);border-radius:999px;padding:2px 8px;font-size:.82em}
+.map-back{color:var(--green-deep);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.map-back:hover{color:var(--green)}
 /* clusters — brand green orbs with a soft ring */
 .marker-cluster{background:transparent!important}
 .marker-cluster div{
@@ -963,7 +978,25 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
   // ===== MAP =====
   var HUE_COLOR={green:"#1B9E6B",blue:"#2E6FD0",orange:"#F5811F",purple:"#6C4FD4",pink:"#F15C74",teal:"#0E9E93"};
-  var map=null, cluster=null, mapInited=false;
+  var map=null, cluster=null, regionLayer=null, mapInited=false;
+  var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
+  var JAPAN_MAXBOUNDS=[[22.5,120.5],[47.2,151.5]];    // これ以上は外に出られない
+  // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
+  var REGION_CENTROID=(function(){
+    var acc={},cnt={};
+    DATA.forEach(function(r){
+      if(r.lat==null||r.region==="全国オンライン")return;
+      acc[r.region]=acc[r.region]||[0,0]; acc[r.region][0]+=r.lat; acc[r.region][1]+=r.lng;
+      cnt[r.region]=(cnt[r.region]||0)+1;
+    });
+    var c={}; Object.keys(acc).forEach(function(g){c[g]=[acc[g][0]/cnt[g],acc[g][1]/cnt[g]];});
+    return c;
+  })();
+  // 地方バブルの表示位置（重なり回避のため手調整。沖縄は九州南西の海上に寄せる）
+  var REGION_LABEL_POS={
+    "北海道":[43.4,142.9],"東北":[39.4,141.6],"関東":[35.4,142.0],"中部":[37.3,137.1],
+    "近畿":[34.4,136.9],"中国":[35.3,131.8],"四国":[32.7,133.4],"九州":[32.0,130.0],"沖縄":[29.5,129.1]
+  };
   function esc(s){return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
   function markerIcon(cv){
@@ -992,32 +1025,59 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     return h;
   }
   function initMap(){
-    map=L.map("map",{scrollWheelZoom:true,zoomControl:true}).setView([37.6,137.4],5);
+    map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
-      maxZoom:19, subdomains:"abcd",
+      maxZoom:19, subdomains:"abcd", noWrap:true,
       attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
     }).addTo(map);
     cluster=L.markerClusterGroup({maxClusterRadius:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true});
-    map.addLayer(cluster);
+    regionLayer=L.layerGroup();
+    map.addLayer(cluster); map.addLayer(regionLayer);
     mapInited=true;
   }
+
+  function selectRegion(g){ state.region=g; syncRegionChips(); syncHeroChips(); render(); }
+
   function updateMap(list){
     if(!mapInited) return;
-    cluster.clearLayers();
-    var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
-    var markers=pts.map(function(r){
-      return L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r)),title:r.name}).bindPopup(popupHtml(r),{maxWidth:280,minWidth:230});
-    });
-    markers.forEach(function(m){cluster.addLayer(m);});
+    cluster.clearLayers(); regionLayer.clearLayers();
     var hint=$("#mapHint");
-    var off=list.length-pts.length;
-    hint.innerHTML='地図に表示中 <b>'+pts.length+'</b> 拠点'
-      +(off>0?'（住所が特定できないオンライン・広域の事業 '+off+' 件は地図に出ません）':'')
-      +'／ピンをタップで詳細。';
-    if(pts.length){
+
+    // ---- STEP 1: 地方えらび（地方・都道府県が未選択のとき）----
+    if(!state.region && !state.pref){
+      var byReg={};
+      list.forEach(function(r){ if(r.lat!=null&&r.region!=="全国オンライン") byReg[r.region]=(byReg[r.region]||0)+1; });
+      var used=[];
+      REGION_ORDER.forEach(function(g){
+        if(g==="全国オンライン") return;
+        var c=REGION_LABEL_POS[g]||REGION_CENTROID[g], n=byReg[g]||0;
+        if(!c||!n) return;
+        var icon=L.divIcon({html:'<div class="ys-region">'+g+'<span class="rc">'+n+'</span></div>',className:"ys-region-marker",iconSize:[1,1],iconAnchor:[0,0]});
+        var m=L.marker(c,{icon:icon,title:g+"をえらぶ"});
+        m.on("click",function(){ selectRegion(g); });
+        regionLayer.addLayer(m); used.push(c);
+      });
       map.invalidateSize();
-      map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14});
+      if(used.length) map.fitBounds(used,{padding:[60,70]}); else map.fitBounds(JAPAN_BOUNDS);
+      hint.innerHTML='まずは地図で見たい <b>地方</b> をタップしてください。えらぶと各拠点が表示されます。';
+      return;
     }
+
+    // ---- STEP 2: 各拠点の表示（今までどおり）----
+    var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
+    pts.forEach(function(r){
+      cluster.addLayer(L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r)),title:r.name}).bindPopup(popupHtml(r),{maxWidth:280,minWidth:230}));
+    });
+    var off=list.length-pts.length;
+    var where=state.pref||state.region||"";
+    hint.innerHTML='<span class="map-back" id="mapBack">← 地方を選びなおす</span>　'
+      +'<b>'+where+'</b> の地図：<b>'+pts.length+'</b> 拠点'
+      +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細';
+    var back=document.getElementById("mapBack");
+    if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); syncHeroChips(); render(); };
+    map.invalidateSize();
+    if(pts.length){ map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14}); }
+    else { map.fitBounds(JAPAN_BOUNDS,{padding:[8,8]}); }
   }
 
   // view toggle
