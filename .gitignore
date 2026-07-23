@@ -6,3 +6,6 @@ package-lock.json
 # Vercel / 環境変数
 .vercel
 .env*
+
+# ダウンロードしたスプレッドシート（ローカル作業用）
+*.xlsx

@@ -41,6 +41,8 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "〒060-0051 北海道札幌市中央区南1条東2丁目 大通バスセンタービル2号館1階・2階",
   "station": "札幌市営地下鉄バスセンター前駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.06068,
   "lng": 141.359055
  },
@@ -86,6 +88,8 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "北海道札幌市東区北22条東1丁目",
   "station": "札幌市営地下鉄北24条駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.088753,
   "lng": 141.350311
  },
@@ -131,6 +135,8 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "北海道札幌市白石区東札幌2条6丁目",
   "station": "札幌市営地下鉄白石駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.045643,
   "lng": 141.394516
  },
@@ -176,6 +182,8 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "北海道札幌市豊平区豊平8条11丁目",
   "station": "札幌市営地下鉄学園前駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.043198,
   "lng": 141.373459
  },
@@ -221,6 +229,8 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "〒063-0051 北海道札幌市西区宮の沢1条1丁目",
   "station": "札幌市営地下鉄宮の沢駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.089222,
   "lng": 141.275116
  },
@@ -259,10 +269,12 @@
    "夜間利用"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.sapporo.jp/kodomo/ikusei/l02\\_1.html",
-  "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/l02\\_1.html",
+  "url": "https://www.city.sapporo.jp/kodomo/ikusei/l02_1.html",
+  "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/l02_1.html",
   "address": "札幌市内の対象児童会館・ミニ児童会館",
   "station": "利用館により異なる",
+  "image": "",
+  "logo": "",
   "lat": 43.062077,
   "lng": 141.354401
  },
@@ -302,9 +314,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.ssc.slp.or.jp/",
-  "infoUrl": "https://www.ssc.slp.or.jp/event/tag/jh\\_school/",
+  "infoUrl": "https://www.ssc.slp.or.jp/event/tag/jh_school/",
   "address": "〒004-0051 北海道札幌市厚別区厚別中央1条5-2-20",
   "station": "JR新札幌駅・地下鉄新さっぽろ駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.036606,
   "lng": 141.472122
  },
@@ -348,6 +362,8 @@
   "infoUrl": "https://hs-compass.com/center/",
   "address": "〒005-0022 北海道札幌市南区真駒内柏丘7-8-1",
   "station": "地下鉄真駒内駅からじょうてつバス,青少年会館前下車",
+  "image": "",
+  "logo": "",
   "lat": 42.988945,
   "lng": 141.342438
  },
@@ -393,6 +409,8 @@
   "infoUrl": "https://www.city.hakodate.hokkaido.jp/docs/2014011500518/",
   "address": "〒040-0046 北海道函館市谷地頭町5-14",
   "station": "函館市電谷地頭電停から徒歩約15分",
+  "image": "",
+  "logo": "",
   "lat": 41.751324,
   "lng": 140.712143
  },
@@ -438,6 +456,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒073-0108 北海道砂川市北光496-25",
   "station": "JR砂川駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 43.517071,
   "lng": 141.932617
  },
@@ -483,6 +503,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒074-1273 北海道深川市音江町2-7-1",
   "station": "JR深川駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 43.693905,
   "lng": 142.07695
  },
@@ -528,6 +550,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒049-2141 北海道茅部郡森町駒ヶ岳657-15",
   "station": "JR駒ヶ岳駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 42.043007,
   "lng": 140.60994
  },
@@ -573,6 +597,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒093-0216 北海道北見市常呂町栄浦365-1",
   "station": "JR網走駅・北見駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 44.130535,
   "lng": 143.981598
  },
@@ -618,6 +644,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒089-3733 北海道足寄郡足寄町常盤3",
   "station": "鉄道駅なし,都市間バス・車利用を確認",
+  "image": "",
+  "logo": "",
   "lat": 43.243591,
   "lng": 143.539001
  },
@@ -663,6 +691,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒088-1113 北海道厚岸郡厚岸町愛冠6",
   "station": "JR厚岸駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 43.023056,
   "lng": 144.842422
  },
@@ -708,6 +738,8 @@
   "infoUrl": "https://hidaka.niye.go.jp/",
   "address": "〒055-2315 北海道沙流郡日高町字富岡",
   "station": "占冠駅・日高町方面から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 42.842861,
   "lng": 142.463776
  },
@@ -753,6 +785,8 @@
   "infoUrl": "https://taisetsu.niye.go.jp/",
   "address": "〒071-0235 北海道上川郡美瑛町白金温泉",
   "station": "JR美瑛駅からバス・車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 43.472809,
   "lng": 142.643753
  },
@@ -792,6 +826,8 @@
   "infoUrl": "https://life.sci.hokudai.ac.jp/mf/event/23666",
   "address": "〒060-0810 北海道札幌市北区北10条西8丁目 北海道大学札幌キャンパス",
   "station": "JR札幌駅・地下鉄北12条駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.072117,
   "lng": 141.342041
  },
@@ -830,6 +866,8 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/ssa/259751.html",
   "address": "オンライン提出,学校経由",
   "station": "オンライン",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -871,6 +909,8 @@
   "infoUrl": "https://www.pref.hokkaido.lg.jp/kz/dxs/hokkaido-startup-studio2024.html",
   "address": "固定会場なし,オンラインと北海道内会場",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -910,6 +950,8 @@
   "infoUrl": "https://www.pref.hokkaido.lg.jp/hf/kms/ibasho/index.html",
   "address": "オンライン,北海道内各地",
   "station": "オンライン",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -950,6 +992,8 @@
   "infoUrl": "https://www.city.asahikawa.hokkaido.jp/kurashi/218/241/305/d073796.html",
   "address": "旭川市内の各掲載拠点",
   "station": "利用先により異なる",
+  "image": "",
+  "logo": "",
   "lat": 43.771435,
   "lng": 142.365295
  },
@@ -993,6 +1037,8 @@
   "infoUrl": "https://www.city.obihiro.hokkaido.jp/shisei/shisetsu/bunka/1001727.html",
   "address": "〒080-0846 北海道帯広市緑ヶ丘2",
   "station": "JR帯広駅からバス・徒歩,緑ヶ丘公園内",
+  "image": "",
+  "logo": "",
   "lat": 42.901546,
   "lng": 143.182571
  },
@@ -1035,6 +1081,8 @@
   "infoUrl": "https://www.city.kushiro.lg.jp/bunkasports/shougaigakushuu/1005719/1005728.html",
   "address": "〒085-0017 北海道釧路市幸町10-2",
   "station": "JR釧路駅から徒歩約8分",
+  "image": "",
+  "logo": "",
   "lat": 42.986477,
   "lng": 144.37912
  },
@@ -1076,6 +1124,8 @@
   "infoUrl": "https://www.city.tomakomai.hokkaido.jp/kagaku/",
   "address": "〒053-0018 北海道苫小牧市旭町3-1-12",
   "station": "JR苫小牧駅から徒歩・バス",
+  "image": "",
+  "logo": "",
   "lat": 42.631817,
   "lng": 141.604614
  },
@@ -1118,6 +1168,8 @@
   "infoUrl": "https://hokumouken.com/2026/",
   "address": "〒090-0015 北海道北見市公園町1",
   "station": "JR北見駅からバス・徒歩",
+  "image": "",
+  "logo": "",
   "lat": 43.817703,
   "lng": 143.903519
  },
@@ -1159,10 +1211,12 @@
    "引率者必要"
   ],
   "status": "掲載推奨",
-  "url": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/bonju\\_top\\_index.html",
-  "infoUrl": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/bonju\\_top\\_index.html",
+  "url": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/bonju_top_index.html",
+  "infoUrl": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/bonju_top_index.html",
   "address": "〒037-0611 青森県五所川原市神山字殊ノ峰117-602",
   "station": "JR五所川原駅から車,団体交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 40.795818,
   "lng": 140.519028
  },
@@ -1208,6 +1262,8 @@
   "infoUrl": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-tanesashi/home.html",
   "address": "〒031-0841 青森県八戸市鮫町字膳並平2-26",
   "station": "JR八戸線種差海岸駅・鮫駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 40.49617,
   "lng": 141.612045
  },
@@ -1253,6 +1309,8 @@
   "infoUrl": "https://www.alis.pref.aomori.lg.jp/shisetsu/guide/",
   "address": "〒030-0111 青森県青森市荒川字藤戸119-7",
   "station": "JR青森駅からバス,総合社会教育センター前下車",
+  "image": "",
+  "logo": "",
   "lat": 40.7957,
   "lng": 140.736145
  },
@@ -1290,9 +1348,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://nyushi.hirosaki-u.ac.jp/",
-  "infoUrl": "https://nyushi.hirosaki-u.ac.jp/wp-content/uploads/2026/05/program\\_20260527.pdf",
+  "infoUrl": "https://nyushi.hirosaki-u.ac.jp/wp-content/uploads/2026/05/program_20260527.pdf",
   "address": "〒036-8560 青森県弘前市文京町1 弘前大学",
   "station": "JR弘前駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 40.587959,
   "lng": 140.472061
  },
@@ -1331,10 +1391,12 @@
    "継続参加"
   ],
   "status": "掲載推奨",
-  "url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/r8\\_aochalle.html",
-  "infoUrl": "https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/r8\\_aochalle.html",
+  "url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/r8_aochalle.html",
+  "infoUrl": "https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/r8_aochalle.html",
   "address": "〒030-0862 青森県青森市古川1-20-11 メゾンビル2階 Giving Treeほか",
   "station": "JR青森駅から徒歩,開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": 40.824833,
   "lng": 140.738998
  },
@@ -1376,6 +1438,8 @@
   "infoUrl": "https://hirosapo.ims-hirosaki.com/",
   "address": "〒036-8003 青森県弘前市駅前町9-20 ヒロロ3階",
   "station": "JR弘前駅から徒歩約3分",
+  "image": "",
+  "logo": "",
   "lat": 40.597374,
   "lng": 140.481659
  },
@@ -1411,10 +1475,12 @@
    "相談窓口案内"
   ],
   "status": "参考情報",
-  "url": "https://www.pref.aomori.lg.jp/bunka/seishonen/index\\_1.html",
-  "infoUrl": "https://www.pref.aomori.lg.jp/bunka/seishonen/index\\_1.html",
+  "url": "https://www.pref.aomori.lg.jp/bunka/seishonen/index_1.html",
+  "infoUrl": "https://www.pref.aomori.lg.jp/bunka/seishonen/index_1.html",
   "address": "オンライン,青森県内",
   "station": "オンライン",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -1460,6 +1526,8 @@
   "infoUrl": "https://iwate.niye.go.jp/",
   "address": "〒020-0601 岩手県滝沢市後292",
   "station": "JR盛岡駅からバス・車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 39.839043,
   "lng": 141.094177
  },
@@ -1500,6 +1568,8 @@
   "infoUrl": "https://stella.se.iwate-u.ac.jp/aboutstella/",
   "address": "〒020-0066 岩手県盛岡市上田4-3-5 岩手大学理工学部",
   "station": "JR盛岡駅からバス,上田四丁目下車",
+  "image": "",
+  "logo": "",
   "lat": 39.718323,
   "lng": 141.134842
  },
@@ -1540,9 +1610,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://miraito.org/youth/",
-  "infoUrl": "https://iju.pref.iwate.jp/coworking\\_list/miraito/",
+  "infoUrl": "https://iju.pref.iwate.jp/coworking_list/miraito/",
   "address": "〒028-4303 岩手県岩手郡岩手町江刈内10-8",
   "station": "IGRいわて銀河鉄道いわて沼宮内駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 39.956127,
   "lng": 141.254562
  },
@@ -1587,6 +1659,8 @@
   "infoUrl": "https://iwatewakamono.net/cafe",
   "address": "〒020-0023 岩手県盛岡市内丸11-2 岩手県公会堂地下",
   "station": "JR盛岡駅からバス,県庁・市役所前下車",
+  "image": "",
+  "logo": "",
   "lat": 39.702454,
   "lng": 141.154099
  },
@@ -1632,6 +1706,8 @@
   "infoUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002051.html",
   "address": "〒029-4504 岩手県胆沢郡金ケ崎町永沢下舘49-1",
   "station": "JR金ケ崎駅から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 39.174938,
   "lng": 141.084412
  },
@@ -1677,6 +1753,8 @@
   "infoUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html",
   "address": "〒028-1371 岩手県下閉伊郡山田町船越2-42",
   "station": "三陸鉄道岩手船越駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 39.442375,
   "lng": 142.012527
  },
@@ -1722,6 +1800,8 @@
   "infoUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002053.html",
   "address": "〒028-6106 岩手県二戸市仁左平字放森61-35",
   "station": "JR・IGR二戸駅から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 40.308163,
   "lng": 141.331573
  },
@@ -1767,6 +1847,8 @@
   "infoUrl": "https://www.pref.miyagi.jp/soshiki/sz-seinen/",
   "address": "〒986-0781 宮城県本吉郡南三陸町戸倉字坂本88-1",
   "station": "BRT志津川駅方面から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 38.634148,
   "lng": 141.445236
  },
@@ -1812,6 +1894,8 @@
   "infoUrl": "https://www.pref.miyagi.jp/soshiki/matsushima-cnt/",
   "address": "〒981-0412 宮城県東松島市宮戸字二ツ橋1",
   "station": "JR野蒜駅から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 38.334801,
   "lng": 141.156204
  },
@@ -1857,6 +1941,8 @@
   "infoUrl": "https://hanayama.niye.go.jp/",
   "address": "〒987-2593 宮城県栗原市花山字本沢沼山61-1",
   "station": "JRくりこま高原駅方面からバス・車,交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 38.855095,
   "lng": 140.779739
  },
@@ -1897,6 +1983,8 @@
   "infoUrl": "https://www.ige.tohoku.ac.jp/mirai/",
   "address": "〒980-8572 宮城県仙台市青葉区荒巻字青葉 東北大学青葉山キャンパス",
   "station": "仙台市地下鉄東西線青葉山駅",
+  "image": "",
+  "logo": "",
   "lat": 38.253063,
   "lng": 140.8237
  },
@@ -1937,6 +2025,8 @@
   "infoUrl": "https://www.city.sendai.jp/kodomo-wakamonokikaku/ibasho/chukoseiibasho.html",
   "address": "若林区文化センター：仙台市若林区南小泉1-1-1,せんだいメディアテーク：仙台市青葉区春日町2-1",
   "station": "地下鉄薬師堂駅方面,地下鉄勾当台公園駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 38.241596,
   "lng": 140.896194
  },
@@ -1978,6 +2068,8 @@
   "infoUrl": "https://www.myu.ac.jp/academics/news/folder002/9179/",
   "address": "〒981-3298 宮城県黒川郡大和町学苑1-1 宮城大学大和キャンパス",
   "station": "仙台市地下鉄泉中央駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 38.3489,
   "lng": 140.840469
  },
@@ -2021,6 +2113,8 @@
   "infoUrl": "https://www.tedic.jp/about-us/",
   "address": "〒986-0824 宮城県石巻市立町1-24 駅前山田ビル2階",
   "station": "JR石巻駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 38.432144,
   "lng": 141.307465
  },
@@ -2064,6 +2158,8 @@
   "infoUrl": "https://asuiku.org/freeschool/index.html",
   "address": "仙台市宮城野区榴岡3-11-10 1階,泉区泉中央1-18-14 302,太白区長町1-5-14 103",
   "station": "JR仙台駅,地下鉄泉中央駅,地下鉄長町一丁目駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 38.260693,
   "lng": 140.891235
  },
@@ -2109,6 +2205,8 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/genre/iwaki-sizen",
   "address": "〒018-1215 秋田県由利本荘市岩城赤平字長ヶ沢260-8",
   "station": "JR羽越本線岩城みなと駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 39.506226,
   "lng": 140.075943
  },
@@ -2154,6 +2252,8 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/genre/horowa-sizen",
   "address": "〒013-0561 秋田県横手市大森町八沢木字大木屋73",
   "station": "JR横手駅方面から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 39.360439,
   "lng": 140.351334
  },
@@ -2199,6 +2299,8 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/genre/oodate-sizen",
   "address": "〒017-0023 秋田県大館市東字岩神沢31",
   "station": "JR大館駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 40.280739,
   "lng": 140.592361
  },
@@ -2241,6 +2343,8 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/archive/204",
   "address": "〒011-0905 秋田県秋田市寺内神屋敷3-1",
   "station": "JR秋田駅からバス,青少年交流センター前方面",
+  "image": "",
+  "logo": "",
   "lat": 39.731747,
   "lng": 140.081528
  },
@@ -2276,9 +2380,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.akita-u.ac.jp/honbu/",
-  "infoUrl": "https://www.akita-u.ac.jp/honbu/exam/pdf/pamphlet/r7\\_lab.pdf",
+  "infoUrl": "https://www.akita-u.ac.jp/honbu/exam/pdf/pamphlet/r7_lab.pdf",
   "address": "〒010-8502 秋田県秋田市手形学園町1-1 秋田大学手形キャンパスほか",
   "station": "JR秋田駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 39.726997,
   "lng": 140.134094
  },
@@ -2316,6 +2422,8 @@
   "infoUrl": "https://www.city.akita.lg.jp/kurashi/shakai-shogai/1008469/1008847/1047108.html",
   "address": "秋田市立図書館の指定館,詳細は公式ページで確認",
   "station": "利用館により異なる",
+  "image": "",
+  "logo": "",
   "lat": 39.719959,
   "lng": 140.103516
  },
@@ -2353,9 +2461,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.akita-u.ac.jp/honbu/",
-  "infoUrl": "https://www.akita-u.ac.jp/honbu/event/img/mix5743\\_01\\_dl.pdf",
+  "infoUrl": "https://www.akita-u.ac.jp/honbu/event/img/mix5743_01_dl.pdf",
   "address": "手形キャンパス：秋田市手形学園町1-1,本道キャンパス：秋田市本道1-1-1",
   "station": "JR秋田駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 39.729813,
   "lng": 140.136017
  },
@@ -2401,6 +2511,8 @@
   "infoUrl": "https://www.pref.yamagata.jp/701005/bunkyo/wakamonoseishounen/kyouikushisetsu/seinennoie/index.html",
   "address": "〒994-0032 山形県天童市小路1-7-8",
   "station": "JR天童駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 38.355942,
   "lng": 140.373215
  },
@@ -2446,6 +2558,8 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒990-1101 山形県西村山郡大江町左沢字楯山2523-5",
   "station": "JR左沢駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 38.383934,
   "lng": 140.204773
  },
@@ -2491,6 +2605,8 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒997-0369 山形県鶴岡市高坂字杉ヶ沢54-1",
   "station": "JR鶴岡駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 38.698772,
   "lng": 139.802643
  },
@@ -2536,6 +2652,8 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒999-0605 山形県西置賜郡飯豊町添川3535-33",
   "station": "JR羽前椿駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 38.030071,
   "lng": 140.014679
  },
@@ -2581,6 +2699,8 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒999-5301 山形県最上郡真室川町川ノ内字水上山3414-5",
   "station": "JR真室川駅から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 38.913792,
   "lng": 140.279755
  },
@@ -2620,6 +2740,8 @@
   "infoUrl": "https://www.cid.yamagata-u.ac.jp/2111/",
   "address": "〒990-8560 山形県山形市小白川町1-4-12 山形大学小白川キャンパスほか",
   "station": "JR山形駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 38.246128,
   "lng": 140.349655
  },
@@ -2660,6 +2782,8 @@
   "infoUrl": "https://www.yamagata-u.ac.jp/jp/",
   "address": "〒990-8560 山形県山形市小白川町1-4-12 山形大学小白川キャンパスほか",
   "station": "JR山形駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 38.246128,
   "lng": 140.349655
  },
@@ -2699,6 +2823,8 @@
   "infoUrl": "https://www.yamagata-u.ac.jp/jp/information/press/20250508/01-1/",
   "address": "〒990-8560 山形県山形市小白川町1-4-12 山形大学小白川キャンパス",
   "station": "JR山形駅からバス,オンライン受講あり",
+  "image": "",
+  "logo": "",
   "lat": 38.246128,
   "lng": 140.349655
  },
@@ -2744,6 +2870,8 @@
   "infoUrl": "https://koriyama-nc.fcs.ed.jp/",
   "address": "〒963-0213 福島県郡山市逢瀬町多田野字中丸山46",
   "station": "JR郡山駅から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 37.386406,
   "lng": 140.276199
  },
@@ -2789,6 +2917,8 @@
   "infoUrl": "https://www.aizu-shizen.jp/",
   "address": "〒969-6504 福島県河沼郡会津坂下町八日沢字西東山4495-1",
   "station": "JR会津坂下駅方面から車,交通を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 37.580326,
   "lng": 139.794983
  },
@@ -2834,6 +2964,8 @@
   "infoUrl": "https://iwaki-nc.fcs.ed.jp/",
   "address": "〒979-0335 福島県いわき市久之浜町田之網字向山53",
   "station": "JR久ノ浜駅方面から車,団体交通を確認",
+  "image": "",
+  "logo": "",
   "lat": 37.122742,
   "lng": 140.988419
  },
@@ -2877,6 +3009,8 @@
   "infoUrl": "https://beans-fukushima.or.jp/",
   "address": "〒960-8066 福島県福島市矢剣町22-5",
   "station": "JR福島駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 37.749752,
   "lng": 140.45636
  },
@@ -2917,6 +3051,8 @@
   "infoUrl": "https://www.city.koriyama.lg.jp/site/manabi/1554.html",
   "address": "郡山市内の各公民館",
   "station": "利用施設により異なる",
+  "image": "",
+  "logo": "",
   "lat": 37.40044,
   "lng": 140.359634
  },
@@ -2956,6 +3092,8 @@
   "infoUrl": "https://www.pref.fukushima.lg.jp/sec/21055a/",
   "address": "固定会場なし,福島県内",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -2995,6 +3133,8 @@
   "infoUrl": "https://www.pref.fukushima.lg.jp/sec/32021b/fukushimainobe-shonn.html",
   "address": "福島県内の指定会場",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": 37.750031,
   "lng": 140.467773
  },
@@ -3035,6 +3175,8 @@
   "infoUrl": "https://www.city.fukushima.fukushima.jp/shisetsu/shukai-kenshu/1596.html",
   "address": "〒960-8117 福島県福島市入江町1-1",
   "station": "福島交通バス日赤病院前から徒歩3分",
+  "image": "",
+  "logo": "",
   "lat": 37.769413,
   "lng": 140.4776
  },
@@ -3080,6 +3222,8 @@
   "infoUrl": "https://chukosei.metro.tokyo.lg.jp/report/report-2025-career-1/",
   "address": "〒100-0005 東京都千代田区丸の内3-8-3",
   "station": "JR有楽町駅から徒歩1分",
+  "image": "",
+  "logo": "",
   "lat": 35.676342,
   "lng": 139.765625
  },
@@ -3124,6 +3268,8 @@
   "infoUrl": "https://tsg.metro.tokyo.lg.jp/",
   "address": "固定会場なし,東京都内会場とオンライン",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -3167,6 +3313,8 @@
   "infoUrl": "https://b-lab.tokyo/",
   "address": "〒113-0034 東京都文京区湯島4-7-10",
   "station": "東京メトロ本郷三丁目駅・湯島駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.709194,
   "lng": 139.765289
  },
@@ -3211,6 +3359,8 @@
   "infoUrl": "https://ups-s.com/",
   "address": "〒156-0055 東京都世田谷区船橋6-25-1 3階",
   "station": "小田急線千歳船橋駅・京王線八幡山駅から徒歩約20分",
+  "image": "",
+  "logo": "",
   "lat": 35.658653,
   "lng": 139.621246
  },
@@ -3254,6 +3404,8 @@
   "infoUrl": "https://www.city.setagaya.lg.jp/02412/8950.html",
   "address": "〒154-0004 東京都世田谷区太子堂2-16-7 世田谷区役所三軒茶屋分庁舎5階",
   "station": "東急田園都市線・世田谷線三軒茶屋駅から徒歩3分",
+  "image": "",
+  "logo": "",
   "lat": 35.644386,
   "lng": 139.670822
  },
@@ -3291,6 +3443,8 @@
   "infoUrl": "https://www.city.adachi.tokyo.jp/sg-shien/cyukouseifree.html",
   "address": "足立区内の地域学習センター等14施設",
   "station": "利用施設により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.775002,
   "lng": 139.804733
  },
@@ -3333,6 +3487,8 @@
   "infoUrl": "https://gsc.iis.u-tokyo.ac.jp/",
   "address": "〒153-8505 東京都目黒区駒場4-6-1 東京大学駒場リサーチキャンパス",
   "station": "京王井の頭線駒場東大前駅・東北沢駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.66407,
   "lng": 139.677353
  },
@@ -3378,6 +3534,8 @@
   "infoUrl": "https://nyc.niye.go.jp/",
   "address": "〒151-0052 東京都渋谷区代々木神園町3-1",
   "station": "小田急線参宮橋駅から徒歩約7分",
+  "image": "",
+  "logo": "",
   "lat": 35.673958,
   "lng": 139.69165
  },
@@ -3420,6 +3578,8 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/ch3/kagaku/index.html",
   "address": "〒243-0018 神奈川県厚木市中町4-16-21 プロミティあつぎ2階",
   "station": "小田急線本厚木駅から徒歩約5分",
+  "image": "",
+  "logo": "",
   "lat": 35.439274,
   "lng": 139.361343
  },
@@ -3463,6 +3623,8 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/ch3/cnt/f100213/momijizaka-hall.html",
   "address": "〒220-0044 神奈川県横浜市西区紅葉ケ丘9-1",
   "station": "JR・市営地下鉄桜木町駅から徒歩約8分",
+  "image": "",
+  "logo": "",
   "lat": 35.452072,
   "lng": 139.626038
  },
@@ -3507,6 +3669,8 @@
   "infoUrl": "https://yokohama-youth.jp/kkspace/",
   "address": "〒231-0062 神奈川県横浜市中区桜木町1-1 ぴおシティ6階",
   "station": "JR桜木町駅から徒歩3分,市営地下鉄桜木町駅から徒歩1分",
+  "image": "",
+  "logo": "",
   "lat": 35.453564,
   "lng": 139.629242
  },
@@ -3551,6 +3715,8 @@
   "infoUrl": "https://yokohama-youth.jp/ikusei/shisetsu/",
   "address": "〒231-8454 神奈川県横浜市中区住吉町4-42-1 関内ホール地下1階",
   "station": "JR関内駅から徒歩7分,地下鉄関内駅・みなとみらい線馬車道駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.447186,
   "lng": 139.636246
  },
@@ -3596,6 +3762,8 @@
   "infoUrl": "https://yokohama-youth.jp/kenshu/",
   "address": "〒236-0025 神奈川県横浜市金沢区野島町24-2",
   "station": "シーサイドライン野島公園駅から徒歩約8分",
+  "image": "",
+  "logo": "",
   "lat": 35.325848,
   "lng": 139.635849
  },
@@ -3641,6 +3809,8 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/v3p/cnt/f531670/index.html",
   "address": "〒243-0307 神奈川県愛甲郡愛川町半原3390",
   "station": "小田急線本厚木駅からバス,車利用推奨",
+  "image": "",
+  "logo": "",
   "lat": 35.536293,
   "lng": 139.262482
  },
@@ -3686,6 +3856,8 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/v3p/cnt/f531670/index.html",
   "address": "〒250-0121 神奈川県南足柄市広町1507",
   "station": "伊豆箱根鉄道大雄山駅からバス・徒歩,車利用推奨",
+  "image": "",
+  "logo": "",
   "lat": 35.311287,
   "lng": 139.079666
  },
@@ -3727,6 +3899,8 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/dx-portal/info/vyc.html",
   "address": "オンライン",
   "station": "オンライン",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -3768,6 +3942,8 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/a0803/news/page/news2026061501.html",
   "address": "〒330-0843 埼玉県さいたま市大宮区吉敷町4-262-18 ekismさいたま新都心5階 Shibusawa Mix",
   "station": "JRさいたま新都心駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.895111,
   "lng": 139.63324
  },
@@ -3805,10 +3981,12 @@
    "継続参加"
   ],
   "status": "掲載推奨",
-  "url": "https://www.saitama-u.ac.jp/seminar\\_archives/202603311000.html",
-  "infoUrl": "https://www.saitama-u.ac.jp/seminar\\_archives/202603311000.html",
+  "url": "https://www.saitama-u.ac.jp/seminar_archives/202603311000.html",
+  "infoUrl": "https://www.saitama-u.ac.jp/seminar_archives/202603311000.html",
   "address": "〒338-8570 埼玉県さいたま市桜区下大久保255 埼玉大学",
   "station": "JR南与野駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.862579,
   "lng": 139.608246
  },
@@ -3851,6 +4029,8 @@
   "infoUrl": "https://www.city.saitama.lg.jp/008/017/003/p034831.html",
   "address": "〒330-0051 埼玉県さいたま市浦和区駒場2-3-45",
   "station": "JR浦和駅・北浦和駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.87212,
   "lng": 139.66481
  },
@@ -3892,6 +4072,8 @@
   "infoUrl": "https://www.city.saitama.lg.jp/003/002/006/p072844.html",
   "address": "桜木ルーム：さいたま市大宮区桜木町2-190,南浦和ルーム：さいたま市南区南浦和2-27-16",
   "station": "JR大宮駅,JR南浦和駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.906464,
   "lng": 139.620438
  },
@@ -3937,6 +4119,8 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/shisetsu/taiken/009.html",
   "address": "〒355-0337 埼玉県比企郡小川町木呂子561",
   "station": "JR竹沢駅から徒歩約30分,東武竹沢駅から徒歩約40分",
+  "image": "",
+  "logo": "",
   "lat": 36.080875,
   "lng": 139.226547
  },
@@ -3982,6 +4166,8 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/shisetsu/taiken/010.html",
   "address": "〒357-0111 埼玉県飯能市上名栗1289-2",
   "station": "西武秩父線正丸駅から徒歩約90分,車利用推奨",
+  "image": "",
+  "logo": "",
   "lat": 35.910126,
   "lng": 139.1465
  },
@@ -4026,6 +4212,8 @@
   "infoUrl": "https://www.city.chiba.jp/faq/kodomomirai/kodomomirai/kikaku/1584.html",
   "address": "〒260-0013 千葉県千葉市中央区中央4-5-1 Qiball3階から5階",
   "station": "京成千葉中央駅から徒歩約5分,千葉都市モノレール葭川公園駅から徒歩約4分",
+  "image": "",
+  "logo": "",
   "lat": 35.607548,
   "lng": 140.12233
  },
@@ -4070,6 +4258,8 @@
   "infoUrl": "https://www.city.funabashi.lg.jp/shisetsu/bunka/0003/0001/0001/p011088.html",
   "address": "〒273-0013 千葉県船橋市若松3-3-4",
   "station": "JR南船橋駅から徒歩約10分",
+  "image": "",
+  "logo": "",
   "lat": 35.677418,
   "lng": 139.991913
  },
@@ -4112,6 +4302,8 @@
   "infoUrl": "https://stella.e.chiba-u.jp/wp-content/uploads/2026/05/27c8aaf1ef9337125d07e1477ba71ad0.pdf",
   "address": "〒263-8522 千葉県千葉市稲毛区弥生町1-33 千葉大学西千葉キャンパス",
   "station": "JR西千葉駅から徒歩約2分",
+  "image": "",
+  "logo": "",
   "lat": 35.625977,
   "lng": 140.103653
  },
@@ -4154,6 +4346,8 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/keishi/sougyou/kigyou-ikusei.html",
   "address": "〒271-0092 千葉県松戸市松戸1389-1 松戸市民会館ほか",
   "station": "JR・新京成線松戸駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.78091,
   "lng": 139.900177
  },
@@ -4195,6 +4389,8 @@
   "infoUrl": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kenzenikusei/seishonen/sougousoudanncenter.html",
   "address": "〒261-0003 千葉県千葉市美浜区高浜2-1-16 千葉市こころの健康センター内",
   "station": "JR稲毛駅・稲毛海岸駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.61702,
   "lng": 140.072815
  },
@@ -4240,6 +4436,8 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kouhou/profile/shisetsu/shizen.html",
   "address": "〒289-0313 千葉県香取市小見川5249-1",
   "station": "JR小見川駅から車,送迎等を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 35.858913,
   "lng": 140.613144
  },
@@ -4285,6 +4483,8 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kouhou/profile/shisetsu/shizen.html",
   "address": "〒292-0526 千葉県君津市笹字片倉1661-1",
   "station": "JR上総亀山駅から車,車利用推奨",
+  "image": "",
+  "logo": "",
   "lat": 35.201393,
   "lng": 140.074387
  },
@@ -4327,6 +4527,8 @@
   "infoUrl": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2026/04/idp-youkou.pdf",
   "address": "固定会場なし,茨城県内各地",
   "station": "活動・発表会場により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -4365,6 +4567,8 @@
   "infoUrl": "https://www.tsukuba.ac.jp/events/20260511110510.html",
   "address": "〒305-8577 茨城県つくば市天王台1-1-1 筑波大学",
   "station": "つくばエクスプレスつくば駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.108723,
   "lng": 140.100632
  },
@@ -4405,6 +4609,8 @@
   "infoUrl": "https://www.city.tsukuba.lg.jp/soshikikarasagasu/kyoikukyokushogaigakushusuishinka/gyomuannai/2/1/1001591.html",
   "address": "つくば市内の指定会場",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": 36.083611,
   "lng": 140.076385
  },
@@ -4450,6 +4656,8 @@
   "infoUrl": "https://c-seinen.net/",
   "address": "〒300-4101 茨城県土浦市永井987",
   "station": "JR神立駅から車約15分,JR土浦駅から車約20分",
+  "image": "",
+  "logo": "",
   "lat": 36.160763,
   "lng": 140.182678
  },
@@ -4495,6 +4703,8 @@
   "infoUrl": "https://www.sashima-sss.com/",
   "address": "〒306-0416 茨城県猿島郡境町伏木2095-3",
   "station": "鉄道駅から遠いためバス・車利用,送迎条件を確認",
+  "image": "",
+  "logo": "",
   "lat": 36.089569,
   "lng": 139.84053
  },
@@ -4538,6 +4748,8 @@
   "infoUrl": "https://youth-i.com/access/index.html",
   "address": "〒310-0034 茨城県水戸市緑町1-1-18",
   "station": "JR水戸駅からバス,青少年会館前または歴史館偕楽園入口下車",
+  "image": "",
+  "logo": "",
   "lat": 36.379173,
   "lng": 140.452301
  },
@@ -4582,6 +4794,8 @@
   "infoUrl": "https://www.city.utsunomiya.lg.jp/kurashi/kyodo/chiiki/1006231.html",
   "address": "〒321-0962 栃木県宇都宮市今泉町3007",
   "station": "JR宇都宮駅からバス,今泉八丁目下車",
+  "image": "",
+  "logo": "",
   "lat": 36.573429,
   "lng": 139.91571
  },
@@ -4621,6 +4835,8 @@
   "infoUrl": "https://koudai.mine.utsunomiya-u.ac.jp/ip-u/",
   "address": "〒321-8505 栃木県宇都宮市峰町350 宇都宮大学峰キャンパス",
   "station": "JR宇都宮駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.550312,
   "lng": 139.914886
  },
@@ -4663,6 +4879,8 @@
   "infoUrl": "https://tochigi-ysn.net/",
   "address": "〒320-0862 栃木県宇都宮市西原1-3-4 aret",
   "station": "東武宇都宮駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.556118,
   "lng": 139.873032
  },
@@ -4708,6 +4926,8 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/kyouiku/shougaigakushuu/shisetsu/index.html",
   "address": "〒329-4308 栃木県栃木市岩舟町下津原1808-1",
   "station": "JR岩舟駅から車約10分,栃木駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.316952,
   "lng": 139.641418
  },
@@ -4753,6 +4973,8 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/kyouiku/shougaigakushuu/shisetsu/index.html",
   "address": "〒325-0301 栃木県那須郡那須町湯本157",
   "station": "JR那須塩原駅・黒磯駅からバス,車利用推奨",
+  "image": "",
+  "logo": "",
   "lat": 37.120468,
   "lng": 139.985626
  },
@@ -4798,6 +5020,8 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/kyouiku/shougaigakushuu/shisetsu/index.html",
   "address": "〒311-1412 茨城県鉾田市玉田336-2",
   "station": "公共交通が限られるため団体バス・車利用を確認",
+  "image": "",
+  "logo": "",
   "lat": 36.218349,
   "lng": 140.563049
  },
@@ -4841,6 +5065,8 @@
   "infoUrl": "https://gunma-tsukurun.jp/go/",
   "address": "〒371-0024 群馬県前橋市表町2-30-8 AQERU前橋2階",
   "station": "JR前橋駅北口から徒歩1分",
+  "image": "",
+  "logo": "",
   "lat": 36.384182,
   "lng": 139.071503
  },
@@ -4884,6 +5110,8 @@
   "infoUrl": "https://www.pref.gunma.jp/page/643539.html",
   "address": "〒370-0044 群馬県高崎市岩押町12-24 Gメッセ群馬4階",
   "station": "JR高崎駅から徒歩約15分",
+  "image": "",
+  "logo": "",
   "lat": 36.318714,
   "lng": 139.021667
  },
@@ -4929,6 +5157,8 @@
   "infoUrl": "https://www.pref.gunma.jp/page/22129.html",
   "address": "〒377-0702 群馬県吾妻郡高山村中山6853-18",
   "station": "公共交通が限られるため団体バス・車利用を確認",
+  "image": "",
+  "logo": "",
   "lat": 36.621689,
   "lng": 138.959335
  },
@@ -4974,6 +5204,8 @@
   "infoUrl": "https://www.pref.gunma.jp/page/22129.html",
   "address": "〒379-2301 群馬県太田市藪塚町3657",
   "station": "東武桐生線藪塚駅から車,交通手段を施設へ確認",
+  "image": "",
+  "logo": "",
   "lat": 36.373169,
   "lng": 139.323685
  },
@@ -5017,6 +5249,8 @@
   "infoUrl": "https://www.pref.gunma.jp/page/22129.html",
   "address": "〒371-0044 群馬県前橋市荒牧町2-12",
   "station": "JR前橋駅からバス,車利用も確認",
+  "image": "",
+  "logo": "",
   "lat": 36.422947,
   "lng": 139.057587
  },
@@ -5062,6 +5296,8 @@
   "infoUrl": "https://akagi.niye.go.jp/",
   "address": "〒371-0101 群馬県前橋市富士見町赤城山27",
   "station": "JR前橋駅からバス・車,交通手段を事前確認",
+  "image": "",
+  "logo": "",
   "lat": 36.482712,
   "lng": 139.12471
  },
@@ -5100,6 +5336,8 @@
   "infoUrl": "https://www.gunma-u.ac.jp/information/229439",
   "address": "〒376-8515 群馬県桐生市天神町1-5-1 群馬大学桐生キャンパス",
   "station": "JR桐生駅・東武新桐生駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.423496,
   "lng": 139.348389
  },
@@ -5146,6 +5384,8 @@
   "infoUrl": "https://www.city.suginami.tokyo.jp/s059/shisetsu/14006.html",
   "address": "〒167-0051 東京都杉並区荻窪1-56-3",
   "station": "東京メトロ南阿佐ケ谷駅から徒歩12分,JR荻窪駅から徒歩15分",
+  "image": "",
+  "logo": "",
   "lat": 35.694511,
   "lng": 139.628098
  },
@@ -5183,10 +5423,12 @@
    "Wi-Fiあり"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.fuchu.tokyo.jp/kosodate/kyoiku/ikuse/chuukouseisedaiibasyo\\_Co-KoPlace.html",
-  "infoUrl": "https://www.city.fuchu.tokyo.jp/kosodate/kyoiku/ikuse/chuukouseisedaiibasyo\\_Co-KoPlace.html",
+  "url": "https://www.city.fuchu.tokyo.jp/kosodate/kyoiku/ikuse/chuukouseisedaiibasyo_Co-KoPlace.html",
+  "infoUrl": "https://www.city.fuchu.tokyo.jp/kosodate/kyoiku/ikuse/chuukouseisedaiibasyo_Co-KoPlace.html",
   "address": "東京都府中市住吉町1-61 住吉文化センター,東京都府中市白糸台1-60 白糸台文化センター",
   "station": "京王線中河原駅,西武多摩川線白糸台駅",
+  "image": "",
+  "logo": "",
   "lat": 35.660294,
   "lng": 139.46051
  },
@@ -5228,10 +5470,12 @@
    "複数拠点"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.edogawa.tokyo.jp/kyoiku\\_plaza/",
-  "infoUrl": "https://www.city.edogawa.tokyo.jp/kyoiku\\_plaza/riyo/index.html",
+  "url": "https://www.city.edogawa.tokyo.jp/kyoiku_plaza/",
+  "infoUrl": "https://www.city.edogawa.tokyo.jp/kyoiku_plaza/riyo/index.html",
   "address": "江戸川区内7館,平井,一之江,葛西,小岩,南小岩,南篠崎,中央",
   "station": "利用施設により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.706738,
   "lng": 139.868057
  },
@@ -5276,6 +5520,8 @@
   "infoUrl": "https://www.city.itabashi.tokyo.jp/kyoikuiinkai/shogai/manaport/ohara/1041024.html",
   "address": "〒174-0061 東京都板橋区大原町5-18",
   "station": "都営三田線本蓮沼駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.770012,
   "lng": 139.699997
  },
@@ -5321,6 +5567,8 @@
   "infoUrl": "https://www.city.itabashi.tokyo.jp/kyoikuiinkai/shogai/manaport/narimasu/1037691.html",
   "address": "〒175-0094 東京都板橋区成増1-12-4",
   "station": "東京メトロ地下鉄成増駅,東武東上線成増駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.774536,
   "lng": 139.632736
  },
@@ -5367,6 +5615,8 @@
   "infoUrl": "https://www.musashino.or.jp/place/1001607/1001611.html",
   "address": "〒180-0023 東京都武蔵野市境南町2-3-18",
   "station": "JR中央線,西武多摩川線武蔵境駅南口から徒歩1分",
+  "image": "",
+  "logo": "",
   "lat": 35.700844,
   "lng": 139.543655
  },
@@ -5412,6 +5662,8 @@
   "infoUrl": "https://www.city.toshima.lg.jp/256/kosodate/kosodate/hokago/jump/005698.html",
   "address": "〒170-0013 東京都豊島区東池袋2-38-10 2階",
   "station": "JR大塚駅,都電荒川線向原駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.732029,
   "lng": 139.721313
  },
@@ -5456,6 +5708,8 @@
   "infoUrl": "https://www.city.toshima.lg.jp/257/kosodate/kosodate/hokago/jump/025456.html",
   "address": "〒171-0051 東京都豊島区長崎2-24-13",
   "station": "西武池袋線椎名町駅,東京メトロ要町駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.730068,
   "lng": 139.691437
  },
@@ -5500,6 +5754,8 @@
   "infoUrl": "https://www.city.chofu.lg.jp/050040/p030013.html",
   "address": "〒182-0035 東京都調布市上石原1-36-2 3階・4階",
   "station": "京王線西調布駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.659058,
   "lng": 139.532516
  },
@@ -5539,10 +5795,12 @@
    "夜間利用条件あり"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.shinjuku.lg.jp/kodomo/kodomos01\\_001009.html",
+  "url": "https://www.city.shinjuku.lg.jp/kodomo/kodomos01_001009.html",
   "infoUrl": "https://www.city.shinjuku.lg.jp/content/000378450.pdf",
   "address": "〒160-0022 東京都新宿区新宿7-3-29 地下1階",
   "station": "東京メトロ,都営地下鉄東新宿駅,都営大江戸線若松河田駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.701225,
   "lng": 139.712662
  },
@@ -5584,9 +5842,11 @@
   ],
   "status": "条件付き掲載",
   "url": "https://www.city.nerima.tokyo.jp/kosodatekyoiku/kyoiku/seishonen/seishonenshisetsu/seishonen/kasugatyouseishounen/index.html",
-  "infoUrl": "https://www.city.nerima.tokyo.jp/shisetsu/shisetsu\\_yoyaku/shogaigakushu/bunka/kasugacho.html",
+  "infoUrl": "https://www.city.nerima.tokyo.jp/shisetsu/shisetsu_yoyaku/shogaigakushu/bunka/kasugacho.html",
   "address": "〒179-0074 東京都練馬区春日町4-16-9",
   "station": "都営大江戸線練馬春日町駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.752403,
   "lng": 139.639008
  },
@@ -5627,10 +5887,12 @@
    "未成年利用条件確認"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.shibuya.tokyo.jp/shisetsu/kosodate/seinen/daikan\\_cr.html",
+  "url": "https://www.city.shibuya.tokyo.jp/shisetsu/kosodate/seinen/daikan_cr.html",
   "infoUrl": "https://daikanyama-tc.com/",
   "address": "〒150-0034 東京都渋谷区代官山町7-9",
   "station": "東急東横線代官山駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.650822,
   "lng": 139.70517
  },
@@ -5675,6 +5937,8 @@
   "infoUrl": "https://www.city.hachioji.tokyo.jp/kurashi/kosodate/wakasienn/wakamonosougou/p027632.html",
   "address": "〒192-0082 東京都八王子市東町3-10 山善ビル3階・4階",
   "station": "JR八王子駅,京王八王子駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.658585,
   "lng": 139.341171
  },
@@ -5717,6 +5981,8 @@
   "infoUrl": "https://www.watacafe.jp/",
   "address": "〒170-0013 東京都豊島区東池袋2-60-3 グレイスロータリービル1階",
   "station": "池袋駅東口から徒歩8分",
+  "image": "",
+  "logo": "",
   "lat": 35.73325,
   "lng": 139.717392
  },
@@ -5760,6 +6026,8 @@
   "infoUrl": "https://www.sankakusha.or.jp/",
   "address": "〒170-0012 東京都豊島区上池袋4-35-12 3階",
   "station": "東武東上線北池袋駅,JR板橋駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.742409,
   "lng": 139.71994
  },
@@ -5802,6 +6070,8 @@
   "infoUrl": "https://www.kodomo-nihongo.com/",
   "address": "〒197-0011 東京都福生市福生2351-1",
   "station": "JR東福生駅,JR福生駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.738964,
   "lng": 139.337601
  },
@@ -5840,6 +6110,8 @@
   "infoUrl": "https://me-x.jp/",
   "address": "オンライン",
   "station": "オンライン",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -5882,6 +6154,8 @@
   "infoUrl": "https://gaku.school/",
   "address": "講座会場により異なる",
   "station": "講座会場により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.66367,
   "lng": 139.697723
  },
@@ -5922,6 +6196,8 @@
   "infoUrl": "https://u-18.makers-u.jp/",
   "address": "固定会場なし,合宿・活動会場は募集要項で確認",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -5963,6 +6239,8 @@
   "infoUrl": "https://www.jfc.go.jp/n/grandprix/",
   "address": "固定会場なし,応募・支援はオンラインと各地域会場",
   "station": "開催回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -6007,6 +6285,8 @@
   "infoUrl": "https://www.city.machida.tokyo.jp/kids/institution/other/index.html",
   "address": "町田市内6施設,ばあん,つるっこ,ぱお,ただON,WAAAO,まあち",
   "station": "利用施設により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.546604,
   "lng": 139.438644
  },
@@ -6052,6 +6332,8 @@
   "infoUrl": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/ikusei/jiritsushien.html",
   "address": "横浜市鶴見区鶴見中央3-23-8,横浜市旭区二俣川1-2 二宮ビル3階,横浜市磯子区磯子3-4-23 浜田ビル2階,横浜市都筑区茅ケ崎中央11-3 3階",
   "station": "鶴見駅,二俣川駅,磯子駅,センター南駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.50766,
   "lng": 139.68367
  },
@@ -6097,6 +6379,8 @@
   "infoUrl": "https://www.yumepark.net/",
   "address": "〒213-0033 神奈川県川崎市高津区下作延5-30-1",
   "station": "JR南武線津田山駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.605423,
   "lng": 139.597031
  },
@@ -6143,6 +6427,8 @@
   "infoUrl": "https://kurokawa-yagai.com/group/",
   "address": "〒215-0035 神奈川県川崎市麻生区黒川313-9",
   "station": "小田急多摩線黒川駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.611107,
   "lng": 139.468521
  },
@@ -6189,6 +6475,8 @@
   "infoUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/shisetsu/school/kyoiku/1003060.html",
   "address": "〒252-0207 神奈川県相模原市中央区矢部新町3-15",
   "station": "JR横浜線矢部駅から徒歩3分",
+  "image": "",
+  "logo": "",
   "lat": 35.574455,
   "lng": 139.387604
  },
@@ -6233,6 +6521,8 @@
   "infoUrl": "https://f-mirai.jp/youth/fujisawa/personal",
   "address": "〒251-0054 神奈川県藤沢市朝日町10-8",
   "station": "JR,小田急,江ノ島電鉄藤沢駅北口から徒歩9分",
+  "image": "",
+  "logo": "",
   "lat": 35.340141,
   "lng": 139.492264
  },
@@ -6276,6 +6566,8 @@
   "infoUrl": "https://f-mirai.jp/youth/tujidou",
   "address": "〒251-0047 神奈川県藤沢市辻堂2-8-31",
   "station": "JR東海道線辻堂駅南口から徒歩3分",
+  "image": "",
+  "logo": "",
   "lat": 35.336079,
   "lng": 139.446167
  },
@@ -6321,6 +6613,8 @@
   "infoUrl": "https://f-mirai.jp/youth/mori/events",
   "address": "〒252-0824 神奈川県藤沢市打戻2345",
   "station": "長後駅,湘南台駅,辻堂駅からバス,最寄り停留所から徒歩10分",
+  "image": "",
+  "logo": "",
   "lat": 35.398285,
   "lng": 139.419815
  },
@@ -6365,6 +6659,8 @@
   "infoUrl": "https://minicity-plus.jp/miniyoko-blog/",
   "address": "固定会場なし,横浜市内・県内の活動会場",
   "station": "活動回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -6408,6 +6704,8 @@
   "infoUrl": "https://www.city.yokohama.lg.jp/kosodate-kyoiku/ikusei/shisetsu/yakatsu.html",
   "address": "横浜市神奈川区三ツ沢西町3-1,横浜市青葉区鉄町1380,横浜市旭区大池町65-1",
   "station": "三ツ沢上町駅,市が尾駅,二俣川駅などから徒歩・バス",
+  "image": "",
+  "logo": "",
   "lat": 35.470428,
   "lng": 139.602768
  },
@@ -6454,6 +6752,8 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/shisetsu/taiken/014.html",
   "address": "〒369-1901 埼玉県秩父市大滝5944-2",
   "station": "秩父鉄道三峰口駅からタクシー約30分,秩父湖バス停から徒歩約4km",
+  "image": "",
+  "logo": "",
   "lat": 35.910919,
   "lng": 138.829224
  },
@@ -6500,6 +6800,8 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/shisetsu/taiken/011.html",
   "address": "〒369-1312 埼玉県秩父郡長瀞町井戸367",
   "station": "秩父鉄道野上駅から徒歩10分",
+  "image": "",
+  "logo": "",
   "lat": 36.104225,
   "lng": 139.118683
  },
@@ -6547,6 +6849,8 @@
   "infoUrl": "https://saitamayouthnet.org/our-business/tamariba/",
   "address": "〒337-0052 埼玉県さいたま市見沼区堀崎町12-39 ほか複数拠点",
   "station": "東武アーバンパークライン大和田駅から徒歩約15分,事業により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.937374,
   "lng": 139.65181
  },
@@ -6592,6 +6896,8 @@
   "infoUrl": "https://shibusawa-mix.pref.saitama.lg.jp/program/bizcon-cafe-2026/",
   "address": "〒330-0843 埼玉県さいたま市大宮区吉敷町4-262-18 ekismさいたま新都心5階",
   "station": "JRさいたま新都心駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.895111,
   "lng": 139.63324
  },
@@ -6634,6 +6940,8 @@
   "infoUrl": "https://www.kawaguchi.science.museum/",
   "address": "〒333-0844 埼玉県川口市上青木3-12-18 SKIPシティ内",
   "station": "JR川口駅,西川口駅,埼玉高速鉄道鳩ヶ谷駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.827053,
   "lng": 139.719635
  },
@@ -6669,10 +6977,12 @@
    "対面"
   ],
   "status": "掲載推奨",
-  "url": "https://www.pref.saitama.lg.jp/g2209/library-info/202608\\_tyuukousei.html",
-  "infoUrl": "https://www.pref.saitama.lg.jp/g2209/library-info/202608\\_tyuukousei.html",
+  "url": "https://www.pref.saitama.lg.jp/g2209/library-info/202608_tyuukousei.html",
+  "infoUrl": "https://www.pref.saitama.lg.jp/g2209/library-info/202608_tyuukousei.html",
   "address": "〒330-0803 埼玉県さいたま市大宮区高鼻町4-219 県立歴史と民俗の博物館",
   "station": "東武アーバンパークライン大宮公園駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.921021,
   "lng": 139.630447
  },
@@ -6716,6 +7026,8 @@
   "infoUrl": "https://shizen.spec.ed.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%B8%80%E8%A6%A7",
   "address": "〒369-1305 埼玉県秩父郡長瀞町長瀞1417-1",
   "station": "秩父鉄道上長瀞駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 36.094967,
   "lng": 139.10228
  },
@@ -6757,6 +7069,8 @@
   "infoUrl": "https://www.city.kashiwa.lg.jp/shogaigakushu/seishonen/hiroba.html",
   "address": "〒277-0005 千葉県柏市柏4-9-7 TeToTe 5階",
   "station": "JR常磐線,東武アーバンパークライン柏駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.863811,
   "lng": 139.972809
  },
@@ -6799,10 +7113,12 @@
    "夜間利用可"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku\\_chugaku/chukosei/seishounenplaza.html",
-  "infoUrl": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku\\_chugaku/chukosei/seishounenplaza.html",
+  "url": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/seishounenplaza.html",
+  "infoUrl": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/seishounenplaza.html",
   "address": "〒270-2225 千葉県松戸市東松戸2-14-1 ひがまつテラス2階",
   "station": "JR武蔵野線,北総線東松戸駅東口から徒歩4分",
+  "image": "",
+  "logo": "",
   "lat": 35.770096,
   "lng": 139.947266
  },
@@ -6840,10 +7156,12 @@
    "複数拠点"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku\\_chugaku/chukosei/chuukouseinoibasho.html",
-  "infoUrl": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku\\_chugaku/chukosei/index.html",
+  "url": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/chuukouseinoibasho.html",
+  "infoUrl": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/index.html",
   "address": "松戸市内4地域,松戸,新松戸,元山,八柱",
   "station": "利用会場により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.787666,
   "lng": 139.903198
  },
@@ -6890,6 +7208,8 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kyouiku/shougaku/shisetsu/kyouikushisetsu/index.html",
   "address": "〒270-1456 千葉県柏市泉1240-1",
   "station": "JR柏駅,我孫子駅などからバス・車,施設案内を確認",
+  "image": "",
+  "logo": "",
   "lat": 35.84277,
   "lng": 140.056976
  },
@@ -6936,6 +7256,8 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kyouiku/shougaku/shisetsu/kyouikushisetsu/index.html",
   "address": "〒299-2862 千葉県鴨川市太海122-1",
   "station": "JR内房線太海駅から徒歩・送迎等を施設に確認",
+  "image": "",
+  "logo": "",
   "lat": 35.085014,
   "lng": 140.090652
  },
@@ -6982,6 +7304,8 @@
   "infoUrl": "https://www.skplaza.pref.chiba.lg.jp/kouza/R8",
   "address": "〒277-0882 千葉県柏市柏の葉4-3-1",
   "station": "つくばエクスプレス柏の葉キャンパス駅,JR柏駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.896629,
   "lng": 139.934052
  },
@@ -7023,6 +7347,8 @@
   "infoUrl": "https://www.city.chiba.jp/kyoiku/shogaigakushu/shogaigakushu/ikupuro/ikupuro.html",
   "address": "固定会場なし,千葉市内・千葉県内の研究機関や企業",
   "station": "講座ごとに異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -7065,6 +7391,8 @@
   "infoUrl": "https://www.kagakukanq.com/",
   "address": "〒260-0013 千葉県千葉市中央区中央4-5-1 きぼーる7階から10階",
   "station": "京成千葉中央駅から徒歩6分,千葉都市モノレール葭川公園駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.607548,
   "lng": 140.12233
  },
@@ -7105,6 +7433,8 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kyouiku/seisaku/kyaria/tankyu/tankyu-index.html",
   "address": "指定推進校・連携先により異なる",
   "station": "学校・会場により異なる",
+  "image": "",
+  "logo": "",
   "lat": 35.604561,
   "lng": 140.123154
  },
@@ -7147,6 +7477,8 @@
   "infoUrl": "https://kyoiku.pref.ibaraki.jp/gakko/compulsory-education/gakuryoku/global-leader/",
   "address": "固定会場なし,県内研修会場とオンライン",
   "station": "研修回により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -7186,6 +7518,8 @@
   "infoUrl": "https://www.city.tsukuba.lg.jp/soshikikarasagasu/shichokoshitsukochoshitsu/gyomuannai/2/14248.html",
   "address": "〒305-0031 茨城県つくば市吾妻1-10-1 つくばセンタービル コリドイオ",
   "station": "つくばエクスプレスつくば駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.081463,
   "lng": 140.114151
  },
@@ -7232,6 +7566,8 @@
   "infoUrl": "https://www.city.mito.lg.jp/site/young-nature/",
   "address": "〒311-4161 茨城県水戸市全隈町80-1",
   "station": "JR赤塚駅から車約10分,公共交通は施設に確認",
+  "image": "",
+  "logo": "",
   "lat": 36.408718,
   "lng": 140.38504
  },
@@ -7275,6 +7611,8 @@
   "infoUrl": "https://www.expocenter.or.jp/",
   "address": "〒305-0031 茨城県つくば市吾妻2-9",
   "station": "つくばエクスプレスつくば駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 36.085747,
   "lng": 140.111526
  },
@@ -7318,6 +7656,8 @@
   "infoUrl": "https://t-csm.jp/",
   "address": "〒321-0151 栃木県宇都宮市西川田町567",
   "station": "東武宇都宮線西川田駅から徒歩・バス,公式交通案内を確認",
+  "image": "",
+  "logo": "",
   "lat": 36.513931,
   "lng": 139.837799
  },
@@ -7364,6 +7704,8 @@
   "infoUrl": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/index.html",
   "address": "〒321-2102 栃木県宇都宮市篠井町1885-1",
   "station": "JR宇都宮駅方面からバス・車,施設の交通案内を確認",
+  "image": "",
+  "logo": "",
   "lat": 36.692547,
   "lng": 139.826981
  },
@@ -7407,6 +7749,8 @@
   "infoUrl": "https://www.city.utsunomiya.lg.jp/kosodate/seishonen/1032847/1032964.html",
   "address": "〒320-0806 栃木県宇都宮市中央1-1-13 中央生涯学習センター4階",
   "station": "東武宇都宮線東武宇都宮駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.559063,
   "lng": 139.882492
  },
@@ -7448,8 +7792,458 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/c01/life/seishounen/seishounen/kouhou/2026mirapuro.html",
   "address": "固定会場なし,活動場所は採択企画により異なる",
   "station": "活動により異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
+ },
+ {
+  "id": "KT-103",
+  "region": "関東",
+  "pref": "栃木県",
+  "city": "宇都宮市",
+  "name": "基地ひるね",
+  "cats": [
+   "支援団体",
+   "プログラム",
+   "活動拠点",
+   "使用できる施設"
+  ],
+  "targets": [
+   "中学生",
+   "高校生",
+   "子ども・若者",
+   "高校生ボランティア"
+  ],
+  "summary": "駄菓子屋とユースセンター機能を持ち、中高生が夜まで過ごし、宿題、交流、相談、地域参加ができる居場所。",
+  "intro": "放課後に立ち寄り、おやつ、宿題、おしゃべりをして過ごせます。中高生は夜まで使える日があり、高校生ボランティアにも参加できます。",
+  "fieldTags": [
+   "居場所",
+   "自習",
+   "交流",
+   "相談",
+   "ボランティア",
+   "地域活動"
+  ],
+  "useTags": [
+   "個人利用可",
+   "予約不要",
+   "無料あり",
+   "夜間利用可",
+   "ボランティア参加"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.miyakko.net/%E5%9F%BA%E5%9C%B0%E3%81%B2%E3%82%8B%E3%81%AD",
+  "infoUrl": "https://hirune.or.jp/",
+  "address": "〒320-0057 栃木県宇都宮市中戸祭1-5-5",
+  "station": "JR宇都宮駅,東武宇都宮駅からバス,栃木医療センター付近",
+  "image": "",
+  "logo": "",
+  "lat": 36.578022,
+  "lng": 139.867233
+ },
+ {
+  "id": "KT-104",
+  "region": "関東",
+  "pref": "栃木県",
+  "city": "県内各地",
+  "name": "とちぎ子どもの未来創造大学 2026",
+  "cats": [
+   "支援団体",
+   "プログラム"
+  ],
+  "targets": [
+   "中学生",
+   "小学4年生から中学3年生",
+   "栃木県在住・在学者"
+  ],
+  "summary": "大学、企業、県の研究機関等と連携し、科学、技術、文化、歴史等の本物に触れる約130講座を提供する学習事業。",
+  "intro": "大学、企業、研究施設の人から科学、技術、歴史、文化を学び、本物の設備や資料に触れる講座を選べます。",
+  "fieldTags": [
+   "科学・研究",
+   "探究",
+   "キャリア教育",
+   "大学連携",
+   "企業連携",
+   "文化・芸術"
+  ],
+  "useTags": [
+   "個人応募",
+   "年度募集",
+   "講座ごとに申込",
+   "無料あり",
+   "有料あり",
+   "複数会場"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.pref.tochigi.lg.jp/m06/houdou/kodomodaigaku/kodomodaigaku-r8.html",
+  "infoUrl": "https://www.pref.tochigi.lg.jp/m06/houdou/kodomodaigaku/kodomodaigaku-r8.html",
+  "address": "固定会場なし,県内の大学・企業・研究機関・公民館等",
+  "station": "講座により異なる",
+  "image": "",
+  "logo": "",
+  "lat": null,
+  "lng": null
+ },
+ {
+  "id": "KT-105",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "前橋市,太田市",
+  "name": "ユースセンターこらんだむ",
+  "cats": [
+   "支援団体",
+   "プログラム",
+   "活動拠点"
+  ],
+  "targets": [
+   "10代",
+   "中学生",
+   "高校生",
+   "学校外の居場所を求める人"
+  ],
+  "summary": "10代なら誰でも無料で立ち寄り、交流、ゲーム、勉強、読書、進路相談等ができる前橋・太田のユースセンター。",
+  "intro": "10代なら無料で立ち寄り、勉強、読書、ゲーム、おしゃべりをして過ごせます。進路なども大人に相談できます。",
+  "fieldTags": [
+   "居場所",
+   "自習",
+   "相談",
+   "交流",
+   "進路",
+   "若者支援"
+  ],
+  "useTags": [
+   "個人利用可",
+   "無料",
+   "予約不要あり",
+   "複数拠点",
+   "開室日時確認"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.korandom.com/710/",
+  "infoUrl": "https://www.korandom.com/710/",
+  "address": "群馬県前橋市表町2-3-6 前橋第一ビル4階,群馬県太田市高林東町1302 太田市南ふれあいセンター内",
+  "station": "JR前橋駅から徒歩,太田会場はバス・車",
+  "image": "",
+  "logo": "",
+  "lat": 36.387604,
+  "lng": 139.072327
+ },
+ {
+  "id": "KT-106",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "前橋市",
+  "name": "群馬県生涯学習センター",
+  "cats": [
+   "プログラム",
+   "活動拠点",
+   "使用できる施設"
+  ],
+  "targets": [
+   "中学生",
+   "高校生",
+   "学校",
+   "青少年団体",
+   "県民"
+  ],
+  "summary": "学習コーナー、少年科学館、プラネタリウム、ホール、研修室、学習情報を提供する県立生涯学習施設。",
+  "intro": "学習コーナーで勉強し、科学展示やプラネタリウムを楽しめます。団体ではホールや研修室も利用できます。",
+  "fieldTags": [
+   "自習",
+   "科学・研究",
+   "天文",
+   "文化・芸術",
+   "地域活動",
+   "イベント開催"
+  ],
+  "useTags": [
+   "個人利用可",
+   "団体利用",
+   "無料あり",
+   "有料あり",
+   "予約必要あり",
+   "イベント参加"
+  ],
+  "status": "掲載推奨",
+  "url": "https://gllcenter.gsn.ed.jp/",
+  "infoUrl": "https://gllcenter.gsn.ed.jp/",
+  "address": "〒371-0801 群馬県前橋市文京町2-20-22",
+  "station": "JR前橋駅から徒歩約20分,生涯学習センター前バス停から徒歩1分",
+  "image": "",
+  "logo": "",
+  "lat": 36.376938,
+  "lng": 139.084702
+ },
+ {
+  "id": "KT-107",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "前橋市",
+  "name": "前橋市児童文化センター",
+  "cats": [
+   "プログラム",
+   "活動拠点",
+   "使用できる施設"
+  ],
+  "targets": [
+   "中学生",
+   "高校生",
+   "子ども",
+   "学校",
+   "家族"
+  ],
+  "summary": "科学、文化芸術、交通学習、プラネタリウム、クラブ・教室を通して子どもの学びと交流を支える施設。",
+  "intro": "科学や文化の展示、プラネタリウムを楽しみ、教室やクラブ活動に参加できます。",
+  "fieldTags": [
+   "科学・研究",
+   "文化・芸術",
+   "天文",
+   "探究",
+   "交流",
+   "学校連携"
+  ],
+  "useTags": [
+   "個人利用可",
+   "無料あり",
+   "有料あり",
+   "イベント参加",
+   "予約必要あり"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.city.maebashi.gunma.jp/soshiki/kyoiku/jidobunkasenta/index.html",
+  "infoUrl": "https://www.city.maebashi.gunma.jp/soshiki/kyoiku/jidobunkasenta/index.html",
+  "address": "〒371-0013 群馬県前橋市西片貝町5-8",
+  "station": "上毛電鉄城東駅から徒歩5分",
+  "image": "",
+  "logo": "",
+  "lat": 36.389248,
+  "lng": 139.088623
+ },
+ {
+  "id": "KT-108",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "高崎市",
+  "name": "高崎市青年センター",
+  "cats": [
+   "支援団体",
+   "プログラム",
+   "活動拠点",
+   "使用できる施設"
+  ],
+  "targets": [
+   "高校生",
+   "若者",
+   "青少年団体",
+   "高崎市・安中市の青少年"
+  ],
+  "summary": "青年教室、体育館、テニスコート、学習・交流活動の施設を提供する高崎市の青少年向け拠点。",
+  "intro": "青年向けの教室に参加したり、体育館やテニスコート、活動用の部屋を利用したりできます。",
+  "fieldTags": [
+   "居場所",
+   "スポーツ",
+   "文化・芸術",
+   "交流",
+   "地域活動",
+   "キャリア教育"
+  ],
+  "useTags": [
+   "個人利用可",
+   "団体利用",
+   "登録必要あり",
+   "無料あり",
+   "予約必要あり",
+   "未成年利用条件確認"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.city.takasaki.gunma.jp/page/4853.html",
+  "infoUrl": "https://www.city.takasaki.gunma.jp/page/4856.html",
+  "address": "〒370-1206 群馬県高崎市台新田町314",
+  "station": "JR倉賀野駅から徒歩・バス,公式交通案内を確認",
+  "image": "",
+  "logo": "",
+  "lat": 36.306229,
+  "lng": 139.075943
+ },
+ {
+  "id": "KT-109",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "前橋市ほか",
+  "name": "群馬県高校生リバースメンター 2026",
+  "cats": [
+   "支援団体",
+   "プログラム"
+  ],
+  "targets": [
+   "高校生",
+   "中等教育学校後期課程",
+   "群馬県在住・在学者"
+  ],
+  "summary": "高校生が知事の相談役となり、県の課題を調査し、専門家・県職員の助言を受けて政策を直接提言する事業。",
+  "intro": "県の課題を調べ、専門家や県職員と考えを深め、知事に自分の政策アイデアを直接提案できます。",
+  "fieldTags": [
+   "社会参画",
+   "探究",
+   "地域活動",
+   "政策提言",
+   "発表",
+   "キャリア教育"
+  ],
+  "useTags": [
+   "個人応募",
+   "年度募集",
+   "選考あり",
+   "無料",
+   "継続参加"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.pref.gunma.jp/page/650132.html",
+  "infoUrl": "https://www.pref.gunma.jp/site/houdou/759883.html",
+  "address": "〒371-8570 群馬県前橋市大手町1-1-1 群馬県庁ほか",
+  "station": "JR前橋駅からバス,会場により異なる",
+  "image": "",
+  "logo": "",
+  "lat": 36.391186,
+  "lng": 139.061691
+ },
+ {
+  "id": "KT-110",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "県内各地",
+  "name": "ユースチャレンジ助成 2026",
+  "cats": [
+   "支援団体",
+   "プログラム"
+  ],
+  "targets": [
+   "高校生",
+   "高専生",
+   "学生",
+   "16歳から25歳",
+   "3人以上のチーム"
+  ],
+  "summary": "学生・若者が群馬県内で行う地域活動に、上限5万円の助成と活動前・途中のミーティングを提供するプログラム。",
+  "intro": "仲間と地域で実行したい活動を計画し、活動費の助成と相談を受けられます。高校生だけのチームには大人のサポーターが必要です。",
+  "fieldTags": [
+   "地域活動",
+   "社会参画",
+   "ボランティア",
+   "自主企画",
+   "探究",
+   "助成金"
+  ],
+  "useTags": [
+   "団体応募",
+   "年度募集",
+   "助成金",
+   "継続支援",
+   "保護者同意確認",
+   "サポーター必要あり"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.gunma-mirai-kikin.org/grant-program/%E3%83%A6%E3%83%BC%E3%82%B9%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E5%8A%A9%E6%88%902026/",
+  "infoUrl": "https://www.gunma-mirai-kikin.org/grant-program/%E3%83%A6%E3%83%BC%E3%82%B9%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E5%8A%A9%E6%88%902026/",
+  "address": "固定会場なし,群馬県内の活動場所",
+  "station": "活動により異なる",
+  "image": "",
+  "logo": "",
+  "lat": null,
+  "lng": null
+ },
+ {
+  "id": "KT-111",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "高崎市",
+  "name": "観音山キャンプパーク・ジョイナス",
+  "cats": [
+   "プログラム",
+   "活動拠点",
+   "使用できる施設"
+  ],
+  "targets": [
+   "中学生",
+   "高校生",
+   "学校",
+   "青少年団体",
+   "家族"
+  ],
+  "summary": "バンガロー、テント・オートキャンプサイト、バーベキュー設備等を備えた高崎市の青少年向け自然体験施設。",
+  "intro": "バンガローやテントでキャンプし、バーベキューや自然体験ができます。家族や青少年団体で利用できます。",
+  "fieldTags": [
+   "自然体験",
+   "キャンプ",
+   "宿泊研修",
+   "環境学習",
+   "チームビルディング"
+  ],
+  "useTags": [
+   "家族利用",
+   "団体利用",
+   "予約必要",
+   "有料",
+   "宿泊可",
+   "引率者必要"
+  ],
+  "status": "掲載推奨",
+  "url": "https://www.city.takasaki.gunma.jp/page/2366.html",
+  "infoUrl": "https://www.city.takasaki.gunma.jp/page/2370.html",
+  "address": "〒370-0867 群馬県高崎市乗附町4045",
+  "station": "JR高崎駅からバス・車,公式交通案内を確認",
+  "image": "",
+  "logo": "",
+  "lat": 36.313381,
+  "lng": 138.95607
+ },
+ {
+  "id": "KT-112",
+  "region": "関東",
+  "pref": "群馬県",
+  "city": "前橋市",
+  "name": "NETSUGEN",
+  "cats": [
+   "支援団体",
+   "プログラム",
+   "活動拠点",
+   "使用できる施設"
+  ],
+  "targets": [
+   "高校生",
+   "高専生",
+   "大学生",
+   "学生",
+   "起業・地域活動に関心のある人"
+  ],
+  "summary": "群馬県庁32階で、起業、地域課題、デジタル等のイベント、交流、コワーキングを提供する官民共創スペース。",
+  "intro": "起業や地域活動のイベントに参加し、企業や社会人、学生と交流できます。高校生向け学生料金の利用条件を確認してください。",
+  "fieldTags": [
+   "起業",
+   "地域活動",
+   "ビジネス",
+   "探究",
+   "交流",
+   "キャリア教育"
+  ],
+  "useTags": [
+   "会員登録",
+   "有料",
+   "学生料金",
+   "イベント参加",
+   "予約必要あり",
+   "未成年利用条件確認"
+  ],
+  "status": "条件付き掲載",
+  "url": "https://www.netsugen.jp/",
+  "infoUrl": "https://www.netsugen.jp/news/%E3%80%90%E5%AD%A6%E7%94%9F%E3%81%AE%E7%9A%86%E6%A7%98%E3%81%B8%E3%80%91%E5%AD%A6%E7%94%9F%E6%96%99%E9%87%91%E3%81%AE%E9%81%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+  "address": "〒371-8570 群馬県前橋市大手町1-1-1 群馬県庁32階",
+  "station": "JR前橋駅からバス,県庁前下車",
+  "image": "",
+  "logo": "",
+  "lat": 36.391186,
+  "lng": 139.061691
  },
  {
   "id": "CH-001",
@@ -7490,6 +8284,8 @@
   "infoUrl": "https://www.city.niigata.lg.jp/kosodate/seisyonen/wakamono/index.html",
   "address": "〒950-0082 新潟県新潟市中央区東万代町9番1号 万代市民会館5階",
   "station": "JR新潟駅万代口から徒歩7分",
+  "image": "",
+  "logo": "",
   "lat": 37.916805,
   "lng": 139.061722
  },
@@ -7535,6 +8331,8 @@
   "infoUrl": "https://niigata-shounensizen.jp/usage/",
   "address": "〒959-2602 新潟県胎内市乙1503-166",
   "station": "JR平木田駅から車",
+  "image": "",
+  "logo": "",
   "lat": 38.128208,
   "lng": 139.401855
  },
@@ -7581,6 +8379,8 @@
   "infoUrl": "https://myoko.niye.go.jp/use/",
   "address": "〒949-2235 新潟県妙高市大字関山6323-2",
   "station": "えちごトキめき鉄道 関山駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.915085,
   "lng": 138.186798
  },
@@ -7621,6 +8421,8 @@
   "infoUrl": "https://www.sc.niigata-u.ac.jp/stella/",
   "address": "〒950-2181 新潟県新潟市西区五十嵐2の町8050 新潟大学五十嵐キャンパス",
   "station": "JR内野駅から徒歩,新潟駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 37.867237,
   "lng": 138.943573
  },
@@ -7663,6 +8465,8 @@
   "infoUrl": "https://www.niigata-mypro-labo.com/event/",
   "address": "固定拠点なし,新潟市内等で開催",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": 37.916077,
   "lng": 139.036545
  },
@@ -7707,6 +8511,8 @@
   "infoUrl": "https://ninno-plaka.com/ninno3/",
   "address": "〒950-0917 新潟県新潟市中央区天神1丁目1番地 プラーカ3地下1階",
   "station": "JR新潟駅南口直結",
+  "image": "",
+  "logo": "",
   "lat": 37.910194,
   "lng": 139.061844
  },
@@ -7746,6 +8552,8 @@
   "infoUrl": "https://myoko.niye.go.jp/event/",
   "address": "〒949-2235 新潟県妙高市大字関山6323-2",
   "station": "えちごトキめき鉄道 関山駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.915085,
   "lng": 138.186798
  },
@@ -7792,6 +8600,8 @@
   "infoUrl": "https://tateyama.niye.go.jp/use/",
   "address": "〒930-1407 富山県中新川郡立山町芦峅寺字前谷1",
   "station": "富山地方鉄道 千垣駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.583675,
   "lng": 137.581909
  },
@@ -7837,6 +8647,8 @@
   "infoUrl": "https://kureha-ie.jp/usage/",
   "address": "〒930-0143 富山県富山市西金屋字長尾8194",
   "station": "JR呉羽駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.695663,
   "lng": 137.15509
  },
@@ -7882,6 +8694,8 @@
   "infoUrl": "https://www.tkc.pref.toyama.jp/search/stdydtl.aspx?stdycd=C0000484",
   "address": "〒939-1432 富山県砺波市徳万字赤坂17-5",
   "station": "JR砺波駅からバス,庄東センター下車徒歩15分",
+  "image": "",
+  "logo": "",
   "lat": 36.636509,
   "lng": 137.018219
  },
@@ -7920,6 +8734,8 @@
   "infoUrl": "https://www.pref.toyama.jp/1119/global/20251017.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -7963,6 +8779,8 @@
   "infoUrl": "https://www.toyamav.net/office/",
   "address": "〒930-0094 富山県富山市安住町5-21 富山県総合福祉会館内",
   "station": "富山地方鉄道 県庁前停留場から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.694996,
   "lng": 137.207825
  },
@@ -8007,6 +8825,8 @@
   "infoUrl": "https://scop-toyama.jp/how-to-use/",
   "address": "〒931-8333 富山県富山市蓮町1丁目7番",
   "station": "富山港線 蓮町駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 36.741539,
   "lng": 137.224014
  },
@@ -8046,9 +8866,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.tsm.toyama.toyama.jp/",
-  "infoUrl": "https://www.tsm.toyama.toyama.jp/?page\\_id=122",
+  "infoUrl": "https://www.tsm.toyama.toyama.jp/?page_id=122",
   "address": "〒939-8084 富山県富山市西中野町1丁目8-31",
   "station": "富山地方鉄道 西中野停留場から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.680664,
   "lng": 137.211044
  },
@@ -8093,6 +8915,8 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/shisetsu/05/0040.html",
   "address": "〒920-0834 石川県金沢市常盤町212-1",
   "station": "JR金沢駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.566189,
   "lng": 136.676926
  },
@@ -8140,6 +8964,8 @@
   "infoUrl": "https://noto.niye.go.jp/userguide/",
   "address": "〒925-8530 石川県羽咋市柴垣町14-5-6",
   "station": "JR羽咋駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.949409,
   "lng": 136.770508
  },
@@ -8185,6 +9011,8 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/syougai/seinen/seinen-top.html",
   "address": "〒920-2113 石川県白山市八幡町戊142",
   "station": "北陸鉄道 鶴来駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.440945,
   "lng": 136.641281
  },
@@ -8229,6 +9057,8 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/syougai/seinen/seinen-top.html",
   "address": "〒920-2331 石川県白山市瀬戸ワ29",
   "station": "北陸鉄道 鶴来駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.281658,
   "lng": 136.657227
  },
@@ -8273,6 +9103,8 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/syougai/seinen/seinen-top.html",
   "address": "〒929-1635 石川県鹿島郡中能登町高畠原山分ハ1",
   "station": "JR能登部駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.932323,
   "lng": 136.874847
  },
@@ -8318,6 +9150,8 @@
   "infoUrl": "https://www.mirai-nomachi.jp/facility.html",
   "address": "〒921-8031 石川県金沢市野町3丁目11-1",
   "station": "北陸鉄道 野町駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.552574,
   "lng": 136.64798
  },
@@ -8360,6 +9194,8 @@
   "infoUrl": "https://www.ishikawa-npo.jp/riyou/gaiyou.html",
   "address": "〒920-0961 石川県金沢市香林坊2丁目4-30 香林坊ラモーダ7階",
   "station": "JR金沢駅からバス,香林坊下車",
+  "image": "",
+  "logo": "",
   "lat": 36.564236,
   "lng": 136.65358
  },
@@ -8398,6 +9234,8 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/gakkou/dentou/tobitate.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -8438,6 +9276,8 @@
   "infoUrl": "https://www.kanazawa-u.ac.jp/press/154511/",
   "address": "〒920-1192 石川県金沢市角間町 金沢大学角間キャンパス",
   "station": "JR金沢駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.545948,
   "lng": 136.709442
  },
@@ -8482,6 +9322,8 @@
   "infoUrl": "https://youthcenter.yya.or.jp/floor/",
   "address": "〒400-0812 山梨県甲府市和戸町1303",
   "station": "JR酒折駅から徒歩,JR甲府駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.653042,
   "lng": 138.623795
  },
@@ -8527,6 +9369,8 @@
   "infoUrl": "https://yatsu.yya.or.jp/access/",
   "address": "〒407-0301 山梨県北杜市高根町清里3545",
   "station": "JR清里駅から徒歩約15分",
+  "image": "",
+  "logo": "",
   "lat": 35.923233,
   "lng": 138.435074
  },
@@ -8571,6 +9415,8 @@
   "infoUrl": "https://atagoyama.yya.or.jp/guide/",
   "address": "〒400-0023 山梨県甲府市愛宕町358-1",
   "station": "JR甲府駅から徒歩または車",
+  "image": "",
+  "logo": "",
   "lat": 35.667801,
   "lng": 138.578568
  },
@@ -8614,6 +9460,8 @@
   "infoUrl": "https://www.yamanashi-nponet.jp/association",
   "address": "〒400-0031 山梨県甲府市丸の内2-35-1 やまなし地域づくり交流センター3階",
   "station": "JR甲府駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.662098,
   "lng": 138.565369
  },
@@ -8652,6 +9500,8 @@
   "infoUrl": "https://www.yamanashi.ac.jp/social/3690",
   "address": "〒400-8510 山梨県甲府市武田4丁目4-37 山梨大学甲府キャンパスほか",
   "station": "JR甲府駅から徒歩約15分",
+  "image": "",
+  "logo": "",
   "lat": 35.678509,
   "lng": 138.57341
  },
@@ -8692,6 +9542,8 @@
   "infoUrl": "https://www.pref.yamanashi.jp/startup/sogyo/y-next2026.html",
   "address": "固定会場なし,年度により異なる",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -8725,10 +9577,12 @@
    "保護者同意"
   ],
   "status": "掲載推奨",
-  "url": "https://www.pref.yamanashi.jp/shigaku-kgk/omura\\_project/kaigairyugaku.html",
-  "infoUrl": "https://www.pref.yamanashi.jp/shigaku-kgk/omura\\_project/kaigairyugaku.html",
+  "url": "https://www.pref.yamanashi.jp/shigaku-kgk/omura_project/kaigairyugaku.html",
+  "infoUrl": "https://www.pref.yamanashi.jp/shigaku-kgk/omura_project/kaigairyugaku.html",
   "address": "固定会場なし,留学先による",
   "station": "該当なし",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -8776,6 +9630,8 @@
   "infoUrl": "https://takato.niye.go.jp/use/",
   "address": "〒396-0301 長野県伊那市高遠町藤沢6877-11",
   "station": "JR伊那市駅から車",
+  "image": "",
+  "logo": "",
   "lat": 35.932476,
   "lng": 138.112
  },
@@ -8817,6 +9673,8 @@
   "infoUrl": "https://www.city.nagano.nagano.jp/n603200/shisetsu/p000093.html",
   "address": "長野県長野市大字山田中2100",
   "station": "JR長野駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.649101,
   "lng": 138.118408
  },
@@ -8856,6 +9714,8 @@
   "infoUrl": "https://myprojects.jp/award/nagano/",
   "address": "固定会場なし,年度により異なる",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -8891,9 +9751,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://shinshu-vc.org/",
-  "infoUrl": "https://www.pref.nagano.lg.jp/keieishien/happyou/260626press\\_contest.html",
+  "infoUrl": "https://www.pref.nagano.lg.jp/keieishien/happyou/260626press_contest.html",
   "address": "〒380-8525 長野県長野市三輪8-49-7 長野県立大学",
   "station": "長野電鉄 本郷駅から徒歩",
+  "image": "",
+  "logo": "",
   "lat": 36.665031,
   "lng": 138.200287
  },
@@ -8930,6 +9792,8 @@
   "infoUrl": "https://www.shinshu-u.ac.jp/faculty/textiles/news/2026/06/224381.html",
   "address": "〒386-8567 長野県上田市常田3-15-1 信州大学繊維学部",
   "station": "JR上田駅から徒歩またはバス",
+  "image": "",
+  "logo": "",
   "lat": 36.392773,
   "lng": 138.259933
  },
@@ -8968,6 +9832,8 @@
   "infoUrl": "https://www.pref.nagano.lg.jp/kyoiku/kyogaku/koko/2024tsubasa.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -9011,6 +9877,8 @@
   "infoUrl": "https://www.npo-nagano.org/aboutus/",
   "address": "〒381-0034 長野県長野市大字高田1029-1 エンドウビル1階",
   "station": "JR長野駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 36.642239,
   "lng": 138.203049
  },
@@ -9053,6 +9921,8 @@
   "infoUrl": "https://www.npo-nagano.org/",
   "address": "長野市内,開催回により会場が異なる",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": 36.648537,
   "lng": 138.194824
  },
@@ -9099,6 +9969,8 @@
   "infoUrl": "https://norikura.niye.go.jp/norikura/use/",
   "address": "〒506-0815 岐阜県高山市岩井町913-13",
   "station": "JR高山駅から車",
+  "image": "",
+  "logo": "",
   "lat": 36.144489,
   "lng": 137.435806
  },
@@ -9142,6 +10014,8 @@
   "infoUrl": "https://gikyobun.or.jp/seisyonenkaikan/about/chuosei.html",
   "address": "〒500-8813 岐阜県岐阜市明徳町11",
   "station": "JR岐阜駅からバス,岐阜市役所前下車",
+  "image": "",
+  "logo": "",
   "lat": 35.423546,
   "lng": 136.757584
  },
@@ -9187,6 +10061,8 @@
   "infoUrl": "https://gikyobun.or.jp/gishizen/guide/",
   "address": "〒501-2502 岐阜県岐阜市山県北野2081",
   "station": "岐阜バス 北野停留所から徒歩約25分",
+  "image": "",
+  "logo": "",
   "lat": 35.518578,
   "lng": 136.831024
  },
@@ -9227,6 +10103,8 @@
   "infoUrl": "https://www.pref.gifu.lg.jp/site/pressrelease/504897.html",
   "address": "最終発表は岐阜県庁,〒500-8570 岐阜県岐阜市薮田南2-1-1",
   "station": "JR西岐阜駅からバスまたは徒歩",
+  "image": "",
+  "logo": "",
   "lat": 35.426201,
   "lng": 136.759933
  },
@@ -9269,6 +10147,8 @@
   "infoUrl": "https://www.softopia.info/rental/",
   "address": "〒503-0006 岐阜県大垣市加賀野4丁目1-7",
   "station": "樽見鉄道 東大垣駅から徒歩,JR大垣駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 35.368057,
   "lng": 136.638962
  },
@@ -9310,6 +10190,8 @@
   "infoUrl": "https://gifu-npocenter.org/about.html",
   "address": "〒500-8384 岐阜県岐阜市薮田南5-14-12 岐阜県シンクタンク庁舎3階",
   "station": "JR西岐阜駅から徒歩またはバス",
+  "image": "",
+  "logo": "",
   "lat": 35.391495,
   "lng": 136.716705
  },
@@ -9353,6 +10235,8 @@
   "infoUrl": "https://g-mediacosmos.jp/center/",
   "address": "〒500-8076 岐阜県岐阜市司町40-5",
   "station": "JR岐阜駅からバス,市役所・メディアコスモス下車",
+  "image": "",
+  "logo": "",
   "lat": 35.426994,
   "lng": 136.760193
  },
@@ -9400,6 +10284,8 @@
   "infoUrl": "https://fujinosato.niye.go.jp/usage/",
   "address": "〒412-0006 静岡県御殿場市中畑2092-5",
   "station": "JR御殿場駅からバスまたは車",
+  "image": "",
+  "logo": "",
   "lat": 35.321262,
   "lng": 138.878525
  },
@@ -9444,6 +10330,8 @@
   "infoUrl": "https://www.pref.shizuoka.jp/kensei/shisetsu/kenshu/1007387.html",
   "address": "〒418-0101 静岡県富士宮市根原1",
   "station": "JR富士宮駅からバスまたは車",
+  "image": "",
+  "logo": "",
   "lat": 35.415428,
   "lng": 138.584564
  },
@@ -9488,6 +10376,8 @@
   "infoUrl": "https://www.city.hamamatsu.shizuoka.jp/katei/youth/seisyounen/index.html",
   "address": "〒430-0906 静岡県浜松市中央区住吉4丁目23-1",
   "station": "JR浜松駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 34.732243,
   "lng": 137.731644
  },
@@ -9528,6 +10418,8 @@
   "infoUrl": "https://fss.shizuoka.ac.jp/program/",
   "address": "〒422-8529 静岡県静岡市駿河区大谷836 静岡大学",
   "station": "JR静岡駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 34.966625,
   "lng": 138.431412
  },
@@ -9571,6 +10463,8 @@
   "infoUrl": "https://ship-shizuoka.jp/facility/",
   "address": "〒420-0031 静岡県静岡市葵区呉服町2丁目7-26 静専ビル2階",
   "station": "JR静岡駅から徒歩8分,静鉄新静岡駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 34.974064,
   "lng": 138.384415
  },
@@ -9614,6 +10508,8 @@
   "infoUrl": "https://www.city.shizuoka.lg.jp/s3247/s002504.html",
   "address": "〒420-0071 静岡県静岡市葵区一番町50",
   "station": "JR静岡駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 34.976231,
   "lng": 138.372818
  },
@@ -9654,6 +10550,8 @@
   "infoUrl": "https://www.pref.shizuoka.jp/kensei/pr/johoshi/kenmin/1070652/1072692/1072694.html",
   "address": "固定会場なし,SHIP等で実施",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -9692,6 +10590,8 @@
   "infoUrl": "https://www.pref.shizuoka.jp/kodomokyoiku/school/kyoiku/1003777/1060426/1060610/index.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -9735,6 +10635,8 @@
   "infoUrl": "https://www.city.nagoya.jp/kodomo/wakamono/1017035/1017050/1037094/1017051.html",
   "address": "〒462-0845 愛知県名古屋市北区柳原3丁目6-8",
   "station": "地下鉄名城公園駅から徒歩約10分",
+  "image": "",
+  "logo": "",
   "lat": 35.192997,
   "lng": 136.907623
  },
@@ -9780,6 +10682,8 @@
   "infoUrl": "https://www.city.nagoya.jp/kodomo/wakamono/1017035/1017050/1037094/1017051.html",
   "address": "〒459-8001 愛知県名古屋市緑区大高町字蝮池4-6",
   "station": "JR南大高駅東口から徒歩約10分",
+  "image": "",
+  "logo": "",
   "lat": 35.056271,
   "lng": 136.949677
  },
@@ -9826,6 +10730,8 @@
   "infoUrl": "https://manabi.pref.aichi.jp/provider/detail/197",
   "address": "〒444-2809 愛知県豊田市小滝野町坂38-25",
   "station": "名鉄豊田市駅から車",
+  "image": "",
+  "logo": "",
   "lat": 35.222778,
   "lng": 137.41246
  },
@@ -9870,6 +10776,8 @@
   "infoUrl": "https://sizennoie-mihama.jp/usage/",
   "address": "〒470-3236 愛知県知多郡美浜町大字小野浦字宮後1-1",
   "station": "名鉄知多奥田駅から車",
+  "image": "",
+  "logo": "",
   "lat": 34.752113,
   "lng": 136.853821
  },
@@ -9910,6 +10818,8 @@
   "infoUrl": "https://ass.pref.aichi.jp/",
   "address": "固定会場なし,プログラムにより異なる",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -9948,6 +10858,8 @@
   "infoUrl": "https://www.city.nagoya.jp/kodomo/wakamono/1017035/1017050/1037094/1048300.html",
   "address": "主な会場はユースクエア,〒462-0845 愛知県名古屋市北区柳原3丁目6-8",
   "station": "地下鉄名城公園駅から徒歩約10分",
+  "image": "",
+  "logo": "",
   "lat": 35.181438,
   "lng": 136.90657
  },
@@ -9981,10 +10893,12 @@
    "定員あり"
   ],
   "status": "掲載推奨",
-  "url": "https://chet.educa.nagoya-u.ac.jp/?page\\_id=84",
-  "infoUrl": "https://chet.educa.nagoya-u.ac.jp/?page\\_id=84",
+  "url": "https://chet.educa.nagoya-u.ac.jp/?page_id=84",
+  "infoUrl": "https://chet.educa.nagoya-u.ac.jp/?page_id=84",
   "address": "〒464-8601 愛知県名古屋市千種区不老町 名古屋大学",
   "station": "地下鉄名古屋大学駅直結",
+  "image": "",
+  "logo": "",
   "lat": 35.155655,
   "lng": 136.964676
  },
@@ -10029,6 +10943,8 @@
   "infoUrl": "https://stationai.co.jp/facility",
   "address": "〒466-0064 愛知県名古屋市昭和区鶴舞1丁目2-32",
   "station": "JR鶴舞駅から徒歩約6分",
+  "image": "",
+  "logo": "",
   "lat": 35.152573,
   "lng": 136.918533
  },
@@ -10075,6 +10991,8 @@
   "infoUrl": "https://suzukato.jp/access/",
   "address": "〒513-0825 三重県鈴鹿市住吉町字中大谷6757-1 南谷口",
   "station": "伊勢鉄道 鈴鹿サーキット稲生駅から徒歩約40分,白子駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 34.851883,
   "lng": 136.533127
  },
@@ -10116,9 +11034,11 @@
   ],
   "status": "条件付き掲載",
   "url": "https://www.kuma-sho.com/",
-  "infoUrl": "https://www.pref.mie.lg.jp/mb/kb\\_kumanos.htm",
+  "infoUrl": "https://www.pref.mie.lg.jp/mb/kb_kumanos.htm",
   "address": "〒519-4327 三重県熊野市金山町1577",
   "station": "JR熊野市駅から車約10分",
+  "image": "",
+  "logo": "",
   "lat": 33.882896,
   "lng": 136.049393
  },
@@ -10164,6 +11084,8 @@
   "infoUrl": "https://www.seibu-la.co.jp/yokkaichi/guide/",
   "address": "〒512-1105 三重県四日市市水沢町字大谷1423-2",
   "station": "近鉄四日市駅からバス,少年自然の家口から徒歩約20分",
+  "image": "",
+  "logo": "",
   "lat": 34.976723,
   "lng": 136.487534
  },
@@ -10207,6 +11129,8 @@
   "infoUrl": "https://www.mienpo.net/about/overview/",
   "address": "〒514-0009 三重県津市羽所町700 アスト津3階",
   "station": "JR,近鉄津駅直結",
+  "image": "",
+  "logo": "",
   "lat": 34.734936,
   "lng": 136.51062
  },
@@ -10245,6 +11169,8 @@
   "infoUrl": "https://www.ac.mie-u.ac.jp/activity/koudai/about/tankyuu.html",
   "address": "〒514-8507 三重県津市栗真町屋町1577 三重大学",
   "station": "近鉄江戸橋駅から徒歩約15分",
+  "image": "",
+  "logo": "",
   "lat": 34.745785,
   "lng": 136.523224
  },
@@ -10284,6 +11210,8 @@
   "infoUrl": "https://www.pref.mie.lg.jp/TOPICS/m0045100478.htm",
   "address": "年度により異なる,2025年度は鈴鹿医療科学大学千代崎キャンパス",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": 34.730278,
   "lng": 136.508606
  },
@@ -10327,6 +11255,8 @@
   "infoUrl": "https://www.bunka.pref.mie.lg.jp/MieMu/82927046642.htm",
   "address": "〒514-0061 三重県津市一身田上津部田3060",
   "station": "JR,近鉄津駅西口からバス",
+  "image": "",
+  "logo": "",
   "lat": 34.746578,
   "lng": 136.498993
  },
@@ -10365,6 +11295,8 @@
   "infoUrl": "https://www.pref.mie.lg.jp/TOPICS/m0360800011.htm",
   "address": "固定会場なし,指定高校で実施",
   "station": "実施校による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -10400,6 +11332,8 @@
   "infoUrl": "https://www.kansai.meti.go.jp/shinkizigyou.html",
   "address": "〒540-8535 大阪府大阪市中央区大手前1-5-44 大阪合同庁舎1号館",
   "station": "Osaka Metro谷町線 天満橋駅（3号出口）",
+  "image": "",
+  "logo": "",
   "lat": 34.688694,
   "lng": 135.520157
  },
@@ -10441,6 +11375,8 @@
   "infoUrl": "https://web.pref.hyogo.lg.jp/sr10/kigyoplaza.html",
   "address": "〒650-0035 兵庫県神戸市中央区浪花町56 三井住友銀行神戸本部ビル2階",
   "station": "JR・阪神 元町駅,地下鉄 旧居留地・大丸前駅",
+  "image": "",
+  "logo": "",
   "lat": 34.689014,
   "lng": 135.192474
  },
@@ -10482,6 +11418,8 @@
   "infoUrl": "https://anchorkobe.com/",
   "address": "〒650-0001 兵庫県神戸市中央区加納町4-2-1 神戸三宮阪急ビル15階",
   "station": "JR三ノ宮駅・阪急,阪神 神戸三宮駅 直結",
+  "image": "",
+  "logo": "",
   "lat": 34.69405,
   "lng": 135.193619
  },
@@ -10517,10 +11455,12 @@
    "イベント参加"
   ],
   "status": "掲載推奨",
-  "url": "https://www.instagram.com/kobe\\_wakamono.kigyo.community/",
+  "url": "https://www.instagram.com/kobe_wakamono.kigyo.community/",
   "infoUrl": "https://hyogo.communityfund.jp/kyokan/project/%E3%82%8D/",
   "address": "固定拠点なし（オンライン・神戸市内イベント）",
   "station": "イベント会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -10562,6 +11502,8 @@
   "infoUrl": "https://www.city.kobe.lg.jp/a64411/kosodate/seshonen/communication/index.html",
   "address": "市内10拠点（各施設の住所は公式一覧参照）",
   "station": "各拠点による",
+  "image": "",
+  "logo": "",
   "lat": 35.880955,
   "lng": 136.33902
  },
@@ -10602,6 +11544,8 @@
   "infoUrl": "https://www.city.kobe.lg.jp/a57667/kosodate/chiiki/freespace.html",
   "address": "〒651-1245 兵庫県神戸市北区谷上東町1-1 谷上SHビル1階",
   "station": "神戸電鉄・神戸市営地下鉄 谷上駅 すぐ",
+  "image": "",
+  "logo": "",
   "lat": 34.761688,
   "lng": 135.171158
  },
@@ -10639,6 +11583,8 @@
   "infoUrl": "https://web.pref.hyogo.lg.jp/sr10/startup-academy/hyogokigyouzemi-r8.html",
   "address": "固定会場なし（採択校の教室等）",
   "station": "対象校による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -10677,6 +11623,8 @@
   "infoUrl": "https://web.pref.hyogo.lg.jp/sr10/koukorenkei/r8.html",
   "address": "〒650-0035 兵庫県神戸市中央区浪花町56 三井住友銀行神戸本部ビル2階",
   "station": "JR・阪神 元町駅,地下鉄 旧居留地・大丸前駅",
+  "image": "",
+  "logo": "",
   "lat": 34.689014,
   "lng": 135.192474
  },
@@ -10717,6 +11665,8 @@
   "infoUrl": "https://www.innovation-osaka.jp/ja/",
   "address": "〒530-0011 大阪府大阪市北区大深町3-1 グランフロント大阪 ナレッジキャピタルタワーC 7階",
   "station": "JR大阪駅 徒歩7分,Osaka Metro梅田駅・阪急大阪梅田駅 徒歩10分",
+  "image": "",
+  "logo": "",
   "lat": 34.705833,
   "lng": 135.494339
  },
@@ -10757,6 +11707,8 @@
   "infoUrl": "https://www.quintbridge.jp/",
   "address": "〒534-0024 大阪府大阪市都島区東野田町4-15-82",
   "station": "Osaka Metro京橋駅 徒歩5分,JR・京阪 京橋駅 徒歩10分",
+  "image": "",
+  "logo": "",
   "lat": 34.698463,
   "lng": 135.529922
  },
@@ -10797,6 +11749,8 @@
   "infoUrl": "https://bloomingcamp.sakura.ad.jp/",
   "address": "〒530-0011 大阪府大阪市北区大深町6-38 グラングリーン大阪 北館 JAM BASE 3階",
   "station": "JR大阪駅 徒歩7分,Osaka Metro梅田駅 徒歩8分,阪急大阪梅田駅 徒歩7分",
+  "image": "",
+  "logo": "",
   "lat": 34.704762,
   "lng": 135.49437
  },
@@ -10838,6 +11792,8 @@
   "infoUrl": "https://kokoplaza.net/",
   "address": "〒533-0033 大阪府大阪市東淀川区東中島1-13-13",
   "station": "JR新大阪駅 徒歩7分,Osaka Metro新大阪駅 徒歩10分",
+  "image": "",
+  "logo": "",
   "lat": 34.732235,
   "lng": 135.503479
  },
@@ -10877,6 +11833,8 @@
   "infoUrl": "https://www.city.sakai.lg.jp/yoyakuanai/bunrui/bunka/seishonenshisetsu/seishonencenter.html",
   "address": "〒590-0930 大阪府堺市堺区柳之町西1-3-19",
   "station": "阪堺線 綾ノ町駅 徒歩2分,南海本線 七道駅 徒歩10分",
+  "image": "",
+  "logo": "",
   "lat": 34.587353,
   "lng": 135.481125
  },
@@ -10917,6 +11875,8 @@
   "infoUrl": "https://www.dreampossibility.com/whatwedo/project/youthcenter/",
   "address": "所在地非公開（公式の利用案内に従う）",
   "station": "利用案内で確認（所在地非公開）",
+  "image": "",
+  "logo": "",
   "lat": 34.705555,
   "lng": 135.509995
  },
@@ -10954,6 +11914,8 @@
   "infoUrl": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/education/koukouseitankyu.html",
   "address": "固定会場なし（支援先・学校ごと）",
   "station": "支援先・学校ごと",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -10991,6 +11953,8 @@
   "infoUrl": "https://kyoto-ys.org/",
   "address": "〒604-8147 京都府京都市中京区東洞院通六角下る御射山町262 京都市中央青少年活動センター内",
   "station": "地下鉄 烏丸御池駅,阪急 烏丸駅",
+  "image": "",
+  "logo": "",
   "lat": 35.011112,
   "lng": 135.764404
  },
@@ -11031,6 +11995,8 @@
   "infoUrl": "https://www.city.kyoto.lg.jp/hagukumi/page/0000314992.html",
   "address": "市内7拠点（中央・北・東山・山科・下京・南・伏見）",
   "station": "各拠点による",
+  "image": "",
+  "logo": "",
   "lat": 35.880955,
   "lng": 136.33902
  },
@@ -11069,6 +12035,8 @@
   "infoUrl": "https://www.city.kyoto.lg.jp/hagukumi/page/0000314992.html",
   "address": "市内7拠点＋移動型（公式ページ参照）",
   "station": "各開催地による",
+  "image": "",
+  "logo": "",
   "lat": 35.880955,
   "lng": 136.33902
  },
@@ -11108,6 +12076,8 @@
   "infoUrl": "https://question.kyoto-shinkin.co.jp/service/students-lab/",
   "address": "〒604-8006 京都府京都市中京区河原町通御池下る下丸屋町390-2 QUESTION 5階",
   "station": "地下鉄 京都市役所前駅 徒歩1分,京阪 三条駅 徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 35.009998,
   "lng": 135.751389
  },
@@ -11147,6 +12117,8 @@
   "infoUrl": "https://glocalcenter.jp/",
   "address": "〒602-8061 京都府京都市上京区油小路通中立売西入る甲斐守町97 西陣産業創造会館2階",
   "station": "市バス 堀川中立売 徒歩3分,地下鉄 今出川駅 徒歩15分",
+  "image": "",
+  "logo": "",
   "lat": 35.025654,
   "lng": 135.753525
  },
@@ -11186,6 +12158,8 @@
   "infoUrl": "https://open.kyoto/",
   "address": "〒600-8009 京都府京都市下京区四条通室町東入函谷鉾町78 京都経済センター3階",
   "station": "地下鉄 四条駅 北改札すぐ,阪急 烏丸駅 26番出口直結",
+  "image": "",
+  "logo": "",
   "lat": 34.987606,
   "lng": 135.755478
  },
@@ -11224,6 +12198,8 @@
   "infoUrl": "https://www.pref.shiga.lg.jp/edu/school/kakusyu/335978/",
   "address": "固定会場なし（対象校・連携大学等）",
   "station": "実施会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -11257,10 +12233,12 @@
    "年度募集"
   ],
   "status": "掲載保留",
-  "url": "https://www.city.moriyama.lg.jp/\\_res/projects/default\\_project/\\_page\\_/001/010/793/02\\_watasitatigamoriyamanomiraiwotukurutyuukouseisamitto2024.pdf",
-  "infoUrl": "https://www.city.moriyama.lg.jp/\\_res/projects/default\\_project/\\_page\\_/001/010/793/02\\_watasitatigamoriyamanomiraiwotukurutyuukouseisamitto2024.pdf",
+  "url": "https://www.city.moriyama.lg.jp/_res/projects/default_project/_page_/001/010/793/02_watasitatigamoriyamanomiraiwotukurutyuukouseisamitto2024.pdf",
+  "infoUrl": "https://www.city.moriyama.lg.jp/_res/projects/default_project/_page_/001/010/793/02_watasitatigamoriyamanomiraiwotukurutyuukouseisamitto2024.pdf",
   "address": "〒524-8585 滋賀県守山市吉身2-5-22 守山市役所（2024年度）",
   "station": "JR守山駅（会場は年度により変更）",
+  "image": "",
+  "logo": "",
   "lat": 35.05933,
   "lng": 135.993958
  },
@@ -11298,6 +12276,8 @@
   "infoUrl": "https://www.pref.shiga.lg.jp/ippan/kosodatekyouiku/kosodate/315829.html",
   "address": "〒520-8577 滋賀県大津市京町4-1-1 滋賀県庁内",
   "station": "JR大津駅",
+  "image": "",
+  "logo": "",
   "lat": 35.003792,
   "lng": 135.867828
  },
@@ -11335,6 +12315,8 @@
   "infoUrl": "https://www.shigaymca.org/",
   "address": "〒523-0891 滋賀県近江八幡市鷹飼町537-3",
   "station": "JR・近江鉄道 近江八幡駅",
+  "image": "",
+  "logo": "",
   "lat": 35.123188,
   "lng": 136.100082
  },
@@ -11374,6 +12356,8 @@
   "infoUrl": "https://biwako-activecenter.com/",
   "address": "〒520-1121 滋賀県高島市勝野1523-1",
   "station": "JR湖西線 近江高島駅 徒歩約20分",
+  "image": "",
+  "logo": "",
   "lat": 35.296452,
   "lng": 136.017731
  },
@@ -11414,6 +12398,8 @@
   "infoUrl": "https://tokiza.jp/",
   "address": "〒520-0241 滋賀県大津市今堅田2-10-4",
   "station": "JR湖西線 堅田駅（徒歩圏・所要時間要確認）",
+  "image": "",
+  "logo": "",
   "lat": 35.121216,
   "lng": 135.918503
  },
@@ -11447,6 +12433,8 @@
   "infoUrl": "https://www.pref.shiga.lg.jp/kigyo/index.html",
   "address": "固定会場なし（掲載施設ごと）",
   "station": "掲載施設ごと",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -11487,6 +12475,8 @@
   "infoUrl": "https://www.town.miyake.lg.jp/soshiki/17/5792.html",
   "address": "〒636-0213 奈良県磯城郡三宅町伴堂689 三宅町交流まちづくりセンターMiiMo 3階スマイル",
   "station": "近鉄田原本線 黒田駅 徒歩15分,近鉄橿原線 石見駅 徒歩18分",
+  "image": "",
+  "logo": "",
   "lat": 34.57357,
   "lng": 135.772919
  },
@@ -11525,6 +12515,8 @@
   "infoUrl": "https://www.pref.nara.lg.jp/n167/60799.html",
   "address": "〒634-0804 奈良県橿原市内膳町1-1-60 ミグランス4階（対面会場）",
   "station": "近鉄 大和八木駅",
+  "image": "",
+  "logo": "",
   "lat": 34.511066,
   "lng": 135.792374
  },
@@ -11564,6 +12556,8 @@
   "infoUrl": "https://www.city.nara.lg.jp/site/kyouiku/8148.html",
   "address": "〒630-1241 奈良県奈良市阪原町25-1",
   "station": "JR・近鉄奈良駅から奈良交通バス「興東館柳生中学校」下車 徒歩1分",
+  "image": "",
+  "logo": "",
   "lat": 34.713566,
   "lng": 135.937424
  },
@@ -11604,6 +12598,8 @@
   "infoUrl": "https://bonchi.fun/",
   "address": "〒630-8217 奈良県奈良市橋本町3-1",
   "station": "近鉄奈良駅 徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 34.681725,
   "lng": 135.829239
  },
@@ -11642,6 +12638,8 @@
   "infoUrl": "https://www.pref.wakayama.lg.jp/prefg/040200/seishounen/shisetu/katudousenta/d00216261.html",
   "address": "〒640-8319 和歌山県和歌山市手平2-1-2 県民交流プラザ和歌山ビッグ愛9階",
   "station": "JRきのくに線 宮前駅",
+  "image": "",
+  "logo": "",
   "lat": 34.218155,
   "lng": 135.190002
  },
@@ -11681,6 +12679,8 @@
   "infoUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/soudan/1015746.html",
   "address": "〒640-0103 和歌山県和歌山市加太1907-2",
   "station": "南海加太線 加太駅（施設までの交通手段要確認）",
+  "image": "",
+  "logo": "",
   "lat": 34.27039,
   "lng": 135.06691
  },
@@ -11717,6 +12717,8 @@
   "infoUrl": "https://wibase.jp/",
   "address": "〒640-8341 和歌山県和歌山市黒田185-3 Key Site 520号",
   "station": "JR和歌山駅（東口から徒歩圏）",
+  "image": "",
+  "logo": "",
   "lat": 34.234142,
   "lng": 135.192017
  },
@@ -11757,6 +12759,8 @@
   "infoUrl": "https://kiyo-keysite.com/",
   "address": "〒640-8341 和歌山県和歌山市黒田185-3",
   "station": "JR和歌山駅（東口から徒歩圏）",
+  "image": "",
+  "logo": "",
   "lat": 34.234142,
   "lng": 135.192017
  },
@@ -11795,6 +12799,8 @@
   "infoUrl": "https://www.pref.wakayama.lg.jp/prefg/040200/d00222163.html",
   "address": "オンライン＋県内会場（募集要項参照）",
   "station": "会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -11834,6 +12840,8 @@
   "infoUrl": "https://www.pref.wakayama.lg.jp/prefg/040200/seishounen/shisetu/seishounennoie/d00216252.html",
   "address": "紀北：かつらぎ町中飯降1317-3,白崎：由良町大引961-1,潮岬：串本町潮岬669",
   "station": "施設ごとに異なる（公式ページ参照）",
+  "image": "",
+  "logo": "",
   "lat": 34.211468,
   "lng": 136.33728
  },
@@ -11874,6 +12882,8 @@
   "infoUrl": "https://sprout-youthcenter.studio.site/youthworker",
   "address": "福井市文京エリア（詳細は公式案内で確認）",
   "station": "えちぜん鉄道 福大前西福井駅周辺（詳細要確認）",
+  "image": "",
+  "logo": "",
   "lat": 36.077618,
   "lng": 136.222458
  },
@@ -11906,10 +12916,12 @@
    "相談"
   ],
   "status": "掲載推奨",
-  "url": "https://note.com/mumm\\_fukui",
-  "infoUrl": "https://note.com/mumm\\_fukui/n/n251e8e299097",
+  "url": "https://note.com/mumm_fukui",
+  "infoUrl": "https://note.com/mumm_fukui/n/n251e8e299097",
   "address": "〒910-0017 福井県福井市文京3-6-17",
   "station": "えちぜん鉄道 福大前西福井駅（徒歩圏）",
+  "image": "",
+  "logo": "",
   "lat": 36.076283,
   "lng": 136.215637
  },
@@ -11947,6 +12959,8 @@
   "infoUrl": "https://www.pref.fukui.lg.jp/doc/sinsan/kigyousien.html",
   "address": "福井県内各地・オンライン",
   "station": "企画ごと",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -11986,6 +13000,8 @@
   "infoUrl": "https://www.pref.fukui.lg.jp/doc/sinsan/sougyousinnsanngyousousyutugur/promoters2026.html",
   "address": "固定会場なし（県内各地・オンライン）",
   "station": "企画ごと",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12026,6 +13042,8 @@
   "infoUrl": "https://craftbridge.jp/",
   "address": "〒910-0006 福井県福井市中央3-5-12 CRAFT BRIDGE",
   "station": "福井鉄道 福井城址大名町駅,JR福井駅",
+  "image": "",
+  "logo": "",
   "lat": 36.062996,
   "lng": 136.213531
  },
@@ -12067,6 +13085,8 @@
   "infoUrl": "https://wakasawan.niye.go.jp/",
   "address": "〒917-0198 福井県小浜市田烏区大浜",
   "station": "JR小浜線 三方駅または上中駅からタクシー約25分（公共交通なし）",
+  "image": "",
+  "logo": "",
   "lat": 35.549305,
   "lng": 135.834274
  },
@@ -12106,6 +13126,8 @@
   "infoUrl": "https://www.beauproject.net/beau-labo-online",
   "address": "オンライン中心,固定会場なし",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12144,6 +13166,8 @@
   "infoUrl": "https://www.chugoku.meti.go.jp/policy/seisaku/sangyo/index.html",
   "address": "〒730-8531 広島県広島市中区上八丁堀6-30 広島合同庁舎2号館",
   "station": "広島電鉄 縮景園前電停",
+  "image": "",
+  "logo": "",
   "lat": 34.398636,
   "lng": 132.462082
  },
@@ -12184,6 +13208,8 @@
   "infoUrl": "https://fureaikaikan.jp/",
   "address": "〒680-0846 鳥取県鳥取市扇町21",
   "station": "JR鳥取駅 南口",
+  "image": "",
+  "logo": "",
   "lat": 35.491734,
   "lng": 134.225418
  },
@@ -12224,6 +13250,8 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/312750.htm",
   "address": "固定拠点なし,県内会場とオンライン",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12262,6 +13290,8 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/item/1113438.htm",
   "address": "〒680-0841 鳥取県鳥取市吉方温泉1丁目252-1",
   "station": "JR鳥取駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 35.494846,
   "lng": 134.235046
  },
@@ -12306,6 +13336,8 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/senjyozan/",
   "address": "〒689-2525 鳥取県東伯郡琴浦町山川807-2",
   "station": "JR赤碕駅から車",
+  "image": "",
+  "logo": "",
   "lat": 35.426334,
   "lng": 133.602615
  },
@@ -12350,6 +13382,8 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/9485.htm",
   "address": "〒689-3319 鳥取県西伯郡大山町赤松明間原312-1",
   "station": "JR大山口駅から車",
+  "image": "",
+  "logo": "",
   "lat": 35.415733,
   "lng": 133.476685
  },
@@ -12388,6 +13422,8 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/pop2026/",
   "address": "固定会場なし,作品応募型",
   "station": "該当なし",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12430,6 +13466,8 @@
   "infoUrl": "https://www.town.ama.shimane.jp/torikumi-shisetsu/shisetsu/okilcdozen",
   "address": "島根県隠岐郡海士町福井1339",
   "station": "菱浦港から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 36.099026,
   "lng": 133.076141
  },
@@ -12474,6 +13512,8 @@
   "infoUrl": "https://www.pref.shimane.lg.jp/education/kyoiku/kikan/seishonennoie/",
   "address": "〒691-0074 島根県出雲市小境町1991-2",
   "station": "一畑電車 一畑口駅から車",
+  "image": "",
+  "logo": "",
   "lat": 35.463959,
   "lng": 132.879669
  },
@@ -12515,6 +13555,8 @@
   "infoUrl": "https://www.pref.shimane.lg.jp/education/kyoiku/syougai/chiikiryoku/challenge.html",
   "address": "固定会場なし,実施市町村の公民館等",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12553,6 +13595,8 @@
   "infoUrl": "https://www1.pref.shimane.lg.jp/gakkokikaku/saihen/keikaku.data/honnbunn.pdf",
   "address": "固定会場なし,各県立高校と地域",
   "station": "対象校による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12592,9 +13636,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://matsue-stic.net/",
-  "infoUrl": "https://www.city.matsue.lg.jp/soshikikarasagasu/kyoikuiinkai\\_shogaigakushuka/shogaigakushu\\_kominkan/17544.html",
+  "infoUrl": "https://www.city.matsue.lg.jp/soshikikarasagasu/kyoikuiinkai_shogaigakushuka/shogaigakushu_kominkan/17544.html",
   "address": "〒690-0061 島根県松江市白瀉本町43 STIC",
   "station": "JR松江駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 35.465427,
   "lng": 133.055801
  },
@@ -12636,6 +13682,8 @@
   "infoUrl": "https://www.shimane-ikiiki.jp/",
   "address": "オンライン情報サイト,活動会場は募集ごとに異なる",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12678,6 +13726,8 @@
   "infoUrl": "https://www.sgsg.work/posts/55016497/",
   "address": "〒700-0026 岡山県岡山市北区奉還町3-1-32 地域交流ステーションverde内",
   "station": "JR岡山駅 西口から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 34.668987,
   "lng": 133.913986
  },
@@ -12720,6 +13770,8 @@
   "infoUrl": "https://dappi-okayama.com/workshop/",
   "address": "〒700-0822 岡山県岡山市北区表町1-4-64 上之町ビル3階301",
   "station": "岡山電気軌道 城下電停",
+  "image": "",
+  "logo": "",
   "lat": 34.664406,
   "lng": 133.929398
  },
@@ -12761,6 +13813,8 @@
   "infoUrl": "https://www.city.okayama.jp/jigyosha/0000030583.html",
   "address": "〒700-0023 岡山県岡山市北区駅前町1-8-18 ICOT NICOT2階",
   "station": "JR岡山駅 東口",
+  "image": "",
+  "logo": "",
   "lat": 34.665909,
   "lng": 133.922012
  },
@@ -12802,6 +13856,8 @@
   "infoUrl": "https://www.oi-project.jp/",
   "address": "〒700-8634 岡山県岡山市北区柳町2-1-1 山陽新聞社内事務局",
   "station": "JR岡山駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 34.65836,
   "lng": 133.91954
  },
@@ -12841,6 +13897,8 @@
   "infoUrl": "https://sites.google.com/gse.okayama-c.ed.jp/koukou-yumeiku/",
   "address": "オンライン情報サイト,会場は募集ごとに異なる",
   "station": "募集ごとに異なる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -12884,6 +13942,8 @@
   "infoUrl": "https://shizutani.jp/",
   "address": "〒705-0036 岡山県備前市閑谷784",
   "station": "JR吉永駅から車",
+  "image": "",
+  "logo": "",
   "lat": 34.798901,
   "lng": 134.227203
  },
@@ -12928,6 +13988,8 @@
   "infoUrl": "https://kibi.niye.go.jp/",
   "address": "〒716-1241 岡山県加賀郡吉備中央町吉川4393-82",
   "station": "JR岡山駅方面から車,送迎条件確認",
+  "image": "",
+  "logo": "",
   "lat": 34.828869,
   "lng": 133.764923
  },
@@ -12967,6 +14029,8 @@
   "infoUrl": "https://www.pref.okayama.jp/page/698688.html",
   "address": "複数の相談機関,住所は公式一覧参照",
   "station": "各機関による",
+  "image": "",
+  "logo": "",
   "lat": 34.655186,
   "lng": 133.919754
  },
@@ -13006,6 +14070,8 @@
   "infoUrl": "https://www.pal.pref.okayama.jp/category/page.aspx?servno=15474",
   "address": "〒700-0016 岡山県岡山市北区伊島町3-1-1 岡山県生涯学習センター",
   "station": "JR岡山駅からバス 京山入口",
+  "image": "",
+  "logo": "",
   "lat": 34.676624,
   "lng": 133.908127
  },
@@ -13050,6 +14116,8 @@
   "infoUrl": "https://www.city.hiroshima.lg.jp/living/kosodate/1021261/1025981/1023663.html",
   "address": "〒730-0011 広島県広島市中区基町5-61",
   "station": "広島電鉄 原爆ドーム前電停,県庁前駅",
+  "image": "",
+  "logo": "",
   "lat": 34.397709,
   "lng": 132.45343
  },
@@ -13092,6 +14160,8 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/soshiki/247/innovationhubcamps.html",
   "address": "〒730-0031 広島県広島市中区紙屋町1-4-3 エフケイビル1階",
   "station": "広島電鉄 紙屋町東電停,本通駅",
+  "image": "",
+  "logo": "",
   "lat": 34.394123,
   "lng": 132.458893
  },
@@ -13129,6 +14199,8 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/site/kyouiku/syougyoukyouiku-kigyoukaseishin.html",
   "address": "固定会場なし,実施校の教室等",
   "station": "対象校による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -13170,6 +14242,8 @@
   "infoUrl": "https://myprohiroshima.manabinominato.or.jp/",
   "address": "固定拠点なし,県内会場とオンライン",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -13210,6 +14284,8 @@
   "infoUrl": "https://www.pcf.city.hiroshima.jp/hpcf/peacestudy/YPV/2026/details.pdf",
   "address": "広島平和記念資料館周辺,研修会場は募集要項参照",
   "station": "広島電鉄 原爆ドーム前電停",
+  "image": "",
+  "logo": "",
   "lat": 34.392235,
   "lng": 132.450974
  },
@@ -13246,6 +14322,8 @@
   "infoUrl": "https://www.pu-hiroshima.ac.jp/site/regionaldevelopmentf/hiroshimaoshi2026-2.html",
   "address": "〒734-8558 広島県広島市南区宇品東1-1-71 県立広島大学広島キャンパス",
   "station": "広島電鉄 県病院前電停",
+  "image": "",
+  "logo": "",
   "lat": 34.367306,
   "lng": 132.469666
  },
@@ -13290,6 +14368,8 @@
   "infoUrl": "https://etajima.niye.go.jp/access",
   "address": "〒737-2126 広島県江田島市江田島町津久茂1-1-1",
   "station": "江田島バス 青少年交流の家入口から徒歩約8分",
+  "image": "",
+  "logo": "",
   "lat": 34.259689,
   "lng": 132.446701
  },
@@ -13334,6 +14414,8 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/site/fukuyamashonen/",
   "address": "〒720-0542 広島県福山市金江町藁江619-2",
   "station": "JR松永駅から車",
+  "image": "",
+  "logo": "",
   "lat": 34.436771,
   "lng": 133.284286
  },
@@ -13373,6 +14455,8 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/site/seisyounen-kennzennikusei/sienkikanmap27.html",
   "address": "複数の支援機関,住所は公式マップ参照",
   "station": "各機関による",
+  "image": "",
+  "logo": "",
   "lat": 34.385277,
   "lng": 132.455276
  },
@@ -13411,6 +14495,8 @@
   "infoUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/180/26558.html",
   "address": "固定会場なし,学校と受入先で実施",
   "station": "活動先による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -13452,6 +14538,8 @@
   "infoUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/35/225609.html",
   "address": "固定会場なし,活動説明会と体験先による",
   "station": "活動先による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -13491,6 +14579,8 @@
   "infoUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/85/256763.html",
   "address": "固定会場なし,採択校の教室等",
   "station": "対象校による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -13535,6 +14625,8 @@
   "infoUrl": "https://www.tokusagamine.com/",
   "address": "〒759-1602 山口県山口市阿東嘉年下1883-2",
   "station": "JR徳佐駅方面から車",
+  "image": "",
+  "logo": "",
   "lat": 34.444439,
   "lng": 131.66835
  },
@@ -13576,6 +14668,8 @@
   "infoUrl": "https://www.hito21.jp/seminarpark/park/",
   "address": "〒754-0893 山口県山口市秋穂二島1062",
   "station": "JR新山口駅から車",
+  "image": "",
+  "logo": "",
   "lat": 34.060059,
   "lng": 131.43544
  },
@@ -13620,6 +14714,8 @@
   "infoUrl": "https://megriba.jp/",
   "address": "〒754-0041 山口県山口市小郡令和1-1-1 KDDI維新ホール1階",
   "station": "JR新山口駅 北口直結",
+  "image": "",
+  "logo": "",
   "lat": 34.092941,
   "lng": 131.394119
  },
@@ -13663,6 +14759,8 @@
   "infoUrl": "https://mirai365.jp/coworking/",
   "address": "〒753-0087 山口県山口市米屋町2-7",
   "station": "JR山口駅から徒歩約7分",
+  "image": "",
+  "logo": "",
   "lat": 34.176888,
   "lng": 131.477432
  },
@@ -13702,6 +14800,8 @@
   "infoUrl": "https://kenmin.pref.yamaguchi.lg.jp/boranet/boralist/",
   "address": "〒753-0064 山口県山口市神田町1-80 パルトピアやまぐち2階",
   "station": "JR湯田温泉駅から車",
+  "image": "",
+  "logo": "",
   "lat": 34.172565,
   "lng": 131.456146
  },
@@ -13745,6 +14845,8 @@
   "infoUrl": "https://www.city.ube.yamaguchi.jp/machizukuri/sangyou/kokorozashi/index.html",
   "address": "〒755-0045 山口県宇部市中央町3-10-12",
   "station": "JR宇部新川駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.955475,
   "lng": 131.24144
  },
@@ -13780,9 +14882,11 @@
   ],
   "status": "参考情報",
   "url": "https://www.shikoku.meti.go.jp/",
-  "infoUrl": "https://www.shikoku.meti.go.jp/01\\_releases/index.html",
+  "infoUrl": "https://www.shikoku.meti.go.jp/01_releases/index.html",
   "address": "〒760-8512 香川県高松市サンポート3-33 高松サンポート合同庁舎",
   "station": "JR高松駅",
+  "image": "",
+  "logo": "",
   "lat": 34.352581,
   "lng": 134.045914
  },
@@ -13827,6 +14931,8 @@
   "infoUrl": "https://www.tokuginplaza.com/asp/sstlist.asp",
   "address": "〒770-0831 徳島県徳島市寺島本町西1-5 アミコビル東館9階",
   "station": "JR徳島駅 直結",
+  "image": "",
+  "logo": "",
   "lat": 34.073792,
   "lng": 134.54892
  },
@@ -13867,6 +14973,8 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kenko/kosodateshien/7314656/",
   "address": "〒770-0831 徳島県徳島市寺島本町西1-61 徳島駅クレメントプラザ5階 toku-Noix内",
   "station": "JR徳島駅 直結",
+  "image": "",
+  "logo": "",
   "lat": 34.074863,
   "lng": 134.549835
  },
@@ -13911,6 +15019,8 @@
   "infoUrl": "https://mugi-nature.com/shisetsu.html",
   "address": "〒775-0005 徳島県海部郡牟岐町大字灘字東谷116-35",
   "station": "JR牟岐駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.671856,
   "lng": 134.445084
  },
@@ -13947,9 +15057,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.tnbc.or.jp/kyoiku/",
-  "infoUrl": "https://www.tnbc.or.jp/open\\_event\\_cat/for\\_school/",
+  "infoUrl": "https://www.tnbc.or.jp/open_event_cat/for_school/",
   "address": "固定会場なし,年度の講座会場と販売会場による",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -13989,6 +15101,8 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/gakkokyoiku/7235508",
   "address": "固定会場なし,年度の発表会場と各学校",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -14025,6 +15139,8 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/shogaigakushu/7304605/",
   "address": "徳島県徳島市寺島本町西1-5 とくぎんトモニプラザほか",
   "station": "JR徳島駅 直結",
+  "image": "",
+  "logo": "",
   "lat": 34.073792,
   "lng": 134.54892
  },
@@ -14067,6 +15183,8 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/entrepreneur/support",
   "address": "運営事務局と県内イベント会場,詳細は公式サイト参照",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": 34.070091,
   "lng": 134.554703
  },
@@ -14106,6 +15224,8 @@
   "infoUrl": "https://shien.pref.tokushima.lg.jp/support-group/support/youth/",
   "address": "複数の支援団体,住所は公式一覧参照",
   "station": "各団体による",
+  "image": "",
+  "logo": "",
   "lat": 34.070091,
   "lng": 134.554703
  },
@@ -14149,6 +15269,8 @@
   "infoUrl": "https://www.seinen.kagawa.jp/main.html",
   "address": "〒769-0102 香川県高松市国分寺町国分1009",
   "station": "JR国分駅から徒歩約3分",
+  "image": "",
+  "logo": "",
   "lat": 34.299576,
   "lng": 133.941055
  },
@@ -14189,10 +15311,12 @@
    "宿泊可"
   ],
   "status": "掲載推奨",
-  "url": "https://www.pref.kagawa.lg.jp/goshikidaishonen/goshikidai\\_shonen/index.html",
-  "infoUrl": "https://www.pref.kagawa.lg.jp/goshikidaishonen/goshikidai\\_shonen/facilites/202534.html",
+  "url": "https://www.pref.kagawa.lg.jp/goshikidaishonen/goshikidai_shonen/index.html",
+  "infoUrl": "https://www.pref.kagawa.lg.jp/goshikidaishonen/goshikidai_shonen/facilites/202534.html",
   "address": "〒761-8002 香川県高松市生島町423",
   "station": "JR高松駅方面から車",
+  "image": "",
+  "logo": "",
   "lat": 34.356052,
   "lng": 133.956985
  },
@@ -14237,6 +15361,8 @@
   "infoUrl": "https://setouchiibase.jp/pub/facility",
   "address": "〒760-0019 香川県高松市サンポート2-1 高松シンボルタワー4・5階",
   "station": "JR高松駅から徒歩約3分",
+  "image": "",
+  "logo": "",
   "lat": 34.352398,
   "lng": 134.047791
  },
@@ -14274,6 +15400,8 @@
   "infoUrl": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/koko/tokushoku/kiramekutop.html",
   "address": "固定会場なし,年度の研修会場と各学校",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -14305,10 +15433,12 @@
    "発表者選考"
   ],
   "status": "条件付き掲載",
-  "url": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/20260130\\_r7\\_tankyu.html",
-  "infoUrl": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/20260130\\_r7\\_tankyu.html",
+  "url": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/20260130_r7_tankyu.html",
+  "infoUrl": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/20260130_r7_tankyu.html",
   "address": "年度の発表会場による",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": 34.340111,
   "lng": 134.043289
  },
@@ -14346,6 +15476,8 @@
   "infoUrl": "https://www.kagawa-u.ac.jp/cooperation-community/course/20433/",
   "address": "香川大学各キャンパス,科目ごとに会場確認",
   "station": "科目の開催キャンパスによる",
+  "image": "",
+  "logo": "",
   "lat": 34.343601,
   "lng": 134.038727
  },
@@ -14384,6 +15516,8 @@
   "infoUrl": "https://www.pref.kagawa.lg.jp/sangyo/shinki/ichigenka.html",
   "address": "オンライン情報サイト,会場は掲載事業ごとに異なる",
   "station": "掲載事業による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -14426,6 +15560,8 @@
   "infoUrl": "https://www.city.matsuyama.ehime.jp/kids/shisetsu/chushinbu/seisyonen.html",
   "address": "〒790-0864 愛媛県松山市築山町12-33",
   "station": "伊予鉄バス 新立から徒歩約2分",
+  "image": "",
+  "logo": "",
   "lat": 33.839363,
   "lng": 132.779282
  },
@@ -14464,6 +15600,8 @@
   "infoUrl": "https://www.pref.ehime.jp/page/145622.html",
   "address": "〒791-8014 愛媛県松山市山越町450 愛媛県男女共同参画センター内",
   "station": "伊予鉄 本町六丁目駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.855057,
   "lng": 132.756302
  },
@@ -14508,6 +15646,8 @@
   "infoUrl": "https://ozu.niye.go.jp/guide/",
   "address": "〒795-0001 愛媛県大洲市北只1086",
   "station": "JR伊予大洲駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.495979,
   "lng": 132.536133
  },
@@ -14553,6 +15693,8 @@
   "infoUrl": "https://en-base.pref.ehime.jp/guide",
   "address": "〒790-8570 愛媛県松山市一番町4-4-2 愛媛県庁内",
   "station": "伊予鉄道 県庁前電停",
+  "image": "",
+  "logo": "",
   "lat": 33.84174,
   "lng": 132.766113
  },
@@ -14591,6 +15733,8 @@
   "infoUrl": "https://ccr.ehime-u.ac.jp/startup/",
   "address": "愛媛県松山市一番町4-4-2 E:N BASE",
   "station": "伊予鉄道 県庁前電停",
+  "image": "",
+  "logo": "",
   "lat": 33.84174,
   "lng": 132.766113
  },
@@ -14626,10 +15770,12 @@
    "申込必要"
   ],
   "status": "掲載保留",
-  "url": "https://www.ehime-u.ac.jp/tp\\_20260616\\_egs/",
-  "infoUrl": "https://www.ehime-u.ac.jp/tp\\_20260616\\_egs/",
+  "url": "https://www.ehime-u.ac.jp/tp_20260616_egs/",
+  "infoUrl": "https://www.ehime-u.ac.jp/tp_20260616_egs/",
   "address": "愛媛大学各施設,詳細公開待ち",
   "station": "実施会場による",
+  "image": "",
+  "logo": "",
   "lat": 33.839165,
   "lng": 132.76564
  },
@@ -14674,6 +15820,8 @@
   "infoUrl": "https://www.i-fureai.jp/",
   "address": "〒791-1136 愛媛県松山市上野町甲650",
   "station": "伊予鉄バス 愛媛県生涯学習センター前から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.773216,
   "lng": 132.803543
  },
@@ -14717,6 +15865,8 @@
   "infoUrl": "https://www.k-sc.net/access/",
   "address": "〒781-8010 高知県高知市桟橋通2-1-50",
   "station": "とさでん交通 桟橋通一丁目電停から徒歩約1分",
+  "image": "",
+  "logo": "",
   "lat": 33.549263,
   "lng": 133.547089
  },
@@ -14761,6 +15911,8 @@
   "infoUrl": "https://www.pref.kochi.lg.jp/soshiki/310000/310405/",
   "address": "〒781-5232 高知県香南市野市町西野303-1",
   "station": "土佐くろしお鉄道 のいち駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.57716,
   "lng": 133.698029
  },
@@ -14800,6 +15952,8 @@
   "infoUrl": "https://www.u-kochi.ac.jp/site/re-design/kochi-teens-base.html",
   "address": "〒780-8515 高知県高知市永国寺町2-22 高知県立大学永国寺キャンパス地域連携棟1階",
   "station": "JR高知駅から徒歩約15分",
+  "image": "",
+  "logo": "",
   "lat": 33.564213,
   "lng": 133.535004
  },
@@ -14844,6 +15998,8 @@
   "infoUrl": "https://www.startup.kochi.jp/",
   "address": "固定会場なし,Kochi Startup BASE関連会場とオンライン",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -14887,6 +16043,8 @@
   "infoUrl": "https://kocopla.jp/access/",
   "address": "〒780-8515 高知県高知市永国寺町6-28 地域連携棟1階",
   "station": "JR高知駅から徒歩約15分,とさでん交通 大橋通から徒歩約7分",
+  "image": "",
+  "logo": "",
   "lat": 33.563499,
   "lng": 133.534317
  },
@@ -14931,6 +16089,8 @@
   "infoUrl": "https://muroto.niye.go.jp/access.html",
   "address": "〒781-7108 高知県室戸市元乙1721",
   "station": "高知東部交通 元橋バス停から施設入口方面",
+  "image": "",
+  "logo": "",
   "lat": 33.310341,
   "lng": 134.115875
  },
@@ -14970,6 +16130,8 @@
   "infoUrl": "https://sites.google.com/g.kochinet.ed.jp/kochikokusaisymposium/",
   "address": "〒780-8052 高知県高知市鴨部2-5-70 高知国際中学校・高等学校",
   "station": "とさでん交通 鴨部電停から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.551083,
   "lng": 133.502197
  },
@@ -15009,6 +16171,8 @@
   "infoUrl": "https://kochi-monodukuri.online/news/21629/",
   "address": "ものメッセKOCHI2026会場,公式募集要項参照",
   "station": "開催会場による",
+  "image": "",
+  "logo": "",
   "lat": 33.558723,
   "lng": 133.531097
  },
@@ -15047,6 +16211,8 @@
   "infoUrl": "https://www.pref.kumamoto.jp/site/chiji/259215.html",
   "address": "固定会場なし,参加校と地域企業で実施",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -15090,6 +16256,8 @@
   "infoUrl": "https://www.pref.fukuoka.lg.jp/contents/koukouseichallenge-portal.html",
   "address": "固定会場なし,県内の活動拠点とオンライン",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -15130,6 +16298,8 @@
   "infoUrl": "https://kodomo.city.fukuoka.lg.jp/info/9826/",
   "address": "複数拠点,若者の居場所マップ参照",
   "station": "各居場所による",
+  "image": "",
+  "logo": "",
   "lat": 33.59,
   "lng": 130.401672
  },
@@ -15175,6 +16345,8 @@
   "infoUrl": "https://yasu.niye.go.jp/facility/",
   "address": "〒838-0202 福岡県朝倉郡筑前町三箇山1103",
   "station": "甘木鉄道 甘木駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.492748,
   "lng": 130.646484
  },
@@ -15220,6 +16392,8 @@
   "infoUrl": "https://www.fsg.pref.fukuoka.jp/center/riyou/anai.html",
   "address": "〒811-2402 福岡県糟屋郡篠栗町大字金出3350-2",
   "station": "JR篠栗駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.632423,
   "lng": 130.545532
  },
@@ -15266,6 +16440,8 @@
   "infoUrl": "https://www.fsg.pref.fukuoka.jp/hikosan/riyou/riyou.html",
   "address": "〒824-0721 福岡県田川郡添田町大字英彦山32-18",
   "station": "JR添田駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.486668,
   "lng": 130.914062
  },
@@ -15309,9 +16485,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.fsg.pref.fukuoka.jp/genkai/",
-  "infoUrl": "https://www.fsg.pref.fukuoka.jp/genkai/riyou/riyou\\_tetuduki.html",
+  "infoUrl": "https://www.fsg.pref.fukuoka.jp/genkai/riyou/riyou_tetuduki.html",
   "address": "〒811-3501 福岡県宗像市神湊1276",
   "station": "JR東郷駅からバスと徒歩",
+  "image": "",
+  "logo": "",
   "lat": 33.849468,
   "lng": 130.495041
  },
@@ -15349,6 +16527,8 @@
   "infoUrl": "https://qfcsp.kyushu-u.ac.jp/",
   "address": "〒819-0395 福岡県福岡市西区元岡744 九州大学伊都キャンパス",
   "station": "九大学研都市駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 33.597153,
   "lng": 130.223312
  },
@@ -15393,6 +16573,8 @@
   "infoUrl": "https://www.city.fukuoka.lg.jp/shimin/koeki/life/fnvcasuminIntroduction.html",
   "address": "〒810-0021 福岡県福岡市中央区今泉1丁目19-22 天神クラス4階",
   "station": "西鉄福岡天神駅から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 33.586418,
   "lng": 130.39772
  },
@@ -15434,6 +16616,8 @@
   "infoUrl": "https://science.pref.fukuoka.jp/",
   "address": "〒830-0003 福岡県久留米市東櫛原町1713",
   "station": "西鉄櫛原駅から徒歩約10分",
+  "image": "",
+  "logo": "",
   "lat": 33.318035,
   "lng": 130.528137
  },
@@ -15478,6 +16662,8 @@
   "infoUrl": "https://www.city.saga.lg.jp/kosodate-kyoiku/mokuteki/7/2268.html",
   "address": "〒840-0831 佐賀県佐賀市松原2丁目2-27 佐賀バルーンミュージアム3階",
   "station": "JR佐賀駅から徒歩約17分,県庁前バス停から徒歩1分",
+  "image": "",
+  "logo": "",
   "lat": 33.252354,
   "lng": 130.300201
  },
@@ -15514,9 +16700,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://www.pref.saga.lg.jp/kyouiku/kiji003116454/index.html",
-  "infoUrl": "https://www.pref.saga.lg.jp/kyouiku/kiji003108682/3\\_108682\\_326178\\_up\\_tvg6781d.pdf",
+  "infoUrl": "https://www.pref.saga.lg.jp/kyouiku/kiji003108682/3_108682_326178_up_tvg6781d.pdf",
   "address": "県内7か所のSAGA DI LAB,会場は年度案内参照",
   "station": "各拠点による",
+  "image": "",
+  "logo": "",
   "lat": 33.263512,
   "lng": 130.300888
  },
@@ -15558,6 +16746,8 @@
   "infoUrl": "https://www.yumeginga.jp/",
   "address": "〒843-0021 佐賀県武雄市武雄町永島16351",
   "station": "JR武雄温泉駅から車で約10分",
+  "image": "",
+  "logo": "",
   "lat": 33.178806,
   "lng": 130.035675
  },
@@ -15599,6 +16789,8 @@
   "infoUrl": "https://www.yumeginga.jp/jaxaga.html",
   "address": "〒843-0021 佐賀県武雄市武雄町永島16351 佐賀県立宇宙科学館",
   "station": "JR武雄温泉駅から車で約10分",
+  "image": "",
+  "logo": "",
   "lat": 33.178806,
   "lng": 130.035675
  },
@@ -15645,6 +16837,8 @@
   "infoUrl": "https://www.hokuzan-saga.jp/guide/index.html",
   "address": "〒842-0303 佐賀県佐賀市富士町大字関屋514-1",
   "station": "JR佐賀駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.410934,
   "lng": 130.232132
  },
@@ -15691,6 +16885,8 @@
   "infoUrl": "https://www.hadosyou-saga.jp/",
   "address": "〒847-0401 佐賀県唐津市鎮西町名護屋5581-1",
   "station": "波戸岬少年自然の家前バス停から徒歩5分",
+  "image": "",
+  "logo": "",
   "lat": 33.530167,
   "lng": 129.86763
  },
@@ -15732,6 +16928,8 @@
   "infoUrl": "https://saga-startup-ecosystem.com/",
   "address": "固定拠点・会場はイベントごとに異なる",
   "station": "会場による",
+  "image": "",
+  "logo": "",
   "lat": 33.263512,
   "lng": 130.300888
  },
@@ -15775,6 +16973,8 @@
   "infoUrl": "https://www.tsunasaga.jp/plaza/",
   "address": "〒840-0826 佐賀県佐賀市白山2丁目1-12 佐賀商工ビル7階",
   "station": "JR佐賀駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.254555,
   "lng": 130.300873
  },
@@ -15821,6 +17021,8 @@
   "infoUrl": "https://isahaya.niye.go.jp/facility/",
   "address": "〒859-0307 長崎県諫早市白木峰町1109-1",
   "station": "JR諫早駅から県営バスまたは車",
+  "image": "",
+  "logo": "",
   "lat": 32.923374,
   "lng": 130.073242
  },
@@ -15867,6 +17069,8 @@
   "infoUrl": "https://hiyoshi-shizen.jp/overview/facility/",
   "address": "〒851-0254 長崎県長崎市飯香浦町3715",
   "station": "JR長崎駅から車",
+  "image": "",
+  "logo": "",
   "lat": 32.725327,
   "lng": 129.929214
  },
@@ -15909,6 +17113,8 @@
   "infoUrl": "https://www.pref.nagasaki.jp/bunrui/shigoto-sangyo/sangyoshien/jigyoshien/shinkigyou/startup/",
   "address": "〒850-0862 長崎県長崎市出島町2-11 出島交流会館2階",
   "station": "長崎電気軌道 出島電停",
+  "image": "",
+  "logo": "",
   "lat": 32.742275,
   "lng": 129.871689
  },
@@ -15950,6 +17156,8 @@
   "infoUrl": "https://miraionlibrary.jp/",
   "address": "〒856-0831 長崎県大村市東本町481",
   "station": "JR大村駅から徒歩約5分",
+  "image": "",
+  "logo": "",
   "lat": 32.908916,
   "lng": 129.961609
  },
@@ -15993,6 +17201,8 @@
   "infoUrl": "https://ncacl.net/volunteer/",
   "address": "〒850-0022 長崎県長崎市馬町21-1",
   "station": "長崎電気軌道 諏訪神社電停から徒歩3分",
+  "image": "",
+  "logo": "",
   "lat": 32.752216,
   "lng": 129.882599
  },
@@ -16033,6 +17243,8 @@
   "infoUrl": "https://nagasaki-volunteer.or.jp/category/o-volunteer/",
   "address": "〒852-8555 長崎県長崎市茂里町3-24 長崎県総合福祉センター2階",
   "station": "JR浦上駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 32.766701,
   "lng": 129.862381
  },
@@ -16071,6 +17283,8 @@
   "infoUrl": "https://www.pref.nagasaki.jp/uploads/2025/05/1747876510.pdf",
   "address": "固定会場なし,県立高校、長崎大学、研修先等",
   "station": "プログラムによる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -16107,10 +17321,12 @@
    "無料確認"
   ],
   "status": "掲載推奨",
-  "url": "\\[link removed\\]\\_/2026\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_\\_.pdf",
+  "url": "[link removed]_/2026________________.pdf",
   "infoUrl": "https://nnavi.pref.nagasaki.jp/",
   "address": "出島メッセ長崎,長崎県長崎市尾上町4-1",
   "station": "JR長崎駅 西口直結",
+  "image": "",
+  "logo": "",
   "lat": 32.753601,
   "lng": 129.868149
  },
@@ -16150,6 +17366,8 @@
   "infoUrl": "https://www.pref.nagasaki.jp/uploads/2025/05/1747876510.pdf",
   "address": "固定会場なし,県立高校と連携企業等",
   "station": "実施校による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -16190,6 +17408,8 @@
   "infoUrl": "https://www.city.kumamoto.jp/kiji00368076/index.html",
   "address": "複数拠点,こどもの居場所マップ参照",
   "station": "各居場所による",
+  "image": "",
+  "logo": "",
   "lat": 32.803333,
   "lng": 130.708054
  },
@@ -16235,6 +17455,8 @@
   "infoUrl": "https://www.k-seishonen.com/ashikita/",
   "address": "〒869-5454 熊本県葦北郡芦北町鶴木山",
   "station": "肥薩おれんじ鉄道 佐敷駅から車",
+  "image": "",
+  "logo": "",
   "lat": 32.314598,
   "lng": 130.476974
  },
@@ -16280,6 +17502,8 @@
   "infoUrl": "https://www.k-seishonen.com/toyono/information.html",
   "address": "〒861-4305 熊本県宇城市豊野町山崎1775",
   "station": "JR松橋駅から車",
+  "image": "",
+  "logo": "",
   "lat": 32.652115,
   "lng": 130.739838
  },
@@ -16325,6 +17549,8 @@
   "infoUrl": "https://www.k-seishonen.com/amakusa/",
   "address": "〒861-6102 熊本県上天草市松島町合津5500",
   "station": "JR三角駅から車",
+  "image": "",
+  "logo": "",
   "lat": 32.508297,
   "lng": 130.422485
  },
@@ -16370,6 +17596,8 @@
   "infoUrl": "https://k-seishonen.com/kikuchi/",
   "address": "〒861-1441 熊本県菊池市原4885-5",
   "station": "JR熊本駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.012997,
   "lng": 130.924255
  },
@@ -16412,6 +17640,8 @@
   "infoUrl": "https://xosspoint.jp/facility-information/",
   "address": "〒860-0047 熊本県熊本市西区春日1丁目14-1 くまもと森都心プラザ2階",
   "station": "JR熊本駅直結",
+  "image": "",
+  "logo": "",
   "lat": 32.790062,
   "lng": 130.691574
  },
@@ -16445,10 +17675,12 @@
    "年度募集"
   ],
   "status": "掲載推奨",
-  "url": "https://www.kumamoto-u.ac.jp/nyuushi/sonota/shin-higo/2026shin\\_higojisyukan",
-  "infoUrl": "https://www.kumamoto-u.ac.jp/nyuushi/sonota/shin-higo/2026\\_sinhigo\\_chirashi.pdf",
+  "url": "https://www.kumamoto-u.ac.jp/nyuushi/sonota/shin-higo/2026shin_higojisyukan",
+  "infoUrl": "https://www.kumamoto-u.ac.jp/nyuushi/sonota/shin-higo/2026_sinhigo_chirashi.pdf",
   "address": "〒860-8555 熊本県熊本市中央区黒髪2丁目40-1 熊本大学",
   "station": "熊本電鉄 黒髪町駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 32.814938,
   "lng": 130.727325
  },
@@ -16487,6 +17719,8 @@
   "infoUrl": "https://www.hs.kumamoto-u.ac.jp/school/news/2026/06/post-26.html",
   "address": "熊本県熊本市中央区九品寺4-24-1 熊本大学九品寺キャンパス",
   "station": "熊本市電 九品寺交差点電停から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 32.793629,
   "lng": 130.714905
  },
@@ -16526,6 +17760,8 @@
   "infoUrl": "https://stsplaza.net/library/2026/07/08/659/",
   "address": "〒860-0047 熊本県熊本市西区春日1丁目14-1 くまもと森都心プラザ6階",
   "station": "JR熊本駅直結",
+  "image": "",
+  "logo": "",
   "lat": 32.790062,
   "lng": 130.691574
  },
@@ -16572,6 +17808,8 @@
   "infoUrl": "https://www.pref.oita.jp/site/kakaji/riyounotebiki.html",
   "address": "〒872-1202 大分県豊後高田市香々地5151",
   "station": "JR宇佐駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.662022,
   "lng": 131.517441
  },
@@ -16618,6 +17856,8 @@
   "infoUrl": "https://www.pref.oita.jp/site/kokonoe/list21527.html",
   "address": "〒879-4911 大分県玖珠郡九重町大字田野204-47",
   "station": "JR豊後中村駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.152756,
   "lng": 131.235001
  },
@@ -16663,6 +17903,8 @@
   "infoUrl": "https://www.city.oita.oita.jp/kosodate/seshonen/shizennoie/index.html",
   "address": "〒870-1221 大分県大分市大字荷尾杵1097-26",
   "station": "JR大分駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.099133,
   "lng": 131.489853
  },
@@ -16701,6 +17943,8 @@
   "infoUrl": "https://www.pref.oita.jp/uploaded/attachment/2264402.pdf",
   "address": "立命館アジア太平洋大学,大分県別府市十文字原1-1,ほかオンライン",
   "station": "JR亀川駅からバス",
+  "image": "",
+  "logo": "",
   "lat": 33.284721,
   "lng": 131.491104
  },
@@ -16745,6 +17989,8 @@
   "infoUrl": "https://www.oitavoc.jp/",
   "address": "大分県大分市大津町2丁目1-41 大分県総合社会福祉会館内",
   "station": "JR牧駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 33.247898,
   "lng": 131.625565
  },
@@ -16785,6 +18031,8 @@
   "infoUrl": "https://www.oita-syakyo.com/pages/24/",
   "address": "〒870-0839 大分県大分市金池南1丁目5-1 J:COMホルトホール大分4階",
   "station": "JR大分駅 上野の森口から徒歩2分",
+  "image": "",
+  "logo": "",
   "lat": 33.231361,
   "lng": 131.605728
  },
@@ -16825,6 +18073,8 @@
   "infoUrl": "https://www.pref.oita.jp/soshiki/14040/oita-startup2026.html",
   "address": "固定会場なし,プログラムごとに異なる",
   "station": "会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -16862,6 +18112,8 @@
   "infoUrl": "https://www.pref.oita.jp/site/n-kennsetsugyou/n-goudousetumeikai.html",
   "address": "クラサス武道スポーツセンター,大分県大分市大字横尾1351",
   "station": "JR高城駅から車",
+  "image": "",
+  "logo": "",
   "lat": 33.239445,
   "lng": 131.609726
  },
@@ -16905,6 +18157,8 @@
   "infoUrl": "https://www.city.miyazaki.miyazaki.jp/education/support/support/379115.html",
   "address": "〒880-0001 宮崎県宮崎市橘通西3丁目10-32 宮崎ナナイロ東館8階",
   "station": "橘通3丁目バス停から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 31.915874,
   "lng": 131.422943
  },
@@ -16941,10 +18195,12 @@
    "平日"
   ],
   "status": "掲載推奨",
-  "url": "https://www.city.miyazaki.miyazaki.jp/education/healthy\\_development/support/376.html",
-  "infoUrl": "https://www.city.miyazaki.miyazaki.jp/education/healthy\\_development/support/376.html",
+  "url": "https://www.city.miyazaki.miyazaki.jp/education/healthy_development/support/376.html",
+  "infoUrl": "https://www.city.miyazaki.miyazaki.jp/education/healthy_development/support/376.html",
   "address": "宮崎県宮崎市内,面接場所は予約時に確認",
   "station": "相談時に確認",
+  "image": "",
+  "logo": "",
   "lat": 31.742336,
   "lng": 131.471893
  },
@@ -16990,6 +18246,8 @@
   "infoUrl": "https://www.aoshima-msgsi.jp/",
   "address": "〒889-2151 宮崎県宮崎市大字熊野字藤兵衛中州",
   "station": "JR運動公園駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 31.832977,
   "lng": 131.441925
  },
@@ -17035,6 +18293,8 @@
   "infoUrl": "https://www.mukabaki-msgsi.jp/contents/",
   "address": "〒882-0077 宮崎県延岡市行縢町760-3",
   "station": "JR延岡駅から車",
+  "image": "",
+  "logo": "",
   "lat": 32.612576,
   "lng": 131.581161
  },
@@ -17080,6 +18340,8 @@
   "infoUrl": "https://www.miike-msgsi.jp/facilities/index.html",
   "address": "〒885-0225 宮崎県都城市夏尾町5988-30",
   "station": "JR都城駅から車",
+  "image": "",
+  "logo": "",
   "lat": 31.850986,
   "lng": 130.970154
  },
@@ -17118,6 +18380,8 @@
   "infoUrl": "https://www.pref.miyazaki.lg.jp/kokokyoiku/press/2026/06/20260626161954.html",
   "address": "ひなた武道館,宮崎県宮崎市熊野2206-1",
   "station": "JR運動公園駅から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 31.907681,
   "lng": 131.420288
  },
@@ -17157,6 +18421,8 @@
   "infoUrl": "https://www.pref.miyazaki.lg.jp/kurashi/npo/volunteer/index.html",
   "address": "オンライン情報サイト,活動会場は募集ごとに異なる",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -17202,6 +18468,8 @@
   "infoUrl": "https://www.pref.kagoshima.jp/bc06/kikan/seisyouken/kari/riyousuruniha.html",
   "address": "〒891-1305 鹿児島県鹿児島市宮之浦町4226-1",
   "station": "JR鹿児島駅から車",
+  "image": "",
+  "logo": "",
   "lat": 31.682465,
   "lng": 130.567932
  },
@@ -17247,6 +18515,8 @@
   "infoUrl": "https://osumi.niye.go.jp/moushikomi/index.html",
   "address": "〒891-2396 鹿児島県鹿屋市花里町赤崩",
   "station": "鹿屋バスセンターから車",
+  "image": "",
+  "logo": "",
   "lat": 31.427324,
   "lng": 130.786041
  },
@@ -17293,6 +18563,8 @@
   "infoUrl": "https://www.kagoshima-seisyounen.jp/guide/",
   "address": "〒890-0064 鹿児島県鹿児島市鴨池新町1-8",
   "station": "県庁前バス停から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 31.560602,
   "lng": 130.556351
  },
@@ -17336,6 +18608,8 @@
   "infoUrl": "https://www.city.kagoshima.lg.jp/san-sousyutu/shisetsu/sangyo/002.html",
   "address": "〒892-0821 鹿児島県鹿児島市名山町9-15",
   "station": "鹿児島市電 朝日通電停から徒歩3分",
+  "image": "",
+  "logo": "",
   "lat": 31.594776,
   "lng": 130.55925
  },
@@ -17371,9 +18645,11 @@
   ],
   "status": "掲載推奨",
   "url": "https://kokubu.edu.pref.kagoshima.jp/article/2026011500139/",
-  "infoUrl": "https://www.pref.kagoshima.jp/ba05/kyoiku-bunka/school/bijyon/documents/121726\\_20251027131336-1.pdf",
+  "infoUrl": "https://www.pref.kagoshima.jp/ba05/kyoiku-bunka/school/bijyon/documents/121726_20251027131336-1.pdf",
   "address": "カクイックス交流センター等,年度により変更",
   "station": "会場による",
+  "image": "",
+  "logo": "",
   "lat": 31.596861,
   "lng": 130.557022
  },
@@ -17414,6 +18690,8 @@
   "infoUrl": "https://www.city.kagoshima.lg.jp/kodomofuku/kagoshimakodomoouennnetwork.html",
   "address": "複数拠点,ネットワーク一覧参照",
   "station": "各居場所による",
+  "image": "",
+  "logo": "",
   "lat": 31.596861,
   "lng": 130.557022
  },
@@ -17451,10 +18729,12 @@
    "継続参加"
   ],
   "status": "掲載推奨",
-  "url": "https://www.pref.kagoshima.jp/bc05/hakubutsukan/volunteer/st\\_volunteer.html",
-  "infoUrl": "https://www.pref.kagoshima.jp/bc05/hakubutsukan/volunteer/st\\_volunteer.html",
+  "url": "https://www.pref.kagoshima.jp/bc05/hakubutsukan/volunteer/st_volunteer.html",
+  "infoUrl": "https://www.pref.kagoshima.jp/bc05/hakubutsukan/volunteer/st_volunteer.html",
   "address": "〒892-0853 鹿児島県鹿児島市城山町1-1 鹿児島県立博物館",
   "station": "鹿児島市電 市役所前電停から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 31.59384,
   "lng": 130.552643
  },
@@ -17494,6 +18774,8 @@
   "infoUrl": "https://www.city.kagoshima.lg.jp/kodomofuku/kokusai.html",
   "address": "固定会場なし,事前研修会場と派遣先による",
   "station": "プログラムによる",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -17539,6 +18821,8 @@
   "infoUrl": "https://okinawa.niye.go.jp/info.php",
   "address": "〒901-3595 沖縄県島尻郡渡嘉敷村字渡嘉敷2760",
   "station": "渡嘉敷港から施設送迎等を確認",
+  "image": "",
+  "logo": "",
   "lat": 26.204298,
   "lng": 127.361282
  },
@@ -17584,6 +18868,8 @@
   "infoUrl": "https://tamagusuku-youthhome.jp/information/",
   "address": "〒901-0604 沖縄県南城市玉城字玉城420",
   "station": "那覇バスターミナルから路線バスと車",
+  "image": "",
+  "logo": "",
   "lat": 26.142889,
   "lng": 127.781868
  },
@@ -17628,6 +18914,8 @@
   "infoUrl": "https://www.unai-sc.net/information/",
   "address": "〒904-1106 沖縄県うるま市石川3491-2",
   "station": "石川ICから車",
+  "image": "",
+  "logo": "",
   "lat": 26.434546,
   "lng": 127.822083
  },
@@ -17672,6 +18960,8 @@
   "infoUrl": "https://www.nagoseishounen-obsi.jp/",
   "address": "〒905-0012 沖縄県名護市字名護5511",
   "station": "名護バスターミナルから車",
+  "image": "",
+  "logo": "",
   "lat": 26.590071,
   "lng": 127.996246
  },
@@ -17716,6 +19006,8 @@
   "infoUrl": "https://www.miyako-banzu.com/",
   "address": "〒906-0011 沖縄県宮古島市平良字東仲宗根添1164",
   "station": "宮古空港から車",
+  "image": "",
+  "logo": "",
   "lat": 24.798697,
   "lng": 125.304176
  },
@@ -17760,6 +19052,8 @@
   "infoUrl": "https://ishigaki-yh.com/",
   "address": "〒907-0024 沖縄県石垣市字新川868",
   "station": "新石垣空港から車",
+  "image": "",
+  "logo": "",
   "lat": 24.364752,
   "lng": 124.128601
  },
@@ -17802,6 +19096,8 @@
   "infoUrl": "https://lagoon-koza.org/school",
   "address": "〒904-0004 沖縄県沖縄市中央1丁目7-8",
   "station": "胡屋バス停から徒歩2分",
+  "image": "",
+  "logo": "",
   "lat": 26.336821,
   "lng": 127.800346
  },
@@ -17845,6 +19141,8 @@
   "infoUrl": "https://www.ryukyu-frogs.com/information",
   "address": "固定会場なし,県内拠点、オンライン、研修先",
   "station": "活動会場による",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -17886,6 +19184,8 @@
   "infoUrl": "https://www.oist.jp/ja/outreach/high-school",
   "address": "〒904-0495 沖縄県国頭郡恩納村字谷茶1919-1 OIST",
   "station": "大学院大学前バス停",
+  "image": "",
+  "logo": "",
   "lat": 26.464243,
   "lng": 127.830719
  },
@@ -17923,6 +19223,8 @@
   "infoUrl": "https://www.oist.jp/ja/outreach/high-school/shima",
   "address": "OIST,沖縄県国頭郡恩納村字谷茶1919-1,ほか活動地域",
   "station": "大学院大学前バス停",
+  "image": "",
+  "logo": "",
   "lat": 26.497368,
   "lng": 127.853729
  },
@@ -17964,6 +19266,8 @@
   "infoUrl": "https://www.pref.okinawa.jp/bunkakoryu/bunkageijutsu/1009673/1009684/1009689.html",
   "address": "〒903-0125 沖縄県中頭郡西原町上原193-7",
   "station": "琉大附属病院前バス停から徒歩圏",
+  "image": "",
+  "logo": "",
   "lat": 26.244158,
   "lng": 127.758911
  },
@@ -18002,6 +19306,8 @@
   "infoUrl": "https://willdoor-compass.com/page",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18041,6 +19347,8 @@
   "infoUrl": "https://khd.gakken.co.jp/2025/04/24/news-5216/",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18080,6 +19388,8 @@
   "infoUrl": "https://qulii.jp/online/",
   "address": "固定会場なし（情報サイト）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18118,6 +19428,8 @@
   "infoUrl": "https://communeinc.com/ja/news/2025feb21",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18157,6 +19469,8 @@
   "infoUrl": "https://www.beauproject.net/beau-labo-online",
   "address": "固定会場なし（オンライン中心）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18197,6 +19511,8 @@
   "infoUrl": "https://growandleap.com/my-story-project/",
   "address": "固定会場なし（対面イベントあり）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18235,6 +19551,8 @@
   "infoUrl": "https://www.1on1college.com/",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18273,6 +19591,8 @@
   "infoUrl": "https://www.camp.waffle-waffle.org/",
   "address": "固定会場なし（開催回による）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18315,6 +19635,8 @@
   "infoUrl": "https://www.technovation.waffle-waffle.org/",
   "address": "固定会場なし（最終発表は対面）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18356,6 +19678,8 @@
   "infoUrl": "https://jr.mitou.org/",
   "address": "固定会場なし（合宿・成果報告会あり）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18397,6 +19721,8 @@
   "infoUrl": "https://www.iewri.or.jp/seminar/seminar/20250429.html",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18436,6 +19762,8 @@
   "infoUrl": "https://discova.jp/program/",
   "address": "固定会場なし（プログラムにより会場あり）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18475,6 +19803,8 @@
   "infoUrl": "https://www.katariba.or.jp/activity/project/ohdantankyu/",
   "address": "固定会場なし（学校から参加）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18515,6 +19845,8 @@
   "infoUrl": "https://www.katariba.or.jp/activity/project/futoko/",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18551,6 +19883,8 @@
   "infoUrl": "https://me-x.jp/lp/",
   "address": "固定会場なし（情報サイト）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18590,6 +19924,8 @@
   "infoUrl": "https://www.dreampossibility.com/whatwedo/yukisakichat/",
   "address": "固定会場なし（LINE相談）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18625,6 +19961,8 @@
   "infoUrl": "https://childline.or.jp/chat/",
   "address": "固定会場なし（チャット相談）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18664,6 +20002,8 @@
   "infoUrl": "https://bondproject.jp/line.html",
   "address": "固定会場なし（LINE相談）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  },
@@ -18700,6 +20040,8 @@
   "infoUrl": "https://stg.katariba-teens.online/",
   "address": "固定会場なし（提供終了）",
   "station": "対象外（オンライン）",
+  "image": "",
+  "logo": "",
   "lat": null,
   "lng": null
  }
