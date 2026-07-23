@@ -518,6 +518,44 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 .map-empty{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
 @media(max-width:520px){.leaflet-popup-content{width:220px!important}}
 
+/* ===== footer nav ===== */
+.foot-nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.foot-nav a{color:var(--ink-soft);font-size:.86rem;font-weight:700;text-decoration:none;cursor:pointer}
+.foot-nav a:hover{color:var(--primary-deep)}
+
+/* ===== content page modal ===== */
+.page-card{
+  max-width:720px;margin:0 auto;background:var(--surface);border-radius:20px;overflow:hidden;
+  box-shadow:0 30px 70px -20px rgba(0,0,0,.5);animation:dpop .28s cubic-bezier(.2,.7,.2,1) both;
+}
+.page-hero{background:linear-gradient(120deg,var(--primary),#E8781F 60%,var(--accent));color:#fff;padding:26px 26px 24px;position:relative}
+.page-hero .eb{font-size:.8rem;font-weight:700;opacity:.9;margin-bottom:6px}
+.page-hero h2{font-family:var(--font-display);font-weight:400;font-size:1.7rem;line-height:1.35}
+.page-close{position:absolute;top:14px;right:14px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.9);color:var(--ink);font-size:20px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer}
+.page-body{padding:22px 26px 30px;font-size:.96rem;line-height:1.9;color:var(--ink)}
+.page-body h3{font-family:var(--font-display);font-weight:400;font-size:1.2rem;color:var(--ink);margin:22px 0 8px}
+.page-body h3:first-child{margin-top:0}
+.page-body p{margin-bottom:12px;color:var(--ink-soft)}
+.page-body ul{margin:0 0 14px;padding-left:2px;list-style:none}
+.page-body li{position:relative;padding-left:22px;margin-bottom:8px;color:var(--ink-soft)}
+.page-body li::before{content:"";position:absolute;left:4px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--primary)}
+.page-body .qa{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.page-body .qa .q{font-weight:700;color:var(--ink);margin-bottom:5px}
+.page-body .qa .q::before{content:"Q. ";color:var(--primary-deep)}
+.page-body .qa .a{color:var(--ink-soft);font-size:.92rem}
+.page-body .callout{background:var(--primary-tint);border-radius:12px;padding:14px 16px;color:var(--primary-deep);font-size:.9rem;font-weight:500;line-height:1.8}
+.page-form{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.page-form label{font-size:.82rem;font-weight:700;color:var(--ink-soft);margin-bottom:5px;display:block}
+.page-form input,.page-form textarea,.page-form select{
+  width:100%;border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;font-size:.95rem;font-family:var(--font-jp);color:var(--ink);background:var(--surface);
+}
+.page-form input:focus,.page-form textarea:focus,.page-form select:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-tint)}
+.page-form textarea{min-height:120px;resize:vertical}
+.page-form .submit{background:var(--primary);color:#fff;border:none;border-radius:11px;padding:14px;font-size:.95rem;font-weight:700;cursor:pointer;margin-top:4px}
+.page-form .submit:hover{background:var(--primary-deep)}
+.page-form .hint{font-size:.8rem;color:var(--muted);line-height:1.7}
+@media(max-width:560px){.page-overlay{padding:0}.page-card{border-radius:0;min-height:100vh}.page-hero h2{font-size:1.4rem}}
+
 /* ===== diagnosis CTA ===== */
 .quiz-cta{max-width:1180px;margin:34px auto 0;padding:0 20px}
 .quiz-cta-inner{
@@ -810,6 +848,12 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
 <footer>
   <div class="foot">
+    <nav class="foot-nav">
+      <a href="#guide" data-page="guide">はじめての人へ</a>
+      <a href="#teachers" data-page="teachers">先生・保護者の方へ</a>
+      <a href="#faq" data-page="faq">よくある質問・安全に使うために</a>
+      <a href="#contact" data-page="contact">掲載依頼・お問い合わせ</a>
+    </nav>
     <div class="legend">
       <span class="status s-rec">掲載推奨</span>
       <span class="status s-cond">条件つき</span>
@@ -820,6 +864,11 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     「条件つき」「参考情報」「要確認」の拠点は、利用に条件がある場合があります。紹介文のとおりに利用できるか、事前にご確認ください。
   </div>
 </footer>
+
+<!-- ===== CONTENT PAGE MODAL ===== -->
+<div class="detail-overlay" id="pageOverlay" role="dialog" aria-modal="true" aria-label="ページ">
+  <div class="page-card" id="pageCard"></div>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
@@ -1546,7 +1595,90 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   quizOverlay.onclick=function(e){ if(e.target===quizOverlay) closeQuiz(); };
   document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&quizOverlay.classList.contains("open")) closeQuiz(); });
 
+  // ===== CONTENT PAGES (P1/P2/P4/P3) =====
+  var CONTACT_EMAIL="yuki.kotake@studymeter-web.com";
+  var pageOverlay=$("#pageOverlay"), pageCard=$("#pageCard");
+  var PAGES={
+    guide:{eb:"はじめての人へ",title:"このサイトのつかい方",html:
+      '<p>「いばしょ・きっかけ MAP」は、中学生・高校生が使える全国の居場所・プログラム・活動拠点・施設をさがせるサイトです。気になることから、近くの場所から、いろいろな入口でさがせます。</p>'+
+      '<h3>4つのさがし方</h3><ul>'+
+      '<li><b>キーワード</b>：名前・活動・地名で検索</li>'+
+      '<li><b>しぼり込み</b>：地方／都道府県／やってみたいこと／対象などで絞る</li>'+
+      '<li><b>地図で見る</b>：地方をえらぶと、その地方の拠点が地図に出ます。ピンをタップで詳細</li>'+
+      '<li><b>近くをさがす</b>：現在地から近い順にならべます（スマホがおすすめ）</li></ul>'+
+      '<h3>迷ったら「診断」</h3><p>3つの質問に答えると、あなたに合いそうな拠点を提案します。トップの「診断をはじめる」から試せます。</p>'+
+      '<h3>カードの見方</h3><ul>'+
+      '<li>写真・名前・場所・「中高生向けの紹介文」で、どんな場所かがわかります</li>'+
+      '<li>カードをタップすると、詳細（地図・タグ・公式サイト・シェア）が開きます</li></ul>'+
+      '<h3>掲載可否バッジ</h3><ul>'+
+      '<li><b>掲載推奨</b>：そのまま利用しやすい</li>'+
+      '<li><b>条件つき</b>：利用に条件がある場合あり</li>'+
+      '<li><b>参考情報／要確認</b>：情報が変わっている可能性あり。公式サイトで確認を</li></ul>'+
+      '<div class="callout">料金・対象年齢・予約の要否などは変わることがあります。参加する前に、必ず公式サイトや各拠点で最新情報を確認してください。</div>'},
+    teachers:{eb:"先生・保護者の方へ",title:"先生・保護者の方へ",html:
+      '<p>本サイトは、生徒・お子さんの「やってみたい」を後押しする場所さがしにお使いいただけます。探究学習・キャリア教育・居場所づくり・課外活動などの入口としてご活用ください。</p>'+
+      '<h3>活用のヒント</h3><ul>'+
+      '<li>地方・都道府県で、地域の拠点をまとめて確認できます</li>'+
+      '<li>「学校連携」「大学連携」「宿泊研修」などのタグで、授業・行事に合う先を探せます</li>'+
+      '<li>各拠点の詳細ページのURLは共有できます（生徒への紹介や、たよりに）</li></ul>'+
+      '<h3>ご利用前のお願い</h3><ul>'+
+      '<li>対象年齢・引率の要否・料金・申込方法は拠点により異なります。「条件つき」の拠点は特にご確認ください</li>'+
+      '<li>掲載内容は各拠点の公式情報をもとに整理していますが、最新でない場合があります。お申し込み前に公式サイト・各拠点へご確認ください</li></ul>'+
+      '<div class="callout">学校・団体での利用や、掲載内容についてのご相談は「掲載依頼・お問い合わせ」からご連絡ください。</div>'},
+    faq:{eb:"よくある質問",title:"よくある質問・安全に使うために",html:
+      '<h3>よくある質問</h3>'+
+      '<div class="qa"><div class="q">無料で使えますか？</div><div class="a">拠点により異なります。「利用のしかた」の「無料」などのタグを目印に。詳しくは各公式サイトで確認してください。</div></div>'+
+      '<div class="qa"><div class="q">申し込みは必要ですか？</div><div class="a">予約や年度募集が必要な場合があります。詳細ページの「利用のしかた」や公式サイトをご確認ください。</div></div>'+
+      '<div class="qa"><div class="q">「条件つき」ってなんですか？</div><div class="a">利用に条件（対象年齢・引率など）がある場合があるという印です。紹介文どおりに使えるか、事前の確認をおすすめします。</div></div>'+
+      '<div class="qa"><div class="q">情報は正確ですか？</div><div class="a">公式情報をもとに整理していますが、変更されることがあります。参加前に必ず最新情報を確認してください。</div></div>'+
+      '<div class="qa"><div class="q">現在地の位置情報は保存されますか？</div><div class="a">近い順の並べ替えにその場で使うだけで、サーバーに保存・送信はしません。</div></div>'+
+      '<h3>安全に使うために</h3><ul>'+
+      '<li>初めて行く場所は、おうちの人や先生に伝えてから利用しましょう</li>'+
+      '<li>お金や個人情報を求められたら、その場で決めず大人に相談を</li>'+
+      '<li>公式サイトや各拠点で、最新の利用条件を確認しましょう</li></ul>'+
+      '<div class="callout">こまったとき・話を聞いてほしいときは、「相談」で絞り込むと、相談できる拠点やオンライン相談が見つかります。</div>'},
+    contact:{eb:"掲載依頼・お問い合わせ",title:"掲載依頼・お問い合わせ",html:
+      '<p>新しい拠点の掲載依頼、掲載内容の修正・削除、その他のお問い合わせはこちらから。下のフォームに入力すると、メールを作成できます。</p>'+
+      '<form class="page-form" id="contactForm">'+
+      '<div><label>お名前・団体名</label><input name="name" autocomplete="off"></div>'+
+      '<div><label>ご連絡先メール</label><input name="email" type="email" autocomplete="off"></div>'+
+      '<div><label>ご用件</label><select name="type"><option>拠点の掲載を依頼したい</option><option>掲載内容の修正・削除</option><option>その他のお問い合わせ</option></select></div>'+
+      '<div><label>内容</label><textarea name="body" placeholder="拠点名・URL・ご要望など、できるだけ具体的にご記入ください。"></textarea></div>'+
+      '<button type="submit" class="submit">メールを作成して送る</button>'+
+      '<p class="hint">送信ボタンでお使いのメールアプリが起動します（宛先・件名・本文が入力済み）。うまく起動しない場合は <a href="mailto:'+CONTACT_EMAIL+'">'+CONTACT_EMAIL+'</a> まで直接お送りください。</p>'+
+      '</form>'}
+  };
+  function openPage(key){
+    var pg=PAGES[key]; if(!pg) return;
+    if(overlay.classList.contains("open")) closeDetail(false);
+    if(quizOverlay.classList.contains("open")) closeQuiz();
+    pageCard.innerHTML='<div class="page-hero"><button class="page-close" id="pageClose" aria-label="閉じる">✕</button><div class="eb">'+pg.eb+'</div><h2>'+pg.title+'</h2></div><div class="page-body">'+pg.html+'</div>';
+    pageOverlay.classList.add("open"); document.body.style.overflow="hidden"; pageOverlay.scrollTop=0;
+    $("#pageClose").onclick=function(){ closePage(); };
+    if(key==="contact") wireContact();
+  }
+  function closePage(){
+    pageOverlay.classList.remove("open"); document.body.style.overflow="";
+    if(location.hash){ try{history.replaceState(null,"",location.pathname+location.search);}catch(e){} }
+  }
+  function wireContact(){
+    var f=$("#contactForm"); if(!f) return;
+    f.onsubmit=function(e){
+      e.preventDefault();
+      var d=new FormData(f);
+      var type=d.get("type")||"お問い合わせ";
+      var subject="【いばしょ・きっかけ MAP】"+type;
+      var body="ご用件: "+type+"\nお名前・団体名: "+(d.get("name")||"")+"\nご連絡先: "+(d.get("email")||"")+"\n\n内容:\n"+(d.get("body")||"");
+      window.location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+    };
+  }
+  pageOverlay.onclick=function(e){ if(e.target===pageOverlay) closePage(); };
+  document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&pageOverlay.classList.contains("open")) closePage(); });
+  function handleHash(){ var k=location.hash.replace(/^#/,""); if(PAGES[k]) openPage(k); else if(pageOverlay.classList.contains("open")) closePage(); }
+  window.addEventListener("hashchange", handleHash);
+
   render();
+  handleHash();
 
   // deep-link: ?id=XXX opens that spot
   (function(){
