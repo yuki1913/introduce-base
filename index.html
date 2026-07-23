@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 <style>
 :root{
   --ink:#0F2928;
@@ -401,6 +404,57 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   .searchbar{margin-bottom:12px}
   .toolbar{padding:10px 14px 8px}
 }
+/* ===== VIEW TOGGLE (list / map) ===== */
+.view-toggle{display:inline-flex;background:var(--slate-tint);border-radius:999px;padding:3px;gap:2px}
+.view-toggle .vt{
+  border:none;background:none;color:var(--ink-soft);font-weight:700;font-size:.82rem;
+  padding:6px 15px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;transition:all .15s;
+}
+.view-toggle .vt svg{width:15px;height:15px}
+.view-toggle .vt.active{background:var(--surface);color:var(--green-deep);box-shadow:0 1px 3px rgba(15,41,40,.16)}
+
+/* ===== MAP ===== */
+.map-section{max-width:1180px;margin:6px auto 0;padding:0 20px 50px}
+.map-hint{
+  font-size:.85rem;color:var(--ink-soft);background:var(--green-tint);
+  border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px;line-height:1.6;
+}
+.map-hint b{color:var(--green-deep);font-family:var(--font-num)}
+#map{
+  height:min(72vh,640px);width:100%;border-radius:var(--radius);
+  border:1px solid var(--line);box-shadow:var(--shadow);z-index:0;background:#e8ece6;
+}
+.leaflet-container{font-family:var(--font-jp);position:relative;z-index:1}
+/* custom pin */
+.ys-pin{
+  width:32px;height:32px;border-radius:50%;border:2.5px solid #fff;
+  box-shadow:0 2px 7px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;
+  font-size:16px;line-height:1;
+}
+.marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(23,151,106,.28)}
+.marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{background:var(--green);color:#fff;font-family:var(--font-num);font-weight:700}
+/* popup */
+.leaflet-popup-content-wrapper{border-radius:14px;padding:0;overflow:hidden;box-shadow:var(--shadow-lift)}
+.leaflet-popup-content{margin:0;width:266px!important;line-height:1.6}
+.ys-pop-photo{height:112px;position:relative;overflow:hidden;background:var(--line)}
+.ys-pop-photo img{width:100%;height:100%;object-fit:cover}
+.ys-pop-pills{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;gap:6px}
+.ys-pop-pills .pill{font-size:.66rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.94)}
+.ys-pop-body{padding:11px 13px 13px}
+.ys-pop-body h4{font-family:var(--font-round);font-weight:700;font-size:1rem;color:var(--ink);margin:0 0 4px;line-height:1.4}
+.ys-pop-place{font-size:.76rem;color:var(--muted);margin-bottom:7px}
+.ys-pop-intro{font-size:.8rem;color:var(--ink);margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ys-pop-act{display:flex;gap:7px}
+.ys-pop-act a{
+  flex:1;text-align:center;font-size:.78rem;font-weight:700;padding:8px;border-radius:9px;text-decoration:none;transition:all .13s;
+}
+.ys-pop-act .p1{background:var(--green);color:#fff}
+.ys-pop-act .p1:hover{background:var(--green-deep)}
+.ys-pop-act .p2{background:var(--surface);color:var(--ink-soft);border:1.5px solid var(--line)}
+.ys-pop-act .p2:hover{border-color:var(--green);color:var(--green-deep)}
+.map-empty{text-align:center;color:var(--muted);padding:30px;font-size:.9rem}
+@media(max-width:520px){.leaflet-popup-content{width:220px!important}}
+
 :focus-visible{outline:3px solid var(--green);outline-offset:2px;border-radius:6px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -488,10 +542,20 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 <div class="toolbar">
   <div class="count"><b id="count">0</b>件 みつかりました</div>
   <div class="toolbar-r">
+    <div class="view-toggle" id="viewToggle" role="tablist" aria-label="表示切替">
+      <button class="vt active" data-view="list" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>リスト</button>
+      <button class="vt" data-view="map" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>地図</button>
+    </div>
     <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
     <button class="clear-all" id="clearAll">条件をクリア</button>
   </div>
 </div>
+
+<!-- ===== MAP VIEW ===== -->
+<section class="map-section" id="mapSection" hidden aria-label="地図でさがす">
+  <div class="map-hint" id="mapHint">地方や都道府県をえらぶと、その地域にズームします。ピンをタップすると詳細が見られます。</div>
+  <div id="map"></div>
+</section>
 
 <!-- ===== CATEGORY BANNERS ===== -->
 <div class="cat-section" id="catSection">
@@ -532,6 +596,8 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="data.js"></script>
 <script>
 (function(){
@@ -591,7 +657,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
 
-  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:""};
+  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:"list"};
 
   var $=function(s){return document.querySelector(s)};
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
@@ -704,7 +770,7 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 
   $("#showAll").onchange=function(){state.showAll=this.checked;render();};
   $("#clearAll").onclick=function(){
-    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:""};
+    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:state.view};
     qi.value="";qc.classList.remove("show");ps.value="";$("#showAll").checked=false;
     syncHeroChips();syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
     syncCatCards();
@@ -876,9 +942,91 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
   }
 
   var grid=$("#grid"),empty=$("#empty"),countEl=$("#count");
+
+  // ===== MAP =====
+  var HUE_COLOR={green:"#1B9E6B",blue:"#2E6FD0",orange:"#F5811F",purple:"#6C4FD4",pink:"#F15C74",teal:"#0E9E93"};
+  var map=null, cluster=null, mapInited=false;
+  function esc(s){return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+  function markerIcon(cv){
+    var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
+    return L.divIcon({
+      html:'<div class="ys-pin" style="background:'+color+'">'+cv.emoji+'</div>',
+      className:"", iconSize:[32,32], iconAnchor:[16,16], popupAnchor:[0,-16]
+    });
+  }
+  function popupHtml(r){
+    var cv=coverOf(r);
+    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
+    var photo=(r.image||getPhotoUrl(cv));
+    var place=[r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
+    var h='<div class="ys-pop">';
+    h+='<div class="ys-pop-photo"><img src="'+esc(photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+      +'<div class="ys-pop-pills"><span class="pill">'+esc(cv.emoji+" "+cv.label)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
+    h+='<div class="ys-pop-body">';
+    h+='<h4>'+esc(r.name)+'</h4>';
+    h+='<div class="ys-pop-place">📍 '+esc(place)+'</div>';
+    if(r.intro) h+='<p class="ys-pop-intro">'+esc(r.intro)+'</p>';
+    h+='<div class="ys-pop-act">';
+    if(r.url) h+='<a class="p1" href="'+esc(r.url)+'" target="_blank" rel="noopener">公式サイト</a>';
+    if(r.address) h+='<a class="p2" href="'+esc(mapUrl(r))+'" target="_blank" rel="noopener">地図で開く</a>';
+    h+='</div></div></div>';
+    return h;
+  }
+  function initMap(){
+    map=L.map("map",{scrollWheelZoom:true,zoomControl:true}).setView([37.6,137.4],5);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    cluster=L.markerClusterGroup({maxClusterRadius:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true});
+    map.addLayer(cluster);
+    mapInited=true;
+  }
+  function updateMap(list){
+    if(!mapInited) return;
+    cluster.clearLayers();
+    var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
+    var markers=pts.map(function(r){
+      return L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r)),title:r.name}).bindPopup(popupHtml(r),{maxWidth:280,minWidth:230});
+    });
+    markers.forEach(function(m){cluster.addLayer(m);});
+    var hint=$("#mapHint");
+    var off=list.length-pts.length;
+    hint.innerHTML='地図に表示中 <b>'+pts.length+'</b> 拠点'
+      +(off>0?'（住所が特定できないオンライン・広域の事業 '+off+' 件は地図に出ません）':'')
+      +'／ピンをタップで詳細。';
+    if(pts.length){
+      map.invalidateSize();
+      map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14});
+    }
+  }
+
+  // view toggle
+  var catSection=$("#catSection"), resultsWrap=$("#resultsWrap"), mapSection=$("#mapSection");
+  var vtBtns=document.querySelectorAll("#viewToggle .vt");
+  vtBtns.forEach(function(b){
+    b.onclick=function(){
+      var v=b.dataset.view;
+      if(v===state.view) return;
+      state.view=v;
+      vtBtns.forEach(function(x){var on=x.dataset.view===v;x.classList.toggle("active",on);x.setAttribute("aria-selected",String(on));});
+      var mapMode=(v==="map");
+      mapSection.hidden=!mapMode;
+      catSection.style.display=mapMode?"none":"";
+      resultsWrap.style.display=mapMode?"none":"";
+      if(mapMode){
+        if(!mapInited) initMap();
+        setTimeout(function(){map.invalidateSize();render();},60);
+      } else {
+        render();
+      }
+    };
+  });
+
   function render(){
     var list=DATA.filter(matches);
     countEl.textContent=list.length.toLocaleString();
+    if(state.view==="map"){ updateMap(list); return; }
     grid.innerHTML="";
     if(!list.length){empty.style.display="";return;}
     empty.style.display="none";
