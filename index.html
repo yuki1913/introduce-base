@@ -421,10 +421,13 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
 }
 .map-hint b{color:var(--green-deep);font-family:var(--font-num)}
 #map{
-  height:min(74vh,660px);width:100%;border-radius:20px;
-  border:1px solid var(--line);box-shadow:var(--shadow-lift);z-index:0;background:#eef0ec;
+  height:min(74vh,660px);width:100%;border-radius:22px;
+  border:1px solid #d8e6df;box-shadow:var(--shadow-lift);z-index:0;
+  background:linear-gradient(155deg,#eaf5f0 0%,#dcecf1 55%,#d3e6ee 100%);
 }
-.leaflet-container{font-family:var(--font-jp);position:relative;z-index:1;background:#eef0ec}
+.leaflet-container{font-family:var(--font-jp);position:relative;z-index:1;background:transparent}
+/* 陸地を紙のように浮かせる影 */
+.leaflet-land-pane{filter:drop-shadow(0 10px 16px rgba(20,74,62,.20)) drop-shadow(0 2px 4px rgba(20,74,62,.12))}
 /* custom pin — branded circle + soft halo, pops on the light basemap */
 .ys-pin{
   width:32px;height:32px;border-radius:50%;
@@ -996,12 +999,12 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     });});
     return holes;
   }
-  // 指定範囲(全国 or 地方)だけを見せるマスク＋境界線を描く。境界を返す
+  // 指定範囲(全国 or 地方)の陸地を白く塗り、県境を描く（海は#mapの背景グラデ）。境界を返す
   function applyMask(feats){
     if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;}
     if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;}
-    maskLayer=L.polygon([WORLD_RING].concat(holesFor(feats)),{stroke:false,fillColor:MASK_FILL,fillOpacity:1,interactive:false,className:"ys-mask"}).addTo(map);
-    outlineLayer=L.geoJSON(feats,{style:{color:"#1B9E6B",weight:1,opacity:.45,fill:false},interactive:false}).addTo(map);
+    maskLayer=L.geoJSON(feats,{pane:"land",style:{fillColor:"#ffffff",fillOpacity:1,stroke:false},interactive:false}).addTo(map);
+    outlineLayer=L.geoJSON(feats,{pane:"border",style:{color:"#bcd6c7",weight:1,opacity:1,fill:false},interactive:false}).addTo(map);
     return outlineLayer.getBounds();
   }
   // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
@@ -1048,11 +1051,10 @@ footer{border-top:1px solid var(--line);background:var(--surface);margin-top:16p
     return h;
   }
   function initMap(){
-    map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",{
-      maxZoom:19, subdomains:"abcd", noWrap:true,
-      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }).addTo(map);
+    map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxZoom:12,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
+    map.createPane("land"); map.getPane("land").style.zIndex=250;      // 陸地（影つき）
+    map.createPane("border"); map.getPane("border").style.zIndex=350;  // 県境ライン
+    map.attributionControl.setPrefix("").addAttribution('境界: <a href="https://github.com/dataofjapan/land" target="_blank" rel="noopener">dataofjapan/land</a>');
     cluster=L.markerClusterGroup({maxClusterRadius:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true});
     regionLayer=L.layerGroup();
     map.addLayer(cluster); map.addLayer(regionLayer);
