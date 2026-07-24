@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>拠点の詳細｜いばしょ・きっかけ MAP</title>
+<meta name="description" content="中高生の活動支援拠点の詳細ページ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
+    <nav class="site-nav">
+      <a href="search.html">さがす</a>
+      <a href="search.html?view=map">地図</a>
+      <a href="guide.html">はじめての方</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="spot-wrap">
+  <a class="spot-back" href="search.html">← 一覧にもどる</a>
+  <div id="spot"></div>
+</main>
+
+<footer>
+  <div class="foot">
+    <nav class="foot-nav">
+      <a href="guide.html">はじめての人へ</a>
+      <a href="teachers.html">先生・保護者の方へ</a>
+      <a href="faq.html">よくある質問・安全に使うために</a>
+      <a href="contact.html">掲載依頼・お問い合わせ</a>
+    </nav>
+    掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data.js"></script>
+<script src="shared.js"></script>
+<script>
+(function(){
+  var Y=window.YS, esc=Y.esc;
+  var id=(new URLSearchParams(location.search)).get("id");
+  var r=id&&Y.BYID[id];
+  var box=document.getElementById("spot");
+  if(!r){ box.innerHTML='<div class="detail-body" style="text-align:center;padding:60px 0"><h2 style="font-family:var(--font-display)">拠点が見つかりませんでした</h2><p style="color:var(--muted)">URLをご確認いただくか、一覧からおさがしください。</p></div>'; return; }
+  document.title=r.name+"｜いばしょ・きっかけ MAP";
+
+  var sm=Y.STATUS_META[r.status]||{cls:"s-ref",label:r.status};
+  var cv=Y.coverOf(r);
+  var place=[r.region,r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
+  var hero=r.image?'<img src="'+esc(r.image)+'" alt="'+esc(r.name)+'" onerror="this.style.display=\'none\'">'
+    :'<div class="card-cover cv-'+cv.hue+'" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center"><span class="cover-emoji">'+cv.emoji+'</span></div>';
+  var h='<div class="spot-hero">'+hero+'<div class="spot-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
+  h+='<div class="detail-body" style="padding:22px 0 0">';
+  if(r.logo) h+='<img class="detail-logo" src="'+esc(r.logo)+'" alt="'+esc(r.name)+'のロゴ" onerror="this.remove()">';
+  h+='<h2>'+esc(r.name)+'</h2>';
+  h+='<div class="detail-place">'+Y.SVG_PIN+'<span>'+esc(place)+'</span></div>';
+  h+='<p class="detail-intro">'+esc(r.intro)+'</p>';
+  if(r.status==="条件付き掲載") h+='<div class="detail-note">利用に条件がある場合があります。参加前に公式サイトでご確認ください。</div>';
+  else if(r.status==="掲載保留"||r.status==="参考情報") h+='<div class="detail-note">情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。</div>';
+  if(r.fieldTags&&r.fieldTags.length) h+='<div class="detail-sec"><h3>やってみたいこと</h3><div class="detail-tags">'+r.fieldTags.map(function(t){return '<span class="tag">'+esc((Y.FIELD_STYLE[t]?Y.FIELD_STYLE[t][0]+" ":"")+t)+'</span>';}).join('')+'</div></div>';
+  if(r.useTags&&r.useTags.length) h+='<div class="detail-sec"><h3>利用のしかた</h3><div class="detail-tags">'+r.useTags.map(function(t){return '<span class="tag use">'+esc(t)+'</span>';}).join('')+'</div></div>';
+  var info='';
+  if(r.targets&&r.targets.length) info+='<div><b>対象</b>'+esc(r.targets.join("・"))+'</div>';
+  if(r.station) info+='<div><b>アクセス</b>'+esc(r.station)+'</div>';
+  if(r.address) info+='<div><b>住所</b>'+esc(r.address)+'</div>';
+  if(info) h+='<div class="detail-sec"><h3>基本情報</h3><div class="detail-info">'+info+'</div></div>';
+  if(r.lat!=null) h+='<div class="detail-sec"><h3>地図</h3><div id="detailMap"></div></div>';
+  h+='<div class="detail-actions">';
+  if(r.url) h+='<a class="da-primary" href="'+esc(r.url)+'" target="_blank" rel="noopener">'+Y.SVG_EXT+'公式サイト</a>';
+  if(r.address) h+='<a class="da-ghost" href="'+esc(Y.mapUrl(r))+'" target="_blank" rel="noopener">'+Y.SVG_MAP+'地図で開く</a>';
+  h+='<button class="da-ghost" id="shareBtn">シェア</button></div>';
+  var rel=Y.DATA.filter(function(x){return x.region===r.region&&x.id!==r.id&&Y.DEFAULT_STATUS[x.status];}).slice(0,6);
+  h+='</div>';
+  if(rel.length) h+='<div class="detail-related"><h3>'+esc(r.region)+'のほかの拠点</h3><div class="grid" id="relGrid"></div></div>';
+  box.innerHTML=h;
+
+  if(rel.length){ var rgd=document.getElementById("relGrid"); rel.forEach(function(x){rgd.appendChild(Y.card(x));}); }
+
+  if(r.lat!=null){
+    var m=L.map("detailMap",{scrollWheelZoom:false,attributionControl:false}).setView([r.lat,r.lng],14);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd"}).addTo(m);
+    L.marker([r.lat,r.lng],{icon:Y.markerIcon(cv)}).addTo(m);
+    setTimeout(function(){m.invalidateSize();},80);
+  }
+  var sb=document.getElementById("shareBtn");
+  if(sb) sb.onclick=function(){
+    var url=location.href;
+    if(navigator.share){ navigator.share({title:r.name,url:url}).catch(function(){}); }
+    else { navigator.clipboard&&navigator.clipboard.writeText(url); var t=document.getElementById("toast"); t.textContent="リンクをコピーしました"; t.classList.add("show"); setTimeout(function(){t.classList.remove("show");},1800); }
+  };
+})();
+</script>
+</body>
+</html>

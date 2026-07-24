@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>掲載依頼・お問い合わせ｜いばしょ・きっかけ MAP</title>
+<meta name="description" content="掲載依頼・お問い合わせ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header"><div class="site-header-inner">
+<a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
+<nav class="site-nav">
+<a href="search.html">さがす</a><a href="search.html?view=map">地図</a>
+<a href="guide.html">はじめての方</a><a href="contact.html" class="active">お問い合わせ</a>
+</nav></div></header>
+<main style="padding:24px 16px 60px">
+<div class="page-card">
+<div class="page-hero"><div class="eb">掲載依頼・お問い合わせ</div><h2>掲載依頼・お問い合わせ</h2></div>
+<div class="page-body"><p>新しい拠点の掲載依頼、掲載内容の修正・削除、その他のお問い合わせはこちらから。下のフォームに入力すると、メールを作成できます。</p><form class="page-form" id="contactForm"><div><label>お名前・団体名</label><input name="name" autocomplete="off"></div><div><label>ご連絡先メール</label><input name="email" type="email" autocomplete="off"></div><div><label>ご用件</label><select name="type"><option>拠点の掲載を依頼したい</option><option>掲載内容の修正・削除</option><option>その他のお問い合わせ</option></select></div><div><label>内容</label><textarea name="body" placeholder="拠点名・URL・ご要望など、できるだけ具体的にご記入ください。"></textarea></div><button type="submit" class="submit">メールを作成して送る</button><p class="hint">送信ボタンでお使いのメールアプリが起動します（宛先・件名・本文が入力済み）。うまく起動しない場合は <a href="mailto:yuki.kotake@studymeter-web.com">yuki.kotake@studymeter-web.com</a> まで直接お送りください。</p></form></div>
+</div></main>
+<footer><div class="foot">
+<nav class="foot-nav">
+<a href="guide.html">はじめての人へ</a><a href="teachers.html">先生・保護者の方へ</a>
+<a href="faq.html">よくある質問・安全に使うために</a><a href="contact.html">掲載依頼・お問い合わせ</a>
+</nav>
+掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
+</div></footer>
+<script>
+(function(){
+  var CONTACT_EMAIL="yuki.kotake@studymeter-web.com";
+  var f=document.getElementById("contactForm"); if(!f) return;
+  f.onsubmit=function(e){
+    e.preventDefault();
+    var d=new FormData(f), type=d.get("type")||"お問い合わせ";
+    var subject="【いばしょ・きっかけ MAP】"+type;
+    var body="ご用件: "+type+"\nお名前・団体名: "+(d.get("name")||"")+"\nご連絡先: "+(d.get("email")||"")+"\n\n内容:\n"+(d.get("body")||"");
+    window.location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+  };
+})();
+</script>
+</body>
+</html>
