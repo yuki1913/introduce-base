@@ -7,7 +7,7 @@
 <meta name="description" content="全国の中高生が使える支援団体・プログラム・活動拠点・施設を、地域と活動内容からさがせる検索サイトです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
@@ -23,10 +23,7 @@
       いばしょ・きっかけ MAP
     </a>
     <nav class="site-nav">
-      <a href="search.html" class="active">さがす</a>
-      <a href="search.html?view=map">地図</a>
-      <a href="guide.html">はじめての方</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="search.html" class="cta active">さがす</a>
     </nav>
   </div>
 </header>
@@ -53,7 +50,7 @@
         <div class="flabel">地方</div>
         <div class="chips scroll" id="regionChips"></div>
       </div>
-      <div class="fgroup" style="margin-top:12px">
+      <div class="fgroup" style="margin-top:var(--space-sm)">
         <div class="flabel">都道府県</div>
         <select id="prefSel" aria-label="都道府県で絞り込み"><option value="">すべての都道府県</option></select>
       </div>
@@ -120,8 +117,7 @@
 <div class="quiz-cta" id="quizCta">
   <div class="quiz-cta-inner">
     <div class="quiz-cta-txt">
-      <div class="quiz-cta-eyebrow">🧭 迷ったら、これ</div>
-      <div class="quiz-cta-title">3つの質問で、あなたにピッタリの場所をさがす</div>
+      <div class="quiz-cta-title">3つの質問から候補をしぼれます。</div>
     </div>
     <button class="quiz-cta-btn" id="quizStart">診断をはじめる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
   </div>
@@ -131,7 +127,6 @@
 <div class="cat-section" id="catSection">
   <div class="section-head">
     <div>
-      <div class="section-divider"></div>
       <h2>カテゴリーからさがす</h2>
     </div>
   </div>
@@ -140,16 +135,15 @@
 
 <!-- ===== RESULTS ===== -->
 <main class="results-wrap" id="resultsWrap">
-  <div class="section-head" style="margin-top:28px">
+  <div class="section-head" style="margin-top:var(--space-lg)">
     <div>
-      <div class="section-divider"></div>
       <h2 id="resultsTitle">すべての拠点・プログラム</h2>
     </div>
   </div>
-  <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">📍 現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
+  <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">
-    <div class="empty-icon">🔎</div>
+    <div class="empty-icon">—</div>
     <p><b>条件に合う拠点がみつかりませんでした。</b><br>キーワードや絞り込みを少なくして、もう一度おためしください。</p>
   </div>
 </main>
@@ -205,28 +199,19 @@
   var DEFAULT_STATUS={"掲載推奨":1,"条件付き掲載":1};
 
   var FIELD_STYLE={
-    "探究":["🔭","blue","science"],"科学・研究":["🧪","blue","science"],"天文":["🌌","blue","science"],"学校連携":["🏫","blue","science"],
-    "大学連携":["🎓","blue","science"],"自習":["📖","blue","science"],"環境学習":["🌍","blue","science"],
-    "交流":["🤝","pink","community"],"相談":["💬","pink","community"],"居場所":["🏡","pink","community"],"社会参画":["🗳️","pink","community"],
-    "ボランティア":["🙌","pink","community"],"国際交流":["🌏","pink","community"],"チームビルディング":["🧩","pink","community"],"若者支援":["🌱","pink","community"],
-    "自然体験":["🌲","green","nature"],"キャンプ":["⛺","green","nature"],"宿泊研修":["🏕️","green","nature"],"地域活動":["🏘️","green","nature"],"農業体験":["🌾","green","nature"],
-    "文化・芸術":["🎨","orange","arts"],"音楽":["🎵","orange","arts"],"ものづくり":["🔨","orange","arts"],"発表":["🎤","orange","arts"],
-    "イベント開催":["🎪","orange","arts"],"自主企画":["✨","orange","arts"],
-    "起業":["🚀","purple","startup"],"ビジネス":["💼","purple","startup"],"企業連携":["🏢","purple","startup"],"キャリア教育":["🧭","purple","startup"],
-    "メンタリング":["🧑‍🏫","purple","startup"],"オープンイノベーション":["💡","purple","startup"],"ピッチ・発表":["📣","purple","startup"],
-    "スポーツ":["⚽","teal","sports"]
+    "探究":["","blue","science"],"科学・研究":["","blue","science"],"天文":["","blue","science"],"学校連携":["","blue","science"],
+    "大学連携":["","blue","science"],"自習":["","blue","science"],"環境学習":["","blue","science"],
+    "交流":["","pink","community"],"相談":["","pink","community"],"居場所":["","pink","community"],"社会参画":["","pink","community"],
+    "ボランティア":["","pink","community"],"国際交流":["","pink","community"],"チームビルディング":["","pink","community"],"若者支援":["","pink","community"],
+    "自然体験":["","green","nature"],"キャンプ":["","green","nature"],"宿泊研修":["","green","nature"],"地域活動":["","green","nature"],"農業体験":["","green","nature"],
+    "文化・芸術":["","orange","arts"],"音楽":["","orange","arts"],"ものづくり":["","orange","arts"],"発表":["","orange","arts"],
+    "イベント開催":["","orange","arts"],"自主企画":["","orange","arts"],
+    "起業":["","purple","startup"],"ビジネス":["","purple","startup"],"企業連携":["","purple","startup"],"キャリア教育":["","purple","startup"],
+    "メンタリング":["","purple","startup"],"オープンイノベーション":["","purple","startup"],"ピッチ・発表":["","purple","startup"],
+    "スポーツ":["","teal","sports"]
   };
-  var CAT_FALLBACK={"支援団体":["🤝","pink","community"],"プログラム":["✨","orange","arts"],"活動拠点":["📍","green","nature"],"使用できる施設":["🏢","blue","science"]};
+  var CAT_FALLBACK={"支援団体":["","pink","community"],"プログラム":["","orange","arts"],"活動拠点":["","green","nature"],"使用できる施設":["","blue","science"]};
 
-  // Category images
-  var CAT_IMGS={
-    "nature":"img/cat-nature.png",
-    "science":"img/cat-science.png",
-    "community":"img/cat-community.png",
-    "arts":"img/cat-arts.png",
-    "startup":"img/cat-startup.png",
-    "sports":"img/cat-sports.png"
-  };
   var CAT_LABELS={
     "nature":"自然・体験",
     "science":"探究・科学",
@@ -235,17 +220,13 @@
     "startup":"起業・キャリア",
     "sports":"スポーツ"
   };
-  var CAT_EMOJIS={
-    "nature":"🌲","science":"🔭","community":"🏡","arts":"🎨","startup":"🚀","sports":"⚽"
-  };
-
   function coverOf(r){
     var tags=r.fieldTags||[];
-    for(var i=0;i<tags.length;i++){if(FIELD_STYLE[tags[i]])return {emoji:FIELD_STYLE[tags[i]][0],hue:FIELD_STYLE[tags[i]][1],catKey:FIELD_STYLE[tags[i]][2],label:tags[i]};}
-    if(r.region==="全国オンライン")return {emoji:"💻",hue:"blue",catKey:"science",label:tags[0]||"オンライン"};
+    for(var i=0;i<tags.length;i++){if(FIELD_STYLE[tags[i]])return {hue:FIELD_STYLE[tags[i]][1],catKey:FIELD_STYLE[tags[i]][2],label:tags[i]};}
+    if(r.region==="全国オンライン")return {hue:"blue",catKey:"science",label:tags[0]||"オンライン"};
     var cats=r.cats||[];
-    for(var j=0;j<cats.length;j++){if(CAT_FALLBACK[cats[j]])return {emoji:CAT_FALLBACK[cats[j]][0],hue:CAT_FALLBACK[cats[j]][1],catKey:CAT_FALLBACK[cats[j]][2],label:tags[0]||cats[j]};}
-    return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
+    for(var j=0;j<cats.length;j++){if(CAT_FALLBACK[cats[j]])return {hue:CAT_FALLBACK[cats[j]][1],catKey:CAT_FALLBACK[cats[j]][2],label:tags[0]||cats[j]};}
+    return {hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
 
   var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:"list",userLoc:null,sortByDist:false};
@@ -310,8 +291,7 @@
   // ===== Field chips =====
   var fc=$("#fieldChips");
   fieldSorted.forEach(function(t){
-    var emo=FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"";
-    var b=el("button","chip",emo+t);
+    var b=el("button","chip",t);
     b.appendChild(el("span","n",String(fieldCounts[t])));
     b.setAttribute("aria-pressed","false");
     b.dataset.tag=t;
@@ -411,11 +391,7 @@
   CAT_KEYS.forEach(function(key){
     var div=el("div","cat-card");
     div.dataset.catkey=key;
-    var img=document.createElement("img");
-    img.src=CAT_IMGS[key];img.alt=CAT_LABELS[key];img.loading="lazy";
-    div.appendChild(img);
     var label=el("div","cat-card-label");
-    label.appendChild(el("span","emoji",CAT_EMOJIS[key]));
     label.appendChild(document.createTextNode(CAT_LABELS[key]));
     div.appendChild(label);
     div.onclick=function(){
@@ -461,50 +437,16 @@
   var SVG_MAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
   var SVG_PIN='<svg class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
 
-  // Local photo pool per category
-  var CAT_PHOTO={
-    "nature":"img/cat-nature.png",
-    "science":"img/cat-science.png",
-    "community":"img/cat-community.png",
-    "arts":"img/cat-arts.png",
-    "startup":"img/cat-startup.png",
-    "sports":"img/cat-sports.png"
-  };
-
-  function getPhotoUrl(cv){
-    return CAT_PHOTO[cv.catKey] || CAT_PHOTO["community"];
-  }
-
   function card(r){
     var c=el("div","card");
     var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
-    var cv=coverOf(r);
 
-    // ---- photo thumbnail ----
     var photoWrap=el("div","card-photo");
-    var pImg=document.createElement("img");
-    pImg.src=r.image||getPhotoUrl(cv);        // D1: 実写真があれば優先
-    pImg.alt=r.name+"の活動イメージ";
-    pImg.loading="lazy";
-    pImg.onerror=function(){
-      var fallback=el("div","card-cover cv-"+cv.hue);
-      fallback.innerHTML='<span class="cover-emoji">'+cv.emoji+'</span>';
-      var top=el("div","photo-pills");
-      top.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
-      top.appendChild(el("span","pill st "+sm.cls,sm.label));
-      fallback.appendChild(top);
-      if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt="";lg.onerror=function(){this.remove();};fallback.appendChild(lg);}
-      c.replaceChild(fallback,photoWrap);
-    };
-    photoWrap.appendChild(pImg);
-    var overlay=el("div","card-photo-overlay");
-    photoWrap.appendChild(overlay);
     var pills=el("div","photo-pills");
     pills.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
     pills.appendChild(el("span","pill st "+sm.cls,sm.label));
     photoWrap.appendChild(pills);
-    if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
-    if(r._dist!=null){var db=el("div","dist-badge","📍 約"+fmtDist(r._dist));photoWrap.appendChild(db);}
+    if(r._dist!=null){var db=el("div","dist-badge","約"+fmtDist(r._dist));photoWrap.appendChild(db);}
     c.appendChild(photoWrap);
 
     // ---- body ----
@@ -522,8 +464,7 @@
     if(r.fieldTags && r.fieldTags.length){
       var tl=el("div","tagline");
       r.fieldTags.slice(0,4).forEach(function(t){
-        var e=FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"";
-        tl.appendChild(el("span","tag",e+t));
+        tl.appendChild(el("span","tag",t));
       });
       body.appendChild(tl);
     }
@@ -566,7 +507,10 @@
   var grid=$("#grid"),empty=$("#empty"),countEl=$("#count");
 
   // ===== MAP =====
-  var HUE_COLOR={green:"#D95C20",blue:"#E8960A",orange:"#E86A45",purple:"#C04020",pink:"#E03030",teal:"#CC6820"};
+  var HUE_COLOR={
+    green:"var(--color-accent)",blue:"var(--color-accent)",orange:"var(--color-accent)",
+    purple:"var(--color-accent)",pink:"var(--color-accent)",teal:"var(--color-accent)"
+  };
   var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false;
   var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
   var JAPAN_MAXBOUNDS=[[22.5,120.5],[47.2,151.5]];    // これ以上は外に出られない
@@ -576,7 +520,7 @@
   var GEO_BY_REGION={};
   GEO.features.forEach(function(f){(GEO_BY_REGION[f.properties.region]=GEO_BY_REGION[f.properties.region]||[]).push(f);});
   var WORLD_RING=[[90,-180],[90,180],[-90,180],[-90,-180]];
-  var MASK_FILL="#e6ebe4";
+  var MASK_FILL="var(--color-map-land)";
   function holesFor(feats){
     var holes=[];
     feats.forEach(function(f){f.geometry.coordinates.forEach(function(poly){
@@ -588,8 +532,8 @@
   function applyMask(feats){
     if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;}
     if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;}
-    maskLayer=L.geoJSON(feats,{pane:"land",style:{fillColor:"#ffffff",fillOpacity:1,stroke:false},interactive:false}).addTo(map);
-    outlineLayer=L.geoJSON(feats,{pane:"border",style:{color:"#bcd6c7",weight:1,opacity:1,fill:false},interactive:false}).addTo(map);
+    maskLayer=L.geoJSON(feats,{pane:"land",style:{fillColor:"var(--color-surface)",fillOpacity:1,stroke:false},interactive:false}).addTo(map);
+    outlineLayer=L.geoJSON(feats,{pane:"border",style:{color:"var(--color-map-rule)",weight:1,opacity:1,fill:false},interactive:false}).addTo(map);
     return outlineLayer.getBounds();
   }
   // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
@@ -613,21 +557,19 @@
   function markerIcon(cv){
     var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
     return L.divIcon({
-      html:'<div class="ys-pin" style="background:'+color+'">'+cv.emoji+'</div>',
+      html:'<div class="ys-pin" style="background:'+color+'"></div>',
       className:"", iconSize:[32,32], iconAnchor:[16,16], popupAnchor:[0,-16]
     });
   }
   function popupHtml(r){
     var cv=coverOf(r);
     var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
-    var photo=(r.image||getPhotoUrl(cv));
     var place=[r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
     var h='<div class="ys-pop">';
-    h+='<div class="ys-pop-photo"><img src="'+esc(photo)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-      +'<div class="ys-pop-pills"><span class="pill">'+esc(cv.emoji+" "+cv.label)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
+    h+='<div class="ys-pop-photo"><div class="ys-pop-pills"><span class="pill">'+esc(cv.label)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
     h+='<div class="ys-pop-body">';
     h+='<h4>'+esc(r.name)+'</h4>';
-    h+='<div class="ys-pop-place">📍 '+esc(place)+'</div>';
+    h+='<div class="ys-pop-place">'+esc(place)+'</div>';
     if(r.intro) h+='<p class="ys-pop-intro">'+esc(r.intro)+'</p>';
     h+='<div class="ys-pop-act">';
     if(r.url) h+='<a class="p1" href="'+esc(r.url)+'" target="_blank" rel="noopener">公式サイト</a>';
@@ -753,13 +695,8 @@
 
   function buildDetail(r){
     var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
-    var cv=coverOf(r);
     var place=[r.region,r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
-    var hero = r.image
-      ? '<img src="'+esc(r.image)+'" alt="'+esc(r.name)+'" onerror="this.style.display=\'none\'">'
-      : '<div class="card-cover cv-'+cv.hue+'" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center"><span class="cover-emoji">'+cv.emoji+'</span></div>';
-    var h='<div class="detail-hero">'+hero
-      +'<div class="detail-hero-grad"></div>'
+    var h='<div class="detail-hero">'
       +'<button class="detail-close" id="detailClose" aria-label="閉じる">✕</button>'
       +'<div class="detail-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span><span class="pill">'+esc(sm.label)+'</span></div>'
       +'</div>';
@@ -772,7 +709,7 @@
     else if(r.status==="掲載保留"||r.status==="参考情報") h+='<div class="detail-note">情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。</div>';
     if(r.fieldTags&&r.fieldTags.length){
       h+='<div class="detail-sec"><h3>やってみたいこと</h3><div class="detail-tags">'+
-         r.fieldTags.map(function(t){return '<span class="tag">'+esc((FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"")+t)+'</span>';}).join('')+'</div></div>';
+         r.fieldTags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('')+'</div></div>';
     }
     if(r.useTags&&r.useTags.length){
       h+='<div class="detail-sec"><h3>利用のしかた</h3><div class="detail-tags">'+
@@ -845,11 +782,11 @@
   var quizOverlay=$("#quizOverlay"), quizCard=$("#quizCard");
   var QUIZ=[
     {key:"target", q:"あなたは？", sub:"対象で少ししぼります", opts:[
-      {v:"中学生",label:"中学生",em:"🎒"},{v:"高校生",label:"高校生",em:"📗"},{v:"",label:"どちらでも",em:"✨"}]},
+      {v:"中学生",label:"中学生",em:""},{v:"高校生",label:"高校生",em:""},{v:"",label:"どちらでも",em:""}]},
     {key:"cat", q:"どんなことに興味ある？", sub:"ひとつ選んでね", opts:
-      CAT_KEYS.map(function(k){return {v:k,label:CAT_LABELS[k],em:CAT_EMOJIS[k]};}).concat([{v:"",label:"まだ決めてない",em:"🤔"}])},
+      CAT_KEYS.map(function(k){return {v:k,label:CAT_LABELS[k],em:""};}).concat([{v:"",label:"まだ決めてない",em:""}])},
     {key:"region", q:"どのあたりでさがす？", sub:"住んでいる地方など", opts:
-      [{v:"",label:"どこでも",em:"🗾"}].concat(REGION_ORDER.map(function(g){return {v:g,label:g,em:(g==="全国オンライン"?"💻":"📍")};}))}
+      [{v:"",label:"どこでも",em:""}].concat(REGION_ORDER.map(function(g){return {v:g,label:g,em:""};}))}
   ];
   var quizAns={}, quizStep=0;
 
@@ -880,7 +817,7 @@
     } else {
       var n=quizCountWith(quizAns);
       quizCard.innerHTML='<div class="quiz-head"><button class="quiz-close" id="quizClose">✕</button>'+prog+'</div>'
-        +'<div class="quiz-result"><div style="font-size:2.4rem">🎉</div><div class="quiz-sub" style="margin:0">あなたにおすすめ</div>'
+        +'<div class="quiz-result"><div class="quiz-sub" style="margin:0">あなたにおすすめ</div>'
         +'<div class="big">'+n+'</div><p>件の拠点・プログラムが見つかりました</p>'
         +'<button class="quiz-next" id="quizShow">結果を見る</button></div>'
         +'<div class="quiz-foot"><button class="quiz-back" id="quizBack">← もどる</button></div>';

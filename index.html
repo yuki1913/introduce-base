@@ -7,7 +7,7 @@
 <meta name="description" content="中学生・高校生が使える全国の居場所・プログラム・活動拠点・施設を、地域と「やってみたいこと」からさがせるサイトです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,26 +16,20 @@
   <div class="site-header-inner">
     <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
     <nav class="site-nav">
-      <a href="search.html">さがす</a>
-      <a href="search.html?view=map">地図</a>
-      <a href="guide.html">はじめての方</a>
-      <a href="contact.html">お問い合わせ</a>
-      <a href="search.html?quiz=1" class="cta">診断する</a>
+      <a href="search.html" class="cta">さがす</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" aria-label="サイト紹介">
-  <img class="hero-img" src="img/hero.png" alt="活動する中高生たち" loading="eager" onerror="this.style.display='none'">
-  <div class="hero-overlay"></div>
   <div class="hero-inner">
-    <div class="hero-eyebrow"><span class="dot"></span>中学生・高校生のための活動さがし</div>
-    <h1>「やってみたい」に、<br><span class="hl">出会える</span>場所。</h1>
-    <p class="hero-lead">探究・交流・自然体験・起業…。全国の居場所やプログラムを、地域と「やってみたいこと」からさがそう。</p>
+    <p class="hero-context">中学生・高校生のための活動さがし</p>
+    <h1>やってみたいことから、<span class="hl">場所をさがす。</span></h1>
+    <p class="hero-lead">探究、交流、自然体験、起業。全国の居場所やプログラムを、地域と興味から比べられます。</p>
     <div class="hero-cta">
       <a class="p1" href="search.html">拠点をさがす</a>
-      <a class="p2" href="search.html?quiz=1">かんたん診断</a>
+      <a class="p2" href="guide.html">使い方を読む →</a>
     </div>
   </div>
 </section>
@@ -44,8 +38,7 @@
 <div class="quiz-cta">
   <div class="quiz-cta-inner">
     <div class="quiz-cta-txt">
-      <div class="quiz-cta-eyebrow">🧭 迷ったら、これ</div>
-      <div class="quiz-cta-title">3つの質問で、あなたにピッタリの場所をさがす</div>
+      <div class="quiz-cta-title">3つの質問から候補をしぼれます。</div>
     </div>
     <a class="quiz-cta-btn" href="search.html?quiz=1">診断をはじめる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
@@ -53,19 +46,19 @@
 
 <!-- カテゴリー -->
 <div class="cat-section" id="catSection">
-  <div class="section-head"><div><div class="section-divider"></div><h2>カテゴリーからさがす</h2></div></div>
+  <div class="section-head"><div><h2>カテゴリーからさがす</h2></div></div>
   <div class="cat-scroll" id="catCards"></div>
 </div>
 
 <!-- 地方 -->
 <section class="home-section">
-  <div class="section-head"><div><div class="section-divider"></div><h2>地方からさがす</h2></div></div>
+  <div class="section-head"><div><h2>地方からさがす</h2></div></div>
   <div class="region-grid" id="regionGrid"></div>
 </section>
 
 <!-- ピックアップ -->
 <section class="home-section home-picks">
-  <div class="section-head"><div><div class="section-divider"></div><h2>ピックアップ</h2></div></div>
+  <div class="section-head"><div><h2>ピックアップ</h2></div></div>
   <p class="home-lead">いろいろな分野から、おすすめの拠点をすこしだけ紹介します。</p>
   <div class="grid" id="pickGrid"></div>
 </section>
@@ -100,9 +93,8 @@
   var cc=document.getElementById("catCards");
   Y.CAT_KEYS.forEach(function(k){
     var a=document.createElement("a"); a.className="cat-card"; a.href="search.html?cat="+k;
-    var img=document.createElement("img"); img.src=Y.CAT_IMGS[k]; img.alt=Y.CAT_LABELS[k]; img.loading="lazy"; a.appendChild(img);
     var lb=document.createElement("div"); lb.className="cat-card-label";
-    lb.innerHTML='<span class="emoji">'+Y.CAT_EMOJIS[k]+'</span>'+Y.CAT_LABELS[k]; a.appendChild(lb);
+    lb.textContent=Y.CAT_LABELS[k]; a.appendChild(lb);
     cc.appendChild(a);
   });
   // 地方
