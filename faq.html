@@ -7,7 +7,7 @@
 <meta name="description" content="料金・申し込み・「条件つき」の意味・位置情報の扱いなど、よくある質問と、中高生が安全に使うためのポイントをまとめました。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +16,11 @@
   <div class="site-header-inner">
     <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
     <nav class="site-nav">
-      <a href="search.html" class="cta">さがす</a>
+      <a href="search.html">さがす</a>
+      <a href="search.html?view=map">地図</a>
+      <a href="guide.html">はじめての方</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="search.html?quiz=1" class="cta">診断する</a>
     </nav>
   </div>
 </header>
@@ -26,6 +30,7 @@
     <nav class="doc-crumb" aria-label="現在の場所">
       <a href="index.html">ホーム</a><span>›</span><span>よくある質問・安全に使うために</span>
     </nav>
+    <div class="doc-eyebrow"><span class="dot"></span>よくある質問</div>
     <h1>よくある質問・<br>安全に使うために</h1>
     <p class="doc-lead">料金や申し込みのこと、バッジの意味、位置情報の扱いなど、よく寄せられる質問をまとめました。あわせて、安全に使うためのポイントもご確認ください。</p>
   </div>
@@ -113,11 +118,13 @@
       <p>なやみを聞いてほしいとき、話せる場所をさがしたいときは、「相談」でさがすと、相談できる拠点やオンライン相談が見つかります。</p>
       <div class="doc-steps">
         <a class="doc-step" href="search.html?field=相談">
+          <div class="n em">💬</div>
           <div class="t">相談できる場所をさがす</div>
           <div class="d">相談を受けつけている拠点・オンライン相談を一覧で表示します。</div>
           <div class="go">「相談」でさがす →</div>
         </a>
         <a class="doc-step" href="search.html?field=居場所">
+          <div class="n em">🏡</div>
           <div class="t">居場所をさがす</div>
           <div class="d">目的がなくても行ける、ゆっくり過ごせる居場所をさがせます。</div>
           <div class="go">「居場所」でさがす →</div>
@@ -130,6 +137,7 @@
 
 <section class="doc-more">
   <div class="doc-more-inner">
+    <div class="section-divider"></div>
     <div class="doc-more-grid">
       <a class="doc-more-card" href="guide.html"><div class="t">はじめての方へ</div><div class="d">4つのさがし方、カードの見方、掲載バッジの意味を紹介します。</div></a>
       <a class="doc-more-card" href="teachers.html"><div class="t">先生・保護者の方へ</div><div class="d">探究学習・キャリア教育・課外活動の入口としての活用のヒント。</div></a>

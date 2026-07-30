@@ -7,7 +7,7 @@
 <meta name="description" content="探究学習・キャリア教育・居場所づくり・課外活動の入口として。「いばしょ・きっかけ MAP」の活用のヒントと、ご利用前に確認していただきたいことをまとめました。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,7 +16,11 @@
   <div class="site-header-inner">
     <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
     <nav class="site-nav">
-      <a href="search.html" class="cta">さがす</a>
+      <a href="search.html">さがす</a>
+      <a href="search.html?view=map">地図</a>
+      <a href="guide.html">はじめての方</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="search.html?quiz=1" class="cta">診断する</a>
     </nav>
   </div>
 </header>
@@ -26,6 +30,7 @@
     <nav class="doc-crumb" aria-label="現在の場所">
       <a href="index.html">ホーム</a><span>›</span><span>先生・保護者の方へ</span>
     </nav>
+    <div class="doc-eyebrow"><span class="dot"></span>先生・保護者の方へ</div>
     <h1>生徒・お子さんの「やってみたい」の入口に</h1>
     <p class="doc-lead">本サイトは、中学生・高校生が使える全国の居場所・プログラム・活動拠点・施設を整理したものです。探究学習・キャリア教育・居場所づくり・課外活動などの入口としてご活用ください。</p>
   </div>
@@ -60,21 +65,25 @@
       <p>よく使われる入口へのショートカットです。</p>
       <div class="doc-steps">
         <a class="doc-step" href="search.html?field=学校連携">
+          <div class="n em">🏫</div>
           <div class="t">学校連携</div>
           <div class="d">学校単位での受け入れ・出張授業などに対応している拠点。</div>
           <div class="go">「学校連携」でさがす →</div>
         </a>
         <a class="doc-step" href="search.html?field=探究">
+          <div class="n em">🔭</div>
           <div class="t">探究学習</div>
           <div class="d">課題研究・探究活動のテーマ探しや、相談先として。</div>
           <div class="go">「探究」でさがす →</div>
         </a>
         <a class="doc-step" href="search.html?field=宿泊研修">
+          <div class="n em">🏕️</div>
           <div class="t">宿泊研修・校外行事</div>
           <div class="d">合宿・宿泊型の研修に使える施設や自然体験の拠点。</div>
           <div class="go">「宿泊研修」でさがす →</div>
         </a>
         <a class="doc-step" href="search.html?field=キャリア教育">
+          <div class="n em">🧭</div>
           <div class="t">キャリア教育</div>
           <div class="d">職業観を育てるプログラム、企業・大学との連携先。</div>
           <div class="go">「キャリア教育」でさがす →</div>
@@ -105,7 +114,7 @@
     <section class="doc-sec" id="contact">
       <h2>ご相談・掲載依頼</h2>
       <p>学校・団体でのご利用のご相談、掲載内容についてのお問い合わせ、新しい拠点の掲載依頼は、お問い合わせフォームからご連絡ください。</p>
-      <div class="doc-more-grid" style="margin-top:var(--space-sm)">
+      <div class="doc-more-grid" style="margin-top:16px">
         <a class="doc-more-card" href="contact.html" style="background:var(--surface)"><div class="t">掲載依頼・お問い合わせ →</div><div class="d">フォームからメールを作成できます。</div></a>
       </div>
     </section>
@@ -115,6 +124,7 @@
 
 <section class="doc-more">
   <div class="doc-more-inner">
+    <div class="section-divider"></div>
     <div class="doc-more-grid">
       <a class="doc-more-card" href="guide.html"><div class="t">はじめての方へ</div><div class="d">4つのさがし方、カードの見方、掲載バッジの意味を紹介します。</div></a>
       <a class="doc-more-card" href="faq.html"><div class="t">よくある質問・安全に使うために</div><div class="d">料金や申し込み、位置情報のことなど。安全に使うためのポイントも。</div></a>
