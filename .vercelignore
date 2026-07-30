@@ -3,5 +3,7 @@ package.json
 package-lock.json
 data.json
 .claude
+.agents
+skills-lock.json
 .vercel
 *.xlsx

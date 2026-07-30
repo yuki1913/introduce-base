@@ -3,6 +3,11 @@ node_modules/
 package.json
 package-lock.json
 
+# エージェント用スキル（ローカル作業用。npx skills add で再取得できる）
+.agents/
+.claude/skills/
+skills-lock.json
+
 # Vercel / 環境変数
 .vercel
 .env*
