@@ -3,32 +3,150 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>このサイトのつかい方｜いばしょ・きっかけ MAP</title>
-<meta name="description" content="いばしょ・きっかけ MAP のつかい方">
+<title>はじめての方へ｜このサイトのつかい方｜いばしょ・きっかけ MAP</title>
+<meta name="description" content="「いばしょ・きっかけ MAP」のつかい方。キーワード・しぼり込み・地図・近くをさがす、4つのさがし方と、カードの見方・掲載バッジの意味を紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header"><div class="site-header-inner">
-<a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
-<nav class="site-nav">
-<a href="search.html">さがす</a><a href="search.html?view=map">地図</a>
-<a href="guide.html" class="active">はじめての方</a><a href="contact.html">お問い合わせ</a>
-</nav></div></header>
-<main style="padding:24px 16px 60px">
-<div class="page-card">
-<div class="page-hero"><div class="eb">はじめての人へ</div><h2>このサイトのつかい方</h2></div>
-<div class="page-body"><p>「いばしょ・きっかけ MAP」は、中学生・高校生が使える全国の居場所・プログラム・活動拠点・施設をさがせるサイトです。気になることから、近くの場所から、いろいろな入口でさがせます。</p><h3>4つのさがし方</h3><ul><li><b>キーワード</b>：名前・活動・地名で検索</li><li><b>しぼり込み</b>：地方／都道府県／やってみたいこと／対象などで絞る</li><li><b>地図で見る</b>：地方をえらぶと、その地方の拠点が地図に出ます。ピンをタップで詳細</li><li><b>近くをさがす</b>：現在地から近い順にならべます（スマホがおすすめ）</li></ul><h3>迷ったら「診断」</h3><p>3つの質問に答えると、あなたに合いそうな拠点を提案します。<a href="search.html?quiz=1">診断をはじめる</a>から試せます。</p><h3>カードの見方</h3><ul><li>写真・名前・場所・「中高生向けの紹介文」で、どんな場所かがわかります</li><li>カードをタップすると、その拠点の詳細ページ（地図・タグ・公式サイト・シェア）が開きます</li></ul><h3>掲載可否バッジ</h3><ul><li><b>掲載推奨</b>：そのまま利用しやすい</li><li><b>条件つき</b>：利用に条件がある場合あり</li><li><b>参考情報／要確認</b>：情報が変わっている可能性あり。公式サイトで確認を</li></ul><div class="callout">料金・対象年齢・予約の要否などは変わることがあります。参加する前に、必ず公式サイトや各拠点で最新情報を確認してください。</div></div>
-</div></main>
-<footer><div class="foot">
-<nav class="foot-nav">
-<a href="guide.html">はじめての人へ</a><a href="teachers.html">先生・保護者の方へ</a>
-<a href="faq.html">よくある質問・安全に使うために</a><a href="contact.html">掲載依頼・お問い合わせ</a>
-</nav>
-掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
-</div></footer>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
+    <nav class="site-nav">
+      <a href="search.html">さがす</a>
+      <a href="search.html?view=map">地図</a>
+      <a href="guide.html" class="active">はじめての方</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="search.html?quiz=1" class="cta">診断する</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-hero">
+  <div class="doc-hero-inner">
+    <nav class="doc-crumb" aria-label="現在の場所">
+      <a href="index.html">ホーム</a><span>›</span><span>はじめての方へ</span>
+    </nav>
+    <div class="doc-eyebrow"><span class="dot"></span>はじめての方へ</div>
+    <h1>このサイトのつかい方</h1>
+    <p class="doc-lead">「いばしょ・きっかけ MAP」は、中学生・高校生が使える全国の居場所・プログラム・活動拠点・施設をさがせるサイトです。気になることから、近くの場所から、いろいろな入口でさがせます。</p>
+  </div>
+</section>
+
+<div class="doc-wrap">
+  <aside class="doc-toc">
+    <div class="doc-toc-t">目次</div>
+    <nav class="doc-toc-list">
+      <a href="#find">4つのさがし方</a>
+      <a href="#quiz">迷ったら「診断」</a>
+      <a href="#card">カードの見方</a>
+      <a href="#badge">掲載バッジの意味</a>
+      <a href="#before">参加する前に</a>
+    </nav>
+  </aside>
+
+  <main class="doc-main doc-body">
+
+    <section class="doc-sec" id="find">
+      <h2>4つのさがし方</h2>
+      <p>やりたいことがはっきりしていなくても大丈夫。好きな入口から見てみてください。</p>
+      <div class="doc-steps">
+        <a class="doc-step" href="search.html">
+          <div class="n">1</div>
+          <div class="t">🔍 キーワードでさがす</div>
+          <div class="d">名前・活動の内容・地名などで検索できます。「探究」「キャンプ」など、気になる言葉でもOK。</div>
+          <div class="go">キーワードでさがす →</div>
+        </a>
+        <a class="doc-step" href="search.html">
+          <div class="n">2</div>
+          <div class="t">🎚️ しぼり込んでさがす</div>
+          <div class="d">地方／都道府県／やってみたいこと／対象などで絞れます。条件はいくつでも組み合わせられます。</div>
+          <div class="go">条件でしぼり込む →</div>
+        </a>
+        <a class="doc-step" href="search.html?view=map">
+          <div class="n">3</div>
+          <div class="t">🗺️ 地図で見る</div>
+          <div class="d">地方をえらぶと、その地方の拠点が地図に出ます。ピンをタップすると詳細が見られます。</div>
+          <div class="go">地図でさがす →</div>
+        </a>
+        <a class="doc-step" href="search.html?near=1">
+          <div class="n">4</div>
+          <div class="t">📍 近くをさがす</div>
+          <div class="d">現在地から近い順にならべかえます。スマホでの利用がおすすめです。</div>
+          <div class="go">近くをさがす →</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="quiz">
+      <h2>迷ったら「診断」</h2>
+      <p>どこから見ればいいか分からないときは、3つの質問に答えるだけの「かんたん診断」から。あなたに合いそうな拠点を提案します。</p>
+      <div class="quiz-cta" style="margin:18px 0 0;padding:0">
+        <div class="quiz-cta-inner">
+          <div class="quiz-cta-txt">
+            <div class="quiz-cta-eyebrow">🧭 迷ったら、これ</div>
+            <div class="quiz-cta-title">3つの質問で、あなたにピッタリの場所をさがす</div>
+          </div>
+          <a class="quiz-cta-btn" href="search.html?quiz=1">診断をはじめる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="card">
+      <h2>カードの見方</h2>
+      <ul>
+        <li>写真・名前・場所・<b>中高生向けの紹介文</b>で、どんな場所かがひと目でわかります</li>
+        <li>タグは「やってみたいこと」。同じタグの拠点をまとめてさがす目印にもなります</li>
+        <li>カードをタップすると<b>詳細ページ</b>（地図・タグ・基本情報・公式サイト・シェア）が開きます</li>
+        <li>詳細ページのURLはそのまま共有できます。友だちや先生に送るのにも使えます</li>
+      </ul>
+    </section>
+
+    <section class="doc-sec" id="badge">
+      <h2>掲載バッジの意味</h2>
+      <p>それぞれの拠点には、使いやすさの目印としてバッジをつけています。</p>
+      <div class="doc-badges">
+        <div class="doc-badge"><span class="status s-rec">掲載推奨</span><span>中高生がそのまま利用しやすい拠点・プログラムです。</span></div>
+        <div class="doc-badge"><span class="status s-cond">条件つき</span><span>対象年齢・引率・申し込みなど、利用に条件がある場合があります。</span></div>
+        <div class="doc-badge"><span class="status s-ref">参考情報</span><span>参考として掲載しています。内容が変わっている可能性があります。</span></div>
+        <div class="doc-badge"><span class="status s-hold">要確認</span><span>情報の確認が追いついていないものです。公式サイトで最新情報をご確認ください。</span></div>
+      </div>
+    </section>
+
+    <section class="doc-sec" id="before">
+      <h2>参加する前に</h2>
+      <div class="doc-callout">料金・対象年齢・予約の要否などは変わることがあります。参加する前に、必ず公式サイトや各拠点で最新情報を確認してください。はじめて行く場所は、おうちの人や先生に伝えてから利用しましょう。</div>
+      <p style="margin-top:16px">気になることがあれば <a href="faq.html">よくある質問・安全に使うために</a> もあわせてご覧ください。</p>
+    </section>
+
+  </main>
+</div>
+
+<section class="doc-more">
+  <div class="doc-more-inner">
+    <div class="section-divider"></div>
+    <div class="doc-more-grid">
+      <a class="doc-more-card" href="faq.html"><div class="t">よくある質問・安全に使うために</div><div class="d">料金や申し込み、位置情報のことなど。安全に使うためのポイントもまとめています。</div></a>
+      <a class="doc-more-card" href="teachers.html"><div class="t">先生・保護者の方へ</div><div class="d">探究学習・キャリア教育・課外活動の入口としての活用のヒント。</div></a>
+      <a class="doc-more-card" href="contact.html"><div class="t">掲載依頼・お問い合わせ</div><div class="d">拠点の掲載依頼、掲載内容の修正・削除のご連絡はこちらから。</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <nav class="foot-nav">
+      <a href="guide.html">はじめての人へ</a>
+      <a href="teachers.html">先生・保護者の方へ</a>
+      <a href="faq.html">よくある質問・安全に使うために</a>
+      <a href="contact.html">掲載依頼・お問い合わせ</a>
+    </nav>
+    掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
+  </div>
+</footer>
 
 </body>
 </html>

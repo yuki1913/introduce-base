@@ -4,31 +4,132 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>掲載依頼・お問い合わせ｜いばしょ・きっかけ MAP</title>
-<meta name="description" content="掲載依頼・お問い合わせ">
+<meta name="description" content="「いばしょ・きっかけ MAP」への拠点の掲載依頼、掲載内容の修正・削除、その他のお問い合わせはこちらから。フォームに入力するとメールを作成できます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header"><div class="site-header-inner">
-<a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
-<nav class="site-nav">
-<a href="search.html">さがす</a><a href="search.html?view=map">地図</a>
-<a href="guide.html">はじめての方</a><a href="contact.html" class="active">お問い合わせ</a>
-</nav></div></header>
-<main style="padding:24px 16px 60px">
-<div class="page-card">
-<div class="page-hero"><div class="eb">掲載依頼・お問い合わせ</div><h2>掲載依頼・お問い合わせ</h2></div>
-<div class="page-body"><p>新しい拠点の掲載依頼、掲載内容の修正・削除、その他のお問い合わせはこちらから。下のフォームに入力すると、メールを作成できます。</p><form class="page-form" id="contactForm"><div><label>お名前・団体名</label><input name="name" autocomplete="off"></div><div><label>ご連絡先メール</label><input name="email" type="email" autocomplete="off"></div><div><label>ご用件</label><select name="type"><option>拠点の掲載を依頼したい</option><option>掲載内容の修正・削除</option><option>その他のお問い合わせ</option></select></div><div><label>内容</label><textarea name="body" placeholder="拠点名・URL・ご要望など、できるだけ具体的にご記入ください。"></textarea></div><button type="submit" class="submit">メールを作成して送る</button><p class="hint">送信ボタンでお使いのメールアプリが起動します（宛先・件名・本文が入力済み）。うまく起動しない場合は <a href="mailto:yuki.kotake@studymeter-web.com">yuki.kotake@studymeter-web.com</a> まで直接お送りください。</p></form></div>
-</div></main>
-<footer><div class="foot">
-<nav class="foot-nav">
-<a href="guide.html">はじめての人へ</a><a href="teachers.html">先生・保護者の方へ</a>
-<a href="faq.html">よくある質問・安全に使うために</a><a href="contact.html">掲載依頼・お問い合わせ</a>
-</nav>
-掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
-</div></footer>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
+    <nav class="site-nav">
+      <a href="search.html">さがす</a>
+      <a href="search.html?view=map">地図</a>
+      <a href="guide.html">はじめての方</a>
+      <a href="contact.html" class="active">お問い合わせ</a>
+      <a href="search.html?quiz=1" class="cta">診断する</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-hero">
+  <div class="doc-hero-inner">
+    <nav class="doc-crumb" aria-label="現在の場所">
+      <a href="index.html">ホーム</a><span>›</span><span>掲載依頼・お問い合わせ</span>
+    </nav>
+    <div class="doc-eyebrow"><span class="dot"></span>掲載依頼・お問い合わせ</div>
+    <h1>ご連絡をお待ちしています</h1>
+    <p class="doc-lead">新しい拠点の掲載依頼、掲載内容の修正・削除、取材・連携のご相談、その他のお問い合わせはこちらから。下のフォームに入力すると、送信用のメールを作成できます。</p>
+  </div>
+</section>
+
+<div class="doc-wrap" style="grid-template-columns:minmax(0,1fr)">
+  <main class="doc-main doc-body">
+    <div class="doc-cols">
+
+      <section class="doc-card">
+        <div class="doc-card-t">お問い合わせフォーム</div>
+        <form class="doc-form" id="contactForm">
+          <div class="fld">
+            <label for="cf-type">ご用件<span class="req">*</span></label>
+            <select id="cf-type" name="type">
+              <option>拠点の掲載を依頼したい</option>
+              <option>掲載内容の修正・削除</option>
+              <option>学校・団体での利用について</option>
+              <option>取材・連携のご相談</option>
+              <option>その他のお問い合わせ</option>
+            </select>
+          </div>
+          <div class="fld">
+            <label for="cf-name">お名前・団体名<span class="req">*</span></label>
+            <input id="cf-name" name="name" autocomplete="organization" placeholder="例）NPO法人〇〇／山田 太郎">
+          </div>
+          <div class="fld">
+            <label for="cf-email">ご連絡先メールアドレス<span class="req">*</span></label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="例）info@example.jp">
+          </div>
+          <div class="fld">
+            <label for="cf-site">拠点名・公式サイトURL</label>
+            <input id="cf-site" name="site" autocomplete="off" placeholder="例）〇〇センター https://example.jp">
+          </div>
+          <div class="fld">
+            <label for="cf-body">内容<span class="req">*</span></label>
+            <textarea id="cf-body" name="body" placeholder="拠点の概要、対象年齢、利用方法、ご要望など、できるだけ具体的にご記入ください。"></textarea>
+          </div>
+          <button type="submit" class="submit">メールを作成して送る</button>
+          <p class="hint">送信ボタンを押すと、お使いのメールアプリが起動します（宛先・件名・本文が入力済みの状態です）。うまく起動しない場合は <a href="mailto:yuki.kotake@studymeter-web.com">yuki.kotake@studymeter-web.com</a> まで直接お送りください。</p>
+        </form>
+      </section>
+
+      <aside>
+        <div class="doc-card" style="margin-bottom:16px">
+          <div class="doc-card-t">連絡先</div>
+          <div class="doc-side-list">
+            <div>
+              <div class="k">メール</div>
+              <a href="mailto:yuki.kotake@studymeter-web.com">yuki.kotake@studymeter-web.com</a>
+            </div>
+            <div>
+              <div class="k">お返事について</div>
+              少人数で運営しているため、お返事までお時間をいただくことがあります。あらかじめご了承ください。
+            </div>
+          </div>
+        </div>
+
+        <div class="doc-card" style="margin-bottom:16px">
+          <div class="doc-card-t">掲載依頼のときに書いてほしいこと</div>
+          <ul style="margin:0">
+            <li>拠点・プログラムの名称と公式サイトURL</li>
+            <li>所在地（オンラインの場合はその旨）</li>
+            <li>対象年齢・対象者（中高生が使えるか）</li>
+            <li>料金・申し込みの要否</li>
+            <li>どんな活動ができるか（かんたんな紹介）</li>
+          </ul>
+        </div>
+
+        <div class="doc-callout amber">掲載情報は各拠点の公式情報をもとに整理しています。内容の誤りや変更に気づかれた場合も、こちらからお知らせいただけると助かります。</div>
+      </aside>
+
+    </div>
+  </main>
+</div>
+
+<section class="doc-more">
+  <div class="doc-more-inner">
+    <div class="section-divider"></div>
+    <div class="doc-more-grid">
+      <a class="doc-more-card" href="guide.html"><div class="t">はじめての方へ</div><div class="d">4つのさがし方、カードの見方、掲載バッジの意味を紹介します。</div></a>
+      <a class="doc-more-card" href="teachers.html"><div class="t">先生・保護者の方へ</div><div class="d">探究学習・キャリア教育・課外活動の入口としての活用のヒント。</div></a>
+      <a class="doc-more-card" href="faq.html"><div class="t">よくある質問・安全に使うために</div><div class="d">料金や申し込み、位置情報のことなど。まずはこちらもご覧ください。</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <nav class="foot-nav">
+      <a href="guide.html">はじめての人へ</a>
+      <a href="teachers.html">先生・保護者の方へ</a>
+      <a href="faq.html">よくある質問・安全に使うために</a>
+      <a href="contact.html">掲載依頼・お問い合わせ</a>
+    </nav>
+    掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
+  </div>
+</footer>
+
 <script>
 (function(){
   var CONTACT_EMAIL="yuki.kotake@studymeter-web.com";
@@ -37,7 +138,11 @@
     e.preventDefault();
     var d=new FormData(f), type=d.get("type")||"お問い合わせ";
     var subject="【いばしょ・きっかけ MAP】"+type;
-    var body="ご用件: "+type+"\nお名前・団体名: "+(d.get("name")||"")+"\nご連絡先: "+(d.get("email")||"")+"\n\n内容:\n"+(d.get("body")||"");
+    var body="ご用件: "+type
+      +"\nお名前・団体名: "+(d.get("name")||"")
+      +"\nご連絡先: "+(d.get("email")||"")
+      +"\n拠点名・URL: "+(d.get("site")||"")
+      +"\n\n内容:\n"+(d.get("body")||"");
     window.location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
   };
 })();
