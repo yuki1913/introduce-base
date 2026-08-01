@@ -54,14 +54,15 @@
     var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
     return L.divIcon({html:'<div class="ys-pin" style="background:'+color+'">'+cv.emoji+'</div>',className:"",iconSize:[32,32],iconAnchor:[16,16],popupAnchor:[0,-16]});
   }
-  var SVG_EXT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
-  var SVG_MAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
-  var SVG_PIN='<svg class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
+  var SVG_EXT='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+  var SVG_MAP='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
+  var SVG_PIN='<svg aria-hidden="true" class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
 
   function card(r){
     var c=el("div","card");
     var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var cv=coverOf(r);
+    c.dataset.cat=cv.catKey;
     var photoWrap=el("div","card-photo");
     var pImg=document.createElement("img");
     pImg.src=r.image||getPhotoUrl(cv); pImg.alt=r.name+"の活動イメージ"; pImg.loading="lazy";
@@ -87,7 +88,7 @@
     body.appendChild(place);
     body.appendChild(el("h3",null,r.name));
     body.appendChild(el("p","intro",r.intro));
-    if(r.fieldTags&&r.fieldTags.length){var tl=el("div","tagline");r.fieldTags.slice(0,4).forEach(function(t){tl.appendChild(el("span","tag",(FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"")+t));});body.appendChild(tl);}
+    if(r.fieldTags&&r.fieldTags.length){var tl=el("div","tagline");r.fieldTags.slice(0,4).forEach(function(t){tl.appendChild(el("span","tag",t));});body.appendChild(tl);}
     var meta=el("div","meta");
     if(r.targets&&r.targets.length){var m=el("div","mrow");m.appendChild(el("span","mk","対象"));m.appendChild(el("span",null,r.targets.slice(0,3).join("・")));meta.appendChild(m);}
     if(r.station){var m2=el("div","mrow");m2.appendChild(el("span","mk","アクセス"));m2.appendChild(el("span",null,r.station));meta.appendChild(m2);}

@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-08-01",
+    "scope": "app",
+    "verb": "study -> redesign",
+    "genre": "editorial-adjacent consumer directory",
+    "macrostructure": "Ecosystem Index / Portfolio Grid / Long Document",
+    "theme": "studied-DNA",
+    "dna_source": "https://qulii.jp/",
+    "dna_secondary": ["https://go.goinc.jp/ (section head)", "https://mirai-creatorz.com/ (card colour tab)"],
+    "theme_axes": "light warm-neutral / weight-driven JP sans 400-900 / duo accent orange + blue",
+    "fonts": "Noto Sans JP + Bricolage Grotesque",
+    "design_system": "design.md",
+    "brief": "いばしょ・きっかけ MAP — 中高生向け全国活動拠点ディレクトリ、全7ページ"
+  }
+]

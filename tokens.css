@@ -1,0 +1,140 @@
+/* Hallmark · tokens · いばしょ・きっかけ MAP
+ * theme: studied-DNA (source: https://qulii.jp/ — structural reference)
+ * secondary axes: go.goinc.jp (section-head device) · mirai-creatorz.com (card colour tab)
+ *
+ * The token VALUES are not copied from any reference. They were solved here so
+ * that every text colour clears WCAG AA (4.5:1) against the darkest light
+ * surface (--color-paper-3), and every band fill clears 4.5:1 with cream text
+ * on it. That means no per-surface exceptions anywhere in styles.css.
+ */
+
+:root {
+  /* ---- surfaces ---- */
+  --color-paper:       oklch(98.5% 0.005 70);   /* #FCFAF7 — never pure #fff */
+  --color-paper-2:     oklch(96.5% 0.010 68);
+  --color-paper-3:     oklch(93.5% 0.016 66);
+  --color-rule:        oklch(89.0% 0.014 64);   /* decorative hairline */
+  --color-rule-strong: oklch(78.0% 0.020 63);   /* decorative frame */
+  --color-border-ctl:  oklch(62.0% 0.030 62);   /* controls — 3:1 on paper-3 */
+
+  /* ---- ink ---- */
+  --color-muted:       oklch(52.0% 0.030 62);
+  --color-ink-2:       oklch(36.0% 0.032 60);
+  --color-ink:         oklch(21.0% 0.020 60);
+
+  /* ---- accent: ONE orange, split by job.
+         A bright orange cannot also be legible as text on light paper — the
+         two requirements pull in opposite directions — so the fill and the
+         text colour are separate tokens.
+         Blue was retired from every surface at the user's request; the only
+         blue left in the system is --cat-science, a functional category label. */
+  --color-accent:      oklch(70.0% 0.190  52);  /* #F67400 bright — FILLS, decoration */
+  --color-accent-text: oklch(53.5% 0.175  45);  /* #BA3F00 deep  — orange AS TEXT / control borders */
+  --color-on-accent:   oklch(21.0% 0.020  60);  /* ink, for text sitting ON the bright fill (6.26:1) */
+  --color-accent-ink:  oklch(98.5% 0.005  70);  /* cream, for text on DARK surfaces */
+  --color-accent-2:    oklch(53.5% 0.175  45);  /* legacy alias -> accent-text */
+  --color-focus:       oklch(53.5% 0.175  45);
+
+  /* ---- full-bleed band fills (cream text sits on these) ---- */
+  --band-warm: oklch(54.0% 0.175  48);
+  --band-ink:  oklch(21.0% 0.020  60);
+
+  /* ---- soft tint bands (ink text sits on these) ---- */
+  --tint-warm: oklch(95.5% 0.035  60);
+  --tint-warm-2: oklch(93.0% 0.045 58);
+
+  /* ---- marker highlight (qulii's 厳選し発信 device) ---- */
+  --marker: oklch(89.0% 0.120 79);
+
+  /* ---- category hues: functional colour system, mirrors shared.js catKey ---- */
+  --cat-nature:    oklch(50.0% 0.150 150);
+  --cat-science:   oklch(52.0% 0.155 255);
+  --cat-community: oklch(54.0% 0.155  10);
+  --cat-arts:      oklch(53.0% 0.155  55);
+  --cat-startup:   oklch(53.5% 0.165 300);
+  --cat-sports:    oklch(49.0% 0.125 195);
+
+  /* ---- semantic status ---- */
+  --status-rec:  oklch(50.0% 0.150 150);
+  --status-cond: oklch(52.5% 0.145  75);
+  --status-ref:  oklch(52.0% 0.030  62);
+  --status-hold: oklch(54.0% 0.175  22);
+
+  /* ---- scrims (alpha is a modifier on ink, not a palette colour) ---- */
+  --scrim-strong: oklch(21% 0.020 60 / 0.82);
+  --scrim-mid:    oklch(21% 0.020 60 / 0.60);
+  --scrim-soft:   oklch(21% 0.020 60 / 0.38);
+  --scrim-hero:   oklch(21% 0.020 60 / 0.62);
+
+  /* ---- type: 2 families.
+         JP carries every heading, weight-driven 400→900 (the GO approach).
+         Bricolage carries the decorative EN labels and the tabular figures. ---- */
+  --font-body:    "Noto Sans JP", system-ui, sans-serif;
+  --font-en:      "Bricolage Grotesque", "Noto Sans JP", sans-serif;
+
+  --text-xs:        0.75rem;
+  --text-sm:        0.875rem;
+  --text-base:      1rem;
+  --text-md:        1.125rem;
+  --text-lg:        1.375rem;
+  --text-xl:        1.75rem;
+  --text-2xl:       2.25rem;
+  --text-3xl:       2.75rem;
+  --text-en:        clamp(2.5rem, 6vw, 4.5rem);   /* the big EN section word */
+  --text-display:   clamp(2.25rem, 4.5vw + 1rem, 3.5rem);
+  --text-display-s: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+
+  --leading-display: 1.3;
+  --leading-body:    1.9;
+  --track-label:     0.16em;
+
+  /* ---- space (4pt) ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+
+  --measure: 68ch;
+  --shell:   1180px;
+  --gutter:  clamp(1rem, 4vw, 1.5rem);
+
+  /* ---- line & radius (qulii sits around 5–8px, plus pills for chips) ---- */
+  --rule-hair: 1px;
+  --rule-bold: 2px;
+  --radius-ctl:  8px;
+  --radius-card: 10px;
+  --radius-pill: 999px;
+
+  /* ---- elevation: qulii uses soft lift on cards, not hard offsets ---- */
+  --shadow-card: 0 1px 2px oklch(21% 0.020 60 / 0.05), 0 6px 18px -10px oklch(21% 0.020 60 / 0.18);
+  --shadow-lift: 0 2px 4px oklch(21% 0.020 60 / 0.06), 0 14px 30px -14px oklch(21% 0.020 60 / 0.26);
+
+  /* ---- motion ---- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:  120ms;
+  --dur-short: 200ms;
+  --dur-med:   320ms;
+
+  /* ---- legacy aliases: three inline style="" attributes in the markup still
+         reference the old token names (teachers.html:118, spot.html:55).
+         Kept so those inline styles resolve instead of falling back to
+         initial values. Do not use these in new CSS. ---- */
+  --surface:      var(--color-paper);
+  --muted:        var(--color-muted);
+  --font-display: var(--font-body);
+
+  /* ---- z (six named levels; no 9999) ---- */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-sticky:  100;
+  --z-overlay: 500;
+  --z-modal:   1000;
+  --z-toast:   1200;
+}

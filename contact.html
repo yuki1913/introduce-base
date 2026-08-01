@@ -7,7 +7,7 @@
 <meta name="description" content="「いばしょ・きっかけ MAP」への拠点の掲載依頼、掲載内容の修正・削除、その他のお問い合わせはこちらから。フォームに入力するとメールを作成できます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +15,10 @@
 <header class="site-header">
   <div class="site-header-inner">
     <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
+    <form class="hdr-search" action="search.html" method="get" role="search">
+      <svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      <input type="search" name="q" placeholder="キーワードでさがす" aria-label="サイト内をキーワードで検索">
+    </form>
     <nav class="site-nav">
       <a href="search.html">さがす</a>
       <a href="search.html?view=map">地図</a>
@@ -109,7 +113,10 @@
 
 <section class="doc-more">
   <div class="doc-more-inner">
-    <div class="section-divider"></div>
+    <h2 class="section-head">
+      <span class="sh-ja">ほかのページ</span>
+      <span class="sh-en" aria-hidden="true">MORE</span>
+    </h2>
     <div class="doc-more-grid">
       <a class="doc-more-card" href="guide.html"><div class="t">はじめての方へ</div><div class="d">4つのさがし方、カードの見方、掲載バッジの意味を紹介します。</div></a>
       <a class="doc-more-card" href="teachers.html"><div class="t">先生・保護者の方へ</div><div class="d">探究学習・キャリア教育・課外活動の入口としての活用のヒント。</div></a>
@@ -127,6 +134,7 @@
       <a href="contact.html">掲載依頼・お問い合わせ</a>
     </nav>
     掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。掲載情報は各拠点の公式発表をもとに編集・整理しています。最終更新 2026年8月。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 

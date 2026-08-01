@@ -7,7 +7,7 @@
 <meta name="description" content="全国の中高生が使える支援団体・プログラム・活動拠点・施設を、地域と活動内容からさがせる検索サイトです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
@@ -31,13 +31,12 @@
   </div>
 </header>
 <span id="totalCount" hidden></span>
-<div class="hero-chips" id="heroChips" hidden></div>
 
 <!-- ===== SEARCH & FILTERS ===== -->
 <div class="search-section">
   <div class="search-inner">
     <div class="searchbar">
-      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      <svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
       <input id="q" type="search" placeholder="キーワードでさがす（名前・活動・地名）" autocomplete="off" aria-label="キー���ード検索">
       <button class="clr" id="qClear" aria-label="キーワードを消す">✕</button>
     </div>
@@ -53,8 +52,8 @@
         <div class="flabel">地方</div>
         <div class="chips scroll" id="regionChips"></div>
       </div>
-      <div class="fgroup" style="margin-top:12px">
-        <div class="flabel">都道府県</div>
+      <div class="fgroup fgroup-inline">
+        <label class="flabel" for="prefSel">都道府県</label>
         <select id="prefSel" aria-label="都道府県で絞り込み"><option value="">すべての都道府県</option></select>
       </div>
     </div>
@@ -92,11 +91,11 @@
   <!-- 目立つビュー切替タブ -->
   <div class="view-toggle-wrap" id="viewToggle" role="tablist" aria-label="表示切替">
     <button class="vt active" data-view="list" aria-selected="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
       リスト表示
     </button>
     <button class="vt" data-view="map" aria-selected="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>
       地図で見る
     </button>
   </div>
@@ -104,7 +103,7 @@
   <div class="view-toggle" id="viewToggleLegacy" hidden></div>
 
   <div class="toolbar-r">
-    <button class="near-btn" id="nearBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>近くをさがす</span></button>
+    <button class="near-btn" id="nearBtn"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>近くをさがす</span></button>
     <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
     <button class="clear-all" id="clearAll">条件をクリア</button>
   </div>
@@ -116,43 +115,39 @@
   <div id="map"></div>
 </section>
 
+<!-- ===== RESULTS ===== -->
+<main class="results-wrap" id="resultsWrap">
+  <h2 class="section-head">
+    <span class="sh-ja" id="resultsTitle">すべての拠点・プログラム</span>
+    <span class="sh-en" aria-hidden="true">ALL SPOTS</span>
+  </h2>
+  <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" style="display:none">
+    <p><b>条件に合う拠点がみつかりませんでした。</b><br>キーワードや絞り込みを少なくして、もう一度おためしください。</p>
+  </div>
+</main>
+
 <!-- ===== DIAGNOSIS CTA ===== -->
 <div class="quiz-cta" id="quizCta">
   <div class="quiz-cta-inner">
     <div class="quiz-cta-txt">
-      <div class="quiz-cta-eyebrow">🧭 迷ったら、これ</div>
-      <div class="quiz-cta-title">3つの質問で、あなたにピッタリの場所をさがす</div>
+      <p class="quiz-cta-eyebrow">Not sure where to start?</p>
+      <p class="quiz-cta-title">3つの質問で、あなたに合う場所をさがす</p>
     </div>
-    <button class="quiz-cta-btn" id="quizStart">診断をはじめる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <button class="quiz-cta-btn" id="quizStart">診断をはじめる<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
   </div>
 </div>
 
 <!-- ===== CATEGORY BANNERS ===== -->
 <div class="cat-section" id="catSection">
-  <div class="section-head">
-    <div>
-      <div class="section-divider"></div>
-      <h2>カテゴリーからさがす</h2>
-    </div>
-  </div>
+  <h2 class="section-head">
+    <span class="sh-ja">カテゴリーからさがす</span>
+    <span class="sh-en" aria-hidden="true">CATEGORY</span>
+  </h2>
   <div class="cat-scroll" id="catCards"></div>
 </div>
 
-<!-- ===== RESULTS ===== -->
-<main class="results-wrap" id="resultsWrap">
-  <div class="section-head" style="margin-top:28px">
-    <div>
-      <div class="section-divider"></div>
-      <h2 id="resultsTitle">すべての拠点・プログラム</h2>
-    </div>
-  </div>
-  <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">📍 現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
-  <div class="grid" id="grid"></div>
-  <div class="empty" id="empty" style="display:none">
-    <div class="empty-icon">🔎</div>
-    <p><b>条件に合う拠点がみつかりませんでした。</b><br>キーワードや絞り込みを少なくして、もう一度おためしください。</p>
-  </div>
-</main>
 
 <!-- ===== DETAIL MODAL ===== -->
 <div class="detail-overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-label="拠点の詳細">
@@ -182,6 +177,7 @@
     </div>
     掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。<br>
     「条件つき」「参考情報」「要確認」の拠点は、利用に条件がある場合があります。紹介文のとおりに利用できるか、事前にご確認ください。
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。掲載情報は各拠点の公式発表をもとに編集・整理しています。最終更新 2026年8月。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
@@ -263,23 +259,6 @@
 
   $("#totalCount").textContent=DATA.length.toLocaleString();
 
-  // ===== Hero quick-chips (region) =====
-  var hc=$("#heroChips");
-  REGION_ORDER.forEach(function(rg){
-    var n=DATA.filter(function(r){return r.region===rg;}).length;
-    if(!n) return;
-    var b=el("button","hero-chip",rg);
-    b.setAttribute("role","listitem");
-    b.onclick=function(){
-      state.region=state.region===rg?"":rg;
-      syncHeroChips();
-      syncRegionChips();
-      render();
-    };
-    b.dataset.rg=rg;
-    hc.appendChild(b);
-  });
-  function syncHeroChips(){[].forEach.call(hc.children,function(b){b.classList.toggle("active",b.dataset.rg===state.region);});}
 
   // ===== Filter tabs =====
   var tabs=document.querySelectorAll(".ftab");
@@ -302,7 +281,7 @@
     var b=el("button","chip",rg);
     var s=el("span","n","("+n+")");b.appendChild(s);
     b.setAttribute("aria-pressed","false");
-    b.onclick=function(){state.region=state.region===rg?"":rg;syncRegionChips();syncHeroChips();render();};
+    b.onclick=function(){state.region=state.region===rg?"":rg;syncRegionChips();render();};
     b.dataset.rg=rg;rc.appendChild(b);
   });
   function syncRegionChips(){[].forEach.call(rc.children,function(b){b.setAttribute("aria-pressed",String(b.dataset.rg===state.region));});}
@@ -310,8 +289,7 @@
   // ===== Field chips =====
   var fc=$("#fieldChips");
   fieldSorted.forEach(function(t){
-    var emo=FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"";
-    var b=el("button","chip",emo+t);
+    var b=el("button","chip",t);
     b.appendChild(el("span","n",String(fieldCounts[t])));
     b.setAttribute("aria-pressed","false");
     b.dataset.tag=t;
@@ -390,8 +368,7 @@
   $("#clearAll").onclick=function(){
     state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:state.view,userLoc:state.userLoc,sortByDist:false};
     qi.value="";qc.classList.remove("show");ps.value="";$("#showAll").checked=false;
-    nearBtn.classList.remove("active");$("#nearBanner").style.display="none";
-    syncHeroChips();syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
+    nearBtn.classList.remove("active");$("#nearBanner").style.display="none";syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
     syncCatCards();
     render();
   };
@@ -409,14 +386,12 @@
     "sports":["スポーツ"]
   };
   CAT_KEYS.forEach(function(key){
-    var div=el("div","cat-card");
+    var div=el("div","cat-card"); div.dataset.cat=key;
     div.dataset.catkey=key;
     var img=document.createElement("img");
     img.src=CAT_IMGS[key];img.alt=CAT_LABELS[key];img.loading="lazy";
     div.appendChild(img);
-    var label=el("div","cat-card-label");
-    label.appendChild(el("span","emoji",CAT_EMOJIS[key]));
-    label.appendChild(document.createTextNode(CAT_LABELS[key]));
+    var label=el("div","cat-card-label",CAT_LABELS[key]);
     div.appendChild(label);
     div.onclick=function(){
       if(state.catFilter===key){
@@ -457,9 +432,9 @@
 
   function mapUrl(r){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.address||r.name)+" "+r.name);}
 
-  var SVG_EXT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
-  var SVG_MAP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
-  var SVG_PIN='<svg class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
+  var SVG_EXT='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+  var SVG_MAP='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
+  var SVG_PIN='<svg aria-hidden="true" class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
 
   // Local photo pool per category
   var CAT_PHOTO={
@@ -476,7 +451,7 @@
   }
 
   function card(r){
-    var c=el("div","card");
+    var c=el("div","card"); c.dataset.cat=coverOf(r).catKey;
     var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var cv=coverOf(r);
 
@@ -504,7 +479,7 @@
     pills.appendChild(el("span","pill st "+sm.cls,sm.label));
     photoWrap.appendChild(pills);
     if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
-    if(r._dist!=null){var db=el("div","dist-badge","📍 約"+fmtDist(r._dist));photoWrap.appendChild(db);}
+    if(r._dist!=null){var db=el("div","dist-badge","約"+fmtDist(r._dist));photoWrap.appendChild(db);}
     c.appendChild(photoWrap);
 
     // ---- body ----
@@ -522,8 +497,7 @@
     if(r.fieldTags && r.fieldTags.length){
       var tl=el("div","tagline");
       r.fieldTags.slice(0,4).forEach(function(t){
-        var e=FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"";
-        tl.appendChild(el("span","tag",e+t));
+        tl.appendChild(el("span","tag",t));
       });
       body.appendChild(tl);
     }
@@ -627,7 +601,7 @@
       +'<div class="ys-pop-pills"><span class="pill">'+esc(cv.emoji+" "+cv.label)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
     h+='<div class="ys-pop-body">';
     h+='<h4>'+esc(r.name)+'</h4>';
-    h+='<div class="ys-pop-place">📍 '+esc(place)+'</div>';
+    h+='<div class="ys-pop-place">'+esc(place)+'</div>';
     if(r.intro) h+='<p class="ys-pop-intro">'+esc(r.intro)+'</p>';
     h+='<div class="ys-pop-act">';
     if(r.url) h+='<a class="p1" href="'+esc(r.url)+'" target="_blank" rel="noopener">公式サイト</a>';
@@ -646,7 +620,7 @@
     mapInited=true;
   }
 
-  function selectRegion(g){ state.region=g; syncRegionChips(); syncHeroChips(); render(); }
+  function selectRegion(g){ state.region=g; syncRegionChips(); render(); }
 
   var PREF_TO_REGION={};
   GEO.features.forEach(function(f){PREF_TO_REGION[f.properties.nam_ja]=f.properties.region;});
@@ -695,7 +669,7 @@
       +'<b>'+where+'</b> の地図：<b>'+pts.length+'</b> 拠点'
       +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細';
     var back=document.getElementById("mapBack");
-    if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); syncHeroChips(); render(); };
+    if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); render(); };
 
     map.invalidateSize();
     if(rbounds){ map.fitBounds(rbounds,{padding:[24,24]}); }
@@ -747,7 +721,7 @@
 
   // ===== DETAIL (spot page) =====
   var overlay=$("#detailOverlay"), detailCard=$("#detailCard"), detailMapObj=null;
-  var SVG_SHARE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>';
+  var SVG_SHARE='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>';
 
   function showToast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(function(){t.classList.remove("show");},1800);}
 
@@ -772,7 +746,7 @@
     else if(r.status==="掲載保留"||r.status==="参考情報") h+='<div class="detail-note">情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。</div>';
     if(r.fieldTags&&r.fieldTags.length){
       h+='<div class="detail-sec"><h3>やってみたいこと</h3><div class="detail-tags">'+
-         r.fieldTags.map(function(t){return '<span class="tag">'+esc((FIELD_STYLE[t]?FIELD_STYLE[t][0]+" ":"")+t)+'</span>';}).join('')+'</div></div>';
+         r.fieldTags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('')+'</div></div>';
     }
     if(r.useTags&&r.useTags.length){
       h+='<div class="detail-sec"><h3>利用のしかた</h3><div class="detail-tags">'+
@@ -896,8 +870,7 @@
     state.catFilter = ans.cat||"";
     state.fields = ans.cat?(CAT_FIELD_MAP[ans.cat]||[]):[];
     state.region = ans.region||"";
-    state.pref=""; ps.value="";
-    syncHeroChips(); syncRegionChips(); syncCatCards();
+    state.pref=""; ps.value=""; syncRegionChips(); syncCatCards();
     syncMulti(fc,state.fields,"tag"); syncMulti(tc,state.targets,"tag");
     closeQuiz();
     if(state.view!=="list"){ var lb=document.querySelector('#viewToggle .vt[data-view=list]'); if(lb) lb.click(); }

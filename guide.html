@@ -7,7 +7,7 @@
 <meta name="description" content="「いばしょ・きっかけ MAP」のつかい方。キーワード・しぼり込み・地図・近くをさがす、4つのさがし方と、カードの見方・掲載バッジの意味を紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +15,10 @@
 <header class="site-header">
   <div class="site-header-inner">
     <a class="brand" href="index.html"><span class="brand-pin"></span>いばしょ・きっかけ MAP</a>
+    <form class="hdr-search" action="search.html" method="get" role="search">
+      <svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+      <input type="search" name="q" placeholder="キーワードでさがす" aria-label="サイト内をキーワードで検索">
+    </form>
     <nav class="site-nav">
       <a href="search.html">さがす</a>
       <a href="search.html?view=map">地図</a>
@@ -56,25 +60,25 @@
       <div class="doc-steps">
         <a class="doc-step" href="search.html">
           <div class="n">1</div>
-          <div class="t">🔍 キーワードでさがす</div>
+          <div class="t">キーワードでさがす</div>
           <div class="d">名前・活動の内容・地名などで検索できます。「探究」「キャンプ」など、気になる言葉でもOK。</div>
           <div class="go">キーワードでさがす →</div>
         </a>
         <a class="doc-step" href="search.html">
           <div class="n">2</div>
-          <div class="t">🎚️ しぼり込んでさがす</div>
+          <div class="t">しぼり込んでさがす</div>
           <div class="d">地方／都道府県／やってみたいこと／対象などで絞れます。条件はいくつでも組み合わせられます。</div>
           <div class="go">条件でしぼり込む →</div>
         </a>
         <a class="doc-step" href="search.html?view=map">
           <div class="n">3</div>
-          <div class="t">🗺️ 地図で見る</div>
+          <div class="t">地図で見る</div>
           <div class="d">地方をえらぶと、その地方の拠点が地図に出ます。ピンをタップすると詳細が見られます。</div>
           <div class="go">地図でさがす →</div>
         </a>
         <a class="doc-step" href="search.html?near=1">
           <div class="n">4</div>
-          <div class="t">📍 近くをさがす</div>
+          <div class="t">近くをさがす</div>
           <div class="d">現在地から近い順にならべかえます。スマホでの利用がおすすめです。</div>
           <div class="go">近くをさがす →</div>
         </a>
@@ -87,10 +91,10 @@
       <div class="quiz-cta" style="margin:18px 0 0;padding:0">
         <div class="quiz-cta-inner">
           <div class="quiz-cta-txt">
-            <div class="quiz-cta-eyebrow">🧭 迷ったら、これ</div>
-            <div class="quiz-cta-title">3つの質問で、あなたにピッタリの場所をさがす</div>
+            <p class="quiz-cta-eyebrow">Not sure where to start?</p>
+            <p class="quiz-cta-title">3つの質問で、あなたに合う場所をさがす</p>
           </div>
-          <a class="quiz-cta-btn" href="search.html?quiz=1">診断をはじめる<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="quiz-cta-btn" href="search.html?quiz=1">診断をはじめる<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
     </section>
@@ -127,7 +131,10 @@
 
 <section class="doc-more">
   <div class="doc-more-inner">
-    <div class="section-divider"></div>
+    <h2 class="section-head">
+      <span class="sh-ja">ほかのページ</span>
+      <span class="sh-en" aria-hidden="true">MORE</span>
+    </h2>
     <div class="doc-more-grid">
       <a class="doc-more-card" href="faq.html"><div class="t">よくある質問・安全に使うために</div><div class="d">料金や申し込み、位置情報のことなど。安全に使うためのポイントもまとめています。</div></a>
       <a class="doc-more-card" href="teachers.html"><div class="t">先生・保護者の方へ</div><div class="d">探究学習・キャリア教育・課外活動の入口としての活用のヒント。</div></a>
@@ -145,6 +152,7 @@
       <a href="contact.html">掲載依頼・お問い合わせ</a>
     </nav>
     掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。掲載情報は各拠点の公式発表をもとに編集・整理しています。最終更新 2026年8月。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
