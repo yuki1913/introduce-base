@@ -41,7 +41,6 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "〒060-0051 北海道札幌市中央区南1条東2丁目 大通バスセンタービル2号館1階・2階",
   "station": "札幌市営地下鉄バスセンター前駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.06068,
   "lng": 141.359055
@@ -88,10 +87,15 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "北海道札幌市東区北22条東1丁目",
   "station": "札幌市営地下鉄北24条駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.088753,
-  "lng": 141.350311
+  "lng": 141.350311,
+  "image": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/images/3_akasia_1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-003",
@@ -135,10 +139,15 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "北海道札幌市白石区東札幌2条6丁目",
   "station": "札幌市営地下鉄白石駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.045643,
-  "lng": 141.394516
+  "lng": 141.394516,
+  "image": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/images/poplar.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-004",
@@ -182,7 +191,6 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "北海道札幌市豊平区豊平8条11丁目",
   "station": "札幌市営地下鉄学園前駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.043198,
   "lng": 141.373459
@@ -229,7 +237,6 @@
   "infoUrl": "https://www.city.sapporo.jp/kodomo/ikusei/youth/institution/index.html",
   "address": "〒063-0051 北海道札幌市西区宮の沢1条1丁目",
   "station": "札幌市営地下鉄宮の沢駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.089222,
   "lng": 141.275116
@@ -317,10 +324,15 @@
   "infoUrl": "https://www.ssc.slp.or.jp/event/tag/jh_school/",
   "address": "〒004-0051 北海道札幌市厚別区厚別中央1条5-2-20",
   "station": "JR新札幌駅・地下鉄新さっぽろ駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.036606,
-  "lng": 141.472122
+  "lng": 141.472122,
+  "image": "https://www.ssc.slp.or.jp/uploads/images/post/event/R8oyakotenmon.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.ssc.slp.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-008",
@@ -362,10 +374,15 @@
   "infoUrl": "https://hs-compass.com/center/",
   "address": "〒005-0022 北海道札幌市南区真駒内柏丘7-8-1",
   "station": "地下鉄真駒内駅からじょうてつバス,青少年会館前下車",
-  "image": "",
   "logo": "",
   "lat": 42.988945,
-  "lng": 141.342438
+  "lng": 141.342438,
+  "image": "https://hs-compass.com/contents/wp-content/uploads/2021/11/IMG_2513-768x1024.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hs-compass.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-009",
@@ -409,10 +426,15 @@
   "infoUrl": "https://www.city.hakodate.hokkaido.jp/docs/2014011500518/",
   "address": "〒040-0046 北海道函館市谷地頭町5-14",
   "station": "函館市電谷地頭電停から徒歩約15分",
-  "image": "",
   "logo": "",
   "lat": 41.751324,
-  "lng": 140.712143
+  "lng": 140.712143,
+  "image": "https://fururu.or.jp/images/2025_1118_road_heating_stop.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://fururu.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-010",
@@ -456,7 +478,6 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒073-0108 北海道砂川市北光496-25",
   "station": "JR砂川駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 43.517071,
   "lng": 141.932617
@@ -503,7 +524,6 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒074-1273 北海道深川市音江町2-7-1",
   "station": "JR深川駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 43.693905,
   "lng": 142.07695
@@ -550,10 +570,15 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒049-2141 北海道茅部郡森町駒ヶ岳657-15",
   "station": "JR駒ヶ岳駅方面から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 42.043007,
-  "lng": 140.60994
+  "lng": 140.60994,
+  "image": "https://napal-mori.org/wp-content/uploads/2023/09/napalMORI.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://napal-mori.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-013",
@@ -597,10 +622,15 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒093-0216 北海道北見市常呂町栄浦365-1",
   "station": "JR網走駅・北見駅方面から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 44.130535,
-  "lng": 143.981598
+  "lng": 143.981598,
+  "image": "https://napal-kitami-hokkaido.jp/images/img_main.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://napal-kitami-hokkaido.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-014",
@@ -644,7 +674,6 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒089-3733 北海道足寄郡足寄町常盤3",
   "station": "鉄道駅なし,都市間バス・車利用を確認",
-  "image": "",
   "logo": "",
   "lat": 43.243591,
   "lng": 143.539001
@@ -691,7 +720,6 @@
   "infoUrl": "https://www.dokyoi.pref.hokkaido.lg.jp/hk/sgg/seisyounensisetu.html",
   "address": "〒088-1113 北海道厚岸郡厚岸町愛冠6",
   "station": "JR厚岸駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 43.023056,
   "lng": 144.842422
@@ -738,10 +766,15 @@
   "infoUrl": "https://hidaka.niye.go.jp/",
   "address": "〒055-2315 北海道沙流郡日高町字富岡",
   "station": "占冠駅・日高町方面から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 42.842861,
-  "lng": 142.463776
+  "lng": 142.463776,
+  "image": "https://hidaka.niye.go.jp/manage/wp-content/themes/hidaka/img/index/img_index01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hidaka.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-017",
@@ -785,10 +818,15 @@
   "infoUrl": "https://taisetsu.niye.go.jp/",
   "address": "〒071-0235 北海道上川郡美瑛町白金温泉",
   "station": "JR美瑛駅からバス・車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 43.472809,
-  "lng": 142.643753
+  "lng": 142.643753,
+  "image": "https://taisetsu.niye.go.jp/wp-content/themes/taisetsu/image/compass.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://taisetsu.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-018",
@@ -826,10 +864,15 @@
   "infoUrl": "https://life.sci.hokudai.ac.jp/mf/event/23666",
   "address": "〒060-0810 北海道札幌市北区北10条西8丁目 北海道大学札幌キャンパス",
   "station": "JR札幌駅・地下鉄北12条駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.072117,
-  "lng": 141.342041
+  "lng": 141.342041,
+  "image": "https://www.hokudai.ac.jp/common/img/btn_X.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.hokudai.ac.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-019",
@@ -909,10 +952,15 @@
   "infoUrl": "https://www.pref.hokkaido.lg.jp/kz/dxs/hokkaido-startup-studio2024.html",
   "address": "固定会場なし,オンラインと北海道内会場",
   "station": "開催回により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.hokkaido.lg.jp/fs/1/0/2/5/8/9/7/0/_/%E5%8C%97%E6%B5%B7%E9%81%93%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA(BASIC)%E8%A1%A8.PNG",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.hokkaido.lg.jp/kz/dxs/hokkaido-startup-studio2024.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-021",
@@ -1037,10 +1085,15 @@
   "infoUrl": "https://www.city.obihiro.hokkaido.jp/shisei/shisetsu/bunka/1001727.html",
   "address": "〒080-0846 北海道帯広市緑ヶ丘2",
   "station": "JR帯広駅からバス・徒歩,緑ヶ丘公園内",
-  "image": "",
   "logo": "",
   "lat": 42.901546,
-  "lng": 143.182571
+  "lng": 143.182571,
+  "image": "https://www.city.obihiro.hokkaido.jp/_res/projects/default_project/_page_/001/016/416/top_cover.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.obihiro.hokkaido.jp/kyoiku/kyoiku/childrenhall/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-024",
@@ -1081,10 +1134,15 @@
   "infoUrl": "https://www.city.kushiro.lg.jp/bunkasports/shougaigakushuu/1005719/1005728.html",
   "address": "〒085-0017 北海道釧路市幸町10-2",
   "station": "JR釧路駅から徒歩約8分",
-  "image": "",
   "logo": "",
   "lat": 42.986477,
-  "lng": 144.37912
+  "lng": 144.37912,
+  "image": "https://www.kodomoyugakukan.jp/images/open@2x.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kodomoyugakukan.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "HK-025",
@@ -1168,10 +1226,15 @@
   "infoUrl": "https://hokumouken.com/2026/",
   "address": "〒090-0015 北海道北見市公園町1",
   "station": "JR北見駅からバス・徒歩",
-  "image": "",
   "logo": "",
   "lat": 43.817703,
-  "lng": 143.903519
+  "lng": 143.903519,
+  "image": "https://hokumouken.com/wp-content/uploads/2024/08/IMG_4882h2.jpeg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hokumouken.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-001",
@@ -1215,10 +1278,15 @@
   "infoUrl": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/bonju_top_index.html",
   "address": "〒037-0611 青森県五所川原市神山字殊ノ峰117-602",
   "station": "JR五所川原駅から車,団体交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 40.795818,
-  "lng": 140.519028
+  "lng": 140.519028,
+  "image": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/img/H30titlesitagazotanuki_0.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.aomori.lg.jp/soshiki/kyoiku/e-bonju/bonju_top_index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-002",
@@ -1309,10 +1377,15 @@
   "infoUrl": "https://www.alis.pref.aomori.lg.jp/shisetsu/guide/",
   "address": "〒030-0111 青森県青森市荒川字藤戸119-7",
   "station": "JR青森駅からバス,総合社会教育センター前下車",
-  "image": "",
   "logo": "",
   "lat": 40.7957,
-  "lng": 140.736145
+  "lng": 140.736145,
+  "image": "https://www.alis.pref.aomori.lg.jp/wp-content/uploads/2026/04/1_jigyoutaikei.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.alis.pref.aomori.lg.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-004",
@@ -1351,10 +1424,15 @@
   "infoUrl": "https://nyushi.hirosaki-u.ac.jp/wp-content/uploads/2026/05/program_20260527.pdf",
   "address": "〒036-8560 青森県弘前市文京町1 弘前大学",
   "station": "JR弘前駅からバス",
-  "image": "",
   "logo": "",
   "lat": 40.587959,
-  "lng": 140.472061
+  "lng": 140.472061,
+  "image": "https://nyushi.hirosaki-u.ac.jp/wp-content/uploads/2026/07/eyecatch_opencampus2026_nyushi-03.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://nyushi.hirosaki-u.ac.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-005",
@@ -1526,7 +1604,6 @@
   "infoUrl": "https://iwate.niye.go.jp/",
   "address": "〒020-0601 岩手県滝沢市後292",
   "station": "JR盛岡駅からバス・車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 39.839043,
   "lng": 141.094177
@@ -1613,10 +1690,15 @@
   "infoUrl": "https://iju.pref.iwate.jp/coworking_list/miraito/",
   "address": "〒028-4303 岩手県岩手郡岩手町江刈内10-8",
   "station": "IGRいわて銀河鉄道いわて沼宮内駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 39.956127,
-  "lng": 141.254562
+  "lng": 141.254562,
+  "image": "https://miraito.org/wp-content/themes/miraito/dist/assets/images/common/youth_mv.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://miraito.org/youth/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-011",
@@ -1659,10 +1741,15 @@
   "infoUrl": "https://iwatewakamono.net/cafe",
   "address": "〒020-0023 岩手県盛岡市内丸11-2 岩手県公会堂地下",
   "station": "JR盛岡駅からバス,県庁・市役所前下車",
-  "image": "",
   "logo": "",
   "lat": 39.702454,
-  "lng": 141.154099
+  "lng": 141.154099,
+  "image": "https://iwatewakamono.net/wp-content/uploads/2024/10/cafe_exterior2024-660x495-1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://iwatewakamono.net/cafe",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-012",
@@ -1706,10 +1793,15 @@
   "infoUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002051.html",
   "address": "〒029-4504 岩手県胆沢郡金ケ崎町永沢下舘49-1",
   "station": "JR金ケ崎駅から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 39.174938,
-  "lng": 141.084412
+  "lng": 141.084412,
+  "image": "https://iwate-sposhin.jp/wp/wp-content/themes/sposhin/img/image-og.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://iwate-sposhin.jp/kennan/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-013",
@@ -1753,10 +1845,15 @@
   "infoUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html",
   "address": "〒028-1371 岩手県下閉伊郡山田町船越2-42",
   "station": "三陸鉄道岩手船越駅方面から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 39.442375,
-  "lng": 142.012527
+  "lng": 142.012527,
+  "image": "https://maps.google.com/maps/api/staticmap?center=39.4029188,141.9494603&zoom=15&size=660x500&markers=39.4029188,141.9494603&sensor=false&format=gif&region=jp&key=AIzaSyBYDaG9yCUKDceXMOETtuTdveaJDjdHYZg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-014",
@@ -1800,7 +1897,6 @@
   "infoUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002053.html",
   "address": "〒028-6106 岩手県二戸市仁左平字放森61-35",
   "station": "JR・IGR二戸駅から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 40.308163,
   "lng": 141.331573
@@ -1847,10 +1943,15 @@
   "infoUrl": "https://www.pref.miyagi.jp/soshiki/sz-seinen/",
   "address": "〒986-0781 宮城県本吉郡南三陸町戸倉字坂本88-1",
   "station": "BRT志津川駅方面から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 38.634148,
-  "lng": 141.445236
+  "lng": 141.445236,
+  "image": "https://www.pref.miyagi.jp/images/29040/marin.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.miyagi.jp/soshiki/sz-seinen/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-016",
@@ -1894,10 +1995,15 @@
   "infoUrl": "https://www.pref.miyagi.jp/soshiki/matsushima-cnt/",
   "address": "〒981-0412 宮城県東松島市宮戸字二ツ橋1",
   "station": "JR野蒜駅から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 38.334801,
-  "lng": 141.156204
+  "lng": 141.156204,
+  "image": "https://www.pref.miyagi.jp/images/50300/seakayak.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.miyagi.jp/soshiki/matsushima-cnt/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-017",
@@ -1941,10 +2047,15 @@
   "infoUrl": "https://hanayama.niye.go.jp/",
   "address": "〒987-2593 宮城県栗原市花山字本沢沼山61-1",
   "station": "JRくりこま高原駅方面からバス・車,交通を確認",
-  "image": "",
   "logo": "",
   "lat": 38.855095,
-  "lng": 140.779739
+  "lng": 140.779739,
+  "image": "https://hanayama.niye.go.jp/wp-content/uploads/2016/06/visaul01.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hanayama.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-018",
@@ -2068,10 +2179,15 @@
   "infoUrl": "https://www.myu.ac.jp/academics/news/folder002/9179/",
   "address": "〒981-3298 宮城県黒川郡大和町学苑1-1 宮城大学大和キャンパス",
   "station": "仙台市地下鉄泉中央駅からバス",
-  "image": "",
   "logo": "",
   "lat": 38.3489,
-  "lng": 140.840469
+  "lng": 140.840469,
+  "image": "https://www.myu.ac.jp/application/files/2917/8303/3798/IMG_9185___.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.myu.ac.jp/academics/news/folder002/9179/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-021",
@@ -2113,10 +2229,15 @@
   "infoUrl": "https://www.tedic.jp/about-us/",
   "address": "〒986-0824 宮城県石巻市立町1-24 駅前山田ビル2階",
   "station": "JR石巻駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 38.432144,
-  "lng": 141.307465
+  "lng": 141.307465,
+  "image": "https://image.jimcdn.com/app/cms/image/transf/none/path/sda3af570d9bc5433/backgroundarea/if8f9aad7b8cf1d3f/version/1767773192/image.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.tedic.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-022",
@@ -2158,10 +2279,15 @@
   "infoUrl": "https://asuiku.org/freeschool/index.html",
   "address": "仙台市宮城野区榴岡3-11-10 1階,泉区泉中央1-18-14 302,太白区長町1-5-14 103",
   "station": "JR仙台駅,地下鉄泉中央駅,地下鉄長町一丁目駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 38.260693,
-  "lng": 140.891235
+  "lng": 140.891235,
+  "image": "https://asuiku.org/data/pages/00/00/00/71/14/7faf776ac0be1e582a540e44cb5c4b85-1782459306.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://asuiku.org/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-023",
@@ -2205,10 +2331,15 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/genre/iwaki-sizen",
   "address": "〒018-1215 秋田県由利本荘市岩城赤平字長ヶ沢260-8",
   "station": "JR羽越本線岩城みなと駅方面から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 39.506226,
-  "lng": 140.075943
+  "lng": 140.075943,
+  "image": "https://www.pref.akita.lg.jp/uploads/public/genre_0000015634_00/user_9706/ni_%E5%B2%A9%E5%9F%8E%E7%A9%BA%E6%92%AE.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.akita.lg.jp/pages/genre/iwaki-sizen",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-024",
@@ -2252,10 +2383,15 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/genre/horowa-sizen",
   "address": "〒013-0561 秋田県横手市大森町八沢木字大木屋73",
   "station": "JR横手駅方面から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 39.360439,
-  "lng": 140.351334
+  "lng": 140.351334,
+  "image": "https://www.pref.akita.lg.jp/uploads/common/og.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.akita.lg.jp/pages/genre/horowa-sizen",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-025",
@@ -2299,10 +2435,15 @@
   "infoUrl": "https://www.pref.akita.lg.jp/pages/genre/oodate-sizen",
   "address": "〒017-0023 秋田県大館市東字岩神沢31",
   "station": "JR大館駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 40.280739,
-  "lng": 140.592361
+  "lng": 140.592361,
+  "image": "https://www.pref.akita.lg.jp/uploads/public/genre_0000015618_00/_thum/af1f084bcb181ccc60d4dcd45a1e1afef23185f3/1200/630/all/8d51b79bbd87b5e28c67a0e7e7fa7829ebbe4cda.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.akita.lg.jp/pages/genre/oodate-sizen",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-026",
@@ -2383,7 +2524,6 @@
   "infoUrl": "https://www.akita-u.ac.jp/honbu/exam/pdf/pamphlet/r7_lab.pdf",
   "address": "〒010-8502 秋田県秋田市手形学園町1-1 秋田大学手形キャンパスほか",
   "station": "JR秋田駅からバス",
-  "image": "",
   "logo": "",
   "lat": 39.726997,
   "lng": 140.134094
@@ -2422,7 +2562,6 @@
   "infoUrl": "https://www.city.akita.lg.jp/kurashi/shakai-shogai/1008469/1008847/1047108.html",
   "address": "秋田市立図書館の指定館,詳細は公式ページで確認",
   "station": "利用館により異なる",
-  "image": "",
   "logo": "",
   "lat": 39.719959,
   "lng": 140.103516
@@ -2464,7 +2603,6 @@
   "infoUrl": "https://www.akita-u.ac.jp/honbu/event/img/mix5743_01_dl.pdf",
   "address": "手形キャンパス：秋田市手形学園町1-1,本道キャンパス：秋田市本道1-1-1",
   "station": "JR秋田駅からバス",
-  "image": "",
   "logo": "",
   "lat": 39.729813,
   "lng": 140.136017
@@ -2511,10 +2649,15 @@
   "infoUrl": "https://www.pref.yamagata.jp/701005/bunkyo/wakamonoseishounen/kyouikushisetsu/seinennoie/index.html",
   "address": "〒994-0032 山形県天童市小路1-7-8",
   "station": "JR天童駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 38.355942,
-  "lng": 140.373215
+  "lng": 140.373215,
+  "image": "https://www.pref.yamagata.jp/images/5130/photo_hp.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.yamagata.jp/701005/bunkyo/wakamonoseishounen/kyouikushisetsu/seinennoie/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-031",
@@ -2558,7 +2701,6 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒990-1101 山形県西村山郡大江町左沢字楯山2523-5",
   "station": "JR左沢駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 38.383934,
   "lng": 140.204773
@@ -2605,7 +2747,6 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒997-0369 山形県鶴岡市高坂字杉ヶ沢54-1",
   "station": "JR鶴岡駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 38.698772,
   "lng": 139.802643
@@ -2652,7 +2793,6 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒999-0605 山形県西置賜郡飯豊町添川3535-33",
   "station": "JR羽前椿駅方面から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 38.030071,
   "lng": 140.014679
@@ -2699,7 +2839,6 @@
   "infoUrl": "https://www500.pref.yamagata.jp/700015/bunkyo/wakamonoseishounen/kyouikushisetsu/kyouikushisetsu.html",
   "address": "〒999-5301 山形県最上郡真室川町川ノ内字水上山3414-5",
   "station": "JR真室川駅から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 38.913792,
   "lng": 140.279755
@@ -2740,10 +2879,15 @@
   "infoUrl": "https://www.cid.yamagata-u.ac.jp/2111/",
   "address": "〒990-8560 山形県山形市小白川町1-4-12 山形大学小白川キャンパスほか",
   "station": "JR山形駅からバス",
-  "image": "",
   "logo": "",
   "lat": 38.246128,
-  "lng": 140.349655
+  "lng": 140.349655,
+  "image": "https://www.cid.yamagata-u.ac.jp/innovative-mind/images/i_img02.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.cid.yamagata-u.ac.jp/innovative-mind/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-036",
@@ -2782,10 +2926,15 @@
   "infoUrl": "https://www.yamagata-u.ac.jp/jp/",
   "address": "〒990-8560 山形県山形市小白川町1-4-12 山形大学小白川キャンパスほか",
   "station": "JR山形駅からバス",
-  "image": "",
   "logo": "",
   "lat": 38.246128,
-  "lng": 140.349655
+  "lng": 140.349655,
+  "image": "https://www.yamagata-u.ac.jp/jp/files/5617/8548/7201/EPOCH.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.yamagata-u.ac.jp/jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-037",
@@ -2823,10 +2972,15 @@
   "infoUrl": "https://www.yamagata-u.ac.jp/jp/information/press/20250508/01-1/",
   "address": "〒990-8560 山形県山形市小白川町1-4-12 山形大学小白川キャンパス",
   "station": "JR山形駅からバス,オンライン受講あり",
-  "image": "",
   "logo": "",
   "lat": 38.246128,
-  "lng": 140.349655
+  "lng": 140.349655,
+  "image": "https://www.yamagata-u.ac.jp/jp/files/7417/5333/9075/top2026.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.yamagata-u.ac.jp/jp/information/press/20250508/01-1/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-038",
@@ -2870,10 +3024,15 @@
   "infoUrl": "https://koriyama-nc.fcs.ed.jp/",
   "address": "〒963-0213 福島県郡山市逢瀬町多田野字中丸山46",
   "station": "JR郡山駅から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 37.386406,
-  "lng": 140.276199
+  "lng": 140.276199,
+  "image": "https://koriyama-nc.fcs.ed.jp/file/2524",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://koriyama-nc.fcs.ed.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-039",
@@ -2917,10 +3076,15 @@
   "infoUrl": "https://www.aizu-shizen.jp/",
   "address": "〒969-6504 福島県河沼郡会津坂下町八日沢字西東山4495-1",
   "station": "JR会津坂下駅方面から車,交通を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 37.580326,
-  "lng": 139.794983
+  "lng": 139.794983,
+  "image": "https://images.unsplash.com/photo-1517842645767-c639042777db",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.aizu-shizen.jp/",
+  "imageKind": "official-preload",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-040",
@@ -2964,10 +3128,15 @@
   "infoUrl": "https://iwaki-nc.fcs.ed.jp/",
   "address": "〒979-0335 福島県いわき市久之浜町田之網字向山53",
   "station": "JR久ノ浜駅方面から車,団体交通を確認",
-  "image": "",
   "logo": "",
   "lat": 37.122742,
-  "lng": 140.988419
+  "lng": 140.988419,
+  "image": "https://iwaki-nc.fcs.ed.jp/file/1003",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://iwaki-nc.fcs.ed.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-041",
@@ -3009,7 +3178,6 @@
   "infoUrl": "https://beans-fukushima.or.jp/",
   "address": "〒960-8066 福島県福島市矢剣町22-5",
   "station": "JR福島駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 37.749752,
   "lng": 140.45636
@@ -3051,10 +3219,15 @@
   "infoUrl": "https://www.city.koriyama.lg.jp/site/manabi/1554.html",
   "address": "郡山市内の各公民館",
   "station": "利用施設により異なる",
-  "image": "",
   "logo": "",
   "lat": 37.40044,
-  "lng": 140.359634
+  "lng": 140.359634,
+  "image": "https://www.city.koriyama.lg.jp/uploaded/image/1996.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.koriyama.lg.jp/site/manabi/1554.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "TH-043",
@@ -3175,10 +3348,15 @@
   "infoUrl": "https://www.city.fukushima.fukushima.jp/shisetsu/shukai-kenshu/1596.html",
   "address": "〒960-8117 福島県福島市入江町1-1",
   "station": "福島交通バス日赤病院前から徒歩3分",
-  "image": "",
   "logo": "",
   "lat": 37.769413,
-  "lng": 140.4776
+  "lng": 140.4776,
+  "image": "https://www.city.fukushima.fukushima.jp/material/images/group/22/kinsei.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.fukushima.fukushima.jp/shisetsu/shukai-kenshu/1596.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-001",
@@ -3222,10 +3400,15 @@
   "infoUrl": "https://chukosei.metro.tokyo.lg.jp/report/report-2025-career-1/",
   "address": "〒100-0005 東京都千代田区丸の内3-8-3",
   "station": "JR有楽町駅から徒歩1分",
-  "image": "",
   "logo": "",
   "lat": 35.676342,
-  "lng": 139.765625
+  "lng": 139.765625,
+  "image": "https://tib.metro.tokyo.lg.jp/wp-content/uploads/2027/01/B46F598E-E9D1-4E25-976A-A7B5AB62FA60-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tib.metro.tokyo.lg.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-002",
@@ -3268,10 +3451,15 @@
   "infoUrl": "https://tsg.metro.tokyo.lg.jp/",
   "address": "固定会場なし,東京都内会場とオンライン",
   "station": "開催回により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://tsg.metro.tokyo.lg.jp/2026/asset/themes/tsg2026/images/top-about-slide01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tsg.metro.tokyo.lg.jp/2026/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-003",
@@ -3313,10 +3501,15 @@
   "infoUrl": "https://b-lab.tokyo/",
   "address": "〒113-0034 東京都文京区湯島4-7-10",
   "station": "東京メトロ本郷三丁目駅・湯島駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.709194,
-  "lng": 139.765289
+  "lng": 139.765289,
+  "image": "https://b-lab.tokyo/wp-content/themes/b-lab/img/top_main_txt.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://b-lab.tokyo/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-004",
@@ -3359,10 +3552,15 @@
   "infoUrl": "https://ups-s.com/",
   "address": "〒156-0055 東京都世田谷区船橋6-25-1 3階",
   "station": "小田急線千歳船橋駅・京王線八幡山駅から徒歩約20分",
-  "image": "",
   "logo": "",
   "lat": 35.658653,
-  "lng": 139.621246
+  "lng": 139.621246,
+  "image": "https://www.ups-s.com/public/images/og/ups_ogimg.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ups-s.com/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-005",
@@ -3404,10 +3602,15 @@
   "infoUrl": "https://www.city.setagaya.lg.jp/02412/8950.html",
   "address": "〒154-0004 東京都世田谷区太子堂2-16-7 世田谷区役所三軒茶屋分庁舎5階",
   "station": "東急田園都市線・世田谷線三軒茶屋駅から徒歩3分",
-  "image": "",
   "logo": "",
   "lat": 35.644386,
-  "lng": 139.670822
+  "lng": 139.670822,
+  "image": "https://www.city.setagaya.lg.jp/images/8950/map1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.setagaya.lg.jp/02412/8950.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-006",
@@ -3443,10 +3646,15 @@
   "infoUrl": "https://www.city.adachi.tokyo.jp/sg-shien/cyukouseifree.html",
   "address": "足立区内の地域学習センター等14施設",
   "station": "利用施設により異なる",
-  "image": "",
   "logo": "",
   "lat": 35.775002,
-  "lng": 139.804733
+  "lng": 139.804733,
+  "image": "https://www.city.adachi.tokyo.jp/images/75163/space2026.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.adachi.tokyo.jp/sg-shien/cyukouseifree.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-007",
@@ -3487,10 +3695,15 @@
   "infoUrl": "https://gsc.iis.u-tokyo.ac.jp/",
   "address": "〒153-8505 東京都目黒区駒場4-6-1 東京大学駒場リサーチキャンパス",
   "station": "京王井の頭線駒場東大前駅・東北沢駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.66407,
-  "lng": 139.677353
+  "lng": 139.677353,
+  "image": "https://gsc.iis.u-tokyo.ac.jp/wp/wp-content/themes/NEXT%20SURPRISE%20OriginalTheme/asset/img/top_03moviesam.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://gsc.iis.u-tokyo.ac.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-008",
@@ -3534,10 +3747,15 @@
   "infoUrl": "https://nyc.niye.go.jp/",
   "address": "〒151-0052 東京都渋谷区代々木神園町3-1",
   "station": "小田急線参宮橋駅から徒歩約7分",
-  "image": "",
   "logo": "",
   "lat": 35.673958,
-  "lng": 139.69165
+  "lng": 139.69165,
+  "image": "https://nyc.niye.go.jp/wp-content/uploads/2024/05/fv_slide04.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://nyc.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-009",
@@ -3578,10 +3796,15 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/ch3/kagaku/index.html",
   "address": "〒243-0018 神奈川県厚木市中町4-16-21 プロミティあつぎ2階",
   "station": "小田急線本厚木駅から徒歩約5分",
-  "image": "",
   "logo": "",
   "lat": 35.439274,
-  "lng": 139.361343
+  "lng": 139.361343,
+  "image": "https://www.pref.kanagawa.jp/images/83772/festival.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.kanagawa.jp/docs/ch3/kagaku/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-010",
@@ -3623,10 +3846,15 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/ch3/cnt/f100213/momijizaka-hall.html",
   "address": "〒220-0044 神奈川県横浜市西区紅葉ケ丘9-1",
   "station": "JR・市営地下鉄桜木町駅から徒歩約8分",
-  "image": "",
   "logo": "",
   "lat": 35.452072,
-  "lng": 139.626038
+  "lng": 139.626038,
+  "image": "https://www.pref.kanagawa.jp/images/32994/momijizaka.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.kanagawa.jp/docs/ch3/cnt/f100213/momijizaka-hall.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-011",
@@ -3669,10 +3897,15 @@
   "infoUrl": "https://yokohama-youth.jp/kkspace/",
   "address": "〒231-0062 神奈川県横浜市中区桜木町1-1 ぴおシティ6階",
   "station": "JR桜木町駅から徒歩3分,市営地下鉄桜木町駅から徒歩1分",
-  "image": "",
   "logo": "",
   "lat": 35.453564,
-  "lng": 139.629242
+  "lng": 139.629242,
+  "image": "https://yokohama-youth.jp/wp-content/uploads/mv1-3-scaled.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://yokohama-youth.jp/kkspace/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-012",
@@ -3715,10 +3948,15 @@
   "infoUrl": "https://yokohama-youth.jp/ikusei/shisetsu/",
   "address": "〒231-8454 神奈川県横浜市中区住吉町4-42-1 関内ホール地下1階",
   "station": "JR関内駅から徒歩7分,地下鉄関内駅・みなとみらい線馬車道駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 35.447186,
-  "lng": 139.636246
+  "lng": 139.636246,
+  "image": "https://yokohama-youth.jp/wp-content/uploads/mv1-1-scaled.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://yokohama-youth.jp/ikusei/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-013",
@@ -3762,10 +4000,15 @@
   "infoUrl": "https://yokohama-youth.jp/kenshu/",
   "address": "〒236-0025 神奈川県横浜市金沢区野島町24-2",
   "station": "シーサイドライン野島公園駅から徒歩約8分",
-  "image": "",
   "logo": "",
   "lat": 35.325848,
-  "lng": 139.635849
+  "lng": 139.635849,
+  "image": "https://yokohama-youth.jp/wp-content/uploads/mv1-2-scaled.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://yokohama-youth.jp/kenshu/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-014",
@@ -3809,10 +4052,15 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/v3p/cnt/f531670/index.html",
   "address": "〒243-0307 神奈川県愛甲郡愛川町半原3390",
   "station": "小田急線本厚木駅からバス,車利用推奨",
-  "image": "",
   "logo": "",
   "lat": 35.536293,
-  "lng": 139.262482
+  "lng": 139.262482,
+  "image": "https://fureai-aikawa.com/IMG/slideshow/1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://fureai-aikawa.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-015",
@@ -3856,7 +4104,6 @@
   "infoUrl": "https://www.pref.kanagawa.jp/docs/v3p/cnt/f531670/index.html",
   "address": "〒250-0121 神奈川県南足柄市広町1507",
   "station": "伊豆箱根鉄道大雄山駅からバス・徒歩,車利用推奨",
-  "image": "",
   "logo": "",
   "lat": 35.311287,
   "lng": 139.079666
@@ -3899,10 +4146,15 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/dx-portal/info/vyc.html",
   "address": "オンライン",
   "station": "オンライン",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.saitama.lg.jp/images/277260/vyc_calendar4.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.saitama.lg.jp/dx-portal/info/vyc.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-017",
@@ -4029,10 +4281,15 @@
   "infoUrl": "https://www.city.saitama.lg.jp/008/017/003/p034831.html",
   "address": "〒330-0051 埼玉県さいたま市浦和区駒場2-3-45",
   "station": "JR浦和駅・北浦和駅からバス",
-  "image": "",
   "logo": "",
   "lat": 35.87212,
-  "lng": 139.66481
+  "lng": 139.66481,
+  "image": "https://www.city.saitama.lg.jp/kagakukan/kanri/category/p067138_d/img/001.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.saitama.lg.jp/kagakukan/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-020",
@@ -4346,10 +4603,15 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/keishi/sougyou/kigyou-ikusei.html",
   "address": "〒271-0092 千葉県松戸市松戸1389-1 松戸市民会館ほか",
   "station": "JR・新京成線松戸駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.78091,
-  "lng": 139.900177
+  "lng": 139.900177,
+  "image": "https://www.pref.chiba.lg.jp/keishi/sougyou/images/r8-ikuseijigyo.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.chiba.lg.jp/keishi/sougyou/kigyou-ikusei.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-027",
@@ -4389,10 +4651,15 @@
   "infoUrl": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kenzenikusei/seishonen/sougousoudanncenter.html",
   "address": "〒261-0003 千葉県千葉市美浜区高浜2-1-16 千葉市こころの健康センター内",
   "station": "JR稲毛駅・稲毛海岸駅からバス",
-  "image": "",
   "logo": "",
   "lat": 35.61702,
-  "lng": 140.072815
+  "lng": 140.072815,
+  "image": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kenzenikusei/seishonen/images/link_map.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kenzenikusei/seishonen/sougousoudanncenter.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-028",
@@ -4436,10 +4703,15 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kouhou/profile/shisetsu/shizen.html",
   "address": "〒289-0313 千葉県香取市小見川5249-1",
   "station": "JR小見川駅から車,送迎等を施設へ確認",
-  "image": "",
   "logo": "",
   "lat": 35.858913,
-  "lng": 140.613144
+  "lng": 140.613144,
+  "image": "https://suigou-omigawa.com/wp/wp-content/uploads/P7021065-1-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://suigou-omigawa.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-029",
@@ -4483,7 +4755,6 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kouhou/profile/shisetsu/shizen.html",
   "address": "〒292-0526 千葉県君津市笹字片倉1661-1",
   "station": "JR上総亀山駅から車,車利用推奨",
-  "image": "",
   "logo": "",
   "lat": 35.201393,
   "lng": 140.074387
@@ -4527,10 +4798,15 @@
   "infoUrl": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2026/04/idp-youkou.pdf",
   "address": "固定会場なし,茨城県内各地",
   "station": "活動・発表会場により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2026/05/idp2026.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kyoiku.pref.ibaraki.jp/lifelong-learning/youth/dream-pass/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-031",
@@ -4656,10 +4932,15 @@
   "infoUrl": "https://c-seinen.net/",
   "address": "〒300-4101 茨城県土浦市永井987",
   "station": "JR神立駅から車約15分,JR土浦駅から車約20分",
-  "image": "",
   "logo": "",
   "lat": 36.160763,
-  "lng": 140.182678
+  "lng": 140.182678,
+  "image": "https://c-seinen.net/wp_system/wp-content/themes/c-seinen.net/_img/top/fac_01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://c-seinen.net/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-034",
@@ -4703,10 +4984,15 @@
   "infoUrl": "https://www.sashima-sss.com/",
   "address": "〒306-0416 茨城県猿島郡境町伏木2095-3",
   "station": "鉄道駅から遠いためバス・車利用,送迎条件を確認",
-  "image": "",
   "logo": "",
   "lat": 36.089569,
-  "lng": 139.84053
+  "lng": 139.84053,
+  "image": "https://www.sashima-sss.com/files/topics/35_ext_01_3.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.sashima-sss.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-035",
@@ -4794,7 +5080,6 @@
   "infoUrl": "https://www.city.utsunomiya.lg.jp/kurashi/kyodo/chiiki/1006231.html",
   "address": "〒321-0962 栃木県宇都宮市今泉町3007",
   "station": "JR宇都宮駅からバス,今泉八丁目下車",
-  "image": "",
   "logo": "",
   "lat": 36.573429,
   "lng": 139.91571
@@ -4835,10 +5120,15 @@
   "infoUrl": "https://koudai.mine.utsunomiya-u.ac.jp/ip-u/",
   "address": "〒321-8505 栃木県宇都宮市峰町350 宇都宮大学峰キャンパス",
   "station": "JR宇都宮駅からバス",
-  "image": "",
   "logo": "",
   "lat": 36.550312,
-  "lng": 139.914886
+  "lng": 139.914886,
+  "image": "https://koudai.mine.utsunomiya-u.ac.jp/ip-u/wp-content/uploads/sites/2/2025/02/HP%E3%80%80R5-PCtopFig%E3%80%801900x600px.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://koudai.mine.utsunomiya-u.ac.jp/ip-u/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-038",
@@ -4879,10 +5169,15 @@
   "infoUrl": "https://tochigi-ysn.net/",
   "address": "〒320-0862 栃木県宇都宮市西原1-3-4 aret",
   "station": "東武宇都宮駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 36.556118,
-  "lng": 139.873032
+  "lng": 139.873032,
+  "image": "https://tochigi-ysn.net/wp-content/uploads/2023/03/engao-photo-02-1.5x-50.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tochigi-ysn.net/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-039",
@@ -4926,10 +5221,15 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/kyouiku/shougaigakushuu/shisetsu/index.html",
   "address": "〒329-4308 栃木県栃木市岩舟町下津原1808-1",
   "station": "JR岩舟駅から車約10分,栃木駅からバス",
-  "image": "",
   "logo": "",
   "lat": 36.316952,
-  "lng": 139.641418
+  "lng": 139.641418,
+  "image": "https://mikamoshizennoie.com/assets/img/top/facility_pc.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://mikamoshizennoie.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-040",
@@ -4973,10 +5273,15 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/kyouiku/shougaigakushuu/shisetsu/index.html",
   "address": "〒325-0301 栃木県那須郡那須町湯本157",
   "station": "JR那須塩原駅・黒磯駅からバス,車利用推奨",
-  "image": "",
   "logo": "",
   "lat": 37.120468,
-  "lng": 139.985626
+  "lng": 139.985626,
+  "image": "https://lh3.googleusercontent.com/sitesv/AG8ngQVQ1WDXf1islQPi4oTH-Xkmkp-GOE-6yC3xfdLiuuG9y1bKhcvaipQoX8wb1pxNpcyPKUcIs2k4Y8Nhvq0A6weLTcaCgyhZmCl3LF5_vhgYHnud_ovj6V0oADbFqWgkqVm4to819TLMBJYAZ7D4bpTTbcZK6Xyq_1jk4J_tazNVzB-46KJ15STBSyQxjhg=w16383",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.windy-nasu.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-041",
@@ -5020,10 +5325,15 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/kyouiku/shougaigakushuu/shisetsu/index.html",
   "address": "〒311-1412 茨城県鉾田市玉田336-2",
   "station": "公共交通が限られるため団体バス・車利用を確認",
-  "image": "",
   "logo": "",
   "lat": 36.218349,
-  "lng": 140.563049
+  "lng": 140.563049,
+  "image": "https://tochigikaihin.jp/cms/wp-content/uploads/2025/07/IMG_E4248-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tochigikaihin.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-042",
@@ -5065,10 +5375,15 @@
   "infoUrl": "https://gunma-tsukurun.jp/go/",
   "address": "〒371-0024 群馬県前橋市表町2-30-8 AQERU前橋2階",
   "station": "JR前橋駅北口から徒歩1分",
-  "image": "",
   "logo": "",
   "lat": 36.384182,
-  "lng": 139.071503
+  "lng": 139.071503,
+  "image": "https://gunma-tsukurun.jp/wp-content/uploads/2025/04/tsukurun_CreativeQuest_%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88_Top-1024x1024.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://gunma-tsukurun.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-043",
@@ -5110,10 +5425,15 @@
   "infoUrl": "https://www.pref.gunma.jp/page/643539.html",
   "address": "〒370-0044 群馬県高崎市岩押町12-24 Gメッセ群馬4階",
   "station": "JR高崎駅から徒歩約15分",
-  "image": "",
   "logo": "",
   "lat": 36.318714,
-  "lng": 139.021667
+  "lng": 139.021667,
+  "image": "https://www.pref.gunma.jp/uploaded/image/612113.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.gunma.jp/page/643539.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-044",
@@ -5296,10 +5616,15 @@
   "infoUrl": "https://akagi.niye.go.jp/",
   "address": "〒371-0101 群馬県前橋市富士見町赤城山27",
   "station": "JR前橋駅からバス・車,交通手段を事前確認",
-  "image": "",
   "logo": "",
   "lat": 36.482712,
-  "lng": 139.12471
+  "lng": 139.12471,
+  "image": "https://akagi.niye.go.jp/wp/wp-content/uploads/2024/08/IMG_1920-scaled-e1724721866500.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://akagi.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-048",
@@ -5336,10 +5661,15 @@
   "infoUrl": "https://www.gunma-u.ac.jp/information/229439",
   "address": "〒376-8515 群馬県桐生市天神町1-5-1 群馬大学桐生キャンパス",
   "station": "JR桐生駅・東武新桐生駅からバス",
-  "image": "",
   "logo": "",
   "lat": 36.423496,
-  "lng": 139.348389
+  "lng": 139.348389,
+  "image": "https://www.gunma-u.ac.jp/wp-content/uploads/2026/06/20260608_rikakyousituthum.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.gunma-u.ac.jp/information/229439",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-049",
@@ -5427,7 +5757,6 @@
   "infoUrl": "https://www.city.fuchu.tokyo.jp/kosodate/kyoiku/ikuse/chuukouseisedaiibasyo_Co-KoPlace.html",
   "address": "東京都府中市住吉町1-61 住吉文化センター,東京都府中市白糸台1-60 白糸台文化センター",
   "station": "京王線中河原駅,西武多摩川線白糸台駅",
-  "image": "",
   "logo": "",
   "lat": 35.660294,
   "lng": 139.46051
@@ -5520,7 +5849,6 @@
   "infoUrl": "https://www.city.itabashi.tokyo.jp/kyoikuiinkai/shogai/manaport/ohara/1041024.html",
   "address": "〒174-0061 東京都板橋区大原町5-18",
   "station": "都営三田線本蓮沼駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 35.770012,
   "lng": 139.699997
@@ -5567,7 +5895,6 @@
   "infoUrl": "https://www.city.itabashi.tokyo.jp/kyoikuiinkai/shogai/manaport/narimasu/1037691.html",
   "address": "〒175-0094 東京都板橋区成増1-12-4",
   "station": "東京メトロ地下鉄成増駅,東武東上線成増駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.774536,
   "lng": 139.632736
@@ -5615,7 +5942,6 @@
   "infoUrl": "https://www.musashino.or.jp/place/1001607/1001611.html",
   "address": "〒180-0023 東京都武蔵野市境南町2-3-18",
   "station": "JR中央線,西武多摩川線武蔵境駅南口から徒歩1分",
-  "image": "",
   "logo": "",
   "lat": 35.700844,
   "lng": 139.543655
@@ -5662,10 +5988,15 @@
   "infoUrl": "https://www.city.toshima.lg.jp/256/kosodate/kosodate/hokago/jump/005698.html",
   "address": "〒170-0013 東京都豊島区東池袋2-38-10 2階",
   "station": "JR大塚駅,都電荒川線向原駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.732029,
-  "lng": 139.721313
+  "lng": 139.721313,
+  "image": "https://www.city.toshima.lg.jp/images/2128/gaikan.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.toshima.lg.jp/256/kosodate/kosodate/hokago/jump/005698.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-056",
@@ -5799,10 +6130,15 @@
   "infoUrl": "https://www.city.shinjuku.lg.jp/content/000378450.pdf",
   "address": "〒160-0022 東京都新宿区新宿7-3-29 地下1階",
   "station": "東京メトロ,都営地下鉄東新宿駅,都営大江戸線若松河田駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.701225,
-  "lng": 139.712662
+  "lng": 139.712662,
+  "image": "https://www.city.shinjuku.lg.jp/content/000387666.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.shinjuku.lg.jp/kodomo/kodomos01_001009.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-059",
@@ -5891,10 +6227,15 @@
   "infoUrl": "https://daikanyama-tc.com/",
   "address": "〒150-0034 東京都渋谷区代官山町7-9",
   "station": "東急東横線代官山駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 35.650822,
-  "lng": 139.70517
+  "lng": 139.70517,
+  "image": "https://www.city.shibuya.tokyo.jp/assets/image/fix-pict_kurashi.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.shibuya.tokyo.jp/shisetsu/kosodate/seinen/daikan_cr.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-061",
@@ -5981,10 +6322,15 @@
   "infoUrl": "https://www.watacafe.jp/",
   "address": "〒170-0013 東京都豊島区東池袋2-60-3 グレイスロータリービル1階",
   "station": "池袋駅東口から徒歩8分",
-  "image": "",
   "logo": "",
   "lat": 35.73325,
-  "lng": 139.717392
+  "lng": 139.717392,
+  "image": "https://www.watacafe.jp/img/main_slide0.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.watacafe.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-063",
@@ -6026,7 +6372,6 @@
   "infoUrl": "https://www.sankakusha.or.jp/",
   "address": "〒170-0012 東京都豊島区上池袋4-35-12 3階",
   "station": "東武東上線北池袋駅,JR板橋駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.742409,
   "lng": 139.71994
@@ -6070,10 +6415,15 @@
   "infoUrl": "https://www.kodomo-nihongo.com/",
   "address": "〒197-0011 東京都福生市福生2351-1",
   "station": "JR東福生駅,JR福生駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.738964,
-  "lng": 139.337601
+  "lng": 139.337601,
+  "image": "https://www.kodomo-nihongo.com/user/media/ysc/page/index/slide/topkeyvisual2024-01.JPG",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kodomo-nihongo.com/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-065",
@@ -6110,7 +6460,6 @@
   "infoUrl": "https://me-x.jp/",
   "address": "オンライン",
   "station": "オンライン",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -6154,10 +6503,15 @@
   "infoUrl": "https://gaku.school/",
   "address": "講座会場により異なる",
   "station": "講座会場により異なる",
-  "image": "",
   "logo": "",
   "lat": 35.66367,
-  "lng": 139.697723
+  "lng": 139.697723,
+  "image": "https://gaku.school/wp/wp-content/uploads/2021/06/gakuL_04b.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://gaku.school/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-067",
@@ -6196,10 +6550,15 @@
   "infoUrl": "https://u-18.makers-u.jp/",
   "address": "固定会場なし,合宿・活動会場は募集要項で確認",
   "station": "開催回により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://u-18.makers-u.jp/img/2025/mainv_copy1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://u-18.makers-u.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-068",
@@ -6239,10 +6598,15 @@
   "infoUrl": "https://www.jfc.go.jp/n/grandprix/",
   "address": "固定会場なし,応募・支援はオンラインと各地域会場",
   "station": "開催回により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.jfc.go.jp/n/grandprix/assets/images/top/finalist-pic.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.jfc.go.jp/n/grandprix/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-069",
@@ -6379,10 +6743,15 @@
   "infoUrl": "https://www.yumepark.net/",
   "address": "〒213-0033 神奈川県川崎市高津区下作延5-30-1",
   "station": "JR南武線津田山駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 35.605423,
-  "lng": 139.597031
+  "lng": 139.597031,
+  "image": "https://www.city.kawasaki.jp/450/cmsfiles/contents/0000091/91345/yumepark04.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.kawasaki.jp/450/page/0000091345.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-072",
@@ -6427,10 +6796,15 @@
   "infoUrl": "https://kurokawa-yagai.com/group/",
   "address": "〒215-0035 神奈川県川崎市麻生区黒川313-9",
   "station": "小田急多摩線黒川駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.611107,
-  "lng": 139.468521
+  "lng": 139.468521,
+  "image": "https://kurokawa-yagai.com/img/okugai-honkan-500x500.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kurokawa-yagai.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-073",
@@ -6475,10 +6849,15 @@
   "infoUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/shisetsu/school/kyoiku/1003060.html",
   "address": "〒252-0207 神奈川県相模原市中央区矢部新町3-15",
   "station": "JR横浜線矢部駅から徒歩3分",
-  "image": "",
   "logo": "",
   "lat": 35.574455,
-  "lng": 139.387604
+  "lng": 139.387604,
+  "image": "https://www.city.sagamihara.kanagawa.jp/_res/projects/default_project/_page_/001/003/060/02.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.sagamihara.kanagawa.jp/kurashi/shisetsu/school/kyoiku/1003060.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-074",
@@ -6521,10 +6900,15 @@
   "infoUrl": "https://f-mirai.jp/youth/fujisawa/personal",
   "address": "〒251-0054 神奈川県藤沢市朝日町10-8",
   "station": "JR,小田急,江ノ島電鉄藤沢駅北口から徒歩9分",
-  "image": "",
   "logo": "",
   "lat": 35.340141,
-  "lng": 139.492264
+  "lng": 139.492264,
+  "image": "https://f-mirai.jp/wp/wp-content/uploads/2026/01/mainimg-pc.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://f-mirai.jp/youth/fujisawa",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-075",
@@ -6566,10 +6950,15 @@
   "infoUrl": "https://f-mirai.jp/youth/tujidou",
   "address": "〒251-0047 神奈川県藤沢市辻堂2-8-31",
   "station": "JR東海道線辻堂駅南口から徒歩3分",
-  "image": "",
   "logo": "",
   "lat": 35.336079,
-  "lng": 139.446167
+  "lng": 139.446167,
+  "image": "https://f-mirai.jp/wp/wp-content/uploads/2026/01/mainimg-pc.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://f-mirai.jp/youth/tujidou",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-076",
@@ -6613,10 +7002,15 @@
   "infoUrl": "https://f-mirai.jp/youth/mori/events",
   "address": "〒252-0824 神奈川県藤沢市打戻2345",
   "station": "長後駅,湘南台駅,辻堂駅からバス,最寄り停留所から徒歩10分",
-  "image": "",
   "logo": "",
   "lat": 35.398285,
-  "lng": 139.419815
+  "lng": 139.419815,
+  "image": "https://f-mirai.jp/wp/wp-content/uploads/2026/04/DSC_0127-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://f-mirai.jp/youth/mori",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-077",
@@ -6659,10 +7053,15 @@
   "infoUrl": "https://minicity-plus.jp/miniyoko-blog/",
   "address": "固定会場なし,横浜市内・県内の活動会場",
   "station": "活動回により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://minicity-plus.jp/main/wp-content/uploads/2019/08/project-miniyoko_c-1024x640.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://minicity-plus.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-078",
@@ -6752,10 +7151,15 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/shisetsu/taiken/014.html",
   "address": "〒369-1901 埼玉県秩父市大滝5944-2",
   "station": "秩父鉄道三峰口駅からタクシー約30分,秩父湖バス停から徒歩約4km",
-  "image": "",
   "logo": "",
   "lat": 35.910919,
-  "lng": 138.829224
+  "lng": 138.829224,
+  "image": "https://genki.spec.ed.jp/ootaki/wysiwyg/image/download/1/3301/big",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://genki.spec.ed.jp/ootaki/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-080",
@@ -6800,10 +7204,15 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/shisetsu/taiken/011.html",
   "address": "〒369-1312 埼玉県秩父郡長瀞町井戸367",
   "station": "秩父鉄道野上駅から徒歩10分",
-  "image": "",
   "logo": "",
   "lat": 36.104225,
-  "lng": 139.118683
+  "lng": 139.118683,
+  "image": "https://www.nagatoro-genki.com/wp-content/uploads/2021/12/P7303618.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.nagatoro-genki.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-081",
@@ -6849,10 +7258,15 @@
   "infoUrl": "https://saitamayouthnet.org/our-business/tamariba/",
   "address": "〒337-0052 埼玉県さいたま市見沼区堀崎町12-39 ほか複数拠点",
   "station": "東武アーバンパークライン大和田駅から徒歩約15分,事業により異なる",
-  "image": "",
   "logo": "",
   "lat": 35.937374,
-  "lng": 139.65181
+  "lng": 139.65181,
+  "image": "https://saitamayouthnet.org/wp-content/uploads/2021/09/99c0bc68a71be91bbc9b65c76056d2cf-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://saitamayouthnet.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-082",
@@ -6896,10 +7310,15 @@
   "infoUrl": "https://shibusawa-mix.pref.saitama.lg.jp/program/bizcon-cafe-2026/",
   "address": "〒330-0843 埼玉県さいたま市大宮区吉敷町4-262-18 ekismさいたま新都心5階",
   "station": "JRさいたま新都心駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.895111,
-  "lng": 139.63324
+  "lng": 139.63324,
+  "image": "https://shibusawa-mix.pref.saitama.lg.jp/wp-content/uploads/2026/07/event20260709-850x572.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://shibusawa-mix.pref.saitama.lg.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-083",
@@ -6981,10 +7400,15 @@
   "infoUrl": "https://www.pref.saitama.lg.jp/g2209/library-info/202608_tyuukousei.html",
   "address": "〒330-0803 埼玉県さいたま市大宮区高鼻町4-219 県立歴史と民俗の博物館",
   "station": "東武アーバンパークライン大宮公園駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.921021,
-  "lng": 139.630447
+  "lng": 139.630447,
+  "image": "https://www.pref.saitama.lg.jp/images/280704/tyukousei0805.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.saitama.lg.jp/g2209/library-info/202608_tyuukousei.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-085",
@@ -7026,10 +7450,15 @@
   "infoUrl": "https://shizen.spec.ed.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%B8%80%E8%A6%A7",
   "address": "〒369-1305 埼玉県秩父郡長瀞町長瀞1417-1",
   "station": "秩父鉄道上長瀞駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 36.094967,
-  "lng": 139.10228
+  "lng": 139.10228,
+  "image": "https://shizen.spec.ed.jp/wysiwyg/image/download/1/8167",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://shizen.spec.ed.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-086",
@@ -7069,10 +7498,15 @@
   "infoUrl": "https://www.city.kashiwa.lg.jp/shogaigakushu/seishonen/hiroba.html",
   "address": "〒277-0005 千葉県柏市柏4-9-7 TeToTe 5階",
   "station": "JR常磐線,東武アーバンパークライン柏駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 35.863811,
-  "lng": 139.972809
+  "lng": 139.972809,
+  "image": "https://www.city.kashiwa.lg.jp/images/40197/zumen.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.kashiwa.lg.jp/shogaigakushu/seishonen/hiroba.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-087",
@@ -7117,10 +7551,15 @@
   "infoUrl": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/seishounenplaza.html",
   "address": "〒270-2225 千葉県松戸市東松戸2-14-1 ひがまつテラス2階",
   "station": "JR武蔵野線,北総線東松戸駅東口から徒歩4分",
-  "image": "",
   "logo": "",
   "lat": 35.770096,
-  "lng": 139.947266
+  "lng": 139.947266,
+  "image": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/seishounenplaza.images/r888.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.matsudo.chiba.jp/kosodate/matsudodekosodate/kosodatenavi/shogaku_chugaku/chukosei/seishounenplaza.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-088",
@@ -7208,10 +7647,15 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kyouiku/shougaku/shisetsu/kyouikushisetsu/index.html",
   "address": "〒270-1456 千葉県柏市泉1240-1",
   "station": "JR柏駅,我孫子駅などからバス・車,施設案内を確認",
-  "image": "",
   "logo": "",
   "lat": 35.84277,
-  "lng": 140.056976
+  "lng": 140.056976,
+  "image": "https://tega.jp/wp-content/uploads/2026/02/top_sp-1-0x0.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tega.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-090",
@@ -7256,10 +7700,15 @@
   "infoUrl": "https://www.pref.chiba.lg.jp/kyouiku/shougaku/shisetsu/kyouikushisetsu/index.html",
   "address": "〒299-2862 千葉県鴨川市太海122-1",
   "station": "JR内房線太海駅から徒歩・送迎等を施設に確認",
-  "image": "",
   "logo": "",
   "lat": 35.085014,
-  "lng": 140.090652
+  "lng": 140.090652,
+  "image": "https://www.echiba-sports.org/kamo/wp-content/uploads/2025/02/%E9%B4%A8%E5%B7%9D%E9%9D%92%E5%B0%91%E5%B9%B4%E8%87%AA%E7%84%B6%E3%81%AE%E5%AE%B6-1-1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.echiba-sports.org/kamo/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-091",
@@ -7304,10 +7753,15 @@
   "infoUrl": "https://www.skplaza.pref.chiba.lg.jp/kouza/R8",
   "address": "〒277-0882 千葉県柏市柏の葉4-3-1",
   "station": "つくばエクスプレス柏の葉キャンパス駅,JR柏駅からバス",
-  "image": "",
   "logo": "",
   "lat": 35.896629,
-  "lng": 139.934052
+  "lng": 139.934052,
+  "image": "https://www.skplaza.pref.chiba.lg.jp/file/14092",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.skplaza.pref.chiba.lg.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-092",
@@ -7347,10 +7801,15 @@
   "infoUrl": "https://www.city.chiba.jp/kyoiku/shogaigakushu/shogaigakushu/ikupuro/ikupuro.html",
   "address": "固定会場なし,千葉市内・千葉県内の研究機関や企業",
   "station": "講座ごとに異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.city.chiba.jp/kyoiku/shogaigakushu/shogaigakushu/ikupuro/images/igakubu.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.chiba.jp/kyoiku/shogaigakushu/shogaigakushu/ikupuro/ikupuro.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-093",
@@ -7391,10 +7850,15 @@
   "infoUrl": "https://www.kagakukanq.com/",
   "address": "〒260-0013 千葉県千葉市中央区中央4-5-1 きぼーる7階から10階",
   "station": "京成千葉中央駅から徒歩6分,千葉都市モノレール葭川公園駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 35.607548,
-  "lng": 140.12233
+  "lng": 140.12233,
+  "image": "https://www.kagakukanq.com/wp-content/uploads/2026/06/959ea43b02fe5ecfe3c8c5f9baf8cb5a-1400x510.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kagakukanq.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-094",
@@ -7477,10 +7941,15 @@
   "infoUrl": "https://kyoiku.pref.ibaraki.jp/gakko/compulsory-education/gakuryoku/global-leader/",
   "address": "固定会場なし,県内研修会場とオンライン",
   "station": "研修回により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://kyoiku.pref.ibaraki.jp/wp-content/uploads/2025/11/image6.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kyoiku.pref.ibaraki.jp/gakko/compulsory-education/gakuryoku/global-leader/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-096",
@@ -7518,10 +7987,15 @@
   "infoUrl": "https://www.city.tsukuba.lg.jp/soshikikarasagasu/shichokoshitsukochoshitsu/gyomuannai/2/14248.html",
   "address": "〒305-0031 茨城県つくば市吾妻1-10-1 つくばセンタービル コリドイオ",
   "station": "つくばエクスプレスつくば駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 36.081463,
-  "lng": 140.114151
+  "lng": 140.114151,
+  "image": "https://www.city.tsukuba.lg.jp/material/images/group/6/R8_townmeeting_illust_a.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.tsukuba.lg.jp/soshikikarasagasu/shichokoshitsukochoshitsu/gyomuannai/2/14248.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-097",
@@ -7566,7 +8040,6 @@
   "infoUrl": "https://www.city.mito.lg.jp/site/young-nature/",
   "address": "〒311-4161 茨城県水戸市全隈町80-1",
   "station": "JR赤塚駅から車約10分,公共交通は施設に確認",
-  "image": "",
   "logo": "",
   "lat": 36.408718,
   "lng": 140.38504
@@ -7611,10 +8084,15 @@
   "infoUrl": "https://www.expocenter.or.jp/",
   "address": "〒305-0031 茨城県つくば市吾妻2-9",
   "station": "つくばエクスプレスつくば駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 36.085747,
-  "lng": 140.111526
+  "lng": 140.111526,
+  "image": "https://www.expocenter.or.jp/files/topics/5160_ext_02_0.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.expocenter.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-099",
@@ -7656,10 +8134,15 @@
   "infoUrl": "https://t-csm.jp/",
   "address": "〒321-0151 栃木県宇都宮市西川田町567",
   "station": "東武宇都宮線西川田駅から徒歩・バス,公式交通案内を確認",
-  "image": "",
   "logo": "",
   "lat": 36.513931,
-  "lng": 139.837799
+  "lng": 139.837799,
+  "image": "https://t-csm.jp/wp/wp-content/uploads/2026/03/kaden01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://t-csm.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-100",
@@ -7704,10 +8187,15 @@
   "infoUrl": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/index.html",
   "address": "〒321-2102 栃木県宇都宮市篠井町1885-1",
   "station": "JR宇都宮駅方面からバス・車,施設の交通案内を確認",
-  "image": "",
   "logo": "",
   "lat": 36.692547,
-  "lng": 139.826981
+  "lng": 139.826981,
+  "image": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/006/624/wannpaku.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-101",
@@ -7749,10 +8237,15 @@
   "infoUrl": "https://www.city.utsunomiya.lg.jp/kosodate/seishonen/1032847/1032964.html",
   "address": "〒320-0806 栃木県宇都宮市中央1-1-13 中央生涯学習センター4階",
   "station": "東武宇都宮線東武宇都宮駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 36.559063,
-  "lng": 139.882492
+  "lng": 139.882492,
+  "image": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/032/964/08071.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.utsunomiya.lg.jp/kosodate/seishonen/1032847/1032964.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-102",
@@ -7792,10 +8285,15 @@
   "infoUrl": "https://www.pref.tochigi.lg.jp/c01/life/seishounen/seishounen/kouhou/2026mirapuro.html",
   "address": "固定会場なし,活動場所は採択企画により異なる",
   "station": "活動により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.tochigi.lg.jp/c01/life/seishounen/seishounen/kouhou/images/20260713153910.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.tochigi.lg.jp/c01/life/seishounen/seishounen/kouhou/2026mirapuro.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-103",
@@ -7837,10 +8335,15 @@
   "infoUrl": "https://hirune.or.jp/",
   "address": "〒320-0057 栃木県宇都宮市中戸祭1-5-5",
   "station": "JR宇都宮駅,東武宇都宮駅からバス,栃木医療センター付近",
-  "image": "",
   "logo": "",
   "lat": 36.578022,
-  "lng": 139.867233
+  "lng": 139.867233,
+  "image": "http://hirune.or.jp/wp-content/uploads/2023/12/hirune_illust.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hirune.or.jp/",
+  "imageKind": "official-preload",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-104",
@@ -7924,10 +8427,15 @@
   "infoUrl": "https://www.korandom.com/710/",
   "address": "群馬県前橋市表町2-3-6 前橋第一ビル4階,群馬県太田市高林東町1302 太田市南ふれあいセンター内",
   "station": "JR前橋駅から徒歩,太田会場はバス・車",
-  "image": "",
   "logo": "",
   "lat": 36.387604,
-  "lng": 139.072327
+  "lng": 139.072327,
+  "image": "https://www.korandom.com/wp/wp-content/uploads/2025/10/IMG_1937-2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.korandom.com/710/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-106",
@@ -8015,10 +8523,15 @@
   "infoUrl": "https://www.city.maebashi.gunma.jp/soshiki/kyoiku/jidobunkasenta/index.html",
   "address": "〒371-0013 群馬県前橋市西片貝町5-8",
   "station": "上毛電鉄城東駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 36.389248,
-  "lng": 139.088623
+  "lng": 139.088623,
+  "image": "https://www.city.maebashi.gunma.jp/material/images/group/104/015_88762459.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.maebashi.gunma.jp/soshiki/kyoiku/jidobunkasenta/index.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-108",
@@ -8148,10 +8661,15 @@
   "infoUrl": "https://www.gunma-mirai-kikin.org/grant-program/%E3%83%A6%E3%83%BC%E3%82%B9%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E5%8A%A9%E6%88%902026/",
   "address": "固定会場なし,群馬県内の活動場所",
   "station": "活動により異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.gunma-mirai-kikin.org/wp-content/uploads/2026/02/image-1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.gunma-mirai-kikin.org/grant-program/%E3%83%A6%E3%83%BC%E3%82%B9%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8%E5%8A%A9%E6%88%902026/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KT-111",
@@ -8240,10 +8758,15 @@
   "infoUrl": "https://www.netsugen.jp/news/%E3%80%90%E5%AD%A6%E7%94%9F%E3%81%AE%E7%9A%86%E6%A7%98%E3%81%B8%E3%80%91%E5%AD%A6%E7%94%9F%E6%96%99%E9%87%91%E3%81%AE%E9%81%A9%E7%94%A8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
   "address": "〒371-8570 群馬県前橋市大手町1-1-1 群馬県庁32階",
   "station": "JR前橋駅からバス,県庁前下車",
-  "image": "",
   "logo": "",
   "lat": 36.391186,
-  "lng": 139.061691
+  "lng": 139.061691,
+  "image": "https://www.netsugen.jp/wp-content/uploads/2021/02/top_image_02.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.netsugen.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-001",
@@ -8284,7 +8807,6 @@
   "infoUrl": "https://www.city.niigata.lg.jp/kosodate/seisyonen/wakamono/index.html",
   "address": "〒950-0082 新潟県新潟市中央区東万代町9番1号 万代市民会館5階",
   "station": "JR新潟駅万代口から徒歩7分",
-  "image": "",
   "logo": "",
   "lat": 37.916805,
   "lng": 139.061722
@@ -8331,10 +8853,15 @@
   "infoUrl": "https://niigata-shounensizen.jp/usage/",
   "address": "〒959-2602 新潟県胎内市乙1503-166",
   "station": "JR平木田駅から車",
-  "image": "",
   "logo": "",
   "lat": 38.128208,
-  "lng": 139.401855
+  "lng": 139.401855,
+  "image": "https://niigata-shounensizen.jp/wp-content/uploads/2026/04/374f29e6ac5ac3114a393850c6a4fe6f-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://niigata-shounensizen.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-003",
@@ -8379,10 +8906,15 @@
   "infoUrl": "https://myoko.niye.go.jp/use/",
   "address": "〒949-2235 新潟県妙高市大字関山6323-2",
   "station": "えちごトキめき鉄道 関山駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.915085,
-  "lng": 138.186798
+  "lng": 138.186798,
+  "image": "https://myoko.niye.go.jp/home/main_leaf04.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://myoko.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-004",
@@ -8465,10 +8997,15 @@
   "infoUrl": "https://www.niigata-mypro-labo.com/event/",
   "address": "固定拠点なし,新潟市内等で開催",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": 37.916077,
-  "lng": 139.036545
+  "lng": 139.036545,
+  "image": "https://lh3.googleusercontent.com/sitesv/AG8ngQXm7nSrnExFeLQ0fhMGOhe0ZWWB47eFJhqGtD1_1anW0BRewHpT8VecMdBEoR3JE29Qg6mx5-T8SIv9ZUEBXQkKgS4JICsPblt6Ut_IwCJCV3HU8FF6yFqqMrPTqzaNOc3414KNHtXep8YFDOWnHTEhQGGy_AC39h_kA5fengplyWE448R0bIKrsbo3vqs=w1280",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.niigata-mypro-labo.com/home",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-006",
@@ -8511,10 +9048,15 @@
   "infoUrl": "https://ninno-plaka.com/ninno3/",
   "address": "〒950-0917 新潟県新潟市中央区天神1丁目1番地 プラーカ3地下1階",
   "station": "JR新潟駅南口直結",
-  "image": "",
   "logo": "",
   "lat": 37.910194,
-  "lng": 139.061844
+  "lng": 139.061844,
+  "image": "https://ninno-plaka.com/ninno3/cms/wp-content/themes/ninno3/assets/img/mv.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ninno-plaka.com/ninno3/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-007",
@@ -8552,7 +9094,6 @@
   "infoUrl": "https://myoko.niye.go.jp/event/",
   "address": "〒949-2235 新潟県妙高市大字関山6323-2",
   "station": "えちごトキめき鉄道 関山駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.915085,
   "lng": 138.186798
@@ -8600,10 +9141,15 @@
   "infoUrl": "https://tateyama.niye.go.jp/use/",
   "address": "〒930-1407 富山県中新川郡立山町芦峅寺字前谷1",
   "station": "富山地方鉄道 千垣駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.583675,
-  "lng": 137.581909
+  "lng": 137.581909,
+  "image": "https://tateyama.niye.go.jp/wp/wp-content/uploads/topimg03.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tateyama.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-009",
@@ -8647,10 +9193,15 @@
   "infoUrl": "https://kureha-ie.jp/usage/",
   "address": "〒930-0143 富山県富山市西金屋字長尾8194",
   "station": "JR呉羽駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.695663,
-  "lng": 137.15509
+  "lng": 137.15509,
+  "image": "https://kureha-ie.jp/images/opening/001.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kureha-ie.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-010",
@@ -8694,7 +9245,6 @@
   "infoUrl": "https://www.tkc.pref.toyama.jp/search/stdydtl.aspx?stdycd=C0000484",
   "address": "〒939-1432 富山県砺波市徳万字赤坂17-5",
   "station": "JR砺波駅からバス,庄東センター下車徒歩15分",
-  "image": "",
   "logo": "",
   "lat": 36.636509,
   "lng": 137.018219
@@ -8734,10 +9284,15 @@
   "infoUrl": "https://www.pref.toyama.jp/1119/global/20251017.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.toyama.jp/images/50515/course.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.toyama.jp/1119/global/20251017.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-012",
@@ -8825,10 +9380,15 @@
   "infoUrl": "https://scop-toyama.jp/how-to-use/",
   "address": "〒931-8333 富山県富山市蓮町1丁目7番",
   "station": "富山港線 蓮町駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 36.741539,
-  "lng": 137.224014
+  "lng": 137.224014,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/5de8c1d0-6976-46d6-be07-ffb20fbab88b",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://scop-toyama.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-014",
@@ -8915,10 +9475,15 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/shisetsu/05/0040.html",
   "address": "〒920-0834 石川県金沢市常盤町212-1",
   "station": "JR金沢駅からバス",
-  "image": "",
   "logo": "",
   "lat": 36.566189,
-  "lng": 136.676926
+  "lng": 136.676926,
+  "image": "https://www.ishikawa-seisoken.jp/photos/t1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.ishikawa-seisoken.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-016",
@@ -8964,10 +9529,15 @@
   "infoUrl": "https://noto.niye.go.jp/userguide/",
   "address": "〒925-8530 石川県羽咋市柴垣町14-5-6",
   "station": "JR羽咋駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.949409,
-  "lng": 136.770508
+  "lng": 136.770508,
+  "image": "https://noto.niye.go.jp/wp/wp-content/uploads/2.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://noto.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-017",
@@ -9011,7 +9581,6 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/syougai/seinen/seinen-top.html",
   "address": "〒920-2113 石川県白山市八幡町戊142",
   "station": "北陸鉄道 鶴来駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.440945,
   "lng": 136.641281
@@ -9057,7 +9626,6 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/syougai/seinen/seinen-top.html",
   "address": "〒920-2331 石川県白山市瀬戸ワ29",
   "station": "北陸鉄道 鶴来駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.281658,
   "lng": 136.657227
@@ -9103,7 +9671,6 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/syougai/seinen/seinen-top.html",
   "address": "〒929-1635 石川県鹿島郡中能登町高畠原山分ハ1",
   "station": "JR能登部駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.932323,
   "lng": 136.874847
@@ -9150,10 +9717,15 @@
   "infoUrl": "https://www.mirai-nomachi.jp/facility.html",
   "address": "〒921-8031 石川県金沢市野町3丁目11-1",
   "station": "北陸鉄道 野町駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 36.552574,
-  "lng": 136.64798
+  "lng": 136.64798,
+  "image": "https://www.mirai-nomachi.jp/assets/img/top/statement_pc.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.mirai-nomachi.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-021",
@@ -9194,10 +9766,15 @@
   "infoUrl": "https://www.ishikawa-npo.jp/riyou/gaiyou.html",
   "address": "〒920-0961 石川県金沢市香林坊2丁目4-30 香林坊ラモーダ7階",
   "station": "JR金沢駅からバス,香林坊下車",
-  "image": "",
   "logo": "",
   "lat": 36.564236,
-  "lng": 136.65358
+  "lng": 136.65358,
+  "image": "https://www.ishikawa-npo.jp/riyou/images/nakamen3.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.ishikawa-npo.jp/riyou/gaiyou.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-022",
@@ -9234,10 +9811,15 @@
   "infoUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/gakkou/dentou/tobitate.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.ishikawa.lg.jp/kyoiku/gakkou/dentou/images/gaiyou.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.ishikawa.lg.jp/kyoiku/gakkou/dentou/tobitate.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-023",
@@ -9276,10 +9858,15 @@
   "infoUrl": "https://www.kanazawa-u.ac.jp/press/154511/",
   "address": "〒920-1192 石川県金沢市角間町 金沢大学角間キャンパス",
   "station": "JR金沢駅からバス",
-  "image": "",
   "logo": "",
   "lat": 36.545948,
-  "lng": 136.709442
+  "lng": 136.709442,
+  "image": "https://www.kanazawa-u.ac.jp/wp/wp-content/themes/KU/assets/images/common/thumbnail-default.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kanazawa-u.ac.jp/press/154511/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-024",
@@ -9322,10 +9909,15 @@
   "infoUrl": "https://youthcenter.yya.or.jp/floor/",
   "address": "〒400-0812 山梨県甲府市和戸町1303",
   "station": "JR酒折駅から徒歩,JR甲府駅からバス",
-  "image": "",
   "logo": "",
   "lat": 35.653042,
-  "lng": 138.623795
+  "lng": 138.623795,
+  "image": "https://youthcenter.yya.or.jp/wp/wp-content/uploads/2023/10/X3A1946.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://youthcenter.yya.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-025",
@@ -9369,10 +9961,15 @@
   "infoUrl": "https://yatsu.yya.or.jp/access/",
   "address": "〒407-0301 山梨県北杜市高根町清里3545",
   "station": "JR清里駅から徒歩約15分",
-  "image": "",
   "logo": "",
   "lat": 35.923233,
-  "lng": 138.435074
+  "lng": 138.435074,
+  "image": "https://yatsu.yya.or.jp/wp-content/themes/yya/assets/images/bt_topFacility2.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://yatsu.yya.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-026",
@@ -9415,10 +10012,15 @@
   "infoUrl": "https://atagoyama.yya.or.jp/guide/",
   "address": "〒400-0023 山梨県甲府市愛宕町358-1",
   "station": "JR甲府駅から徒歩または車",
-  "image": "",
   "logo": "",
   "lat": 35.667801,
-  "lng": 138.578568
+  "lng": 138.578568,
+  "image": "https://atagoyama.yya.or.jp/images/common/parkmap.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://atagoyama.yya.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-027",
@@ -9500,10 +10102,15 @@
   "infoUrl": "https://www.yamanashi.ac.jp/social/3690",
   "address": "〒400-8510 山梨県甲府市武田4丁目4-37 山梨大学甲府キャンパスほか",
   "station": "JR甲府駅から徒歩約15分",
-  "image": "",
   "logo": "",
   "lat": 35.678509,
-  "lng": 138.57341
+  "lng": 138.57341,
+  "image": "https://www.yamanashi.ac.jp/wp-content/themes/ac-yamanashi-ja-pc/img/top/ico_twitter.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.yamanashi.ac.jp/social/3690",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-029",
@@ -9542,10 +10149,15 @@
   "infoUrl": "https://www.pref.yamanashi.jp/startup/sogyo/y-next2026.html",
   "address": "固定会場なし,年度により異なる",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://image.jimcdn.com/app/cms/image/transf/none/path/s3730626c3ed97f57/backgroundarea/i774c80e2062bdda2/version/1573205300/image.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.y-next.website/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-030",
@@ -9581,10 +10193,15 @@
   "infoUrl": "https://www.pref.yamanashi.jp/shigaku-kgk/omura_project/kaigairyugaku.html",
   "address": "固定会場なし,留学先による",
   "station": "該当なし",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.yamanashi.jp/shared/templates/top_rn2023/images/upload/bnr_rnavi_img2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.yamanashi.jp/shigaku-kgk/omura_project/kaigairyugaku.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-031",
@@ -9630,10 +10247,15 @@
   "infoUrl": "https://takato.niye.go.jp/use/",
   "address": "〒396-0301 長野県伊那市高遠町藤沢6877-11",
   "station": "JR伊那市駅から車",
-  "image": "",
   "logo": "",
   "lat": 35.932476,
-  "lng": 138.112
+  "lng": 138.112,
+  "image": "https://takato.niye.go.jp/wp-content/uploads/2025/03/IMG_0988.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://takato.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-032",
@@ -9754,10 +10376,15 @@
   "infoUrl": "https://www.pref.nagano.lg.jp/keieishien/happyou/260626press_contest.html",
   "address": "〒380-8525 長野県長野市三輪8-49-7 長野県立大学",
   "station": "長野電鉄 本郷駅から徒歩",
-  "image": "",
   "logo": "",
   "lat": 36.665031,
-  "lng": 138.200287
+  "lng": 138.200287,
+  "image": "https://shinshu-vc.org/wp/wp-content/uploads/2026/06/header_image2026.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://shinshu-vc.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-035",
@@ -9792,7 +10419,6 @@
   "infoUrl": "https://www.shinshu-u.ac.jp/faculty/textiles/news/2026/06/224381.html",
   "address": "〒386-8567 長野県上田市常田3-15-1 信州大学繊維学部",
   "station": "JR上田駅から徒歩またはバス",
-  "image": "",
   "logo": "",
   "lat": 36.392773,
   "lng": 138.259933
@@ -9877,7 +10503,6 @@
   "infoUrl": "https://www.npo-nagano.org/aboutus/",
   "address": "〒381-0034 長野県長野市大字高田1029-1 エンドウビル1階",
   "station": "JR長野駅からバス",
-  "image": "",
   "logo": "",
   "lat": 36.642239,
   "lng": 138.203049
@@ -9921,7 +10546,6 @@
   "infoUrl": "https://www.npo-nagano.org/",
   "address": "長野市内,開催回により会場が異なる",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": 36.648537,
   "lng": 138.194824
@@ -9969,10 +10593,15 @@
   "infoUrl": "https://norikura.niye.go.jp/norikura/use/",
   "address": "〒506-0815 岐阜県高山市岩井町913-13",
   "station": "JR高山駅から車",
-  "image": "",
   "logo": "",
   "lat": 36.144489,
-  "lng": 137.435806
+  "lng": 137.435806,
+  "image": "https://norikura.niye.go.jp/norikura/nk-cms/wp-content/uploads/2026/03/main004.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://norikura.niye.go.jp/norikura/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-040",
@@ -10014,10 +10643,15 @@
   "infoUrl": "https://gikyobun.or.jp/seisyonenkaikan/about/chuosei.html",
   "address": "〒500-8813 岐阜県岐阜市明徳町11",
   "station": "JR岐阜駅からバス,岐阜市役所前下車",
-  "image": "",
   "logo": "",
   "lat": 35.423546,
-  "lng": 136.757584
+  "lng": 136.757584,
+  "image": "https://gikyobun.or.jp/seisyonenkaikan/img/topimg01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://gikyobun.or.jp/seisyonenkaikan/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-041",
@@ -10061,10 +10695,15 @@
   "infoUrl": "https://gikyobun.or.jp/gishizen/guide/",
   "address": "〒501-2502 岐阜県岐阜市山県北野2081",
   "station": "岐阜バス 北野停留所から徒歩約25分",
-  "image": "",
   "logo": "",
   "lat": 35.518578,
-  "lng": 136.831024
+  "lng": 136.831024,
+  "image": "https://gikyobun.or.jp/gishizen/img/topimg01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://gikyobun.or.jp/gishizen/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-042",
@@ -10147,10 +10786,15 @@
   "infoUrl": "https://www.softopia.info/rental/",
   "address": "〒503-0006 岐阜県大垣市加賀野4丁目1-7",
   "station": "樽見鉄道 東大垣駅から徒歩,JR大垣駅からバス",
-  "image": "",
   "logo": "",
   "lat": 35.368057,
-  "lng": 136.638962
+  "lng": 136.638962,
+  "image": "https://www.softopia.info/wp-content/uploads/2019/04/office_eyecatch.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.softopia.info/rental/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-044",
@@ -10235,10 +10879,15 @@
   "infoUrl": "https://g-mediacosmos.jp/center/",
   "address": "〒500-8076 岐阜県岐阜市司町40-5",
   "station": "JR岐阜駅からバス,市役所・メディアコスモス下車",
-  "image": "",
   "logo": "",
   "lat": 35.426994,
-  "lng": 136.760193
+  "lng": 136.760193,
+  "image": "https://g-mediacosmos.jp/assets_c/2025/03/slider_01-thumb-1120xauto-26613.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://g-mediacosmos.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-046",
@@ -10284,10 +10933,15 @@
   "infoUrl": "https://fujinosato.niye.go.jp/usage/",
   "address": "〒412-0006 静岡県御殿場市中畑2092-5",
   "station": "JR御殿場駅からバスまたは車",
-  "image": "",
   "logo": "",
   "lat": 35.321262,
-  "lng": 138.878525
+  "lng": 138.878525,
+  "image": "https://fujinosato.niye.go.jp/app/wp-content/themes/fujinosato_2019/img/top/about_photo_01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://fujinosato.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-047",
@@ -10330,10 +10984,15 @@
   "infoUrl": "https://www.pref.shizuoka.jp/kensei/shisetsu/kenshu/1007387.html",
   "address": "〒418-0101 静岡県富士宮市根原1",
   "station": "JR富士宮駅からバスまたは車",
-  "image": "",
   "logo": "",
   "lat": 35.415428,
-  "lng": 138.584564
+  "lng": 138.584564,
+  "image": "https://asagiri-camping.sakura.ne.jp/wp/wp-content/uploads/2026/05/P1004818-scaled-e1779092477105.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://asagiri.camping.or.jp/",
+  "imageKind": "official-preload",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-048",
@@ -10418,10 +11077,15 @@
   "infoUrl": "https://fss.shizuoka.ac.jp/program/",
   "address": "〒422-8529 静岡県静岡市駿河区大谷836 静岡大学",
   "station": "JR静岡駅からバス",
-  "image": "",
   "logo": "",
   "lat": 34.966625,
-  "lng": 138.431412
+  "lng": 138.431412,
+  "image": "https://fss.shizuoka.ac.jp/wp-content/uploads/2020/04/2020_Research-Training-Course.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://fss.shizuoka.ac.jp/program/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-050",
@@ -10463,10 +11127,15 @@
   "infoUrl": "https://ship-shizuoka.jp/facility/",
   "address": "〒420-0031 静岡県静岡市葵区呉服町2丁目7-26 静専ビル2階",
   "station": "JR静岡駅から徒歩8分,静鉄新静岡駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 34.974064,
-  "lng": 138.384415
+  "lng": 138.384415,
+  "image": "https://ship-shizuoka.jp/assets/img/innovation.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ship-shizuoka.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-051",
@@ -10508,10 +11177,15 @@
   "infoUrl": "https://www.city.shizuoka.lg.jp/s3247/s002504.html",
   "address": "〒420-0071 静岡県静岡市葵区一番町50",
   "station": "JR静岡駅からバス",
-  "image": "",
   "logo": "",
   "lat": 34.976231,
-  "lng": 138.372818
+  "lng": 138.372818,
+  "image": "https://www.bancho-npo-center.org/_src/73766/img20260707090759989637.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.bancho-npo-center.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-052",
@@ -10550,10 +11224,15 @@
   "infoUrl": "https://www.pref.shizuoka.jp/kensei/pr/johoshi/kenmin/1070652/1072692/1072694.html",
   "address": "固定会場なし,SHIP等で実施",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/072/694/images/main.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.shizuoka.jp/kensei/pr/johoshi/kenmin/1070652/1072692/1072694.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-053",
@@ -10590,10 +11269,15 @@
   "infoUrl": "https://www.pref.shizuoka.jp/kodomokyoiku/school/kyoiku/1003777/1060426/1060610/index.html",
   "address": "固定会場なし,研修会場と留学先による",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/060/426/carouselbanner_oshirase.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.shizuoka.jp/kodomokyoiku/school/kyoiku/1003777/1060426/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-054",
@@ -10635,10 +11319,15 @@
   "infoUrl": "https://www.city.nagoya.jp/kodomo/wakamono/1017035/1017050/1037094/1017051.html",
   "address": "〒462-0845 愛知県名古屋市北区柳原3丁目6-8",
   "station": "地下鉄名城公園駅から徒歩約10分",
-  "image": "",
   "logo": "",
   "lat": 35.192997,
-  "lng": 136.907623
+  "lng": 136.907623,
+  "image": "https://youth.nagoya/wp-content/uploads/2025/08/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E3%81%84%EF%BC%81%EF%BC%92.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://youth.nagoya/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-055",
@@ -10682,10 +11371,15 @@
   "infoUrl": "https://www.city.nagoya.jp/kodomo/wakamono/1017035/1017050/1037094/1017051.html",
   "address": "〒459-8001 愛知県名古屋市緑区大高町字蝮池4-6",
   "station": "JR南大高駅東口から徒歩約10分",
-  "image": "",
   "logo": "",
   "lat": 35.056271,
-  "lng": 136.949677
+  "lng": 136.949677,
+  "image": "https://youth.nagoya/wp-content/uploads/2025/08/%E9%9D%92%E5%B0%91%E5%B9%B4%E5%AE%BF%E6%B3%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E3%81%84%EF%BC%81%EF%BC%92.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://youth.nagoya/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-056",
@@ -10730,10 +11424,15 @@
   "infoUrl": "https://manabi.pref.aichi.jp/provider/detail/197",
   "address": "〒444-2809 愛知県豊田市小滝野町坂38-25",
   "station": "名鉄豊田市駅から車",
-  "image": "",
   "logo": "",
   "lat": 35.222778,
-  "lng": 137.41246
+  "lng": 137.41246,
+  "image": "https://www.sizennoie-asahi.jp/wp-content/themes/sizennoie-asahi/images/top/orientation_movie_thumbnail.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.sizennoie-asahi.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-057",
@@ -10776,10 +11475,15 @@
   "infoUrl": "https://sizennoie-mihama.jp/usage/",
   "address": "〒470-3236 愛知県知多郡美浜町大字小野浦字宮後1-1",
   "station": "名鉄知多奥田駅から車",
-  "image": "",
   "logo": "",
   "lat": 34.752113,
-  "lng": 136.853821
+  "lng": 136.853821,
+  "image": "https://sizennoie-mihama.jp/wp/wp-content/uploads/2022/01/img_slide01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://sizennoie-mihama.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-058",
@@ -10818,10 +11522,15 @@
   "infoUrl": "https://ass.pref.aichi.jp/",
   "address": "固定会場なし,プログラムにより異なる",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/7c206eb1-c6bf-4552-b51d-62650d44ec9d",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ass.pref.aichi.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-059",
@@ -10858,7 +11567,6 @@
   "infoUrl": "https://www.city.nagoya.jp/kodomo/wakamono/1017035/1017050/1037094/1048300.html",
   "address": "主な会場はユースクエア,〒462-0845 愛知県名古屋市北区柳原3丁目6-8",
   "station": "地下鉄名城公園駅から徒歩約10分",
-  "image": "",
   "logo": "",
   "lat": 35.181438,
   "lng": 136.90657
@@ -10943,10 +11651,15 @@
   "infoUrl": "https://stationai.co.jp/facility",
   "address": "〒466-0064 愛知県名古屋市昭和区鶴舞1丁目2-32",
   "station": "JR鶴舞駅から徒歩約6分",
-  "image": "",
   "logo": "",
   "lat": 35.152573,
-  "lng": 136.918533
+  "lng": 136.918533,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/bd91b51f-278e-436d-bb8f-6f6cad1361b0",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://stationai.co.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-062",
@@ -10991,10 +11704,15 @@
   "infoUrl": "https://suzukato.jp/access/",
   "address": "〒513-0825 三重県鈴鹿市住吉町字中大谷6757-1 南谷口",
   "station": "伊勢鉄道 鈴鹿サーキット稲生駅から徒歩約40分,白子駅からバス",
-  "image": "",
   "logo": "",
   "lat": 34.851883,
-  "lng": 136.533127
+  "lng": 136.533127,
+  "image": "https://suzukato.jp/wp-content/themes/suzukato2024/assets/img/top/about.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://suzukato.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-063",
@@ -11037,10 +11755,15 @@
   "infoUrl": "https://www.pref.mie.lg.jp/mb/kb_kumanos.htm",
   "address": "〒519-4327 三重県熊野市金山町1577",
   "station": "JR熊野市駅から車約10分",
-  "image": "",
   "logo": "",
   "lat": 33.882896,
-  "lng": 136.049393
+  "lng": 136.049393,
+  "image": "https://www.kuma-sho.com/img/hyousi2.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kuma-sho.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-064",
@@ -11084,10 +11807,15 @@
   "infoUrl": "https://www.seibu-la.co.jp/yokkaichi/guide/",
   "address": "〒512-1105 三重県四日市市水沢町字大谷1423-2",
   "station": "近鉄四日市駅からバス,少年自然の家口から徒歩約20分",
-  "image": "",
   "logo": "",
   "lat": 34.976723,
-  "lng": 136.487534
+  "lng": 136.487534,
+  "image": "https://www.seibu-la.co.jp/yokkaichi/files/home_main_img.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.seibu-la.co.jp/yokkaichi/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-065",
@@ -11129,10 +11857,15 @@
   "infoUrl": "https://www.mienpo.net/about/overview/",
   "address": "〒514-0009 三重県津市羽所町700 アスト津3階",
   "station": "JR,近鉄津駅直結",
-  "image": "",
   "logo": "",
   "lat": 34.734936,
-  "lng": 136.51062
+  "lng": 136.51062,
+  "image": "https://www.mienpo.net/wp/wp-content/themes/mienpo/img/mainvisual_img.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.mienpo.net/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-066",
@@ -11169,10 +11902,15 @@
   "infoUrl": "https://www.ac.mie-u.ac.jp/activity/koudai/about/tankyuu.html",
   "address": "〒514-8507 三重県津市栗真町屋町1577 三重大学",
   "station": "近鉄江戸橋駅から徒歩約15分",
-  "image": "",
   "logo": "",
   "lat": 34.745785,
-  "lng": 136.523224
+  "lng": 136.523224,
+  "image": "https://www.ac.mie-u.ac.jp/item/R8%E5%AD%A6%E5%95%8F%E6%8E%A2%E7%A9%B6%E3%82%BB%E3%83%9F%E3%83%8A%E3%83%BC%28800%C3%971132%29.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.ac.mie-u.ac.jp/activity/koudai/about/tankyuu.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-067",
@@ -11210,10 +11948,15 @@
   "infoUrl": "https://www.pref.mie.lg.jp/TOPICS/m0045100478.htm",
   "address": "年度により異なる,2025年度は鈴鹿医療科学大学千代崎キャンパス",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": 34.730278,
-  "lng": 136.508606
+  "lng": 136.508606,
+  "image": "https://www.pref.mie.lg.jp/common/content/000419155.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.mie.lg.jp/TOPICS/m0045100478.htm",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CH-068",
@@ -11255,7 +11998,6 @@
   "infoUrl": "https://www.bunka.pref.mie.lg.jp/MieMu/82927046642.htm",
   "address": "〒514-0061 三重県津市一身田上津部田3060",
   "station": "JR,近鉄津駅西口からバス",
-  "image": "",
   "logo": "",
   "lat": 34.746578,
   "lng": 136.498993
@@ -11295,10 +12037,15 @@
   "infoUrl": "https://www.pref.mie.lg.jp/TOPICS/m0360800011.htm",
   "address": "固定会場なし,指定高校で実施",
   "station": "実施校による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.mie.lg.jp/common/content/000419155.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.mie.lg.jp/TOPICS/m0360800029.htm",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-001",
@@ -11375,10 +12122,15 @@
   "infoUrl": "https://web.pref.hyogo.lg.jp/sr10/kigyoplaza.html",
   "address": "〒650-0035 兵庫県神戸市中央区浪花町56 三井住友銀行神戸本部ビル2階",
   "station": "JR・阪神 元町駅,地下鉄 旧居留地・大丸前駅",
-  "image": "",
   "logo": "",
   "lat": 34.689014,
-  "lng": 135.192474
+  "lng": 135.192474,
+  "image": "https://www.kigyoplaza-hyogo.jp/kip/wp-content/themes/kip-hyogo/img/index/perspective.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kigyoplaza-hyogo.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-003",
@@ -11418,10 +12170,15 @@
   "infoUrl": "https://anchorkobe.com/",
   "address": "〒650-0001 兵庫県神戸市中央区加納町4-2-1 神戸三宮阪急ビル15階",
   "station": "JR三ノ宮駅・阪急,阪神 神戸三宮駅 直結",
-  "image": "",
   "logo": "",
   "lat": 34.69405,
-  "lng": 135.193619
+  "lng": 135.193619,
+  "image": "https://anchorkobe.com/assets/image/og.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://anchorkobe.com/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-004",
@@ -11459,10 +12216,15 @@
   "infoUrl": "https://hyogo.communityfund.jp/kyokan/project/%E3%82%8D/",
   "address": "固定拠点なし（オンライン・神戸市内イベント）",
   "station": "イベント会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://hyogo.communityfund.jp/kyokan/wp-content/uploads/fc24fc38cc618c2c2ddb056a94cdc1a3-658x658.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hyogo.communityfund.jp/kyokan/project/%E3%82%8D/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-005",
@@ -11502,10 +12264,15 @@
   "infoUrl": "https://www.city.kobe.lg.jp/a64411/kosodate/seshonen/communication/index.html",
   "address": "市内10拠点（各施設の住所は公式一覧参照）",
   "station": "各拠点による",
-  "image": "",
   "logo": "",
   "lat": 35.880955,
-  "lng": 136.33902
+  "lng": 136.33902,
+  "image": "https://www.city.kobe.lg.jp/images/6973/img_5186.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.kobe.lg.jp/a64411/kosodate/seshonen/communication/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-006",
@@ -11544,10 +12311,15 @@
   "infoUrl": "https://www.city.kobe.lg.jp/a57667/kosodate/chiiki/freespace.html",
   "address": "〒651-1245 兵庫県神戸市北区谷上東町1-1 谷上SHビル1階",
   "station": "神戸電鉄・神戸市営地下鉄 谷上駅 すぐ",
-  "image": "",
   "logo": "",
   "lat": 34.761688,
-  "lng": 135.171158
+  "lng": 135.171158,
+  "image": "https://www.city.kobe.lg.jp/images/68916/basyo_1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.kobe.lg.jp/a57667/kosodate/chiiki/freespace.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-007",
@@ -11665,10 +12437,15 @@
   "infoUrl": "https://www.innovation-osaka.jp/ja/",
   "address": "〒530-0011 大阪府大阪市北区大深町3-1 グランフロント大阪 ナレッジキャピタルタワーC 7階",
   "station": "JR大阪駅 徒歩7分,Osaka Metro梅田駅・阪急大阪梅田駅 徒歩10分",
-  "image": "",
   "logo": "",
   "lat": 34.705833,
-  "lng": 135.494339
+  "lng": 135.494339,
+  "image": "https://www.innovation-osaka.jp/ja/wp-content/themes/ena/images/oih-thumb-pink.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.innovation-osaka.jp/ja/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-010",
@@ -11707,10 +12484,15 @@
   "infoUrl": "https://www.quintbridge.jp/",
   "address": "〒534-0024 大阪府大阪市都島区東野田町4-15-82",
   "station": "Osaka Metro京橋駅 徒歩5分,JR・京阪 京橋駅 徒歩10分",
-  "image": "",
   "logo": "",
   "lat": 34.698463,
-  "lng": 135.529922
+  "lng": 135.529922,
+  "image": "https://www.quintbridge.jp/assets/images/top/about01.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.quintbridge.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-011",
@@ -11749,10 +12531,15 @@
   "infoUrl": "https://bloomingcamp.sakura.ad.jp/",
   "address": "〒530-0011 大阪府大阪市北区大深町6-38 グラングリーン大阪 北館 JAM BASE 3階",
   "station": "JR大阪駅 徒歩7分,Osaka Metro梅田駅 徒歩8分,阪急大阪梅田駅 徒歩7分",
-  "image": "",
   "logo": "",
   "lat": 34.704762,
-  "lng": 135.49437
+  "lng": 135.49437,
+  "image": "https://bloomingcamp.sakura.ad.jp/images/space.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://bloomingcamp.sakura.ad.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-012",
@@ -11792,10 +12579,15 @@
   "infoUrl": "https://kokoplaza.net/",
   "address": "〒533-0033 大阪府大阪市東淀川区東中島1-13-13",
   "station": "JR新大阪駅 徒歩7分,Osaka Metro新大阪駅 徒歩10分",
-  "image": "",
   "logo": "",
   "lat": 34.732235,
-  "lng": 135.503479
+  "lng": 135.503479,
+  "image": "https://kokoplaza.net/wp-content/themes/KOKO%20PLAZA/image/hole.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kokoplaza.net/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-013",
@@ -11833,7 +12625,6 @@
   "infoUrl": "https://www.city.sakai.lg.jp/yoyakuanai/bunrui/bunka/seishonenshisetsu/seishonencenter.html",
   "address": "〒590-0930 大阪府堺市堺区柳之町西1-3-19",
   "station": "阪堺線 綾ノ町駅 徒歩2分,南海本線 七道駅 徒歩10分",
-  "image": "",
   "logo": "",
   "lat": 34.587353,
   "lng": 135.481125
@@ -11875,7 +12666,6 @@
   "infoUrl": "https://www.dreampossibility.com/whatwedo/project/youthcenter/",
   "address": "所在地非公開（公式の利用案内に従う）",
   "station": "利用案内で確認（所在地非公開）",
-  "image": "",
   "logo": "",
   "lat": 34.705555,
   "lng": 135.509995
@@ -11914,10 +12704,15 @@
   "infoUrl": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/education/koukouseitankyu.html",
   "address": "固定会場なし（支援先・学校ごと）",
   "station": "支援先・学校ごと",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.osaka.lg.jp/images/127357/topgazou_1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.osaka.lg.jp/o120020/eneseisaku/education/koukouseitankyu.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-016",
@@ -11953,10 +12748,15 @@
   "infoUrl": "https://kyoto-ys.org/",
   "address": "〒604-8147 京都府京都市中京区東洞院通六角下る御射山町262 京都市中央青少年活動センター内",
   "station": "地下鉄 烏丸御池駅,阪急 烏丸駅",
-  "image": "",
   "logo": "",
   "lat": 35.011112,
-  "lng": 135.764404
+  "lng": 135.764404,
+  "image": "https://kyoto-ys.org/data/confs/1/71e2d3299dc414dc50dd32fb13ef0698-1702860938.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kyoto-ys.org/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-017",
@@ -11995,10 +12795,15 @@
   "infoUrl": "https://www.city.kyoto.lg.jp/hagukumi/page/0000314992.html",
   "address": "市内7拠点（中央・北・東山・山科・下京・南・伏見）",
   "station": "各拠点による",
-  "image": "",
   "logo": "",
   "lat": 35.880955,
-  "lng": 136.33902
+  "lng": 136.33902,
+  "image": "https://ys-kyoto.org/main/wp-content/themes/ys_kyoto/image/about_thumb.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ys-kyoto.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-018",
@@ -12076,10 +12881,15 @@
   "infoUrl": "https://question.kyoto-shinkin.co.jp/service/students-lab/",
   "address": "〒604-8006 京都府京都市中京区河原町通御池下る下丸屋町390-2 QUESTION 5階",
   "station": "地下鉄 京都市役所前駅 徒歩1分,京阪 三条駅 徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 35.009998,
-  "lng": 135.751389
+  "lng": 135.751389,
+  "image": "https://question.kyoto-shinkin.co.jp/app/themes/question2022/assets/dist/images/pages/students-lab/intro01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://question.kyoto-shinkin.co.jp/service/students-lab/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-020",
@@ -12117,10 +12927,15 @@
   "infoUrl": "https://glocalcenter.jp/",
   "address": "〒602-8061 京都府京都市上京区油小路通中立売西入る甲斐守町97 西陣産業創造会館2階",
   "station": "市バス 堀川中立売 徒歩3分,地下鉄 今出川駅 徒歩15分",
-  "image": "",
   "logo": "",
   "lat": 35.025654,
-  "lng": 135.753525
+  "lng": 135.753525,
+  "image": "https://glocalcenter.jp/wp2021/wp-content/uploads/2026/05/%E6%98%8E%E3%82%8B%E3%81%84%E7%99%BD%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://glocalcenter.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-021",
@@ -12158,10 +12973,15 @@
   "infoUrl": "https://open.kyoto/",
   "address": "〒600-8009 京都府京都市下京区四条通室町東入函谷鉾町78 京都経済センター3階",
   "station": "地下鉄 四条駅 北改札すぐ,阪急 烏丸駅 26番出口直結",
-  "image": "",
   "logo": "",
   "lat": 34.987606,
-  "lng": 135.755478
+  "lng": 135.755478,
+  "image": "https://open.kyoto/wp-content/themes/openkyoto/assets/img/index/main4_sp.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://open.kyoto/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-022",
@@ -12315,10 +13135,15 @@
   "infoUrl": "https://www.shigaymca.org/",
   "address": "〒523-0891 滋賀県近江八幡市鷹飼町537-3",
   "station": "JR・近江鉄道 近江八幡駅",
-  "image": "",
   "logo": "",
   "lat": 35.123188,
-  "lng": 136.100082
+  "lng": 136.100082,
+  "image": "https://www.shigaymca.org/wp-content/uploads/2025/05/26a301b2ffc8aeefa37d3d8671a36522.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.shigaymca.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-026",
@@ -12356,10 +13181,15 @@
   "infoUrl": "https://biwako-activecenter.com/",
   "address": "〒520-1121 滋賀県高島市勝野1523-1",
   "station": "JR湖西線 近江高島駅 徒歩約20分",
-  "image": "",
   "logo": "",
   "lat": 35.296452,
-  "lng": 136.017731
+  "lng": 136.017731,
+  "image": "https://biwako-activecenter.com/images/1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://biwako-activecenter.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-027",
@@ -12398,10 +13228,15 @@
   "infoUrl": "https://tokiza.jp/",
   "address": "〒520-0241 滋賀県大津市今堅田2-10-4",
   "station": "JR湖西線 堅田駅（徒歩圏・所要時間要確認）",
-  "image": "",
   "logo": "",
   "lat": 35.121216,
-  "lng": 135.918503
+  "lng": 135.918503,
+  "image": "https://tokiza.jp/wp-content/uploads/2025/03/img_space_1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tokiza.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-028",
@@ -12475,10 +13310,15 @@
   "infoUrl": "https://www.town.miyake.lg.jp/soshiki/17/5792.html",
   "address": "〒636-0213 奈良県磯城郡三宅町伴堂689 三宅町交流まちづくりセンターMiiMo 3階スマイル",
   "station": "近鉄田原本線 黒田駅 徒歩15分,近鉄橿原線 石見駅 徒歩18分",
-  "image": "",
   "logo": "",
   "lat": 34.57357,
-  "lng": 135.772919
+  "lng": 135.772919,
+  "image": "https://www.town.miyake.lg.jp/uploaded/life/5792_6215_img.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.town.miyake.lg.jp/soshiki/17/5792.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-030",
@@ -12515,7 +13355,6 @@
   "infoUrl": "https://www.pref.nara.lg.jp/n167/60799.html",
   "address": "〒634-0804 奈良県橿原市内膳町1-1-60 ミグランス4階（対面会場）",
   "station": "近鉄 大和八木駅",
-  "image": "",
   "logo": "",
   "lat": 34.511066,
   "lng": 135.792374
@@ -12556,7 +13395,6 @@
   "infoUrl": "https://www.city.nara.lg.jp/site/kyouiku/8148.html",
   "address": "〒630-1241 奈良県奈良市阪原町25-1",
   "station": "JR・近鉄奈良駅から奈良交通バス「興東館柳生中学校」下車 徒歩1分",
-  "image": "",
   "logo": "",
   "lat": 34.713566,
   "lng": 135.937424
@@ -12598,10 +13436,15 @@
   "infoUrl": "https://bonchi.fun/",
   "address": "〒630-8217 奈良県奈良市橋本町3-1",
   "station": "近鉄奈良駅 徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 34.681725,
-  "lng": 135.829239
+  "lng": 135.829239,
+  "image": "https://bonchi.fun/wp-content/themes/bonchi/assets/images/top/about-img.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://bonchi.fun/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-033",
@@ -12679,10 +13522,15 @@
   "infoUrl": "https://www.city.wakayama.wakayama.jp/shisetsu/soudan/1015746.html",
   "address": "〒640-0103 和歌山県和歌山市加太1907-2",
   "station": "南海加太線 加太駅（施設までの交通手段要確認）",
-  "image": "",
   "logo": "",
   "lat": 34.27039,
-  "lng": 135.06691
+  "lng": 135.06691,
+  "image": "https://www.kadacenter.jp/wp-content/uploads/2026/02/2026_1-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kadacenter.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-035",
@@ -12717,10 +13565,15 @@
   "infoUrl": "https://wibase.jp/",
   "address": "〒640-8341 和歌山県和歌山市黒田185-3 Key Site 520号",
   "station": "JR和歌山駅（東口から徒歩圏）",
-  "image": "",
   "logo": "",
   "lat": 34.234142,
-  "lng": 135.192017
+  "lng": 135.192017,
+  "image": "https://wibase.jp/wp/wp-content/themes/wib2022/assets/common/img/sakurug.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://wibase.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-036",
@@ -12759,10 +13612,15 @@
   "infoUrl": "https://kiyo-keysite.com/",
   "address": "〒640-8341 和歌山県和歌山市黒田185-3",
   "station": "JR和歌山駅（東口から徒歩圏）",
-  "image": "",
   "logo": "",
   "lat": 34.234142,
-  "lng": 135.192017
+  "lng": 135.192017,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/f6574002-ebca-4be5-bc13-c31b5b368def",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kiyo-keysite.com/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-037",
@@ -12799,10 +13657,15 @@
   "infoUrl": "https://www.pref.wakayama.lg.jp/prefg/040200/d00222163.html",
   "address": "オンライン＋県内会場（募集要項参照）",
   "station": "会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.wakayama.lg.jp/prefg/040200/d00222163_d/img/003.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.wakayama.lg.jp/prefg/040200/d00222163.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-038",
@@ -12882,10 +13745,15 @@
   "infoUrl": "https://sprout-youthcenter.studio.site/youthworker",
   "address": "福井市文京エリア（詳細は公式案内で確認）",
   "station": "えちぜん鉄道 福大前西福井駅周辺（詳細要確認）",
-  "image": "",
   "logo": "",
   "lat": 36.077618,
-  "lng": 136.222458
+  "lng": 136.222458,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/b99db860-c00e-4b7c-9e63-2d87a8154511",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://sprout-youthcenter.studio.site/youthworker",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-040",
@@ -12920,10 +13788,15 @@
   "infoUrl": "https://note.com/mumm_fukui/n/n251e8e299097",
   "address": "〒910-0017 福井県福井市文京3-6-17",
   "station": "えちぜん鉄道 福大前西福井駅（徒歩圏）",
-  "image": "",
   "logo": "",
   "lat": 36.076283,
-  "lng": 136.215637
+  "lng": 136.215637,
+  "image": "https://assets.st-note.com/production/uploads/images/97696126/838075848630d60a328ecff9f5b3d98a.jpg?width=1920&quality=90",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://note.com/mumm_fukui",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-041",
@@ -12959,7 +13832,6 @@
   "infoUrl": "https://www.pref.fukui.lg.jp/doc/sinsan/kigyousien.html",
   "address": "福井県内各地・オンライン",
   "station": "企画ごと",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -13000,7 +13872,6 @@
   "infoUrl": "https://www.pref.fukui.lg.jp/doc/sinsan/sougyousinnsanngyousousyutugur/promoters2026.html",
   "address": "固定会場なし（県内各地・オンライン）",
   "station": "企画ごと",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -13042,10 +13913,15 @@
   "infoUrl": "https://craftbridge.jp/",
   "address": "〒910-0006 福井県福井市中央3-5-12 CRAFT BRIDGE",
   "station": "福井鉄道 福井城址大名町駅,JR福井駅",
-  "image": "",
   "logo": "",
   "lat": 36.062996,
-  "lng": 136.213531
+  "lng": 136.213531,
+  "image": "https://craftbridge.jp/common/uploads/2020/02/83055321_2837168283006673_5350242156491571200_o.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://craftbridge.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-044",
@@ -13085,10 +13961,15 @@
   "infoUrl": "https://wakasawan.niye.go.jp/",
   "address": "〒917-0198 福井県小浜市田烏区大浜",
   "station": "JR小浜線 三方駅または上中駅からタクシー約25分（公共交通なし）",
-  "image": "",
   "logo": "",
   "lat": 35.549305,
-  "lng": 135.834274
+  "lng": 135.834274,
+  "image": "https://wakasawan.niye.go.jp/wp/wp-content/themes/wakasawan/images/fb_img_wakasa.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://wakasawan.niye.go.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KN-045",
@@ -13126,7 +14007,6 @@
   "infoUrl": "https://www.beauproject.net/beau-labo-online",
   "address": "オンライン中心,固定会場なし",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -13250,10 +14130,15 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/312750.htm",
   "address": "固定拠点なし,県内会場とオンライン",
   "station": "活動会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.tottori.lg.jp/secure/1333375/IMG_0058.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.tottori.lg.jp/312750.htm",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-004",
@@ -13336,10 +14221,15 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/senjyozan/",
   "address": "〒689-2525 鳥取県東伯郡琴浦町山川807-2",
   "station": "JR赤碕駅から車",
-  "image": "",
   "logo": "",
   "lat": 35.426334,
-  "lng": 133.602615
+  "lng": 133.602615,
+  "image": "https://www.pref.tottori.lg.jp/secure/1278990/yoyaku.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.tottori.lg.jp/senjyozan/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-006",
@@ -13382,10 +14272,15 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/9485.htm",
   "address": "〒689-3319 鳥取県西伯郡大山町赤松明間原312-1",
   "station": "JR大山口駅から車",
-  "image": "",
   "logo": "",
   "lat": 35.415733,
-  "lng": 133.476685
+  "lng": 133.476685,
+  "image": "https://www.pref.tottori.lg.jp/secure/1274723/tozan550.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.tottori.lg.jp/daisenseinen/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-007",
@@ -13422,7 +14317,6 @@
   "infoUrl": "https://www.pref.tottori.lg.jp/pop2026/",
   "address": "固定会場なし,作品応募型",
   "station": "該当なし",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -13466,10 +14360,15 @@
   "infoUrl": "https://www.town.ama.shimane.jp/torikumi-shisetsu/shisetsu/okilcdozen",
   "address": "島根県隠岐郡海士町福井1339",
   "station": "菱浦港から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 36.099026,
-  "lng": 133.076141
+  "lng": 133.076141,
+  "image": "https://storage.googleapis.com/ama-town-portal/media/%E6%96%BD%E8%A8%AD_%E5%AD%A6%E7%BF%92%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A1%E3%82%A4%E3%83%B3%E7%94%BB%E5%83%8F.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.town.ama.shimane.jp/torikumi-shisetsu/shisetsu/okilcdozen",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-009",
@@ -13639,10 +14538,15 @@
   "infoUrl": "https://www.city.matsue.lg.jp/soshikikarasagasu/kyoikuiinkai_shogaigakushuka/shogaigakushu_kominkan/17544.html",
   "address": "〒690-0061 島根県松江市白瀉本町43 STIC",
   "station": "JR松江駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 35.465427,
-  "lng": 133.055801
+  "lng": 133.055801,
+  "image": "https://matsue-stic.net/wp-content/uploads/2021/04/STIC-scaled-960x400.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://matsue-stic.net/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-013",
@@ -13682,10 +14586,15 @@
   "infoUrl": "https://www.shimane-ikiiki.jp/",
   "address": "オンライン情報サイト,活動会場は募集ごとに異なる",
   "station": "活動会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.shimane-ikiiki.jp/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhblUwZUhaNWRHTnFaV1F3Ykhaa1pYQnlhemgzZEd4aWFUaHVhQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVzJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW5BNFUwMHdSR3RoYWxveU9XVlRXbXhYU0ZOWUxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0RoVFRUQkVhMkZxV2pJNVpWTmFiRmRJVTFndWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyNi0wOC0wMlQwMDo0MDozMi40MjVaIiwicHVyIjoiYmxvYl9rZXkifX0=--2f2f3bbad7f67d6036d90da247caba6c96e8738e/p8SM0DkajZ29eSZlWHSX.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.shimane-ikiiki.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-014",
@@ -13726,10 +14635,15 @@
   "infoUrl": "https://www.sgsg.work/posts/55016497/",
   "address": "〒700-0026 岡山県岡山市北区奉還町3-1-32 地域交流ステーションverde内",
   "station": "JR岡山駅 西口から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 34.668987,
-  "lng": 133.913986
+  "lng": 133.913986,
+  "image": "https://cdn.amebaowndme.com/madrid-prd/madrid-web/images/sites/1835383/66dd58a69bfcd47865549df5e3e00445_d22b84c16238aa8de3061c660915981c.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://hokanchoyouth.localinfo.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-015",
@@ -13770,10 +14684,15 @@
   "infoUrl": "https://dappi-okayama.com/workshop/",
   "address": "〒700-0822 岡山県岡山市北区表町1-4-64 上之町ビル3階301",
   "station": "岡山電気軌道 城下電停",
-  "image": "",
   "logo": "",
   "lat": 34.664406,
-  "lng": 133.929398
+  "lng": 133.929398,
+  "image": "https://dappi-okayama.com/uploads/1710932512617-7e6b7bb7-49ff-4a36-bed0-1ca1f99b290e.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://dappi-okayama.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-016",
@@ -13813,10 +14732,15 @@
   "infoUrl": "https://www.city.okayama.jp/jigyosha/0000030583.html",
   "address": "〒700-0023 岡山県岡山市北区駅前町1-8-18 ICOT NICOT2階",
   "station": "JR岡山駅 東口",
-  "image": "",
   "logo": "",
   "lat": 34.665909,
-  "lng": 133.922012
+  "lng": 133.922012,
+  "image": "https://momosta.com/cms/wp-content/uploads/2026/06/32dfe030fe7ec3d11e98301b31ed4170.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://momosta.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-017",
@@ -13856,10 +14780,15 @@
   "infoUrl": "https://www.oi-project.jp/",
   "address": "〒700-8634 岡山県岡山市北区柳町2-1-1 山陽新聞社内事務局",
   "station": "JR岡山駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 34.65836,
-  "lng": 133.91954
+  "lng": 133.91954,
+  "image": "https://www.oi-project.jp/wp/wp-content/themes/oip2017/images/2026/mainslide_oic2026.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.oi-project.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-018",
@@ -13897,10 +14826,15 @@
   "infoUrl": "https://sites.google.com/gse.okayama-c.ed.jp/koukou-yumeiku/",
   "address": "オンライン情報サイト,会場は募集ごとに異なる",
   "station": "募集ごとに異なる",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://lh3.googleusercontent.com/sitesv/AG8ngQVTiPeq_q5KvHMH05ufV5gBWDoy5AEdRqn5zhQsneaYqwK-a69sfUgPP4cTtG_0cSB5t0EOoUUkXKUAHyfvTxfRin9ePZox6wN3kQU5uqnRS2digVGB3Fcvd3pnO1IivDUcviNP1NkIFNR2EtPxNGI7dUb7cVcdJIlndmR-H765HwmoB5LMfmJJokuDBYM2qaGKb79jBpVwO6oIJxW1xM7fOYYMouw4zaFvnmOcG4s=w1280",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://sites.google.com/gse.okayama-c.ed.jp/koukou-yumeiku/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-019",
@@ -13942,10 +14876,15 @@
   "infoUrl": "https://shizutani.jp/",
   "address": "〒705-0036 岡山県備前市閑谷784",
   "station": "JR吉永駅から車",
-  "image": "",
   "logo": "",
   "lat": 34.798901,
-  "lng": 134.227203
+  "lng": 134.227203,
+  "image": "https://shizutani.jp/wp-content/themes/Shizutani_Theme/img/top_img_1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://shizutani.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-020",
@@ -13988,10 +14927,15 @@
   "infoUrl": "https://kibi.niye.go.jp/",
   "address": "〒716-1241 岡山県加賀郡吉備中央町吉川4393-82",
   "station": "JR岡山駅方面から車,送迎条件確認",
-  "image": "",
   "logo": "",
   "lat": 34.828869,
-  "lng": 133.764923
+  "lng": 133.764923,
+  "image": "https://kibi.niye.go.jp/common2/photo/mainvisual/image1/l_202212081459120501375.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kibi.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-021",
@@ -14116,7 +15060,6 @@
   "infoUrl": "https://www.city.hiroshima.lg.jp/living/kosodate/1021261/1025981/1023663.html",
   "address": "〒730-0011 広島県広島市中区基町5-61",
   "station": "広島電鉄 原爆ドーム前電停,県庁前駅",
-  "image": "",
   "logo": "",
   "lat": 34.397709,
   "lng": 132.45343
@@ -14160,10 +15103,15 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/soshiki/247/innovationhubcamps.html",
   "address": "〒730-0031 広島県広島市中区紙屋町1-4-3 エフケイビル1階",
   "station": "広島電鉄 紙屋町東電停,本通駅",
-  "image": "",
   "logo": "",
   "lat": 34.394123,
-  "lng": 132.458893
+  "lng": 132.458893,
+  "image": "https://www.camps-hiroshima.jp/assets/img/introduction/sketch.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.camps-hiroshima.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-025",
@@ -14199,10 +15147,15 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/site/kyouiku/syougyoukyouiku-kigyoukaseishin.html",
   "address": "固定会場なし,実施校の教室等",
   "station": "対象校による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.hiroshima.lg.jp/img/hiroshima-edu.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.hiroshima.lg.jp/site/kyouiku/syougyoukyouiku-kigyoukaseishin.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-026",
@@ -14242,10 +15195,15 @@
   "infoUrl": "https://myprohiroshima.manabinominato.or.jp/",
   "address": "固定拠点なし,県内会場とオンライン",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://myprohiroshima.manabinominato.or.jp/wp-content/themes/myprohiroshima/assets/main/thumbnail.webp",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://myprohiroshima.manabinominato.or.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-027",
@@ -14284,7 +15242,6 @@
   "infoUrl": "https://www.pcf.city.hiroshima.jp/hpcf/peacestudy/YPV/2026/details.pdf",
   "address": "広島平和記念資料館周辺,研修会場は募集要項参照",
   "station": "広島電鉄 原爆ドーム前電停",
-  "image": "",
   "logo": "",
   "lat": 34.392235,
   "lng": 132.450974
@@ -14322,10 +15279,15 @@
   "infoUrl": "https://www.pu-hiroshima.ac.jp/site/regionaldevelopmentf/hiroshimaoshi2026-2.html",
   "address": "〒734-8558 広島県広島市南区宇品東1-1-71 県立広島大学広島キャンパス",
   "station": "広島電鉄 県病院前電停",
-  "image": "",
   "logo": "",
   "lat": 34.367306,
-  "lng": 132.469666
+  "lng": 132.469666,
+  "image": "https://www.pu-hiroshima.ac.jp/uploaded/subsite/377_img.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pu-hiroshima.ac.jp/site/regionaldevelopmentf/hiroshimaoshi2026-2.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-029",
@@ -14368,10 +15330,15 @@
   "infoUrl": "https://etajima.niye.go.jp/access",
   "address": "〒737-2126 広島県江田島市江田島町津久茂1-1-1",
   "station": "江田島バス 青少年交流の家入口から徒歩約8分",
-  "image": "",
   "logo": "",
   "lat": 34.259689,
-  "lng": 132.446701
+  "lng": 132.446701,
+  "image": "https://etajima.niye.go.jp/wp-content/uploads/2026/07/HP%E7%94%A8.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://etajima.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-030",
@@ -14414,10 +15381,15 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/site/fukuyamashonen/",
   "address": "〒720-0542 広島県福山市金江町藁江619-2",
   "station": "JR松永駅から車",
-  "image": "",
   "logo": "",
   "lat": 34.436771,
-  "lng": 133.284286
+  "lng": 133.284286,
+  "image": "https://www.pref.hiroshima.lg.jp/img/hiroshima-edu.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.hiroshima.lg.jp/site/fukuyamashonen/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-031",
@@ -14455,10 +15427,15 @@
   "infoUrl": "https://www.pref.hiroshima.lg.jp/site/seisyounen-kennzennikusei/sienkikanmap27.html",
   "address": "複数の支援機関,住所は公式マップ参照",
   "station": "各機関による",
-  "image": "",
   "logo": "",
   "lat": 34.385277,
-  "lng": 132.455276
+  "lng": 132.455276,
+  "image": "https://www.pref.hiroshima.lg.jp/img/hiroshima-pref.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.hiroshima.lg.jp/site/seisyounen-kennzennikusei/sienkikanmap27.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-032",
@@ -14495,10 +15472,15 @@
   "infoUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/180/26558.html",
   "address": "固定会場なし,学校と受入先で実施",
   "station": "活動先による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.yamaguchi.lg.jp/uploaded/image/35494.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/180/26558.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-033",
@@ -14538,10 +15520,15 @@
   "infoUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/35/225609.html",
   "address": "固定会場なし,活動説明会と体験先による",
   "station": "活動先による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.yamaguchi.lg.jp/uploaded/image/127544.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/35/225609.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-034",
@@ -14579,10 +15566,15 @@
   "infoUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/85/256763.html",
   "address": "固定会場なし,採択校の教室等",
   "station": "対象校による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.yamaguchi.lg.jp/uploaded/image/128160.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.yamaguchi.lg.jp/soshiki/85/256763.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-035",
@@ -14668,10 +15660,15 @@
   "infoUrl": "https://www.hito21.jp/seminarpark/park/",
   "address": "〒754-0893 山口県山口市秋穂二島1062",
   "station": "JR新山口駅から車",
-  "image": "",
   "logo": "",
   "lat": 34.060059,
-  "lng": 131.43544
+  "lng": 131.43544,
+  "image": "https://www.hito21.jp/seminarpark/wp-content/themes/seminarpark/images/top/park.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.hito21.jp/seminarpark/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-037",
@@ -14714,10 +15711,15 @@
   "infoUrl": "https://megriba.jp/",
   "address": "〒754-0041 山口県山口市小郡令和1-1-1 KDDI維新ホール1階",
   "station": "JR新山口駅 北口直結",
-  "image": "",
   "logo": "",
   "lat": 34.092941,
-  "lng": 131.394119
+  "lng": 131.394119,
+  "image": "https://megriba.jp/wp202503/wp-content/uploads/2025/03/DSC08963-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://megriba.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-038",
@@ -14759,10 +15761,15 @@
   "infoUrl": "https://mirai365.jp/coworking/",
   "address": "〒753-0087 山口県山口市米屋町2-7",
   "station": "JR山口駅から徒歩約7分",
-  "image": "",
   "logo": "",
   "lat": 34.176888,
-  "lng": 131.477432
+  "lng": 131.477432,
+  "image": "https://mirai365.jp/assets/img/frontpage/slider/slide_2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://mirai365.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-039",
@@ -14800,10 +15807,15 @@
   "infoUrl": "https://kenmin.pref.yamaguchi.lg.jp/boranet/boralist/",
   "address": "〒753-0064 山口県山口市神田町1-80 パルトピアやまぐち2階",
   "station": "JR湯田温泉駅から車",
-  "image": "",
   "logo": "",
   "lat": 34.172565,
-  "lng": 131.456146
+  "lng": 131.456146,
+  "image": "https://kenmin.pref.yamaguchi.lg.jp/boranet/images/image-message-pc.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kenmin.pref.yamaguchi.lg.jp/boranet/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "CG-040",
@@ -14845,10 +15857,15 @@
   "infoUrl": "https://www.city.ube.yamaguchi.jp/machizukuri/sangyou/kokorozashi/index.html",
   "address": "〒755-0045 山口県宇部市中央町3-10-12",
   "station": "JR宇部新川駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 33.955475,
-  "lng": 131.24144
+  "lng": 131.24144,
+  "image": "https://ube-startup.com/wp202602/wp-content/uploads/2025/08/kv_slide_about.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ube-startup.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-001",
@@ -14973,10 +15990,15 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kenko/kosodateshien/7314656/",
   "address": "〒770-0831 徳島県徳島市寺島本町西1-61 徳島駅クレメントプラザ5階 toku-Noix内",
   "station": "JR徳島駅 直結",
-  "image": "",
   "logo": "",
   "lat": 34.074863,
-  "lng": 134.549835
+  "lng": 134.549835,
+  "image": "https://www.pref.tokushima.lg.jp/file/thumbnail/1063796.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kenko/kosodateshien/7314656/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-004",
@@ -15019,10 +16041,15 @@
   "infoUrl": "https://mugi-nature.com/shisetsu.html",
   "address": "〒775-0005 徳島県海部郡牟岐町大字灘字東谷116-35",
   "station": "JR牟岐駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.671856,
-  "lng": 134.445084
+  "lng": 134.445084,
+  "image": "https://www.mugi-nature.com/_src/2223/head_2009.jpg?v=1686126431045",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.mugi-nature.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-005",
@@ -15060,10 +16087,15 @@
   "infoUrl": "https://www.tnbc.or.jp/open_event_cat/for_school/",
   "address": "固定会場なし,年度の講座会場と販売会場による",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.tnbc.or.jp/wp03/wp-content/uploads/2023/06/hp_5-600x392.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.tnbc.or.jp/kyoiku/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-006",
@@ -15101,7 +16133,6 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/gakkokyoiku/7235508",
   "address": "固定会場なし,年度の発表会場と各学校",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -15139,7 +16170,6 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/shogaigakushu/7304605/",
   "address": "徳島県徳島市寺島本町西1-5 とくぎんトモニプラザほか",
   "station": "JR徳島駅 直結",
-  "image": "",
   "logo": "",
   "lat": 34.073792,
   "lng": 134.54892
@@ -15183,7 +16213,6 @@
   "infoUrl": "https://www.pref.tokushima.lg.jp/entrepreneur/support",
   "address": "運営事務局と県内イベント会場,詳細は公式サイト参照",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": 34.070091,
   "lng": 134.554703
@@ -15224,10 +16253,15 @@
   "infoUrl": "https://shien.pref.tokushima.lg.jp/support-group/support/youth/",
   "address": "複数の支援団体,住所は公式一覧参照",
   "station": "各団体による",
-  "image": "",
   "logo": "",
   "lat": 34.070091,
-  "lng": 134.554703
+  "lng": 134.554703,
+  "image": "https://shien.pref.tokushima.lg.jp/wp-content/themes/theme/assets/img/cmn/menu_bg.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://shien.pref.tokushima.lg.jp/support-group/support/youth/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-010",
@@ -15269,10 +16303,15 @@
   "infoUrl": "https://www.seinen.kagawa.jp/main.html",
   "address": "〒769-0102 香川県高松市国分寺町国分1009",
   "station": "JR国分駅から徒歩約3分",
-  "image": "",
   "logo": "",
   "lat": 34.299576,
-  "lng": 133.941055
+  "lng": 133.941055,
+  "image": "http://seinen.kagawa.jp//bdflashinfo/thumbnail.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.seinen.kagawa.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-011",
@@ -15315,10 +16354,15 @@
   "infoUrl": "https://www.pref.kagawa.lg.jp/goshikidaishonen/goshikidai_shonen/facilites/202534.html",
   "address": "〒761-8002 香川県高松市生島町423",
   "station": "JR高松駅方面から車",
-  "image": "",
   "logo": "",
   "lat": 34.356052,
-  "lng": 133.956985
+  "lng": 133.956985,
+  "image": "https://www.pref.kagawa.lg.jp/images/15264/goshikidai_shonen_ttl.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.kagawa.lg.jp/goshikidaishonen/goshikidai_shonen/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-012",
@@ -15361,10 +16405,15 @@
   "infoUrl": "https://setouchiibase.jp/pub/facility",
   "address": "〒760-0019 香川県高松市サンポート2-1 高松シンボルタワー4・5階",
   "station": "JR高松駅から徒歩約3分",
-  "image": "",
   "logo": "",
   "lat": 34.352398,
-  "lng": 134.047791
+  "lng": 134.047791,
+  "image": "https://setouchiibase.jp/assets/system/company/release/company_4.jpg?286440592",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://setouchiibase.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-013",
@@ -15400,7 +16449,6 @@
   "infoUrl": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/koko/tokushoku/kiramekutop.html",
   "address": "固定会場なし,年度の研修会場と各学校",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -15437,7 +16485,6 @@
   "infoUrl": "https://www.pref.kagawa.lg.jp/kenkyoui/kokokyoiku/20260130_r7_tankyu.html",
   "address": "年度の発表会場による",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": 34.340111,
   "lng": 134.043289
@@ -15516,10 +16563,15 @@
   "infoUrl": "https://www.pref.kagawa.lg.jp/sangyo/shinki/ichigenka.html",
   "address": "オンライン情報サイト,会場は掲載事業ごとに異なる",
   "station": "掲載事業による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://startup.pref.kagawa.lg.jp/wp/wp-content/uploads/2025/06/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://startup.pref.kagawa.lg.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-017",
@@ -15560,10 +16612,15 @@
   "infoUrl": "https://www.city.matsuyama.ehime.jp/kids/shisetsu/chushinbu/seisyonen.html",
   "address": "〒790-0864 愛媛県松山市築山町12-33",
   "station": "伊予鉄バス 新立から徒歩約2分",
-  "image": "",
   "logo": "",
   "lat": 33.839363,
-  "lng": 132.779282
+  "lng": 132.779282,
+  "image": "https://mbyc.info/youth/wp-content/themes/matsuyama-youth-center/images/first_view_head.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://mbyc.info/youth/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-018",
@@ -15600,10 +16657,15 @@
   "infoUrl": "https://www.pref.ehime.jp/page/145622.html",
   "address": "〒791-8014 愛媛県松山市山越町450 愛媛県男女共同参画センター内",
   "station": "伊予鉄 本町六丁目駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 33.855057,
-  "lng": 132.756302
+  "lng": 132.756302,
+  "image": "https://www.pref.ehime.jp/uploaded/image/65210.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.ehime.jp/page/49675.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-019",
@@ -15646,10 +16708,15 @@
   "infoUrl": "https://ozu.niye.go.jp/guide/",
   "address": "〒795-0001 愛媛県大洲市北只1086",
   "station": "JR伊予大洲駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.495979,
-  "lng": 132.536133
+  "lng": 132.536133,
+  "image": "https://ozu.niye.go.jp/assets/images/IMG_8546.JPG",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ozu.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-020",
@@ -15693,7 +16760,6 @@
   "infoUrl": "https://en-base.pref.ehime.jp/guide",
   "address": "〒790-8570 愛媛県松山市一番町4-4-2 愛媛県庁内",
   "station": "伊予鉄道 県庁前電停",
-  "image": "",
   "logo": "",
   "lat": 33.84174,
   "lng": 132.766113
@@ -15733,7 +16799,6 @@
   "infoUrl": "https://ccr.ehime-u.ac.jp/startup/",
   "address": "愛媛県松山市一番町4-4-2 E:N BASE",
   "station": "伊予鉄道 県庁前電停",
-  "image": "",
   "logo": "",
   "lat": 33.84174,
   "lng": 132.766113
@@ -15774,10 +16839,15 @@
   "infoUrl": "https://www.ehime-u.ac.jp/tp_20260616_egs/",
   "address": "愛媛大学各施設,詳細公開待ち",
   "station": "実施会場による",
-  "image": "",
   "logo": "",
   "lat": 33.839165,
-  "lng": 132.76564
+  "lng": 132.76564,
+  "image": "https://www.ehime-u.ac.jp/wp-content/uploads/2026/06/jisedai-1024x701.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.ehime-u.ac.jp/tp_20260616_egs/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-023",
@@ -15865,10 +16935,15 @@
   "infoUrl": "https://www.k-sc.net/access/",
   "address": "〒781-8010 高知県高知市桟橋通2-1-50",
   "station": "とさでん交通 桟橋通一丁目電停から徒歩約1分",
-  "image": "",
   "logo": "",
   "lat": 33.549263,
-  "lng": 133.547089
+  "lng": 133.547089,
+  "image": "https://www.k-sc.net/wp-content/uploads/2026/03/ksc-eyecatch.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.k-sc.net/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-025",
@@ -15911,10 +16986,15 @@
   "infoUrl": "https://www.pref.kochi.lg.jp/soshiki/310000/310405/",
   "address": "〒781-5232 高知県香南市野市町西野303-1",
   "station": "土佐くろしお鉄道 のいち駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 33.57716,
-  "lng": 133.698029
+  "lng": 133.698029,
+  "image": "https://www.pref.kochi.lg.jp/doc/2024050600018/file_contents/file_20265306105558_1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.kochi.lg.jp/soshiki/310000/310405/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-026",
@@ -15952,10 +17032,15 @@
   "infoUrl": "https://www.u-kochi.ac.jp/site/re-design/kochi-teens-base.html",
   "address": "〒780-8515 高知県高知市永国寺町2-22 高知県立大学永国寺キャンパス地域連携棟1階",
   "station": "JR高知駅から徒歩約15分",
-  "image": "",
   "logo": "",
   "lat": 33.564213,
-  "lng": 133.535004
+  "lng": 133.535004,
+  "image": "https://www.u-kochi.ac.jp/uploaded/image/18549.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.u-kochi.ac.jp/site/re-design/kochi-teens-base.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-027",
@@ -15998,10 +17083,15 @@
   "infoUrl": "https://www.startup.kochi.jp/",
   "address": "固定会場なし,Kochi Startup BASE関連会場とオンライン",
   "station": "活動会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/186509/801214_995736.jpeg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.startup.kochi.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-028",
@@ -16043,10 +17133,15 @@
   "infoUrl": "https://kocopla.jp/access/",
   "address": "〒780-8515 高知県高知市永国寺町6-28 地域連携棟1階",
   "station": "JR高知駅から徒歩約15分,とさでん交通 大橋通から徒歩約7分",
-  "image": "",
   "logo": "",
   "lat": 33.563499,
-  "lng": 133.534317
+  "lng": 133.534317,
+  "image": "https://kocopla.jp/data/uploaded/page_contents/w5957901/1784786277032.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kocopla.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-029",
@@ -16089,10 +17184,15 @@
   "infoUrl": "https://muroto.niye.go.jp/access.html",
   "address": "〒781-7108 高知県室戸市元乙1721",
   "station": "高知東部交通 元橋バス停から施設入口方面",
-  "image": "",
   "logo": "",
   "lat": 33.310341,
-  "lng": 134.115875
+  "lng": 134.115875,
+  "image": "https://muroto.niye.go.jp/image/top/main_sm.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://muroto.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-030",
@@ -16130,10 +17230,15 @@
   "infoUrl": "https://sites.google.com/g.kochinet.ed.jp/kochikokusaisymposium/",
   "address": "〒780-8052 高知県高知市鴨部2-5-70 高知国際中学校・高等学校",
   "station": "とさでん交通 鴨部電停から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 33.551083,
-  "lng": 133.502197
+  "lng": 133.502197,
+  "image": "https://lh3.googleusercontent.com/sitesv/AG8ngQUUO_Ut9tWFgyQzA3vSkofpNjhCBq6kjgOtKTThMr2NdYb5hadXnh2IMBsD_B6y8kiw-TQxRg-7FJWwS0qbBzWc9tF-IMWgSUUdNVPNxHzb8rk9d9PzmLE_HIAI1hjuR05U17qKy1fpmXDFMc21-iIeYmXmAKukc06jI6di7kuDO3Cvu_IyuKck0SMc=w16383",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://sites.google.com/g.kochinet.ed.jp/kochikokusaisymposium/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "SK-031",
@@ -16171,7 +17276,6 @@
   "infoUrl": "https://kochi-monodukuri.online/news/21629/",
   "address": "ものメッセKOCHI2026会場,公式募集要項参照",
   "station": "開催会場による",
-  "image": "",
   "logo": "",
   "lat": 33.558723,
   "lng": 133.531097
@@ -16211,10 +17315,15 @@
   "infoUrl": "https://www.pref.kumamoto.jp/site/chiji/259215.html",
   "address": "固定会場なし,参加校と地域企業で実施",
   "station": "活動会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.kumamoto.jp/uploaded/subsite/25_img.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.kumamoto.jp/site/chiji/259215.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-002",
@@ -16345,10 +17454,15 @@
   "infoUrl": "https://yasu.niye.go.jp/facility/",
   "address": "〒838-0202 福岡県朝倉郡筑前町三箇山1103",
   "station": "甘木鉄道 甘木駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.492748,
-  "lng": 130.646484
+  "lng": 130.646484,
+  "image": "https://yasu.niye.go.jp/wp/wp-content/uploads/2022/03/slider_img01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://yasu.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-005",
@@ -16392,10 +17506,15 @@
   "infoUrl": "https://www.fsg.pref.fukuoka.jp/center/riyou/anai.html",
   "address": "〒811-2402 福岡県糟屋郡篠栗町大字金出3350-2",
   "station": "JR篠栗駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.632423,
-  "lng": 130.545532
+  "lng": 130.545532,
+  "image": "https://www.fsg.pref.fukuoka.jp/center/image/top/img_1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.fsg.pref.fukuoka.jp/center/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-006",
@@ -16440,10 +17559,15 @@
   "infoUrl": "https://www.fsg.pref.fukuoka.jp/hikosan/riyou/riyou.html",
   "address": "〒824-0721 福岡県田川郡添田町大字英彦山32-18",
   "station": "JR添田駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.486668,
-  "lng": 130.914062
+  "lng": 130.914062,
+  "image": "https://www.fsg.pref.fukuoka.jp/hikosan/image/top/newgazo2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.fsg.pref.fukuoka.jp/hikosan/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-007",
@@ -16488,10 +17612,15 @@
   "infoUrl": "https://www.fsg.pref.fukuoka.jp/genkai/riyou/riyou_tetuduki.html",
   "address": "〒811-3501 福岡県宗像市神湊1276",
   "station": "JR東郷駅からバスと徒歩",
-  "image": "",
   "logo": "",
   "lat": 33.849468,
-  "lng": 130.495041
+  "lng": 130.495041,
+  "image": "https://www.fsg.pref.fukuoka.jp/genkai/image/img_top_2026.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.fsg.pref.fukuoka.jp/genkai/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-008",
@@ -16527,10 +17656,15 @@
   "infoUrl": "https://qfcsp.kyushu-u.ac.jp/",
   "address": "〒819-0395 福岡県福岡市西区元岡744 九州大学伊都キャンパス",
   "station": "九大学研都市駅からバス",
-  "image": "",
   "logo": "",
   "lat": 33.597153,
-  "lng": 130.223312
+  "lng": 130.223312,
+  "image": "https://qfcsp.kyushu-u.ac.jp/_cms_dir/uploads/2025/03/img_home_overview.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://qfcsp.kyushu-u.ac.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-009",
@@ -16573,7 +17707,6 @@
   "infoUrl": "https://www.city.fukuoka.lg.jp/shimin/koeki/life/fnvcasuminIntroduction.html",
   "address": "〒810-0021 福岡県福岡市中央区今泉1丁目19-22 天神クラス4階",
   "station": "西鉄福岡天神駅から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 33.586418,
   "lng": 130.39772
@@ -16662,10 +17795,15 @@
   "infoUrl": "https://www.city.saga.lg.jp/kosodate-kyoiku/mokuteki/7/2268.html",
   "address": "〒840-0831 佐賀県佐賀市松原2丁目2-27 佐賀バルーンミュージアム3階",
   "station": "JR佐賀駅から徒歩約17分,県庁前バス停から徒歩1分",
-  "image": "",
   "logo": "",
   "lat": 33.252354,
-  "lng": 130.300201
+  "lng": 130.300201,
+  "image": "https://www.city.saga.lg.jp/material/images/group/68/p1au6macfob4l159a3pl1t2v1l034.JPG",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.saga.lg.jp/kosodate-kyoiku/mokuteki/7/2269.html",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-012",
@@ -16703,7 +17841,6 @@
   "infoUrl": "https://www.pref.saga.lg.jp/kyouiku/kiji003108682/3_108682_326178_up_tvg6781d.pdf",
   "address": "県内7か所のSAGA DI LAB,会場は年度案内参照",
   "station": "各拠点による",
-  "image": "",
   "logo": "",
   "lat": 33.263512,
   "lng": 130.300888
@@ -16746,10 +17883,15 @@
   "infoUrl": "https://www.yumeginga.jp/",
   "address": "〒843-0021 佐賀県武雄市武雄町永島16351",
   "station": "JR武雄温泉駅から車で約10分",
-  "image": "",
   "logo": "",
   "lat": 33.178806,
-  "lng": 130.035675
+  "lng": 130.035675,
+  "image": "https://www.yumeginga.jp/var/rev0/0002/5950/slide.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.yumeginga.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-014",
@@ -16789,10 +17931,15 @@
   "infoUrl": "https://www.yumeginga.jp/jaxaga.html",
   "address": "〒843-0021 佐賀県武雄市武雄町永島16351 佐賀県立宇宙科学館",
   "station": "JR武雄温泉駅から車で約10分",
-  "image": "",
   "logo": "",
   "lat": 33.178806,
-  "lng": 130.035675
+  "lng": 130.035675,
+  "image": "https://www.yumeginga.jp/var/rev0/0002/6450/JAXA_kanai.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.yumeginga.jp/jaxaga.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-015",
@@ -16837,10 +17984,15 @@
   "infoUrl": "https://www.hokuzan-saga.jp/guide/index.html",
   "address": "〒842-0303 佐賀県佐賀市富士町大字関屋514-1",
   "station": "JR佐賀駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.410934,
-  "lng": 130.232132
+  "lng": 130.232132,
+  "image": "https://www.hokuzan-saga.jp/cms/wp-content/uploads/2026/04/5.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.hokuzan-saga.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-016",
@@ -16885,10 +18037,15 @@
   "infoUrl": "https://www.hadosyou-saga.jp/",
   "address": "〒847-0401 佐賀県唐津市鎮西町名護屋5581-1",
   "station": "波戸岬少年自然の家前バス停から徒歩5分",
-  "image": "",
   "logo": "",
   "lat": 33.530167,
-  "lng": 129.86763
+  "lng": 129.86763,
+  "image": "https://www.hadosyou-saga.jp/cms/wp-content/themes/hadosyou/images/fb.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.hadosyou-saga.jp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-017",
@@ -16928,10 +18085,15 @@
   "infoUrl": "https://saga-startup-ecosystem.com/",
   "address": "固定拠点・会場はイベントごとに異なる",
   "station": "会場による",
-  "image": "",
   "logo": "",
   "lat": 33.263512,
-  "lng": 130.300888
+  "lng": 130.300888,
+  "image": "https://www.pref.saga.lg.jp/common/upload/freearea/4_3251_210888_up_zwbussu5.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.saga.lg.jp/list05259.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-018",
@@ -16973,10 +18135,15 @@
   "infoUrl": "https://www.tsunasaga.jp/plaza/",
   "address": "〒840-0826 佐賀県佐賀市白山2丁目1-12 佐賀商工ビル7階",
   "station": "JR佐賀駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 33.254555,
-  "lng": 130.300873
+  "lng": 130.300873,
+  "image": "https://www.city.saga.lg.jp/material/images/group/60/p1ji95td6p9muev9mavgkq1sop4.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.saga.lg.jp/kurashi/community/4/1/7583.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-019",
@@ -17021,7 +18188,6 @@
   "infoUrl": "https://isahaya.niye.go.jp/facility/",
   "address": "〒859-0307 長崎県諫早市白木峰町1109-1",
   "station": "JR諫早駅から県営バスまたは車",
-  "image": "",
   "logo": "",
   "lat": 32.923374,
   "lng": 130.073242
@@ -17113,10 +18279,15 @@
   "infoUrl": "https://www.pref.nagasaki.jp/bunrui/shigoto-sangyo/sangyoshien/jigyoshien/shinkigyou/startup/",
   "address": "〒850-0862 長崎県長崎市出島町2-11 出島交流会館2階",
   "station": "長崎電気軌道 出島電停",
-  "image": "",
   "logo": "",
   "lat": 32.742275,
-  "lng": 129.871689
+  "lng": 129.871689,
+  "image": "https://co-dejima.jp/wp-content/uploads/2021/07/co-dejima.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://co-dejima.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-022",
@@ -17156,10 +18327,15 @@
   "infoUrl": "https://miraionlibrary.jp/",
   "address": "〒856-0831 長崎県大村市東本町481",
   "station": "JR大村駅から徒歩約5分",
-  "image": "",
   "logo": "",
   "lat": 32.908916,
-  "lng": 129.961609
+  "lng": 129.961609,
+  "image": "https://miraionlibrary.jp/wp-content/uploads/2024/12/%E9%9B%BB%E5%AD%90%E6%9B%B8%E7%B1%8D%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC%EF%BC%88%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%EF%BC%89%E6%9C%80%E7%B5%82.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://miraionlibrary.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-023",
@@ -17243,10 +18419,15 @@
   "infoUrl": "https://nagasaki-volunteer.or.jp/category/o-volunteer/",
   "address": "〒852-8555 長崎県長崎市茂里町3-24 長崎県総合福祉センター2階",
   "station": "JR浦上駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 32.766701,
-  "lng": 129.862381
+  "lng": 129.862381,
+  "image": "https://nagasaki-volunteer.or.jp/wp-content/uploads/2026/06/na2-image-1024x538.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://nagasaki-volunteer.or.jp/volunteer/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-025",
@@ -17325,10 +18506,15 @@
   "infoUrl": "https://nnavi.pref.nagasaki.jp/",
   "address": "出島メッセ長崎,長崎県長崎市尾上町4-1",
   "station": "JR長崎駅 西口直結",
-  "image": "",
   "logo": "",
   "lat": 32.753601,
-  "lng": 129.868149
+  "lng": 129.868149,
+  "image": "https://nnavi.pref.nagasaki.jp/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fentrance_recruit.197fd82a.png&w=3840&q=75",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://nnavi.pref.nagasaki.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-027",
@@ -17408,7 +18594,6 @@
   "infoUrl": "https://www.city.kumamoto.jp/kiji00368076/index.html",
   "address": "複数拠点,こどもの居場所マップ参照",
   "station": "各居場所による",
-  "image": "",
   "logo": "",
   "lat": 32.803333,
   "lng": 130.708054
@@ -17502,10 +18687,15 @@
   "infoUrl": "https://www.k-seishonen.com/toyono/information.html",
   "address": "〒861-4305 熊本県宇城市豊野町山崎1775",
   "station": "JR松橋駅から車",
-  "image": "",
   "logo": "",
   "lat": 32.652115,
-  "lng": 130.739838
+  "lng": 130.739838,
+  "image": "https://www.k-seishonen.com/toyono/hub2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.k-seishonen.com/toyono/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-031",
@@ -17549,10 +18739,15 @@
   "infoUrl": "https://www.k-seishonen.com/amakusa/",
   "address": "〒861-6102 熊本県上天草市松島町合津5500",
   "station": "JR三角駅から車",
-  "image": "",
   "logo": "",
   "lat": 32.508297,
-  "lng": 130.422485
+  "lng": 130.422485,
+  "image": "https://www.k-seishonen.com/amakusa/hpimage/gyoikou3.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.k-seishonen.com/amakusa/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-032",
@@ -17596,10 +18791,15 @@
   "infoUrl": "https://k-seishonen.com/kikuchi/",
   "address": "〒861-1441 熊本県菊池市原4885-5",
   "station": "JR熊本駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.012997,
-  "lng": 130.924255
+  "lng": 130.924255,
+  "image": "https://k-seishonen.com/kikuchi/hpimage/hub2.png.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://k-seishonen.com/kikuchi/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-033",
@@ -17640,10 +18840,15 @@
   "infoUrl": "https://xosspoint.jp/facility-information/",
   "address": "〒860-0047 熊本県熊本市西区春日1丁目14-1 くまもと森都心プラザ2階",
   "station": "JR熊本駅直結",
-  "image": "",
   "logo": "",
   "lat": 32.790062,
-  "lng": 130.691574
+  "lng": 130.691574,
+  "image": "https://xosspoint.jp/wp-content/uploads/2022/03/sin.009-570x570.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://xosspoint.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-034",
@@ -17679,7 +18884,6 @@
   "infoUrl": "https://www.kumamoto-u.ac.jp/nyuushi/sonota/shin-higo/2026_sinhigo_chirashi.pdf",
   "address": "〒860-8555 熊本県熊本市中央区黒髪2丁目40-1 熊本大学",
   "station": "熊本電鉄 黒髪町駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 32.814938,
   "lng": 130.727325
@@ -17808,10 +19012,15 @@
   "infoUrl": "https://www.pref.oita.jp/site/kakaji/riyounotebiki.html",
   "address": "〒872-1202 大分県豊後高田市香々地5151",
   "station": "JR宇佐駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.662022,
-  "lng": 131.517441
+  "lng": 131.517441,
+  "image": "https://www.pref.oita.jp/uploaded/image/2085669.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.oita.jp/site/kakaji/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-038",
@@ -17856,10 +19065,15 @@
   "infoUrl": "https://www.pref.oita.jp/site/kokonoe/list21527.html",
   "address": "〒879-4911 大分県玖珠郡九重町大字田野204-47",
   "station": "JR豊後中村駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.152756,
-  "lng": 131.235001
+  "lng": 131.235001,
+  "image": "https://www.pref.oita.jp/uploaded/image/2006794.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.oita.jp/site/kokonoe/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-039",
@@ -17903,10 +19117,15 @@
   "infoUrl": "https://www.city.oita.oita.jp/kosodate/seshonen/shizennoie/index.html",
   "address": "〒870-1221 大分県大分市大字荷尾杵1097-26",
   "station": "JR大分駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.099133,
-  "lng": 131.489853
+  "lng": 131.489853,
+  "image": "https://www.city.oita.oita.jp/o199/images/map.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.oita.oita.jp/o199/2025notuharusyounensizennoieannai.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-040",
@@ -17989,10 +19208,15 @@
   "infoUrl": "https://www.oitavoc.jp/",
   "address": "大分県大分市大津町2丁目1-41 大分県総合社会福祉会館内",
   "station": "JR牧駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 33.247898,
-  "lng": 131.625565
+  "lng": 131.625565,
+  "image": "https://www.oitavoc.jp/wordpress/wp-content/themes/oita-voc/assets/img/kv/sakura-kasan.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.oitavoc.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-042",
@@ -18031,10 +19255,15 @@
   "infoUrl": "https://www.oita-syakyo.com/pages/24/",
   "address": "〒870-0839 大分県大分市金池南1丁目5-1 J:COMホルトホール大分4階",
   "station": "JR大分駅 上野の森口から徒歩2分",
-  "image": "",
   "logo": "",
   "lat": 33.231361,
-  "lng": 131.605728
+  "lng": 131.605728,
+  "image": "https://www.oita-syakyo.com/files/libs/2100/202512011650065991.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.oita-syakyo.com/pages/24/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-043",
@@ -18073,10 +19302,15 @@
   "infoUrl": "https://www.pref.oita.jp/soshiki/14040/oita-startup2026.html",
   "address": "固定会場なし,プログラムごとに異なる",
   "station": "会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.pref.oita.jp/uploaded/life/2348291_4793531_img.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.oita.jp/soshiki/14040/oita-startup2026.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-044",
@@ -18112,7 +19346,6 @@
   "infoUrl": "https://www.pref.oita.jp/site/n-kennsetsugyou/n-goudousetumeikai.html",
   "address": "クラサス武道スポーツセンター,大分県大分市大字横尾1351",
   "station": "JR高城駅から車",
-  "image": "",
   "logo": "",
   "lat": 33.239445,
   "lng": 131.609726
@@ -18157,10 +19390,15 @@
   "infoUrl": "https://www.city.miyazaki.miyazaki.jp/education/support/support/379115.html",
   "address": "〒880-0001 宮崎県宮崎市橘通西3丁目10-32 宮崎ナナイロ東館8階",
   "station": "橘通3丁目バス停から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 31.915874,
-  "lng": 131.422943
+  "lng": 131.422943,
+  "image": "https://www.city.miyazaki.miyazaki.jp/fs/8/9/1/0/5/9/_/IMG_8124.JPG",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.city.miyazaki.miyazaki.jp/education/support/support/379115.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-046",
@@ -18199,7 +19437,6 @@
   "infoUrl": "https://www.city.miyazaki.miyazaki.jp/education/healthy_development/support/376.html",
   "address": "宮崎県宮崎市内,面接場所は予約時に確認",
   "station": "相談時に確認",
-  "image": "",
   "logo": "",
   "lat": 31.742336,
   "lng": 131.471893
@@ -18246,10 +19483,15 @@
   "infoUrl": "https://www.aoshima-msgsi.jp/",
   "address": "〒889-2151 宮崎県宮崎市大字熊野字藤兵衛中州",
   "station": "JR運動公園駅から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 31.832977,
-  "lng": 131.441925
+  "lng": 131.441925,
+  "image": "https://www.aoshima-msgsi.jp/images/index/top_suntle.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.aoshima-msgsi.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-048",
@@ -18293,10 +19535,15 @@
   "infoUrl": "https://www.mukabaki-msgsi.jp/contents/",
   "address": "〒882-0077 宮崎県延岡市行縢町760-3",
   "station": "JR延岡駅から車",
-  "image": "",
   "logo": "",
   "lat": 32.612576,
-  "lng": 131.581161
+  "lng": 131.581161,
+  "image": "https://www.mukabaki-msgsi.jp/contents/wp-content/uploads/2026/02/c218c5fbf0e2ad5e243e9947072c3501.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.mukabaki-msgsi.jp/contents/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-049",
@@ -18340,10 +19587,15 @@
   "infoUrl": "https://www.miike-msgsi.jp/facilities/index.html",
   "address": "〒885-0225 宮崎県都城市夏尾町5988-30",
   "station": "JR都城駅から車",
-  "image": "",
   "logo": "",
   "lat": 31.850986,
-  "lng": 130.970154
+  "lng": 130.970154,
+  "image": "https://www.miike-msgsi.jp/images/index/morino-chibikko-hiroba-2026.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.miike-msgsi.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-050",
@@ -18468,10 +19720,15 @@
   "infoUrl": "https://www.pref.kagoshima.jp/bc06/kikan/seisyouken/kari/riyousuruniha.html",
   "address": "〒891-1305 鹿児島県鹿児島市宮之浦町4226-1",
   "station": "JR鹿児島駅から車",
-  "image": "",
   "logo": "",
   "lat": 31.682465,
-  "lng": 130.567932
+  "lng": 130.567932,
+  "image": "https://www.pref.kagoshima.jp/bc06/kikan/seisyouken/kari/images/109930_20260406162357-1.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.pref.kagoshima.jp/bc06/kikan/seisyouken/kari/riyousuruniha.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-053",
@@ -18515,10 +19772,15 @@
   "infoUrl": "https://osumi.niye.go.jp/moushikomi/index.html",
   "address": "〒891-2396 鹿児島県鹿屋市花里町赤崩",
   "station": "鹿屋バスセンターから車",
-  "image": "",
   "logo": "",
   "lat": 31.427324,
-  "lng": 130.786041
+  "lng": 130.786041,
+  "image": "https://osumi.niye.go.jp/img/slider/slider2025_img/slider5.JPG",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://osumi.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-054",
@@ -18563,10 +19825,15 @@
   "infoUrl": "https://www.kagoshima-seisyounen.jp/guide/",
   "address": "〒890-0064 鹿児島県鹿児島市鴨池新町1-8",
   "station": "県庁前バス停から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 31.560602,
-  "lng": 130.556351
+  "lng": 130.556351,
+  "image": "https://www.kagoshima-seisyounen.jp/cms/wp-content/themes/kagoshima-seisyounen/images/mbn-hotspace.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.kagoshima-seisyounen.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-055",
@@ -18608,10 +19875,15 @@
   "infoUrl": "https://www.city.kagoshima.lg.jp/san-sousyutu/shisetsu/sangyo/002.html",
   "address": "〒892-0821 鹿児島県鹿児島市名山町9-15",
   "station": "鹿児島市電 朝日通電停から徒歩3分",
-  "image": "",
   "logo": "",
   "lat": 31.594776,
-  "lng": 130.55925
+  "lng": 130.55925,
+  "image": "https://mark-meizan.io/wp-content/uploads/2025/05/2I8A0006-R2_original-scaled.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://mark-meizan.io/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-056",
@@ -18648,10 +19920,15 @@
   "infoUrl": "https://www.pref.kagoshima.jp/ba05/kyoiku-bunka/school/bijyon/documents/121726_20251027131336-1.pdf",
   "address": "カクイックス交流センター等,年度により変更",
   "station": "会場による",
-  "image": "",
   "logo": "",
   "lat": 31.596861,
-  "lng": 130.557022
+  "lng": 130.557022,
+  "image": "https://kokubu.edu.pref.kagoshima.jp/article/2026011500139/file_contents/06koukouseitankyu.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://kokubu.edu.pref.kagoshima.jp/article/2026011500139/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "KY-057",
@@ -18821,10 +20098,15 @@
   "infoUrl": "https://okinawa.niye.go.jp/info.php",
   "address": "〒901-3595 沖縄県島尻郡渡嘉敷村字渡嘉敷2760",
   "station": "渡嘉敷港から施設送迎等を確認",
-  "image": "",
   "logo": "",
   "lat": 26.204298,
-  "lng": 127.361282
+  "lng": 127.361282,
+  "image": "https://okinawa.niye.go.jp/images/cover.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://okinawa.niye.go.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-002",
@@ -18868,10 +20150,15 @@
   "infoUrl": "https://tamagusuku-youthhome.jp/information/",
   "address": "〒901-0604 沖縄県南城市玉城字玉城420",
   "station": "那覇バスターミナルから路線バスと車",
-  "image": "",
   "logo": "",
   "lat": 26.142889,
-  "lng": 127.781868
+  "lng": 127.781868,
+  "image": "https://tamagusuku-youthhome.jp/wp-content/uploads/2026/05/fc94d587b8d41e238a380d51bf397b7b-scaled.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://tamagusuku-youthhome.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-003",
@@ -18914,10 +20201,15 @@
   "infoUrl": "https://www.unai-sc.net/information/",
   "address": "〒904-1106 沖縄県うるま市石川3491-2",
   "station": "石川ICから車",
-  "image": "",
   "logo": "",
   "lat": 26.434546,
-  "lng": 127.822083
+  "lng": 127.822083,
+  "image": "https://www.unai-sc.net/wp-content/uploads/2025/05/5adc89506f138ba304fa566bd9ed2437-1-pdf.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.unai-sc.net/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-004",
@@ -18960,10 +20252,15 @@
   "infoUrl": "https://www.nagoseishounen-obsi.jp/",
   "address": "〒905-0012 沖縄県名護市字名護5511",
   "station": "名護バスターミナルから車",
-  "image": "",
   "logo": "",
   "lat": 26.590071,
-  "lng": 127.996246
+  "lng": 127.996246,
+  "image": "https://www.nagoseishounen-obsi.jp/img/top01.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.nagoseishounen-obsi.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-005",
@@ -19006,10 +20303,15 @@
   "infoUrl": "https://www.miyako-banzu.com/",
   "address": "〒906-0011 沖縄県宮古島市平良字東仲宗根添1164",
   "station": "宮古空港から車",
-  "image": "",
   "logo": "",
   "lat": 24.798697,
-  "lng": 125.304176
+  "lng": 125.304176,
+  "image": "https://www.miyako-banzu.com/obj/img_main.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.miyako-banzu.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-006",
@@ -19052,10 +20354,15 @@
   "infoUrl": "https://ishigaki-yh.com/",
   "address": "〒907-0024 沖縄県石垣市字新川868",
   "station": "新石垣空港から車",
-  "image": "",
   "logo": "",
   "lat": 24.364752,
-  "lng": 124.128601
+  "lng": 124.128601,
+  "image": "https://ishigaki-yh.com/wp-content/uploads/2022/08/ue-1145.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://ishigaki-yh.com/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-007",
@@ -19096,10 +20403,15 @@
   "infoUrl": "https://lagoon-koza.org/school",
   "address": "〒904-0004 沖縄県沖縄市中央1丁目7-8",
   "station": "胡屋バス停から徒歩2分",
-  "image": "",
   "logo": "",
   "lat": 26.336821,
-  "lng": 127.800346
+  "lng": 127.800346,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/fa8a478c-b057-4d40-b8c5-5560e23b25ac",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://lagoon-koza.org/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-008",
@@ -19141,10 +20453,15 @@
   "infoUrl": "https://www.ryukyu-frogs.com/information",
   "address": "固定会場なし,県内拠点、オンライン、研修先",
   "station": "活動会場による",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://static.wixstatic.com/media/69d2fd_4a9e3f5ca5534e0391adc4b613324272~mv2.png/v1/fill/w_980,h_264,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%E8%83%8C%E6%99%AF2_edited.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.ryukyu-frogs.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-009",
@@ -19184,10 +20501,15 @@
   "infoUrl": "https://www.oist.jp/ja/outreach/high-school",
   "address": "〒904-0495 沖縄県国頭郡恩納村字谷茶1919-1 OIST",
   "station": "大学院大学前バス停",
-  "image": "",
   "logo": "",
   "lat": 26.464243,
-  "lng": 127.830719
+  "lng": 127.830719,
+  "image": "https://www.oist.jp/sites/default/files/styles/embed_auto_height_720/public/2024-09/seo-shima-workshop1.JPG?itok=MJlk36Cc",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.oist.jp/ja/outreach/high-school",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-010",
@@ -19223,10 +20545,15 @@
   "infoUrl": "https://www.oist.jp/ja/outreach/high-school/shima",
   "address": "OIST,沖縄県国頭郡恩納村字谷茶1919-1,ほか活動地域",
   "station": "大学院大学前バス停",
-  "image": "",
   "logo": "",
   "lat": 26.497368,
-  "lng": 127.853729
+  "lng": 127.853729,
+  "image": "https://www.oist.jp/sites/default/files/styles/image_text_xl_1x/public/2024-09/seo-shima-workshop1.JPG?h=854a7be2&itok=vQxlJEvZ",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.oist.jp/ja/outreach/high-school/shima",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "OK-011",
@@ -19266,7 +20593,6 @@
   "infoUrl": "https://www.pref.okinawa.jp/bunkakoryu/bunkageijutsu/1009673/1009684/1009689.html",
   "address": "〒903-0125 沖縄県中頭郡西原町上原193-7",
   "station": "琉大附属病院前バス停から徒歩圏",
-  "image": "",
   "logo": "",
   "lat": 26.244158,
   "lng": 127.758911
@@ -19306,10 +20632,15 @@
   "infoUrl": "https://willdoor-compass.com/page",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://storage.googleapis.com/production-os-assets/assets/b9586eb5-b5b7-4748-8621-8cd83c3dc668",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://willdoor-compass.com/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-002",
@@ -19347,10 +20678,15 @@
   "infoUrl": "https://khd.gakken.co.jp/2025/04/24/news-5216/",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://khd.gakken.co.jp/wp-content/uploads/2025/04/20250424_1.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://khd.gakken.co.jp/2025/04/24/news-5216/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-003",
@@ -19388,10 +20724,15 @@
   "infoUrl": "https://qulii.jp/online/",
   "address": "固定会場なし（情報サイト）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://qulii.jp/wp-content/uploads/2026/05/discova2026summer_pc.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://qulii.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-004",
@@ -19428,10 +20769,15 @@
   "infoUrl": "https://communeinc.com/ja/news/2025feb21",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://storage.googleapis.com/studio-cms-assets/projects/rROnmP8pWA/s-1280x670_v-fms_webp_59c650c3-67ec-4df6-b874-16fcafd4056a.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://communeinc.com/ja/news/2025feb21",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-005",
@@ -19469,7 +20815,6 @@
   "infoUrl": "https://www.beauproject.net/beau-labo-online",
   "address": "固定会場なし（オンライン中心）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -19511,10 +20856,15 @@
   "infoUrl": "https://growandleap.com/my-story-project/",
   "address": "固定会場なし（対面イベントあり）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://growandleap.com/wp-content/uploads/2026/05/MSP%E3%83%95%E3%82%A7%E3%82%B92026-%E3%82%B5%E3%83%A0%E3%83%8D.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://growandleap.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-007",
@@ -19551,10 +20901,15 @@
   "infoUrl": "https://www.1on1college.com/",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://static.wixstatic.com/media/18e02f_ee0df8b59f2c401e91a44ef9ff1d1493~mv2.jpg/v1/fill/w_960,h_540,al_c/18e02f_ee0df8b59f2c401e91a44ef9ff1d1493~mv2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.1on1college.com/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-008",
@@ -19591,10 +20946,15 @@
   "infoUrl": "https://www.camp.waffle-waffle.org/",
   "address": "固定会場なし（開催回による）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://static.wixstatic.com/media/6220ba_17a245f71a7041f2be0a8d958816300e~mv2.png/v1/fill/w_1024,h_512,al_c/6220ba_17a245f71a7041f2be0a8d958816300e~mv2.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.camp.waffle-waffle.org/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-009",
@@ -19635,10 +20995,15 @@
   "infoUrl": "https://www.technovation.waffle-waffle.org/",
   "address": "固定会場なし（最終発表は対面）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://static.wixstatic.com/media/291c86_50c5fc3af1114c5f9c22be03c16066ea~mv2.jpg/v1/fill/w_248,h_330,q_90,enc_avif,quality_auto/291c86_50c5fc3af1114c5f9c22be03c16066ea~mv2.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.technovation.waffle-waffle.org/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-010",
@@ -19678,10 +21043,15 @@
   "infoUrl": "https://jr.mitou.org/",
   "address": "固定会場なし（合宿・成果報告会あり）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://jr.mitou.org/assets/img/twitter_card_square.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://jr.mitou.org/",
+  "imageKind": "official-twitter",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-011",
@@ -19721,10 +21091,15 @@
   "infoUrl": "https://www.iewri.or.jp/seminar/seminar/20250429.html",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.iewri.or.jp/data/pages/00/00/00/67/44/09ec2433559309c8f6b44784f2d5ca2b-1783571518.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.iewri.or.jp/index.html",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-012",
@@ -19762,10 +21137,15 @@
   "infoUrl": "https://discova.jp/program/",
   "address": "固定会場なし（プログラムにより会場あり）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://discova.jp/cms/wp-content/uploads/2023/05/23%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%BC.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://discova.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-013",
@@ -19803,7 +21183,6 @@
   "infoUrl": "https://www.katariba.or.jp/activity/project/ohdantankyu/",
   "address": "固定会場なし（学校から参加）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null
@@ -19845,10 +21224,15 @@
   "infoUrl": "https://www.katariba.or.jp/activity/project/futoko/",
   "address": "固定会場なし（オンライン）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://futoko.katariba.online/img/main_visual.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://futoko.katariba.online/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-015",
@@ -19883,10 +21267,15 @@
   "infoUrl": "https://me-x.jp/lp/",
   "address": "固定会場なし（情報サイト）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://me-x.jp/common/img/og.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://me-x.jp/lp/",
+  "imageKind": "official-og",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-016",
@@ -19924,10 +21313,15 @@
   "infoUrl": "https://www.dreampossibility.com/whatwedo/yukisakichat/",
   "address": "固定会場なし（LINE相談）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://www.dreampossibility.com/wp/wp-content/uploads/2021/06/bnr_yukisakichat.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://www.dreampossibility.com/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-017",
@@ -19961,10 +21355,15 @@
   "infoUrl": "https://childline.or.jp/chat/",
   "address": "固定会場なし（チャット相談）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://childline.or.jp/wp/wp-content/themes/child_line/images/top/whats_illust.png",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://childline.or.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-018",
@@ -20002,10 +21401,15 @@
   "infoUrl": "https://bondproject.jp/line.html",
   "address": "固定会場なし（LINE相談）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
-  "lng": null
+  "lng": null,
+  "image": "https://bondproject.jp/wp-content/uploads/2025/12/voices24-768x969.jpg",
+  "imageSource": "団体公式サイト",
+  "imageSourceUrl": "https://bondproject.jp/",
+  "imageKind": "official-page-image",
+  "imageReview": "公開前に利用条件確認",
+  "imageCheckedAt": "2026-08-02"
  },
  {
   "id": "ON-019",
@@ -20040,7 +21444,6 @@
   "infoUrl": "https://stg.katariba-teens.online/",
   "address": "固定会場なし（提供終了）",
   "station": "対象外（オンライン）",
-  "image": "",
   "logo": "",
   "lat": null,
   "lng": null

@@ -24,7 +24,7 @@
   };
   var CAT_FALLBACK={"支援団体":["🤝","pink","community"],"プログラム":["✨","orange","arts"],"活動拠点":["📍","green","nature"],"使用できる施設":["🏢","blue","science"]};
   var CAT_KEYS=["nature","science","community","arts","startup","sports"];
-  var CAT_IMGS={nature:"img/cat-nature.png",science:"img/cat-science.png",community:"img/cat-community.png",arts:"img/cat-arts.png",startup:"img/cat-startup.png",sports:"img/cat-sports.png"};
+  var CAT_IMGS={nature:"img/editorial/field-nature.jpg",science:"img/editorial/field-science.jpg",community:"img/editorial/field-community.jpg",arts:"img/editorial/field-arts.jpg",startup:"img/editorial/field-startup.jpg",sports:"img/editorial/field-sports.jpg"};
   var CAT_LABELS={nature:"自然・体験",science:"探究・科学",community:"居場所・交流",arts:"文化・芸術",startup:"起業・キャリア",sports:"スポーツ"};
   var CAT_EMOJIS={nature:"🌲",science:"🔭",community:"🏡",arts:"🎨",startup:"🚀",sports:"⚽"};
   var CAT_FIELD_MAP={
@@ -49,6 +49,9 @@
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
   function getPhotoUrl(cv){return CAT_PHOTO[cv.catKey]||CAT_PHOTO.community;}
+  function hasOfficialPhoto(r){return !!(r.image&&r.imageSourceUrl);}
+  function photoAlt(r,cv){return hasOfficialPhoto(r)?r.name+"の公式サイト掲載画像":(CAT_LABELS[cv.catKey]||"活動")+"のイメージ写真";}
+  function photoCredit(r){return hasOfficialPhoto(r)?"公式サイト掲載":"イメージ写真";}
   function mapUrl(r){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.address||r.name)+" "+r.name);}
   function markerIcon(cv){
     var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
@@ -65,8 +68,13 @@
     c.dataset.cat=cv.catKey;
     var photoWrap=el("div","card-photo");
     var pImg=document.createElement("img");
-    pImg.src=r.image||getPhotoUrl(cv); pImg.alt=r.name+"の活動イメージ"; pImg.loading="lazy";
+    var fallbackPhoto=getPhotoUrl(cv);
+    pImg.src=r.image||fallbackPhoto; pImg.alt=photoAlt(r,cv); pImg.loading="lazy"; pImg.decoding="async"; pImg.referrerPolicy="no-referrer";
     pImg.onerror=function(){
+      if(!this.dataset.fallback&&this.src.indexOf(fallbackPhoto)===-1){
+        this.dataset.fallback="1"; this.src=fallbackPhoto; this.alt=photoAlt({},cv); this.removeAttribute("referrerpolicy");
+        credit.textContent="イメージ写真"; credit.className="photo-credit is-image"; return;
+      }
       var fb=el("div","card-cover cv-"+cv.hue); fb.innerHTML='<span class="cover-emoji">'+cv.emoji+'</span>';
       var top=el("div","photo-pills");
       top.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
@@ -76,11 +84,13 @@
     };
     photoWrap.appendChild(pImg);
     photoWrap.appendChild(el("div","card-photo-overlay"));
+    var credit=el("span","photo-credit "+(hasOfficialPhoto(r)?"is-official":"is-image"),photoCredit(r));
+    photoWrap.appendChild(credit);
     var pills=el("div","photo-pills");
     pills.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
     pills.appendChild(el("span","pill st "+sm.cls,sm.label));
     photoWrap.appendChild(pills);
-    if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
+    if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.decoding="async";lg.referrerPolicy="no-referrer";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
     c.appendChild(photoWrap);
     var body=el("div","card-body");
     var place=el("div","place"); place.innerHTML=SVG_PIN;
@@ -107,7 +117,7 @@
   window.YS={
     DATA:DATA, BYID:BYID, REGION_ORDER:REGION_ORDER, CATS:CATS, STATUS_META:STATUS_META, DEFAULT_STATUS:DEFAULT_STATUS,
     FIELD_STYLE:FIELD_STYLE, CAT_KEYS:CAT_KEYS, CAT_IMGS:CAT_IMGS, CAT_LABELS:CAT_LABELS, CAT_EMOJIS:CAT_EMOJIS, CAT_FIELD_MAP:CAT_FIELD_MAP,
-    esc:esc, el:el, coverOf:coverOf, getPhotoUrl:getPhotoUrl, mapUrl:mapUrl, markerIcon:markerIcon, card:card,
+    esc:esc, el:el, coverOf:coverOf, getPhotoUrl:getPhotoUrl, hasOfficialPhoto:hasOfficialPhoto, photoAlt:photoAlt, photoCredit:photoCredit, mapUrl:mapUrl, markerIcon:markerIcon, card:card,
     SVG_EXT:SVG_EXT, SVG_MAP:SVG_MAP, SVG_PIN:SVG_PIN
   };
 })();

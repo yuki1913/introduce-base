@@ -64,13 +64,15 @@
   var cv=Y.coverOf(r);
   var place=[r.region,r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
   var heroSrc=r.image||Y.getPhotoUrl(cv);
-  var hero='<img src="'+esc(heroSrc)+'" alt="'+esc(r.name)+'の活動イメージ" fetchpriority="high" onerror="this.style.display=\'none\'">';
-  var h='<div class="spot-hero">'+hero+'<div class="spot-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
+  var hero='<img id="spotPhoto" src="'+esc(heroSrc)+'" alt="'+esc(Y.photoAlt(r,cv))+'" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">';
+  var h='<div class="spot-hero">'+hero+'<div class="spot-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span><span class="pill">'+esc(sm.label)+'</span></div><span id="spotPhotoCredit" class="photo-credit '+(Y.hasOfficialPhoto(r)?'is-official':'is-image')+'">'+Y.photoCredit(r)+'</span></div>';
   h+='<div class="detail-body" style="padding:22px 0 0">';
   if(r.logo) h+='<img class="detail-logo" src="'+esc(r.logo)+'" alt="'+esc(r.name)+'のロゴ" onerror="this.remove()">';
   h+='<h2>'+esc(r.name)+'</h2>';
   h+='<div class="detail-place">'+Y.SVG_PIN+'<span>'+esc(place)+'</span></div>';
   h+='<p class="detail-intro">'+esc(r.intro)+'</p>';
+  if(Y.hasOfficialPhoto(r)) h+='<p class="photo-source-note" id="spotPhotoSource">写真候補：<a href="'+esc(r.imageSourceUrl)+'" target="_blank" rel="noopener">団体公式サイト</a><span>公開前に利用条件を確認してください</span></p>';
+  else h+='<p class="photo-source-note" id="spotPhotoSource">写真：活動分野を表す生成イメージ</p>';
   if(r.status==="条件付き掲載") h+='<div class="detail-note">利用に条件がある場合があります。参加前に公式サイトでご確認ください。</div>';
   else if(r.status==="掲載保留"||r.status==="参考情報") h+='<div class="detail-note">情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。</div>';
   if(r.fieldTags&&r.fieldTags.length) h+='<div class="detail-sec"><h3>やってみたいこと</h3><div class="detail-tags">'+r.fieldTags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('')+'</div></div>';
@@ -90,14 +92,24 @@
   if(rel.length) h+='<div class="detail-related"><h3>'+esc(r.region)+'のほかの拠点</h3><div class="grid" id="relGrid"></div></div>';
   box.innerHTML=h;
 
+  var spotPhoto=document.getElementById("spotPhoto");
+  spotPhoto.onerror=function(){
+    var fallback=Y.getPhotoUrl(cv);
+    if(!this.dataset.fallback&&this.src.indexOf(fallback)===-1){
+      this.dataset.fallback="1"; this.src=fallback; this.alt=Y.photoAlt({},cv); this.removeAttribute("referrerpolicy");
+      var badge=document.getElementById("spotPhotoCredit"); badge.textContent="イメージ写真"; badge.className="photo-credit is-image";
+      document.getElementById("spotPhotoSource").textContent="写真：活動分野を表す生成イメージ";
+    }else this.style.display="none";
+  };
+
   if(rel.length){ var rgd=document.getElementById("relGrid"); rel.forEach(function(x){rgd.appendChild(Y.card(x));}); }
 
-  if(r.lat!=null){
+  if(r.lat!=null&&window.L){
     var m=L.map("detailMap",{scrollWheelZoom:false,attributionControl:false}).setView([r.lat,r.lng],14);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd"}).addTo(m);
     L.marker([r.lat,r.lng],{icon:Y.markerIcon(cv)}).addTo(m);
     setTimeout(function(){m.invalidateSize();},80);
-  }
+  }else if(r.lat!=null) document.getElementById("detailMap").innerHTML='<p class="map-empty">地図を読み込めませんでした。「地図で開く」からご確認ください。</p>';
   var sb=document.getElementById("shareBtn");
   if(sb) sb.onclick=function(){
     var url=location.href;

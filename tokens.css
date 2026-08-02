@@ -99,8 +99,9 @@
   --space-2xl: 4.5rem;
   --space-3xl: 7rem;
 
-  --measure: 68ch;
-  --shell:   1180px;
+  --measure:      68ch;
+  --measure-wide: 64rem;
+  --shell:        1280px;
   --gutter:  clamp(1rem, 4vw, 1.5rem);
 
   /* ---- line & radius (qulii sits around 5–8px, plus pills for chips) ---- */

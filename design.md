@@ -119,6 +119,12 @@ Headings are roman. `font-style: italic` is banned on every heading and label.
 buttons (qulii's register). Elevation is a **soft lift** (`--shadow-card` /
 `--shadow-lift`), not a hard offset.
 
+The shared page shell is 1280px. Long-form prose remains capped at 68ch, while
+photography, result grids, document components and form layouts may use the
+available shell width. Organization detail pages use the 64rem wide measure.
+This separation keeps reading lines comfortable without leaving useful desktop
+space empty.
+
 ## Motion
 
 - Easings `--ease-out` / `--ease-in` / `--ease-in-out`; never the browser default.
@@ -140,17 +146,36 @@ Header (brand · search · links), the section-head device, the band rhythm, the
 duo accent, the category colour system, the status signal system, the colophon
 footer.
 
+## Photography policy
+
+- Organization-specific photography is discovered only from each record's
+  official URL or its listed public information-source URL. Every adopted
+  candidate carries `imageSourceUrl`, `imageKind`, `imageCheckedAt`, and the
+  editorial state `公開前に利用条件確認`; the machine-readable audit trail is
+  `image-sources.json`.
+- Cards label official candidates **「公式サイト掲載」**. Spot/detail views
+  link back to the source page. External images use `referrerpolicy=no-referrer`
+  and fall back to a local field image when loading fails.
+- If no suitable official candidate is found, use one of six locally generated
+  documentary-style field images and label it **「イメージ写真」**. Never
+  generate a photograph and imply that it depicts a particular organization.
+- The four Long Document pages and the home hero may use locally generated
+  editorial images. They must include literal, visible image captions and
+  truthful alt text describing them as imagery.
+- Local generated assets are JPEG, 3:2, 1536×1024, quality 84. A restrained
+  saturation/contrast grade in `styles.css` integrates them with the existing
+  warm public-media palette.
+
 ## Known deviations
 
 - **Emoji remain in `shared.js` for map pins** (`markerIcon`) and the 34-entry
   `FIELD_STYLE` map. Hallmark gate 30 bans emoji-as-icon; replacing them needs a
   34-icon SVG set plus a data rewrite, which is out of scope for a visual
   redesign. All *decorative* emoji were removed from rendered copy.
-- **The site's 7 photographs are AI-generated.** `img/hero.png` had generator
-  prompt text baked into it ("Canon EOS R5 / 24mm f/4 …"); `img/hero-photo.png`
-  is a crop of the photographic region with that text removed. The original file
-  is untouched. Replacing these with real photography is the highest-value
-  remaining improvement and is not something a CSS change can fix.
+- **Legacy generated PNGs remain in `img/` but are no longer referenced.** They
+  are retained to avoid destructive asset deletion. Current UI surfaces use
+  sourced official-site candidates where a plausible photo was found, and
+  clearly labelled generated editorial imagery everywhere else.
 
 ## Exports
 

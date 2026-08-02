@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-08-02",
+    "scope": "app layout",
+    "verb": "refine",
+    "genre": "editorial-adjacent consumer directory",
+    "macrostructure": "Ecosystem Index / Portfolio Grid / Long Document (preserved)",
+    "theme": "studied-DNA",
+    "enrichment": "existing photography preserved",
+    "brief": "全体シェルを1280pxへ拡張し、本文の可読幅を保ちながら問い合わせ・写真・カードの横幅を活用"
+  },
+  {
     "date": "2026-08-01",
     "scope": "app",
     "verb": "study -> redesign",
@@ -12,5 +22,19 @@
     "fonts": "Noto Sans JP + Bricolage Grotesque",
     "design_system": "design.md",
     "brief": "いばしょ・きっかけ MAP — 中高生向け全国活動拠点ディレクトリ、全7ページ"
+  },
+  {
+    "date": "2026-08-02",
+    "scope": "app enrichment",
+    "verb": "enrich",
+    "genre": "editorial-adjacent consumer directory",
+    "macrostructure": "Ecosystem Index / Portfolio Grid / Long Document (preserved)",
+    "theme": "studied-DNA",
+    "enrichment": "E8 official-site photography + labelled Tier-C editorial imagery",
+    "official_image_candidates": 294,
+    "generated_category_fallbacks": 163,
+    "generated_editorial_assets": 11,
+    "provenance_ledger": "image-sources.json",
+    "slop_test": "pass for changed surfaces; legacy emoji map-pin deviation retained from locked system"
   }
 ]

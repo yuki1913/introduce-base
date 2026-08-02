@@ -13,6 +13,7 @@ build.py — スプレッドシート(xlsx)から data.js / data.json を再生�
   - 既存 data.json の「住所→緯度経度」をキャッシュとして再利用するので、
     住所が変わっていない拠点は再ジオコーディングしません（速い・手動補正も保持）。
   - 写真URL / ロゴURL 列があれば image / logo として取り込みます。
+  - 写真URLが空の場合は image-sources.json の公式サイト調査結果を引き継ぎます。
 """
 import json, re, sys, glob, os, time, urllib.parse, urllib.request
 import openpyxl
@@ -114,6 +115,25 @@ def main():
                 'image':g(row,'写真URL'),
                 'logo':g(row,'ロゴURL'),
             })
+
+    # 公式サイト画像の出典台帳をマージ。スプレッドシートの明示指定を優先する。
+    ledger_path=os.path.join(HERE,'image-sources.json')
+    if os.path.exists(ledger_path):
+        try:
+            with open(ledger_path,encoding='utf-8') as f:
+                ledger=json.load(f)
+            image_sources={x.get('id'):x for x in ledger.get('records',[]) if x.get('id') and x.get('image')}
+            for r in recs:
+                src=image_sources.get(r['id'])
+                if not r['image'] and src:
+                    r['image']=src['image']
+                    r['imageSource']=src.get('imageSource','団体公式サイト')
+                    r['imageSourceUrl']=src.get('imageSourceUrl','')
+                    r['imageKind']=src.get('imageKind','official-site-image')
+                    r['imageReview']=src.get('imageReview','公開前に利用条件確認')
+                    r['imageCheckedAt']=src.get('checkedAt','')
+        except (OSError, ValueError, TypeError) as e:
+            print('注意: image-sources.json を読み込めませんでした:', e)
 
     # ジオコーディング（キャッシュ優先）
     new_geo=0
