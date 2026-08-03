@@ -1848,12 +1848,9 @@
   "logo": "",
   "lat": 39.442375,
   "lng": 142.012527,
-  "image": "https://maps.google.com/maps/api/staticmap?center=39.4029188,141.9494603&zoom=15&size=660x500&markers=39.4029188,141.9494603&sensor=false&format=gif&region=jp&key=AIzaSyBYDaG9yCUKDceXMOETtuTdveaJDjdHYZg",
-  "imageSource": "団体公式サイト",
-  "imageSourceUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html",
-  "imageKind": "official-page-image",
-  "imageReview": "公開前に利用条件確認",
-  "imageCheckedAt": "2026-08-02"
+  "image": "",
+  "imageSource": "",
+  "imageSourceUrl": ""
  },
  {
   "id": "TH-014",

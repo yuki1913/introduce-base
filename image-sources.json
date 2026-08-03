@@ -3,8 +3,8 @@
   "policy": "公式サイトの代表画像のみを候補化。転載可否は自動判定せず、公開前確認が必要。候補がない団体は分野別の生成イメージ写真を使用する。",
   "stats": {
     "total": 457,
-    "officialImageFound": 294,
-    "generatedCategoryFallback": 163
+    "officialImageFound": 293,
+    "generatedCategoryFallback": 164
   },
   "records": [
     {
@@ -508,17 +508,15 @@
     {
       "id": "TH-013",
       "name": "岩手県立陸中海岸青少年の家",
-      "image": "https://maps.google.com/maps/api/staticmap?center=39.4029188,141.9494603&zoom=15&size=660x500&markers=39.4029188,141.9494603&sensor=false&format=gif&region=jp&key=AIzaSyBYDaG9yCUKDceXMOETtuTdveaJDjdHYZg",
-      "imageSource": "団体公式サイト",
-      "imageSourceUrl": "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html",
-      "imageKind": "official-page-image",
-      "imageReview": "公開前に利用条件確認",
-      "status": "official-site-image-found",
+      "imageSource": "",
+      "imageSourceUrl": "",
+      "status": "fallback-generated-category",
       "checkedAt": "2026-08-02",
       "checkedPages": [
         "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html",
         "https://www.pref.iwate.jp/shisetsu/gakushuu/1002052.html"
-      ]
+      ],
+      "note": "公式ページ埋め込みの Google Static Maps 画像を検出したため不採用。URLに第三者(岩手県)のAPIキーが含まれ、かつ地図は施設の写真ではない。2026-08-03 除去。"
     },
     {
       "id": "TH-014",

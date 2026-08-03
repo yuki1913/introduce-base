@@ -31,6 +31,28 @@ def find_xlsx():
     xs.sort(key=os.path.getmtime, reverse=True)
     return xs[0]
 
+# 公式サイトから拾った画像URLのうち、採用してはいけないもの。
+# 実例: 岩手県の施設ページに埋め込まれた Google Static Maps の <img> をそのまま
+# 取り込んだ結果、岩手県のAPIキーを当リポジトリで再公開してしまった(GitHub
+# secret scanning が検知)。他人の資格情報を載せない・地図は写真ではない。
+CRED_PARAM=re.compile(r'[?&](?:key|api[_-]?key|token|access[_-]?token|signature|sig|secret|password|auth)=', re.I)
+MAP_TILE  =re.compile(r'(?:/maps/api/|staticmap|/vt/|tile\.openstreetmap|api\.mapbox\.com)', re.I)
+
+def image_url_ok(url, rid=''):
+    """台帳の画像URLを採用してよいか。ダメなら理由を出して False。"""
+    u=str(url or '')
+    if not u: return False
+    if CRED_PARAM.search(u):
+        print(f'  除外 {rid}: URLに他者のAPIキー/トークンが含まれるため不採用')
+        return False
+    if MAP_TILE.search(u):
+        print(f'  除外 {rid}: 地図タイル画像は施設の写真ではないため不採用')
+        return False
+    if not u.startswith('https://'):
+        print(f'  除外 {rid}: https 以外のURLは不採用')
+        return False
+    return True
+
 def splittags(s):
     if not s: return []
     return [p.strip() for p in re.split(r'[，、,／/]+', str(s)) if p and p.strip()]
@@ -122,7 +144,8 @@ def main():
         try:
             with open(ledger_path,encoding='utf-8') as f:
                 ledger=json.load(f)
-            image_sources={x.get('id'):x for x in ledger.get('records',[]) if x.get('id') and x.get('image')}
+            image_sources={x.get('id'):x for x in ledger.get('records',[])
+                           if x.get('id') and x.get('image') and image_url_ok(x['image'], x.get('id'))}
             for r in recs:
                 src=image_sources.get(r['id'])
                 if not r['image'] and src:
