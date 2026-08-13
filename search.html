@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20260813e">
 </head>
 <body>
 
@@ -213,6 +213,24 @@
     "スポーツ":["⚽","teal","sports"]
   };
   var CAT_FALLBACK={"支援団体":["🤝","pink","community"],"プログラム":["✨","orange","arts"],"活動拠点":["📍","green","nature"],"使用できる施設":["🏢","blue","science"]};
+  function ctypeRow(r){
+    var have=r.cats||[];
+    var box=document.createDocumentFragment();
+    box.appendChild(el("span","ctypes-label","あてはまるもの"));
+    var wrap=el("div","ctypes");
+    wrap.setAttribute("role","list");
+    wrap.setAttribute("aria-label","あてはまるもの");
+    // カードでは常に CATS の4枠を出し、該当ぶんにチェックを入れる
+    CATS.forEach(function(t){
+      var on=have.indexOf(t)>=0;
+      var sp=el("span","ctype"+(on?" is-on":""),t);
+      sp.setAttribute("role","listitem");
+      sp.setAttribute("aria-label",t+"："+(on?"対象":"対象外"));
+      wrap.appendChild(sp);
+    });
+    box.appendChild(wrap);
+    return box;
+  }
 
   // Category images
   var CAT_IMGS={
@@ -499,6 +517,9 @@
     place.innerHTML=SVG_PIN;
     var parts=[r.pref,r.city].filter(function(x,i,a){return x && a.indexOf(x)===i;});
     parts.forEach(function(p,i){if(i)place.appendChild(el("span","sep","·"));place.appendChild(el("span",null,p));});
+    var cc=el("span","cat-chip",CAT_LABELS[cv.catKey]||"活動");
+    cc.setAttribute("aria-label","カテゴリー："+(CAT_LABELS[cv.catKey]||"活動"));
+    place.appendChild(cc);
     body.appendChild(place);
 
     body.appendChild(el("h3",null,r.name));
@@ -511,6 +532,7 @@
       });
       body.appendChild(tl);
     }
+    body.appendChild(ctypeRow(r));
 
     var meta=el("div","meta");
     if(r.targets && r.targets.length){
@@ -551,16 +573,21 @@
 
   // ===== MAP =====
   var HUE_COLOR={green:"#D95C20",blue:"#E8960A",orange:"#E86A45",purple:"#C04020",pink:"#E03030",teal:"#CC6820"};
-  var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false;
+  var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false, tiles=null;
+  var MAP_ZOOM_PICK=12;   // 地方えらび：タイルなしのシルエットなので、寄っても情報が増えない
+  var MAP_ZOOM_DETAIL=17; // 地方選択後：タイルが出るので街区まで寄れる
   var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
   var JAPAN_MAXBOUNDS=[[22.5,120.5],[47.2,151.5]];    // これ以上は外に出られない
 
   // ---- 都道府県境界（マスク用）----
   var GEO=window.JAPANGEO||{features:[]};
-  var GEO_BY_REGION={};
-  GEO.features.forEach(function(f){(GEO_BY_REGION[f.properties.region]=GEO_BY_REGION[f.properties.region]||[]).push(f);});
+  var GEO_BY_REGION={}, GEO_BY_PREF={};
+  GEO.features.forEach(function(f){
+    (GEO_BY_REGION[f.properties.region]=GEO_BY_REGION[f.properties.region]||[]).push(f);
+    GEO_BY_PREF[f.properties.nam_ja]=[f];
+  });
   var WORLD_RING=[[90,-180],[90,180],[-90,180],[-90,-180]];
-  var MASK_FILL="#e6ebe4";
+  var MASK_FILL="#EFE7DE";  // 地方の外を覆うベール。暖色系のサーフェスに合わせた灰
   function holesFor(feats){
     var holes=[];
     feats.forEach(function(f){f.geometry.coordinates.forEach(function(poly){
@@ -568,12 +595,29 @@
     });});
     return holes;
   }
-  // 指定範囲(全国 or 地方)の陸地を白く塗り、県境を描く（海は#mapの背景グラデ）。境界を返す
-  function applyMask(feats){
+  function clearMaskLayers(){
     if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;}
     if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;}
+  }
+  var tok=function(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();};
+  // 指定範囲(全国 or 地方)の陸地を白く塗り、県境を描く（海は#mapの背景グラデ）。境界を返す
+  function applyMask(feats){
+    clearMaskLayers();
     maskLayer=L.geoJSON(feats,{pane:"land",style:{fillColor:"#ffffff",fillOpacity:1,stroke:false},interactive:false}).addTo(map);
     outlineLayer=L.geoJSON(feats,{pane:"border",style:{color:"#bcd6c7",weight:1,opacity:1,fill:false},interactive:false}).addTo(map);
+    return outlineLayer.getBounds();
+  }
+  // 地方を選んだあと：詳細タイルを出し、選んだ地方の「外側だけ」をベールで覆う。
+  // 外周に世界全体のリング、穴として地方の県境を渡す。Leaflet の Path は既定で
+  // fill-rule:evenodd なので、GeoJSON の巻き方向に関係なく穴が抜ける。
+  function applyFocus(feats){
+    clearMaskLayers();
+    maskLayer=L.polygon([WORLD_RING].concat(holesFor(feats)),{
+      pane:"dim",stroke:false,fillColor:MASK_FILL,fillOpacity:.86,interactive:false
+    }).addTo(map);
+    outlineLayer=L.geoJSON(feats,{pane:"border",
+      style:{color:tok("--color-accent-text")||"#BD3700",weight:2,opacity:.85,fill:false},interactive:false
+    }).addTo(map);
     return outlineLayer.getBounds();
   }
   // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
@@ -622,10 +666,17 @@
     return h;
   }
   function initMap(){
-    map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxZoom:12,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
+    map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxZoom:MAP_ZOOM_PICK,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
     map.createPane("land"); map.getPane("land").style.zIndex=250;      // 陸地（影つき）
+    map.createPane("dim"); map.getPane("dim").style.zIndex=260;        // 地方の外を覆うベール
+    map.getPane("dim").style.pointerEvents="none";
     map.createPane("border"); map.getPane("border").style.zIndex=350;  // 県境ライン
     map.attributionControl.setPrefix("").addAttribution('境界: <a href="https://github.com/dataofjapan/land" target="_blank" rel="noopener">dataofjapan/land</a>');
+    // 地方を選んだあとだけ addLayer する。地方えらびの段階では白いシルエットのままにしたい。
+    tiles=L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{
+      maxZoom:19,subdomains:"abcd",
+      attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
+    });
     cluster=L.markerClusterGroup({maxClusterRadius:48,showCoverageOnHover:false,spiderfyOnMaxZoom:true});
     regionLayer=L.layerGroup();
     map.addLayer(cluster); map.addLayer(regionLayer);
@@ -644,6 +695,8 @@
 
     // ---- STEP 1: 地方えらび（地方・都道府県が未選択のとき）＝ 日本の陸地だけ表示 ----
     if(!state.region && !state.pref){
+      if(map.hasLayer(tiles)) map.removeLayer(tiles);
+      map.setMaxZoom(MAP_ZOOM_PICK);
       applyMask(GEO.features);
       map.setMaxBounds(JAPAN_MAXBOUNDS);
       var byReg={};
@@ -665,11 +718,16 @@
     }
 
     // ---- STEP 2: 選んだ地方だけ表示＋各拠点 ----
-    var maskRegion=state.region||PREF_TO_REGION[state.pref]||"";
-    var feats=GEO_BY_REGION[maskRegion]||[];
+    // 都道府県まで絞られているならその県だけを、地方どまりなら地方全体を焦点にする。
+    // ベールが「いま見ている範囲」を示すので、見出しの地名と一致させる。
+    var feats=(state.pref&&GEO_BY_PREF[state.pref])
+      || GEO_BY_REGION[state.region||PREF_TO_REGION[state.pref]||""] || [];
     var rbounds=null;
-    if(feats.length){ rbounds=applyMask(feats); map.setMaxBounds(rbounds.pad(0.35)); }
-    else { if(maskLayer){map.removeLayer(maskLayer);maskLayer=null;} if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;} map.setMaxBounds(JAPAN_MAXBOUNDS); }
+    // 詳細タイルに切り替え、街区まで寄れるようにする
+    if(!map.hasLayer(tiles)) map.addLayer(tiles);
+    map.setMaxZoom(MAP_ZOOM_DETAIL);
+    if(feats.length){ rbounds=applyFocus(feats); map.setMaxBounds(rbounds.pad(0.35)); }
+    else { clearMaskLayers(); map.setMaxBounds(JAPAN_MAXBOUNDS); }
 
     var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
     pts.forEach(function(r){
@@ -679,13 +737,15 @@
     var where=state.pref||state.region||"";
     hint.innerHTML='<span class="map-back" id="mapBack">← 地方を選びなおす</span>　'
       +'<b>'+where+'</b> の地図：<b>'+pts.length+'</b> 拠点'
-      +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細';
+      +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細・地図は拡大できます';
     var back=document.getElementById("mapBack");
     if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); render(); };
 
     map.invalidateSize();
-    if(rbounds){ map.fitBounds(rbounds,{padding:[24,24]}); }
-    else if(pts.length){ map.fitBounds(cluster.getBounds(),{padding:[45,45],maxZoom:14}); }
+    // 拠点のある範囲に寄せる。地方の外周に合わせると、鹿児島の南西諸島のように
+    // 遠い離島を含む地方で引きすぎた画になり、詳細地図の意味がなくなる。
+    if(pts.length){ map.fitBounds(cluster.getBounds(),{padding:[50,50],maxZoom:13}); }
+    else if(rbounds){ map.fitBounds(rbounds,{padding:[24,24]}); }
     else { map.fitBounds(JAPAN_BOUNDS,{padding:[8,8]}); }
   }
 

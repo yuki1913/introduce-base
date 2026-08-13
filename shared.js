@@ -23,6 +23,24 @@
     "スポーツ":["⚽","teal","sports"]
   };
   var CAT_FALLBACK={"支援団体":["🤝","pink","community"],"プログラム":["✨","orange","arts"],"活動拠点":["📍","green","nature"],"使用できる施設":["🏢","blue","science"]};
+  function ctypeRow(r){
+    var have=r.cats||[];
+    var box=document.createDocumentFragment();
+    box.appendChild(el("span","ctypes-label","あてはまるもの"));
+    var wrap=el("div","ctypes");
+    wrap.setAttribute("role","list");
+    wrap.setAttribute("aria-label","あてはまるもの");
+    // カードでは常に CATS の4枠を出し、該当ぶんにチェックを入れる
+    CATS.forEach(function(t){
+      var on=have.indexOf(t)>=0;
+      var s=el("span","ctype"+(on?" is-on":""),t);
+      s.setAttribute("role","listitem");
+      s.setAttribute("aria-label",t+"："+(on?"対象":"対象外"));
+      wrap.appendChild(s);
+    });
+    box.appendChild(wrap);
+    return box;
+  }
   var CAT_KEYS=["nature","science","community","arts","startup","sports"];
   var CAT_IMGS={nature:"img/editorial/field-nature.jpg",science:"img/editorial/field-science.jpg",community:"img/editorial/field-community.jpg",arts:"img/editorial/field-arts.jpg",startup:"img/editorial/field-startup.jpg",sports:"img/editorial/field-sports.jpg"};
   var CAT_LABELS={nature:"自然・体験",science:"探究・科学",community:"居場所・交流",arts:"文化・芸術",startup:"起業・キャリア",sports:"スポーツ"};
@@ -95,10 +113,14 @@
     var body=el("div","card-body");
     var place=el("div","place"); place.innerHTML=SVG_PIN;
     [r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).forEach(function(p,i){if(i)place.appendChild(el("span","sep","·"));place.appendChild(el("span",null,p));});
+    var cc=el("span","cat-chip",CAT_LABELS[cv.catKey]||"活動");
+    cc.setAttribute("aria-label","カテゴリー："+(CAT_LABELS[cv.catKey]||"活動"));
+    place.appendChild(cc);
     body.appendChild(place);
     body.appendChild(el("h3",null,r.name));
     body.appendChild(el("p","intro",r.intro));
     if(r.fieldTags&&r.fieldTags.length){var tl=el("div","tagline");r.fieldTags.slice(0,4).forEach(function(t){tl.appendChild(el("span","tag",t));});body.appendChild(tl);}
+    body.appendChild(ctypeRow(r));
     var meta=el("div","meta");
     if(r.targets&&r.targets.length){var m=el("div","mrow");m.appendChild(el("span","mk","対象"));m.appendChild(el("span",null,r.targets.slice(0,3).join("・")));meta.appendChild(m);}
     if(r.station){var m2=el("div","mrow");m2.appendChild(el("span","mk","アクセス"));m2.appendChild(el("span",null,r.station));meta.appendChild(m2);}
