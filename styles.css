@@ -15,7 +15,7 @@
  * slop: pass for changed surfaces; legacy emoji map pins remain a documented deviation
  */
 
-@import url("tokens.css?v=20260813e");
+@import url("tokens.css?v=20260813k");
 
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{overflow-x:clip}
@@ -539,6 +539,63 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 .region-tile:hover{box-shadow:var(--shadow-lift);color:var(--color-accent-text)}
 .region-tile .rc{font-family:var(--font-en);font-variant-numeric:tabular-nums;font-size:var(--text-md);font-weight:800;color:var(--color-accent-text);flex:none}
 .home-picks .grid{margin-top:0}
+/* ========== 地方ごとのピックアップ ==========
+   全地方を横1本のレールに並べる。地方を選ばせず、スクロールで通して見せる。
+   縦に10地方積むとホームが約6,500pxになるため、横に流す構成を採っている。 */
+.rp-head{display:flex;align-items:flex-start;gap:var(--space-md);justify-content:space-between}
+.rp-head .home-lead{margin-bottom:var(--space-md)}
+.rp-nav-group{display:flex;gap:var(--space-2xs);flex:none}
+.rp-nav{
+  width:44px;height:44px;flex:none;border-radius:var(--radius-pill);
+  background:var(--color-paper);border:var(--rule-hair) solid var(--color-border-ctl);
+  color:var(--color-ink-2);display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:border-color var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out);
+}
+.rp-nav svg{width:1.125rem;height:1.125rem}
+.rp-nav:hover{border-color:var(--color-accent-text);color:var(--color-accent-text)}
+.rp-nav:disabled{opacity:.35;cursor:default}
+.rp-nav:disabled:hover{border-color:var(--color-border-ctl);color:var(--color-ink-2)}
+/* レール本体。tabindex="0" が付いているのでキーボードでも矢印キーでスクロールできる。 */
+.rp-rail{
+  display:flex;gap:var(--space-xl);overflow-x:auto;overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding-bottom:var(--space-2xs);
+}
+.rp-rail::-webkit-scrollbar{display:none}
+.rp-rail:focus-visible{outline:var(--rule-bold) solid var(--color-focus);outline-offset:4px}
+/* scroll-snap は使わない。レール幅の都合で最終グループを左端に揃えられず、
+   矢印で送っても手前のグループにスナップで引き戻されるため。矢印側で正確に
+   位置を決めているので、スクロール自体は自由でよい。 */
+.rp-group{flex:none}
+.rp-group-head{
+  display:flex;align-items:baseline;gap:var(--space-sm);
+  margin-bottom:var(--space-2xs);padding-bottom:var(--space-2xs);
+  border-bottom:var(--rule-bold) solid var(--color-rule-strong);
+}
+.rp-group-name{font-size:var(--text-lg);font-weight:900;color:var(--color-ink);white-space:nowrap}
+.rp-group-n{
+  font-family:var(--font-en);font-variant-numeric:tabular-nums;font-weight:700;
+  font-size:var(--text-sm);color:var(--color-accent-text);margin-left:var(--space-2xs);
+}
+/* 既定では地方名のすぐ隣。右寄せにするのはグループ幅（カード3枚+隙間≒61.5rem）が
+   レールに収まる画面のみ。そうでない画面で右寄せにすると画面外に出る。 */
+.rp-group-more{
+  margin-left:0;flex:none;font-size:var(--text-sm);font-weight:700;white-space:nowrap;
+  color:var(--color-accent-text);text-decoration:underline;text-underline-offset:3px;
+}
+/* 必要幅 = カード3枚(58.5rem) + 隙間2つ(3rem) + ガター(3rem) = 64.5rem。
+   スクロールバー等の誤差を見て 67rem から右寄せにする。 */
+@media(min-width:67rem){ .rp-group-more{margin-left:auto} }
+.rp-group-more:hover{color:var(--color-ink)}
+.rp-group-cards{display:flex;gap:var(--space-md)}
+/* レール内ではグリッドが効かないので、カード幅を明示する。 */
+.rp-group-cards > .card{width:clamp(16rem,74vw,19.5rem);flex:none}
+@media(max-width:47.99rem){
+  .rp-rail{gap:var(--space-lg)}
+  .rp-nav-group{display:none}          /* スマホは指でなぞれるので矢印は不要 */
+  .rp-head{display:block}
+  .rp-group-head{gap:var(--space-2xs)}
+}
 .home-foot-cta{max-width:var(--shell);margin:0 auto;padding:0 var(--gutter)}
 .home-foot-cta a{
   display:flex;align-items:center;justify-content:center;gap:var(--space-2xs);

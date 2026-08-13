@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260813e">
+<link rel="stylesheet" href="styles.css?v=20260813k">
 </head>
 <body>
 
@@ -80,6 +80,24 @@
   </section>
 </div>
 
+<!-- 地方ごとのピックアップ -->
+<div class="band band-tint-warm">
+  <section class="home-section home-region-picks">
+    <h2 class="section-head">
+      <span class="sh-ja">地方ごとのピックアップ</span>
+      <span class="sh-en" aria-hidden="true">AREA PICKS</span>
+    </h2>
+    <div class="rp-head">
+      <p class="home-lead">横にスクロールすると、ほかの地方も見られます。地方ごとに3件ずつ。</p>
+      <div class="rp-nav-group">
+        <button type="button" class="rp-nav" id="rpPrev" aria-label="前の地方へスクロール"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="rp-nav" id="rpNext" aria-label="次の地方へスクロール"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="rp-rail" id="rpRail" tabindex="0" role="group" aria-label="地方ごとのピックアップ。横にスクロールできます"></div>
+  </section>
+</div>
+
 <!-- ピックアップ -->
 <div class="band band-paper-2">
   <section class="home-section home-picks">
@@ -137,6 +155,74 @@
     var a=document.createElement("a"); a.className="region-tile"; a.href="search.html?region="+encodeURIComponent(g);
     a.innerHTML='<span>'+g+'</span><span class="rc">'+n+'</span>'; rg.appendChild(a);
   });
+  // 地方ごとのピックアップ（横1本のレールに、地方ごと3件ずつ並べる）
+  var rpRail=document.getElementById("rpRail");
+  var byRegion={};
+  D.forEach(function(r){ (byRegion[r.region]=byRegion[r.region]||[]).push(r); });
+
+  // 掲載推奨を優先し、分野が偏らないよう catKey を散らして拾う。
+  // 分野が3種そろわない地方は同分野で埋める。
+  function picksFor(g){
+    var list=byRegion[g]||[];
+    var rec=list.filter(function(r){ return r.status==="掲載推奨"; });
+    var pool=rec.length?rec:list;
+    var out=[], seen={};
+    pool.forEach(function(r){
+      if(out.length>=3) return;
+      var k=Y.coverOf(r).catKey;
+      if(seen[k]) return;
+      seen[k]=1; out.push(r);
+    });
+    pool.forEach(function(r){ if(out.length<3 && out.indexOf(r)<0) out.push(r); });
+    return out.slice(0,3);
+  }
+
+  Y.REGION_ORDER.forEach(function(g){
+    var list=byRegion[g]||[]; if(!list.length) return;
+    var grp=document.createElement("div"); grp.className="rp-group";
+    var hd=document.createElement("div"); hd.className="rp-group-head";
+    var h3=document.createElement("h3"); h3.className="rp-group-name"; h3.textContent=g;
+    var n=document.createElement("span"); n.className="rp-group-n"; n.textContent=list.length;
+    h3.appendChild(n);
+    var more=document.createElement("a"); more.className="rp-group-more";
+    more.href="search.html?region="+encodeURIComponent(g);
+    more.textContent="すべて見る →";
+    more.setAttribute("aria-label",g+"の拠点をすべて見る");
+    hd.appendChild(h3); hd.appendChild(more);
+    var cards=document.createElement("div"); cards.className="rp-group-cards";
+    picksFor(g).forEach(function(r){ cards.appendChild(Y.card(r)); });
+    grp.appendChild(hd); grp.appendChild(cards);
+    rpRail.appendChild(grp);
+  });
+
+  // 矢印は地方の切れ目にスナップさせる。PCのマウスだと横スクロールしにくいため。
+  var rpPrev=document.getElementById("rpPrev"), rpNext=document.getElementById("rpNext");
+  // offsetLeft はレールではなく position 付きの祖先が基準になるため、ずれた値だと
+  // scroll-snap(proximity) にスナップで引き戻される。レール自身の座標系で測る。
+  function groupOffsets(){
+    var base=rpRail.getBoundingClientRect().left - rpRail.scrollLeft;
+    return [].map.call(rpRail.children,function(el){
+      return Math.round(el.getBoundingClientRect().left - base);
+    });
+  }
+  function scrollToGroup(dir){
+    var offs=groupOffsets(), cur=rpRail.scrollLeft, target=null;
+    if(dir>0){ for(var i=0;i<offs.length;i++){ if(offs[i]>cur+8){ target=offs[i]; break; } } }
+    else { for(var j=offs.length-1;j>=0;j--){ if(offs[j]<cur-8){ target=offs[j]; break; } } }
+    if(target===null) target=dir>0?rpRail.scrollWidth:0;
+    rpRail.scrollTo({left:target,behavior:"smooth"});
+  }
+  rpPrev.onclick=function(){ scrollToGroup(-1); };
+  rpNext.onclick=function(){ scrollToGroup(1); };
+  function syncNav(){
+    var max=rpRail.scrollWidth-rpRail.clientWidth-1;
+    rpPrev.disabled = rpRail.scrollLeft<=0;
+    rpNext.disabled = rpRail.scrollLeft>=max;
+  }
+  rpRail.addEventListener("scroll",syncNav);
+  window.addEventListener("resize",syncNav);
+  syncNav();
+
   // ピックアップ（各カテゴリの掲載推奨から1件ずつ）
   var pick=document.getElementById("pickGrid"), used={}, picks=[];
   Y.CAT_KEYS.forEach(function(k){
