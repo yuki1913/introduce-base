@@ -67,7 +67,7 @@
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
   function getPhotoUrl(cv){return CAT_PHOTO[cv.catKey]||CAT_PHOTO.community;}
-  function hasOfficialPhoto(r){return !!(r.image&&r.imageSourceUrl);}
+  function hasOfficialPhoto(r){return !!(r.image&&(r.imageOfficial||r.imageSourceUrl));}
   function photoAlt(r,cv){return hasOfficialPhoto(r)?r.name+"の公式サイト掲載画像":(CAT_LABELS[cv.catKey]||"活動")+"のイメージ写真";}
   function photoCredit(r){return hasOfficialPhoto(r)?"公式サイト掲載":"イメージ写真";}
   function mapUrl(r){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.address||r.name)+" "+r.name);}

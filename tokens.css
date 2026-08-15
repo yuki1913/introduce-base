@@ -60,7 +60,7 @@
   --cat-nature:    oklch(50.0% 0.150 150);
   --cat-science:   oklch(52.0% 0.155 255);
   --cat-community: oklch(54.0% 0.155  10);
-  --cat-arts:      oklch(53.0% 0.155  55);
+  --cat-arts:      oklch(44.5% 0.115  78); /* ochre-brown: distinct from brand orange */
   --cat-startup:   oklch(53.5% 0.165 300);
   --cat-sports:    oklch(49.0% 0.125 195);
 

@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-08-15",
+    "scope": "app",
+    "verb": "review-driven refine",
+    "genre": "editorial-adjacent consumer directory",
+    "macrostructure": "Ecosystem Index / Portfolio Grid / Long Document (preserved)",
+    "theme": "studied-DNA",
+    "enrichment": "lazy SVG Japan map from existing boundary data",
+    "brief": "設計レビュー14項目をもとに、初期転送量、段階描画、詳細の根拠表示、SEO、地方導線、フッターを改善"
+  },
+  {
     "date": "2026-08-02",
     "scope": "app layout",
     "verb": "refine",

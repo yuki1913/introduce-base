@@ -96,7 +96,7 @@ Applied to the category strip (top bar + label), and to each card's top tab,
 location pin and hashtag tags. All clear 4.5:1 as text on all three surfaces.
 
 ```
---cat-nature oklch(50% 0.150 150)   --cat-arts    oklch(51.5% 0.155  55)
+--cat-nature oklch(50% 0.150 150)   --cat-arts    oklch(44.5% 0.115  78)
 --cat-science oklch(52% 0.155 255)  --cat-startup oklch(52.5% 0.165 300)
 --cat-community oklch(54% 0.155 10) --cat-sports  oklch(47.5% 0.125 195)
 ```

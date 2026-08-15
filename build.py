@@ -16,11 +16,29 @@ build.py — スプレッドシート(xlsx)から data.js / data.json を再生�
   - 写真URLが空の場合は image-sources.json の公式サイト調査結果を引き継ぎます。
 """
 import json, re, sys, glob, os, time, urllib.parse, urllib.request
+from datetime import date
 import openpyxl
 
 HERE=os.path.dirname(os.path.abspath(__file__))
 PREF={'HK-':'北海道','TH-':'東北','KT-':'関東','CH-':'中部','KN-':'近畿','CG-':'中国','SK-':'四国','KY-':'九州','OK-':'沖縄','ON-':'全国オンライン'}
 CATCOLS=['支援団体','プログラム','活動拠点','使用できる施設']
+DEFAULT_STATUS={'掲載推奨','条件付き掲載'}
+
+# 一覧・ホームでは詳細原稿や出典URLを送らない。詳細ページだけが
+# data-details/<ID>.json を読むため、トップと検索の初期転送量を抑えられる。
+LIST_FIELDS=(
+    'id','region','pref','city','name','cats','targets','intro','fieldTags',
+    'useTags','status','lat','lng','image'
+)
+CAT_FIELD_MAP={
+    'nature':['自然体験','キャンプ','宿泊研修','地域活動','農業体験','環境学習'],
+    'science':['探究','科学・研究','天文','自習','学校連携','大学連携'],
+    'community':['居場所','交流','相談','社会参画','ボランティア','国際交流','チームビルディング','若者支援'],
+    'arts':['文化・芸術','音楽','ものづくり','発表','イベント開催','自主企画'],
+    'startup':['起業','ビジネス','企業連携','キャリア教育','メンタリング','オープンイノベーション','ピッチ・発表'],
+    'sports':['スポーツ'],
+}
+CAT_KEYS=tuple(CAT_FIELD_MAP)
 
 def find_xlsx():
     if len(sys.argv)>1 and os.path.exists(sys.argv[1]):
@@ -85,7 +103,102 @@ def geocode(addr, pref, city):
         time.sleep(0.12)
     return None
 
+def list_record(r):
+    out={k:r.get(k) for k in LIST_FIELDS}
+    out['imageOfficial']=bool(r.get('image') and r.get('imageSourceUrl'))
+    return out
+
+def cover_key(r):
+    tags=set(r.get('fieldTags') or [])
+    for key in CAT_KEYS:
+        if tags.intersection(CAT_FIELD_MAP[key]):
+            return key
+    if r.get('region')=='全国オンライン':
+        return 'science'
+    fallback={'支援団体':'community','プログラム':'arts','活動拠点':'nature','使用できる施設':'science'}
+    for cat in r.get('cats') or []:
+        if cat in fallback:
+            return fallback[cat]
+    return 'nature'
+
+def home_records(recs):
+    """地方3件ずつ＋6分野1件ずつだけをトップ用に選ぶ。"""
+    visible=[r for r in recs if r.get('status') in DEFAULT_STATUS]
+    picked=[]
+    for region in PREF.values():
+        pool=[r for r in visible if r.get('region')==region]
+        recommended=[r for r in pool if r.get('status')=='掲載推奨']
+        pool=recommended or pool
+        chosen=[]; seen=set()
+        for r in pool:
+            key=cover_key(r)
+            if key not in seen:
+                chosen.append(r); seen.add(key)
+            if len(chosen)==3: break
+        for r in pool:
+            if len(chosen)==3: break
+            if r not in chosen: chosen.append(r)
+        picked.extend(chosen)
+    for key in CAT_KEYS:
+        match=next((r for r in visible if r.get('status')=='掲載推奨' and cover_key(r)==key),None)
+        if match: picked.append(match)
+    unique={}
+    for r in picked:
+        unique.setdefault(r['id'],r)
+    counts={region:sum(1 for r in visible if r.get('region')==region) for region in PREF.values()}
+    return list(unique.values()),counts
+
+def write_outputs(recs):
+    with open(os.path.join(HERE,'data.json'),'w',encoding='utf-8') as f:
+        json.dump(recs,f,ensure_ascii=False,indent=1)
+    with open(os.path.join(HERE,'data.js'),'w',encoding='utf-8') as f:
+        f.write('window.YSDATA = '); json.dump(recs,f,ensure_ascii=False,separators=(',',':')); f.write(';\n')
+
+    list_recs=[list_record(r) for r in recs]
+    with open(os.path.join(HERE,'data-list.js'),'w',encoding='utf-8') as f:
+        f.write('window.YSDATA = '); json.dump(list_recs,f,ensure_ascii=False,separators=(',',':')); f.write(';\n')
+
+    home_recs,counts=home_records(recs)
+    with open(os.path.join(HERE,'data-home.js'),'w',encoding='utf-8') as f:
+        f.write('window.YSDATA = '); json.dump([list_record(r) for r in home_recs],f,ensure_ascii=False,separators=(',',':')); f.write(';\n')
+        f.write('window.YSHOME_COUNTS = '); json.dump(counts,f,ensure_ascii=False,separators=(',',':')); f.write(';\n')
+
+    detail_dir=os.path.join(HERE,'data-details')
+    os.makedirs(detail_dir,exist_ok=True)
+    for r in recs:
+        with open(os.path.join(detail_dir,r['id']+'.json'),'w',encoding='utf-8') as f:
+            json.dump(r,f,ensure_ascii=False,separators=(',',':'))
+
+    updated=f'{date.today().year}年{date.today().month}月{date.today().day}日'
+    marker=re.compile(r'(<time\s+data-updated-at(?:\s+datetime="[^"]*")?>).*?(</time>)')
+    for path in glob.glob(os.path.join(HERE,'*.html')):
+        with open(path,encoding='utf-8') as f: html=f.read()
+        html=marker.sub(r'\1'+updated+r'\2',html)
+        with open(path,'w',encoding='utf-8') as f: f.write(html)
+
+    # 本番URLが分かる環境では、有効な絶対URLの sitemap も同時に作る。
+    # SITE_ORIGIN 未設定時に推測したドメインを書かないことを優先する。
+    origin=os.environ.get('SITE_ORIGIN','').strip().rstrip('/')
+    if re.match(r'^https://[^/]+',origin):
+        pages=['','search.html','guide.html','faq.html','teachers.html','contact.html']
+        urls=''.join(f'<url><loc>{origin}/{page}</loc></url>' for page in pages)
+        with open(os.path.join(HERE,'sitemap.xml'),'w',encoding='utf-8') as f:
+            f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls+'</urlset>\n')
+        with open(os.path.join(HERE,'robots.txt'),'w',encoding='utf-8') as f:
+            f.write(f'User-agent: *\nAllow: /\nSitemap: {origin}/sitemap.xml\n')
+    else:
+        print('注意: SITE_ORIGIN 未設定のため sitemap.xml は生成していません。')
+
+    return list_recs,home_recs
+
 def main():
+    if len(sys.argv)>1 and sys.argv[1]=='--from-json':
+        with open(os.path.join(HERE,'data.json'),encoding='utf-8') as f:
+            recs=json.load(f)
+        list_recs,home_recs=write_outputs(recs)
+        print('既存 data.json から派生データを更新しました。')
+        print('一覧:',len(list_recs),'件 ｜ ホーム:',len(home_recs),'件 ｜ 詳細:',len(recs),'件')
+        return
     xlsx=find_xlsx()
     print("読み込み:", os.path.basename(xlsx))
     wb=openpyxl.load_workbook(xlsx, read_only=True, data_only=True)
@@ -171,11 +284,8 @@ def main():
             if ll: cache[addr]=ll; new_geo+=1
             time.sleep(0.1)
 
-    # 出力
-    with open(dj,'w',encoding='utf-8') as f:
-        json.dump(recs,f,ensure_ascii=False,indent=1)
-    with open(os.path.join(HERE,'data.js'),'w',encoding='utf-8') as f:
-        f.write('window.YSDATA = '); json.dump(recs,f,ensure_ascii=False); f.write(';\n')
+    # 出力（フルデータ＋初期表示用の軽量データ＋ID別詳細）
+    write_outputs(recs)
 
     # サマリ
     from collections import Counter

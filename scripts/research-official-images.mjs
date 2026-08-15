@@ -69,7 +69,7 @@ function absoluteUrl(value, pageUrl) {
   }
 }
 
-const REJECT_IMAGE = /(?:logo|emblem|symbol|favicon|(?:^|[-_/])icon(?:[-_/\.\d]|$)|sprite|spacer|placeholder|loading|no[-_]?image|blank|pixel|qrcode|qr[-_]?code|qr(?:[-_.\d]|$)|button|arrow|tel(?:ephone)?[-_]?\d*|ic[-_](?:hokkaido|home|top)|municipal[-_]?emblem|topimage[-_]?tx|instagram|facebook|youtube|social|glyph|og[-_]?image|(?:^|[-_/])(title|headline|dayori|letter|news|flyer|poster|pamphlet|banner|ogp|ogimage|sns|share|qr)(?:[-_/\.\d]|$)|チラシ|ﾁﾗ|たより|だより|リーフレット|パンフ|バナー)/i;
+const REJECT_IMAGE = /(?:logo|emblem|symbol|favicon|(?:^|[-_/])icon(?:[-_/\.\d]|$)|sprite|spacer|placeholder|loading|no[-_]?image|blank|pixel|qrcode|qr[-_]?code|qr(?:[-_.\d]|$)|button|arrow|tel(?:ephone)?[-_]?\d*|ic[-_](?:hokkaido|home|top)|municipal[-_]?emblem|topimage[-_]?tx|instagram|facebook|youtube|social|glyph|(?:^|[-_/])(title|headline|dayori|letter|news|flyer|poster|pamphlet|banner|sns|share|qr)(?:[-_/\.\d]|$)|チラシ|ﾁﾗ|たより|だより|リーフレット|パンフ|バナー)/i;
 const PHOTO_HINT = /(hero|main[-_]?visual|key[-_]?visual|\bmv\b|\bkv\b|cover|slide|gallery|photo|facility|activity|about|活動|施設|館内|風景|外観|体験)/i;
 
 function addCandidate(list, rawUrl, pageUrl, type, score, hint = "") {
@@ -92,16 +92,16 @@ function collectCandidates(html, pageUrl) {
     const a = attrsOf(tag);
     const key = (a.property || a.name || a.itemprop || "").toLowerCase();
     if (!a.content) continue;
-    if (/^og:image(?::(?:url|secure_url))?$/.test(key)) addCandidate(candidates, a.content, pageUrl, "official-og", 86, key);
-    else if (/^twitter:image(?::src)?$/.test(key)) addCandidate(candidates, a.content, pageUrl, "official-twitter", 82, key);
-    else if (key === "image") addCandidate(candidates, a.content, pageUrl, "official-meta", 82, key);
+    if (/^og:image(?::(?:url|secure_url))?$/.test(key)) addCandidate(candidates, a.content, pageUrl, "official-og", 180, key);
+    else if (/^twitter:image(?::src)?$/.test(key)) addCandidate(candidates, a.content, pageUrl, "official-twitter", 165, key);
+    else if (key === "image") addCandidate(candidates, a.content, pageUrl, "official-meta", 160, key);
   }
 
   for (const tag of html.match(/<link\b[^>]*>/gi) || []) {
     const a = attrsOf(tag);
     const rel = (a.rel || "").toLowerCase();
-    if (rel.includes("image_src")) addCandidate(candidates, a.href, pageUrl, "official-image-src", 88, rel);
-    if (rel.includes("preload") && (a.as || "").toLowerCase() === "image") addCandidate(candidates, a.href || a.imagesrcset?.split(/[ ,]/)[0], pageUrl, "official-preload", 78, rel);
+    if (rel.includes("image_src")) addCandidate(candidates, a.href, pageUrl, "official-image-src", 170, rel);
+    if (rel.includes("preload") && (a.as || "").toLowerCase() === "image") addCandidate(candidates, a.href || a.imagesrcset?.split(/[ ,]/)[0], pageUrl, "official-preload", 150, rel);
   }
 
   for (const tag of (html.match(/<img\b[^>]*>/gi) || []).slice(0, 80)) {
