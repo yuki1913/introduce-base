@@ -564,7 +564,6 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 }
 .region-tile:hover{box-shadow:var(--shadow-lift);color:var(--color-accent-text)}
 .region-tile .rc{font-family:var(--font-en);font-variant-numeric:tabular-nums;font-size:var(--text-md);font-weight:800;color:var(--color-accent-text);flex:none}
-.home-picks .grid{margin-top:0}
 /* ========== 地方ごとのピックアップ ==========
    全地方を横1本のレールに並べる。地方を選ばせず、スクロールで通して見せる。
    縦に10地方積むとホームが約6,500pxになるため、横に流す構成を採っている。 */

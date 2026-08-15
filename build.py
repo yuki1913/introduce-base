@@ -122,7 +122,7 @@ def cover_key(r):
     return 'nature'
 
 def home_records(recs):
-    """地方3件ずつ＋6分野1件ずつだけをトップ用に選ぶ。"""
+    """地方ごとに3件ずつ、トップ用に選ぶ。"""
     visible=[r for r in recs if r.get('status') in DEFAULT_STATUS]
     picked=[]
     for region in PREF.values():
@@ -139,9 +139,6 @@ def home_records(recs):
             if len(chosen)==3: break
             if r not in chosen: chosen.append(r)
         picked.extend(chosen)
-    for key in CAT_KEYS:
-        match=next((r for r in visible if r.get('status')=='掲載推奨' and cover_key(r)==key),None)
-        if match: picked.append(match)
     unique={}
     for r in picked:
         unique.setdefault(r['id'],r)

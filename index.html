@@ -110,18 +110,6 @@
   </section>
 </div>
 
-<!-- ピックアップ -->
-<div class="band band-paper-2">
-  <section class="home-section home-picks">
-    <h2 class="section-head">
-      <span class="sh-ja">ピックアップ</span>
-      <span class="sh-en" aria-hidden="true">PICK UP</span>
-    </h2>
-    <p class="home-lead">いろいろな分野から、おすすめの拠点をすこしだけ紹介します。</p>
-    <div class="grid" id="pickGrid"></div>
-  </section>
-</div>
-
 <!-- 全部見る -->
 <div class="band band-ink">
   <div class="home-foot-cta"><a href="search.html">すべての拠点・プログラムをさがす →</a></div>
@@ -132,7 +120,7 @@
     <div class="foot-grid">
       <section><h2>はじめての人へ</h2><nav><a href="guide.html">使い方を見る</a><a href="search.html">拠点をさがす</a><a href="search.html?view=map">地図からさがす</a></nav></section>
       <section><h2>先生・保護者へ</h2><nav><a href="teachers.html">活用のヒント</a><a href="faq.html">安全に使うために</a><a href="search.html?quiz=1">かんたん診断</a></nav></section>
-      <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a></nav></section>
+      <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
     <div class="foot-note">
       <div class="legend"><span class="status s-rec">掲載推奨</span><span class="status s-cond">条件つき</span><span class="status s-ref">参考情報</span><span class="status s-hold">要確認</span></div>
@@ -232,12 +220,6 @@
   window.addEventListener("resize",syncNav);
   syncNav();
 
-  // ピックアップ（各カテゴリの掲載推奨から1件ずつ）
-  var pick=document.getElementById("pickGrid"), used={}, picks=[];
-  Y.CAT_KEYS.forEach(function(k){
-    for(var i=0;i<D.length;i++){var x=D[i]; if(x.status==="掲載推奨"&&!used[x.id]&&Y.coverOf(x).catKey===k){picks.push(x);used[x.id]=1;break;}}
-  });
-  picks.slice(0,6).forEach(function(r){pick.appendChild(Y.card(r));});
 })();
 </script>
 </body>
