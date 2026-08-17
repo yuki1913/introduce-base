@@ -54,7 +54,6 @@
     sports:["スポーツ"]
   };
   var CAT_PHOTO=CAT_IMGS;
-  var HUE_COLOR={green:"#1B9E6B",blue:"#2E6FD0",orange:"#F5811F",purple:"#6C4FD4",pink:"#F15C74",teal:"#0E9E93"};
 
   function esc(s){return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
@@ -105,9 +104,17 @@
     return wrap;
   }
   function mapUrl(r){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.address||r.name)+" "+r.name);}
+  var MAP_ICON_PATHS={
+    nature:'<path d="M19 4C11 4 5 8 5 14c0 3 2 5 5 5 6 0 9-7 9-15Z"/><path d="M5 21c2-5 5-8 10-11"/>',
+    science:'<path d="M9 3h6M10 3v6l-5 8.5A2.3 2.3 0 0 0 7 21h10a2.3 2.3 0 0 0 2-3.5L14 9V3"/><path d="M8 16h8"/>',
+    community:'<path d="m3 11.5 9-7.5 9 7.5"/><path d="M5.5 10.5V20h13v-9.5M9.5 20v-6h5v6"/>',
+    arts:'<path d="M12 3a9 9 0 1 0 0 18h1.5a2 2 0 0 0 0-4H12a2 2 0 0 1 0-4h3a6 6 0 0 0 6-6c0-2.2-4-4-9-4Z"/><circle cx="7.5" cy="10" r=".7"/><circle cx="10" cy="7" r=".7"/><circle cx="14" cy="6.5" r=".7"/>',
+    startup:'<path d="M9 18h6M10 22h4"/><path d="M8.5 14.5A6 6 0 1 1 15.5 14.5c-1 .8-1.5 1.6-1.5 2.5h-4c0-.9-.5-1.7-1.5-2.5Z"/>',
+    sports:'<circle cx="12" cy="12" r="9"/><path d="m8.5 9 3.5-2.5L15.5 9l-1.3 4H9.8L8.5 9ZM12 6.5V3M15.5 9l3.3-1.1M14.2 13l2.2 3M9.8 13l-2.2 3M8.5 9 5.2 7.9"/>'
+  };
   function markerIcon(cv){
-    var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
-    return L.divIcon({html:'<div class="ys-pin" style="background:'+color+'">'+cv.emoji+'</div>',className:"",iconSize:[32,32],iconAnchor:[16,16],popupAnchor:[0,-16]});
+    var key=cv.catKey||"community",svg='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+(MAP_ICON_PATHS[key]||MAP_ICON_PATHS.community)+'</svg>';
+    return L.divIcon({html:'<div class="ys-pin-offset"><div class="ys-place-pin" data-cat="'+key+'"><span>'+svg+'</span></div></div>',className:"ys-place-marker",iconSize:[44,48],iconAnchor:[22,46],popupAnchor:[0,-42]});
   }
   var SVG_EXT='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
   var SVG_MAP='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';

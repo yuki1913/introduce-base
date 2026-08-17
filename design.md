@@ -224,10 +224,12 @@ labels; the full target list remains on the detail page.
 
 ## Known deviations
 
-- **Emoji remain in `shared.js` for map pins** (`markerIcon`) and the 34-entry
-  `FIELD_STYLE` map. Hallmark gate 30 bans emoji-as-icon; replacing them needs a
-  34-icon SVG set plus a data rewrite, which is out of scope for a visual
-  redesign. All *decorative* emoji were removed from rendered copy.
+- **Emoji remain as legacy metadata in the 34-entry `FIELD_STYLE` map**, but are
+  no longer rendered as map controls. Map locations use six consistent SVG
+  pictograms with a visible legend. Numeric marker clustering is disabled;
+  records at the same rounded coordinate fan out in screen space so every
+  location remains individually selectable without changing its stored
+  latitude and longitude.
 - **Legacy generated PNGs remain in `img/` but are no longer referenced.** They
   are retained to avoid destructive asset deletion. Current UI surfaces use
   sourced official-site candidates where a plausible photo was found, and
