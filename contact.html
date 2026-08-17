@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260815a">
+<link rel="stylesheet" href="styles.css?v=20260817i">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
     <nav class="site-nav">
       <a href="search.html">さがす</a>
       <a href="search.html?view=map">地図</a>
+      <a class="favorites-nav" href="search.html?favorites=1" aria-label="気になるリスト"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorites-nav-label">気になる</span><b data-favorite-count>0</b></a>
       <a href="guide.html">はじめての方</a>
       <a href="contact.html" class="active">お問い合わせ</a>
       <a href="search.html?quiz=1" class="cta">診断する</a>
@@ -128,7 +129,7 @@
       <span class="sh-en" aria-hidden="true">MORE</span>
     </h2>
     <div class="doc-more-grid">
-      <a class="doc-more-card" href="guide.html"><div class="t">はじめての方へ</div><div class="d">4つのさがし方、カードの見方、掲載バッジの意味を紹介します。</div></a>
+      <a class="doc-more-card" href="guide.html"><div class="t">はじめての方へ</div><div class="d">4つのさがし方、カードの見方、対象表示を紹介します。</div></a>
       <a class="doc-more-card" href="teachers.html"><div class="t">先生・保護者の方へ</div><div class="d">探究学習・キャリア教育・課外活動の入口としての活用のヒント。</div></a>
       <a class="doc-more-card" href="faq.html"><div class="t">よくある質問・安全に使うために</div><div class="d">料金や申し込み、位置情報のことなど。まずはこちらもご覧ください。</div></a>
     </div>
@@ -147,6 +148,7 @@
   </div>
 </footer>
 
+<script src="favorites.js?v=20260817i"></script>
 <script>
 (function(){
   var CONTACT_EMAIL="yuki.kotake@studymeter-web.com";

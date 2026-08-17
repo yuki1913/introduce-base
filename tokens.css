@@ -70,6 +70,25 @@
   --status-ref:  oklch(52.0% 0.030  62);
   --status-hold: oklch(54.0% 0.175  22);
 
+  /* ---- audience labels: age group, never publication status ---- */
+  --audience-junior-bg:  var(--tint-warm-2);
+  --audience-junior-ink: var(--color-accent-text);
+  --audience-high-bg:    var(--color-ink);
+  --audience-high-ink:   var(--color-accent-ink);
+  --audience-other-bg:   var(--color-paper-3);
+  --audience-other-ink:  var(--color-ink-2);
+
+  /* ---- home map regions: warm cartographic palette, no blue/green ---- */
+  --map-hokkaido: oklch(89% 0.075 82);
+  --map-tohoku:   oklch(91% 0.045 68);
+  --map-kanto:    oklch(88% 0.075 52);
+  --map-chubu:    oklch(91% 0.050 35);
+  --map-kinki:    oklch(90% 0.040 315);
+  --map-chugoku:  oklch(88% 0.060 18);
+  --map-shikoku:  oklch(91% 0.060 74);
+  --map-kyushu:   oklch(87% 0.080 38);
+  --map-okinawa:  oklch(92% 0.055 58);
+
   /* ---- scrims (alpha is a modifier on ink, not a palette colour) ---- */
   --scrim-strong: oklch(21% 0.020 60 / 0.82);
   --scrim-mid:    oklch(21% 0.020 60 / 0.60);

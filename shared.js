@@ -66,10 +66,44 @@
     for(var j=0;j<cats.length;j++){if(CAT_FALLBACK[cats[j]])return {emoji:CAT_FALLBACK[cats[j]][0],hue:CAT_FALLBACK[cats[j]][1],catKey:CAT_FALLBACK[cats[j]][2],label:tags[0]||cats[j]};}
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
+  function regionPicks(region,limit){
+    var list=DATA.filter(function(r){return r.region===region;});
+    var rec=list.filter(function(r){return r.status==="掲載推奨";});
+    var pool=rec.length?rec:list;
+    var out=[], seen={};
+    pool.forEach(function(r){
+      if(out.length>=limit) return;
+      var key=coverOf(r).catKey;
+      if(seen[key]) return;
+      seen[key]=1; out.push(r);
+    });
+    pool.forEach(function(r){if(out.length<limit&&out.indexOf(r)<0)out.push(r);});
+    return out.slice(0,limit);
+  }
   function getPhotoUrl(cv){return CAT_PHOTO[cv.catKey]||CAT_PHOTO.community;}
   function hasOfficialPhoto(r){return !!(r.image&&(r.imageOfficial||r.imageSourceUrl));}
   function photoAlt(r,cv){return hasOfficialPhoto(r)?r.name+"の公式サイト掲載画像":(CAT_LABELS[cv.catKey]||"活動")+"のイメージ写真";}
   function photoCredit(r){return hasOfficialPhoto(r)?"公式サイト掲載":"イメージ写真";}
+  function audienceKinds(r){
+    var hay=(r.targets||[]).join("・");
+    var both=/中高生|小中高生|中学生[・･と\/／、 ]*高校生|10代|13\s*[〜～~\-–—]\s*18/.test(hay);
+    var junior=both||/中学生|中学校|中等教育学校前期|12歳|13歳|14歳/.test(hay);
+    var high=both||/高校生|高等学校|高専|高等部|中等教育学校後期|15歳|16歳|17歳|18歳|中学生卒業後/.test(hay);
+    if(/中学生を除く|中学生は対象外/.test(hay)) junior=false;
+    var kinds=[];
+    if(junior) kinds.push("junior");
+    if(high) kinds.push("high");
+    if(!kinds.length) kinds.push("other");
+    return kinds;
+  }
+  function audiencePills(r){
+    var labels={junior:"中学生",high:"高校生",other:"その他"};
+    var wrap=el("span","audience-pills");
+    var detail=(r.targets||[]).join("・")||"対象を公式サイトで確認";
+    wrap.setAttribute("aria-label","対象："+detail); wrap.title="対象："+detail;
+    audienceKinds(r).forEach(function(kind){wrap.appendChild(el("span","pill audience-pill audience-"+kind,labels[kind]));});
+    return wrap;
+  }
   function mapUrl(r){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent((r.address||r.name)+" "+r.name);}
   function markerIcon(cv){
     var color=HUE_COLOR[cv.hue]||HUE_COLOR.green;
@@ -79,9 +113,16 @@
   var SVG_MAP='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
   var SVG_PIN='<svg aria-hidden="true" class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
 
+  function favoriteButton(r){
+    var b=el("button","favorite-btn");
+    b.type="button";b.dataset.favoriteId=r.id;
+    b.innerHTML=window.YSFavorites?window.YSFavorites.SVG_HEART:"";
+    if(window.YSFavorites)window.YSFavorites.syncButton(b);
+    return b;
+  }
+
   function card(r){
     var c=el("div","card");
-    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var cv=coverOf(r);
     c.dataset.cat=cv.catKey;
     var photoWrap=el("div","card-photo");
@@ -96,8 +137,9 @@
       var fb=el("div","card-cover cv-"+cv.hue); fb.innerHTML='<span class="cover-emoji">'+cv.emoji+'</span>';
       var top=el("div","photo-pills");
       top.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
-      top.appendChild(el("span","pill st "+sm.cls,sm.label)); fb.appendChild(top);
+      top.appendChild(audiencePills(r)); fb.appendChild(top);
       if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt="";lg.onerror=function(){this.remove();};fb.appendChild(lg);}
+      fb.appendChild(favoriteButton(r));
       c.replaceChild(fb,photoWrap);
     };
     photoWrap.appendChild(pImg);
@@ -106,9 +148,10 @@
     photoWrap.appendChild(credit);
     var pills=el("div","photo-pills");
     pills.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
-    pills.appendChild(el("span","pill st "+sm.cls,sm.label));
+    pills.appendChild(audiencePills(r));
     photoWrap.appendChild(pills);
     if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.decoding="async";lg.referrerPolicy="no-referrer";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
+    photoWrap.appendChild(favoriteButton(r));
     c.appendChild(photoWrap);
     var body=el("div","card-body");
     var place=el("div","place"); place.innerHTML=SVG_PIN;
@@ -122,24 +165,21 @@
     if(r.fieldTags&&r.fieldTags.length){var tl=el("div","tagline");r.fieldTags.slice(0,4).forEach(function(t){tl.appendChild(el("span","tag",t));});body.appendChild(tl);}
     body.appendChild(ctypeRow(r));
     var meta=el("div","meta");
-    if(r.targets&&r.targets.length){var m=el("div","mrow");m.appendChild(el("span","mk","対象"));m.appendChild(el("span",null,r.targets.slice(0,3).join("・")));meta.appendChild(m);}
     if(r.station){var m2=el("div","mrow");m2.appendChild(el("span","mk","アクセス"));m2.appendChild(el("span",null,r.station));meta.appendChild(m2);}
     if(meta.children.length)body.appendChild(meta);
-    if(r.status==="条件付き掲載")body.appendChild(el("div","note","利用に条件がある場合があります。参加前に公式サイトでご確認ください。"));
-    else if(r.status==="掲載保留"||r.status==="参考情報")body.appendChild(el("div","note","情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。"));
     var act=el("div","actions");
     if(r.url){var a=el("a","btn btn-primary");a.href=r.url;a.target="_blank";a.rel="noopener";a.innerHTML=SVG_EXT+"公式サイト";act.appendChild(a);}
     if(r.address){var mb=el("a","btn btn-ghost");mb.href=mapUrl(r);mb.target="_blank";mb.rel="noopener";mb.innerHTML=SVG_MAP+"地図";act.appendChild(mb);}
     if(act.children.length)body.appendChild(act);
     c.appendChild(body);
-    c.onclick=function(e){ if(e.target.closest("a")) return; location.href="spot.html?id="+encodeURIComponent(r.id); };
+    c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href="spot.html?id="+encodeURIComponent(r.id); };
     return c;
   }
 
   window.YS={
     DATA:DATA, BYID:BYID, REGION_ORDER:REGION_ORDER, CATS:CATS, STATUS_META:STATUS_META, DEFAULT_STATUS:DEFAULT_STATUS,
     FIELD_STYLE:FIELD_STYLE, CAT_KEYS:CAT_KEYS, CAT_IMGS:CAT_IMGS, CAT_LABELS:CAT_LABELS, CAT_EMOJIS:CAT_EMOJIS, CAT_FIELD_MAP:CAT_FIELD_MAP,
-    esc:esc, el:el, coverOf:coverOf, getPhotoUrl:getPhotoUrl, hasOfficialPhoto:hasOfficialPhoto, photoAlt:photoAlt, photoCredit:photoCredit, mapUrl:mapUrl, markerIcon:markerIcon, card:card,
+    esc:esc, el:el, coverOf:coverOf, regionPicks:regionPicks, getPhotoUrl:getPhotoUrl, hasOfficialPhoto:hasOfficialPhoto, photoAlt:photoAlt, photoCredit:photoCredit, audienceKinds:audienceKinds, audiencePills:audiencePills, mapUrl:mapUrl, markerIcon:markerIcon, card:card,
     SVG_EXT:SVG_EXT, SVG_MAP:SVG_MAP, SVG_PIN:SVG_PIN
   };
 })();

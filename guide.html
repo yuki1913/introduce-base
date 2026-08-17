@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>はじめての方へ｜このサイトのつかい方｜いばしょ・きっかけ MAP</title>
-<meta name="description" content="「いばしょ・きっかけ MAP」のつかい方。キーワード・しぼり込み・地図・近くをさがす、4つのさがし方と、カードの見方・掲載バッジの意味を紹介します。">
+<meta name="description" content="「いばしょ・きっかけ MAP」のつかい方。キーワード・しぼり込み・地図・近くをさがす、4つのさがし方と、カードの見方・対象表示を紹介します。">
 <link rel="canonical" href="guide.html">
 <meta property="og:type" content="article"><meta property="og:site_name" content="いばしょ・きっかけ MAP">
 <meta property="og:title" content="はじめての方へ｜いばしょ・きっかけ MAP">
@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260815a">
+<link rel="stylesheet" href="styles.css?v=20260817i">
 </head>
 <body>
 
@@ -28,6 +28,7 @@
     <nav class="site-nav">
       <a href="search.html">さがす</a>
       <a href="search.html?view=map">地図</a>
+      <a class="favorites-nav" href="search.html?favorites=1" aria-label="気になるリスト"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorites-nav-label">気になる</span><b data-favorite-count>0</b></a>
       <a href="guide.html" class="active">はじめての方</a>
       <a href="contact.html">お問い合わせ</a>
       <a href="search.html?quiz=1" class="cta">診断する</a>
@@ -53,7 +54,7 @@
       <a href="#find">4つのさがし方</a>
       <a href="#quiz">迷ったら「診断」</a>
       <a href="#card">カードの見方</a>
-      <a href="#badge">掲載バッジの意味</a>
+      <a href="#audience">対象表示の見方</a>
       <a href="#before">参加する前に</a>
     </nav>
   </aside>
@@ -117,20 +118,23 @@
         <li><b>「公式サイト掲載」</b>は団体の公式ページで確認した画像候補です。詳細ページから出典を確認できます</li>
         <li><b>「イメージ写真」</b>は活動分野の雰囲気を伝えるための生成画像で、その団体を撮影した写真ではありません</li>
         <li>タグは「やってみたいこと」。同じタグの拠点をまとめてさがす目印にもなります</li>
+        <li>写真右下の<b>ハート</b>を押すと「気になるリスト」に保存できます。保存内容はこの端末のブラウザ内にのみ残ります</li>
+        <li>気になるリストの<b>「リストを共有」</b>から、同じ候補を見られる専用URLを友だち・保護者・先生に送れます</li>
         <li>カードをタップすると<b>詳細ページ</b>（地図・タグ・基本情報・公式サイト・シェア）が開きます</li>
+        <li>詳細ページの<b>「予定に入れる」</b>で、公式サイトで確認した開催日や申込締切をカレンダーに追加できます</li>
         <li>詳細ページのURLはそのまま共有できます。友だちや先生に送るのにも使えます</li>
       </ul>
     </section>
 
-    <section class="doc-sec" id="badge">
-      <h2>掲載バッジの意味</h2>
-      <p>それぞれの拠点には、使いやすさの目印としてバッジをつけています。</p>
-      <div class="doc-badges">
-        <div class="doc-badge"><span class="status s-rec">掲載推奨</span><span>中高生がそのまま利用しやすい拠点・プログラムです。</span></div>
-        <div class="doc-badge"><span class="status s-cond">条件つき</span><span>対象年齢・引率・申し込みなど、利用に条件がある場合があります。</span></div>
-        <div class="doc-badge"><span class="status s-ref">参考情報</span><span>参考として掲載しています。内容が変わっている可能性があります。</span></div>
-        <div class="doc-badge"><span class="status s-hold">要確認</span><span>情報の確認が追いついていないものです。公式サイトで最新情報をご確認ください。</span></div>
+    <section class="doc-sec" id="audience">
+      <h2>対象表示の見方</h2>
+      <p>カード写真の右上には、その場所やプログラムが主に誰向けかを表示しています。</p>
+      <div class="audience-legend" aria-label="対象表示の色分け">
+        <span class="audience-pills"><span class="pill audience-pill audience-junior">中学生</span></span>
+        <span class="audience-pills"><span class="pill audience-pill audience-high">高校生</span></span>
+        <span class="audience-pills"><span class="pill audience-pill audience-other">その他</span></span>
       </div>
+      <div class="doc-callout">中学生と高校生の両方が対象の場合は、2つのラベルが並びます。「その他」には大学生、若者、家族、学校・団体などが含まれます。詳しい年齢や利用条件は詳細ページと公式サイトでご確認ください。</div>
     </section>
 
     <section class="doc-sec" id="before">
@@ -168,5 +172,6 @@
   </div>
 </footer>
 
+<script src="favorites.js?v=20260817i"></script>
 </body>
 </html>

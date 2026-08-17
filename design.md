@@ -134,6 +134,35 @@ space empty.
 - Focus rings appear instantly; `outline` is never transitioned.
 - Reduced-motion collapses everything to a ≤150ms opacity change.
 
+## Home map interaction
+
+- The Japan silhouette is north-up and uses a latitude-aware physical aspect
+  ratio instead of the former horizontally stretched projection. Okinawa is a
+  labelled right-bottom inset so the mainland can occupy more of the available
+  width without a tall empty tail. Each region has its own quiet warm cartographic
+  fill; hover strengthens its outline and selection alone becomes vivid orange.
+- The Japan map is a preview surface: selecting a region opens a narrow floating
+  list inside the map with three region picks, using the AREA PICKS selection rule.
+- Each row is limited to a circular photo, name, category, and short location.
+  Full provenance, tags, eligibility, descriptions, and external actions stay on
+  the detail page and the full AREA PICKS cards.
+- The adjacent text region index remains the explicit route to the full filtered
+  result list. This keeps preview and exhaustive search as separate actions.
+- The popover stays at 280px or narrower, is positioned within the map boundary,
+  and never adds a page-wide backdrop. It supports keyboard focus, Escape, a
+  visible close control, outside-click dismissal, and selected-region state.
+
+## Search filters
+
+- Keyword search is the primary control. All structured filters live in one
+  native disclosure immediately below it and remain collapsed by default.
+- A compact `3問で診断` launch sits beside the keyword field. It opens the same
+  diagnosis used by the lower-page CTA, so the search page has an immediate
+  guided path without duplicating the quiz implementation.
+- The closed disclosure shows a short, live summary of selected conditions.
+  Inside, the three filter families use a quiet underline tab treatment rather
+  than competing filled pills; individual filter values remain touch-safe chips.
+
 ## CTA voice
 
 Primary = orange pill, cream text. Secondary = cream pill, ink text. Tertiary =
@@ -143,8 +172,35 @@ and every control is ≥44px tall.
 ## What pages MUST share
 
 Header (brand · search · links), the section-head device, the band rhythm, the
-duo accent, the category colour system, the status signal system, the colophon
-footer.
+duo accent, the category colour system, the audience signal system, the colophon
+footer. Public cards do not display editorial publication-status badges. Their
+top-right photo labels classify `targets` as 中学生 (warm vermilion tint),
+高校生 (dark ink), or その他 (neutral). Records for both school stages show two
+labels; the full target list remains on the detail page.
+
+## Favorites
+
+- Cards keep the save action inside the photograph as a 44 px heart button, so
+  no new metadata row is added to the already information-dense card body.
+- The header shows the saved count on every page. Search adds one explicit
+  `気になる` filter and a dedicated empty state.
+- Favorites use `localStorage` and therefore stay in the current browser only.
+  The interface must not imply account sync or cross-device persistence.
+- Search can create a compact `?list=` URL containing up to 60 valid record IDs.
+  Opening that link shows the same shortlist without importing it into the
+  recipient's local favorites. Treat possession of the URL as access to the list.
+
+## Calendar handoff
+
+- Source records currently have no dependable structured event date or deadline.
+  Detail views therefore ask the visitor to enter a date they confirmed on the
+  official site instead of guessing or silently pre-filling one.
+- The handoff downloads a standards-based `.ics` file with the record name,
+  location, detail URL, a selectable `VALARM` reminder, and a note to recheck
+  the official source. It works without accounts or a third-party calendar
+  integration.
+- The calendar action stays in detail actions; cards remain dedicated to
+  discovery and saving.
 
 ## Photography policy
 

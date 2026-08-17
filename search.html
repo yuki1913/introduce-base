@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-<link rel="stylesheet" href="styles.css?v=20260815a">
+<link rel="stylesheet" href="styles.css?v=20260817j">
 </head>
 <body>
 
@@ -31,6 +31,7 @@
     <nav class="site-nav">
       <a href="search.html" class="active">さがす</a>
       <a href="search.html?view=map">地図</a>
+      <a class="favorites-nav" href="search.html?favorites=1" aria-label="気になるリスト"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorites-nav-label">気になる</span><b data-favorite-count>0</b></a>
       <a href="guide.html">はじめての方</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
@@ -41,52 +42,65 @@
 <!-- ===== SEARCH & FILTERS ===== -->
 <div class="search-section">
   <div class="search-inner">
-    <div class="searchbar">
-      <svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
-      <input id="q" type="search" placeholder="キーワードでさがす（名前・活動・地名）" autocomplete="off" aria-label="キーワード検索">
-      <button class="clr" id="qClear" aria-label="キーワードを消す">✕</button>
-    </div>
-
-    <div class="filter-tabs" role="tablist">
-      <button class="ftab active" role="tab" aria-selected="true" data-panel="panel-region">地方・都道府県</button>
-      <button class="ftab" role="tab" aria-selected="false" data-panel="panel-field">活動分野</button>
-      <button class="ftab" role="tab" aria-selected="false" data-panel="panel-detail">くわしい条件</button>
-    </div>
-
-    <div class="filter-panel show" id="panel-region">
-      <div class="fgroup">
-        <div class="flabel">地方</div>
-        <div class="chips scroll" id="regionChips"></div>
+    <div class="searchbar-row">
+      <div class="searchbar">
+        <svg aria-hidden="true" class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+        <input id="q" type="search" placeholder="キーワードでさがす（名前・活動・地名）" autocomplete="off" aria-label="キーワード検索">
+        <button class="clr" id="qClear" aria-label="キーワードを消す">✕</button>
       </div>
-      <div class="fgroup fgroup-inline">
-        <label class="flabel" for="prefSel">都道府県</label>
-        <select id="prefSel" aria-label="都道府県で絞り込み"><option value="">すべての都道府県</option></select>
-      </div>
+      <button class="search-quiz-btn" id="quizStartTop" type="button"><span aria-hidden="true"></span>3問で診断</button>
     </div>
 
-    <div class="filter-panel" id="panel-field">
-      <div class="fgroup">
-        <div class="flabel">やってみたいこと（複数OK）</div>
-        <div class="chips" id="fieldChips"></div>
-      </div>
-    </div>
-
-    <div class="filter-panel" id="panel-detail">
-      <div class="frow">
-        <div class="fgroup">
-          <div class="flabel">だれ向け</div>
-          <div class="chips" id="targetChips"></div>
+    <details class="filter-disclosure" id="filterDisclosure">
+      <summary>
+        <span class="filter-summary-label">絞り込み条件</span>
+        <span class="filter-summary-current" id="filterSummary">すべて</span>
+        <span class="filter-summary-action">変更</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 10 5 5 5-5"/></svg>
+      </summary>
+      <div class="filter-disclosure-body">
+        <div class="filter-tabs" role="tablist">
+          <button class="ftab active" role="tab" aria-selected="true" data-panel="panel-region">地域</button>
+          <button class="ftab" role="tab" aria-selected="false" data-panel="panel-field">活動分野</button>
+          <button class="ftab" role="tab" aria-selected="false" data-panel="panel-detail">詳細条件</button>
         </div>
-        <div class="fgroup">
-          <div class="flabel">種類</div>
-          <div class="chips" id="catChips"></div>
+
+        <div class="filter-panel show" id="panel-region">
+          <div class="fgroup">
+            <div class="flabel">地方</div>
+            <div class="chips scroll" id="regionChips"></div>
+          </div>
+          <div class="fgroup fgroup-inline">
+            <label class="flabel" for="prefSel">都道府県</label>
+            <select id="prefSel" aria-label="都道府県で絞り込み"><option value="">すべての都道府県</option></select>
+          </div>
         </div>
-        <div class="fgroup">
-          <div class="flabel">利用のしかた</div>
-          <div class="chips" id="useChips"></div>
+
+        <div class="filter-panel" id="panel-field">
+          <div class="fgroup">
+            <div class="flabel">やってみたいこと（複数OK）</div>
+            <div class="chips" id="fieldChips"></div>
+          </div>
+        </div>
+
+        <div class="filter-panel" id="panel-detail">
+          <div class="frow">
+            <div class="fgroup">
+              <div class="flabel">だれ向け</div>
+              <div class="chips" id="targetChips"></div>
+            </div>
+            <div class="fgroup">
+              <div class="flabel">種類</div>
+              <div class="chips" id="catChips"></div>
+            </div>
+            <div class="fgroup">
+              <div class="flabel">利用のしかた</div>
+              <div class="chips" id="useChips"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </details>
   </div>
 </div>
 
@@ -109,8 +123,15 @@
   <div class="view-toggle" id="viewToggleLegacy" hidden></div>
 
   <div class="toolbar-r">
+    <button class="favorites-filter-btn" id="favoritesFilter" type="button" aria-pressed="false">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+      <span>気になる</span><b id="favoritesCount">0</b>
+    </button>
+    <button class="share-list-btn" id="shareFavorites" type="button" hidden>
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+      <span>リストを共有</span>
+    </button>
     <button class="near-btn" id="nearBtn"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span>近くをさがす</span></button>
-    <label class="switch"><input type="checkbox" id="showAll"><span class="track"></span>参考・保留も表示</label>
     <button class="clear-all" id="clearAll">条件をクリア</button>
   </div>
 </div>
@@ -118,6 +139,7 @@
 <!-- ===== MAP VIEW ===== -->
 <section class="map-section" id="mapSection" hidden aria-label="地図でさがす">
   <div class="map-hint" id="mapHint">地方や都道府県をえらぶと、その地域にズームします。ピンをタップすると詳細が見られます。</div>
+  <div class="search-map-overview" id="searchMapOverview" hidden></div>
   <div id="map"></div>
 </section>
 
@@ -125,12 +147,12 @@
 <main class="results-wrap" id="resultsWrap">
   <h1 class="section-head is-lead">
     <span class="sh-ja" id="resultsTitle">すべての拠点・プログラム</span>
-    <span class="sh-en" aria-hidden="true">ALL SPOTS</span>
+    <span class="sh-en" id="resultsTitleEn" aria-hidden="true">ALL SPOTS</span>
   </h1>
   <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">
-    <p><b>条件に合う拠点がみつかりませんでした。</b><br>キーワードや絞り込みを少なくして、もう一度おためしください。</p>
+    <p id="emptyMessage"><b>条件に合う拠点がみつかりませんでした。</b><br>キーワードや絞り込みを少なくして、もう一度おためしください。</p>
   </div>
 </main>
 
@@ -174,21 +196,21 @@
       <section><h2>先生・保護者へ</h2><nav><a href="teachers.html">活用のヒント</a><a href="faq.html">安全に使うために</a><a href="search.html?quiz=1">かんたん診断</a></nav></section>
       <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
-    <div class="foot-note">
-      <div class="legend"><span class="status s-rec">掲載推奨</span><span class="status s-cond">条件つき</span><span class="status s-ref">参考情報</span><span class="status s-hold">要確認</span></div>
-      <p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。「条件つき」「参考情報」「要確認」の拠点は、利用前に最新情報をご確認ください。</p>
-    </div>
+    <div class="foot-note"><p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。</p></div>
     <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 P26年8月15日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="favorites.js?v=20260817i"></script>
+<script src="calendar.js?v=20260817j"></script>
 <script src="data-list.js"></script>
 <script>
 (function(){
   var DATA = (window.YSDATA||[]).map(function(r,i){ r._i=i; return r; });
   var BYID={}; DATA.forEach(function(r){BYID[r.id]=r;});
+  if(window.YSCalendar)window.YSCalendar.register(BYID);
   var REGION_ORDER=["北海道","東北","関東","中部","近畿","中国","四国","九州","沖縄","全国オンライン"];
   var CATS=["支援団体","プログラム","活動拠点","使用できる施設"];
   var PREF_ORDER=["北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"];
@@ -262,7 +284,7 @@
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
 
-  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:"list",userLoc:null,sortByDist:false};
+  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:"list",userLoc:null,sortByDist:false,favoritesOnly:false,sharedIds:null};
 
   function distKm(a,b,c,d){var R=6371,dLa=(c-a)*Math.PI/180,dLo=(d-b)*Math.PI/180,la1=a*Math.PI/180,la2=c*Math.PI/180;var x=Math.sin(dLa/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dLo/2)**2;return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
   function fmtDist(km){return km<1?Math.round(km*1000)+"m":(km<10?km.toFixed(1):Math.round(km))+"km";}
@@ -270,6 +292,22 @@
   var $=function(s){return document.querySelector(s)};
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
   function norm(s){return (s||"").toLowerCase();}
+  function syncFilterSummary(){
+    var labels=[];
+    if(state.region) labels.push(state.region);
+    if(state.pref) labels.push(state.pref);
+    if(state.catFilter&&CAT_LABELS[state.catFilter]) labels.push(CAT_LABELS[state.catFilter]);
+    else state.fields.slice(0,2).forEach(function(x){labels.push(x);});
+    state.targets.forEach(function(x){labels.push(x);});
+    state.cats.slice(0,1).forEach(function(x){labels.push(x);});
+    state.uses.slice(0,1).forEach(function(x){labels.push(x);});
+    var summary=$("#filterSummary"), disclosure=$("#filterDisclosure");
+    if(summary){
+      var shown=labels.slice(0,3);
+      summary.textContent=shown.length?shown.join("・")+(labels.length>3?" ほか"+(labels.length-3)+"件":""):"すべて";
+    }
+    if(disclosure) disclosure.classList.toggle("has-filters",labels.length>0);
+  }
 
   function countBy(key){var m={};DATA.forEach(function(r){(r[key]||[]).forEach(function(t){m[t]=(m[t]||0)+1;});});return m;}
   var fieldCounts=countBy("fieldTags");
@@ -382,14 +420,47 @@
   };
   $("#nearClear").onclick=function(){ setNear(false); render(); };
 
-  $("#showAll").onchange=function(){state.showAll=this.checked;render();};
   $("#clearAll").onclick=function(){
-    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],showAll:false,catFilter:"",view:state.view,userLoc:state.userLoc,sortByDist:false};
-    qi.value="";qc.classList.remove("show");ps.value="";$("#showAll").checked=false;
+    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:state.view,userLoc:state.userLoc,sortByDist:false,favoritesOnly:false,sharedIds:null};
+    qi.value="";qc.classList.remove("show");ps.value="";
     nearBtn.classList.remove("active");$("#nearBanner").style.display="none";syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
-    syncCatCards();
+    syncCatCards();syncFavoritesUI();
     render();
   };
+
+  var favoritesFilter=$("#favoritesFilter"),favoritesCount=$("#favoritesCount"),shareFavorites=$("#shareFavorites");
+  function syncFavoritesUI(){
+    var n=window.YSFavorites?window.YSFavorites.count():0;
+    favoritesCount.textContent=n;
+    favoritesFilter.classList.toggle("active",state.favoritesOnly);
+    favoritesFilter.setAttribute("aria-pressed",String(state.favoritesOnly));
+    var title=$("#resultsTitle"),titleEn=$("#resultsTitleEn");
+    if(state.sharedIds){if(title)title.textContent="共有された気になるリスト";if(titleEn)titleEn.textContent="SHARED LIST";}
+    else if(state.favoritesOnly){if(title)title.textContent="気になるリスト";if(titleEn)titleEn.textContent="FAVORITES";}
+    else{if(title)title.textContent="すべての拠点・プログラム";if(titleEn)titleEn.textContent="ALL SPOTS";}
+    var shareIds=state.sharedIds||(state.favoritesOnly&&window.YSFavorites?window.YSFavorites.ids():[]);
+    shareFavorites.hidden=!shareIds||!shareIds.length;
+  }
+  favoritesFilter.onclick=function(){
+    if(state.sharedIds){state.sharedIds=null;state.favoritesOnly=true;}
+    else state.favoritesOnly=!state.favoritesOnly;
+    syncFavoritesUI();render();
+  };
+  function copyText(text){
+    if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(text);
+    var area=document.createElement("textarea");area.value=text;area.setAttribute("readonly","");area.style.position="fixed";area.style.opacity="0";
+    document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();return Promise.resolve();
+  }
+  shareFavorites.onclick=function(){
+    var ids=(state.sharedIds||(window.YSFavorites?window.YSFavorites.ids():[])).filter(function(id){return !!BYID[id];}).slice(0,60);
+    if(!ids.length){showToast("共有する場所がありません");return;}
+    var url=new URL(location.href);url.search="";url.hash="";url.searchParams.set("list",ids.join(","));
+    var data={title:"気になる場所リスト｜いばしょ・きっかけ MAP",text:ids.length+"件の気になる場所",url:url.toString()};
+    if(navigator.share)navigator.share(data).catch(function(error){if(error.name!=="AbortError")copyText(data.url).then(function(){showToast("共有リンクをコピーしました");});});
+    else copyText(data.url).then(function(){showToast("共有リンクをコピーしました");});
+  };
+  window.addEventListener("ysfavoriteschange",function(){syncFavoritesUI();if(state.favoritesOnly)render();});
+  syncFavoritesUI();
 
   // ===== Category cards =====
   var catCardContainer=$("#catCards");
@@ -430,7 +501,9 @@
 
   // ===== Filtering =====
   function matches(r){
-    if(!state.showAll && !DEFAULT_STATUS[r.status]) return false;
+    if(!DEFAULT_STATUS[r.status]) return false;
+    if(state.sharedIds&&state.sharedIds.indexOf(r.id)<0) return false;
+    if(state.favoritesOnly&&(!window.YSFavorites||!window.YSFavorites.has(r.id))) return false;
     if(state.region && r.region!==state.region) return false;
     if(state.pref && r.pref!==state.pref) return false;
     if(state.cats.length && !state.cats.every(function(c){return (r.cats||[]).indexOf(c)>=0;})) return false;
@@ -453,6 +526,12 @@
   var SVG_EXT='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
   var SVG_MAP='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
   var SVG_PIN='<svg aria-hidden="true" class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
+  function favoriteButton(r){
+    var b=el("button","favorite-btn");b.type="button";b.dataset.favoriteId=r.id;
+    b.innerHTML=window.YSFavorites?window.YSFavorites.SVG_HEART:"";
+    if(window.YSFavorites)window.YSFavorites.syncButton(b);
+    return b;
+  }
 
   // Local photo pool per category
   var CAT_PHOTO={
@@ -470,10 +549,34 @@
   function hasOfficialPhoto(r){return !!(r.image&&(r.imageOfficial||r.imageSourceUrl));}
   function photoAlt(r,cv){return hasOfficialPhoto(r)?r.name+"の公式サイト掲載画像":(CAT_LABELS[cv.catKey]||"活動")+"のイメージ写真";}
   function photoCredit(r){return hasOfficialPhoto(r)?"公式サイト掲載":"イメージ写真";}
+  function audienceKinds(r){
+    var hay=(r.targets||[]).join("・");
+    var both=/中高生|小中高生|中学生[・･と\/／、 ]*高校生|10代|13\s*[〜～~\-–—]\s*18/.test(hay);
+    var junior=both||/中学生|中学校|中等教育学校前期|12歳|13歳|14歳/.test(hay);
+    var high=both||/高校生|高等学校|高専|高等部|中等教育学校後期|15歳|16歳|17歳|18歳|中学生卒業後/.test(hay);
+    if(/中学生を除く|中学生は対象外/.test(hay)) junior=false;
+    var kinds=[];
+    if(junior) kinds.push("junior");
+    if(high) kinds.push("high");
+    if(!kinds.length) kinds.push("other");
+    return kinds;
+  }
+  function audiencePills(r){
+    var labels={junior:"中学生",high:"高校生",other:"その他"};
+    var wrap=el("span","audience-pills");
+    var detail=(r.targets||[]).join("・")||"対象を公式サイトで確認";
+    wrap.setAttribute("aria-label","対象："+detail); wrap.title="対象："+detail;
+    audienceKinds(r).forEach(function(kind){wrap.appendChild(el("span","pill audience-pill audience-"+kind,labels[kind]));});
+    return wrap;
+  }
+  function audiencePillsHtml(r){
+    var labels={junior:"中学生",high:"高校生",other:"その他"};
+    var detail=(r.targets||[]).join("・")||"対象を公式サイトで確認";
+    return '<span class="audience-pills" aria-label="'+esc("対象："+detail)+'" title="'+esc("対象："+detail)+'">'+audienceKinds(r).map(function(kind){return '<span class="pill audience-pill audience-'+kind+'">'+labels[kind]+'</span>';}).join("")+'</span>';
+  }
 
   function card(r){
     var c=el("div","card"); c.dataset.cat=coverOf(r).catKey;
-    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var cv=coverOf(r);
 
     // ---- photo thumbnail ----
@@ -492,9 +595,10 @@
       fallback.innerHTML='<span class="cover-emoji">'+cv.emoji+'</span>';
       var top=el("div","photo-pills");
       top.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
-      top.appendChild(el("span","pill st "+sm.cls,sm.label));
+      top.appendChild(audiencePills(r));
       fallback.appendChild(top);
       if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt="";lg.onerror=function(){this.remove();};fallback.appendChild(lg);}
+      fallback.appendChild(favoriteButton(r));
       c.replaceChild(fallback,photoWrap);
     };
     photoWrap.appendChild(pImg);
@@ -504,10 +608,11 @@
     photoWrap.appendChild(credit);
     var pills=el("div","photo-pills");
     pills.appendChild(el("span","pill rgn",r.region==="全国オンライン"?"オンライン":r.region));
-    pills.appendChild(el("span","pill st "+sm.cls,sm.label));
+    pills.appendChild(audiencePills(r));
     photoWrap.appendChild(pills);
     if(r.logo){var lg=document.createElement("img");lg.className="card-logo";lg.src=r.logo;lg.alt=r.name+"のロゴ";lg.loading="lazy";lg.decoding="async";lg.referrerPolicy="no-referrer";lg.onerror=function(){this.remove();};photoWrap.appendChild(lg);}
     if(r._dist!=null){var db=el("div","dist-badge","約"+fmtDist(r._dist));photoWrap.appendChild(db);}
+    photoWrap.appendChild(favoriteButton(r));
     c.appendChild(photoWrap);
 
     // ---- body ----
@@ -535,12 +640,6 @@
     body.appendChild(ctypeRow(r));
 
     var meta=el("div","meta");
-    if(r.targets && r.targets.length){
-      var m=el("div","mrow");
-      m.appendChild(el("span","mk","対象"));
-      m.appendChild(el("span",null,r.targets.slice(0,3).join("・")));
-      meta.appendChild(m);
-    }
     if(r.station){
       var m2=el("div","mrow");
       m2.appendChild(el("span","mk","アクセス"));
@@ -548,12 +647,6 @@
       meta.appendChild(m2);
     }
     if(meta.children.length)body.appendChild(meta);
-
-    if(r.status==="条件付き掲載"){
-      body.appendChild(el("div","note","利用に条件がある場合があります。参加前に公式サイトでご確認ください。"));
-    } else if(r.status==="掲載保留"||r.status==="参考情報"){
-      body.appendChild(el("div","note","情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。"));
-    }
 
     var act=el("div","actions");
     if(r.url){
@@ -565,7 +658,7 @@
     if(act.children.length)body.appendChild(act);
 
     c.appendChild(body);
-    c.onclick=function(e){ if(e.target.closest("a")) return; location.href="spot.html?id="+encodeURIComponent(r.id); };
+    c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href="spot.html?id="+encodeURIComponent(r.id); };
     return c;
   }
 
@@ -595,6 +688,9 @@
   // ===== MAP =====
   var HUE_COLOR={green:"#D95C20",blue:"#E8960A",orange:"#E86A45",purple:"#C04020",pink:"#E03030",teal:"#CC6820"};
   var map=null, cluster=null, regionLayer=null, maskLayer=null, outlineLayer=null, mapInited=false, tiles=null;
+  var mapElement=$("#map"),overviewMount=$("#searchMapOverview"),SVG_NS="http://www.w3.org/2000/svg";
+  var REGION_KEYS={"北海道":"hokkaido","東北":"tohoku","関東":"kanto","中部":"chubu","近畿":"kinki","中国":"chugoku","四国":"shikoku","九州":"kyushu","沖縄":"okinawa"};
+  var SEARCH_MAP_LABELS={"北海道":[142.4,43.2],"東北":[140.6,39.0],"関東":[139.7,36.0],"中部":[137.2,36.2],"近畿":[135.4,34.8],"中国":[132.6,34.8],"四国":[133.6,33.6],"九州":[130.5,32.4],"沖縄":[127.8,26.3]};
   var MAP_ZOOM_PICK=12;   // 地方えらび：タイルなしのシルエットなので、寄っても情報が増えない
   var MAP_ZOOM_DETAIL=17; // 地方選択後：タイルが出るので街区まで寄れる
   var JAPAN_BOUNDS=[[30.4,128.6],[45.7,146.4]];       // 日本を枠に収める
@@ -632,13 +728,6 @@
     if(outlineLayer){map.removeLayer(outlineLayer);outlineLayer=null;}
   }
   var tok=function(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();};
-  // 指定範囲(全国 or 地方)の陸地を白く塗り、県境を描く（海は#mapの背景グラデ）。境界を返す
-  function applyMask(feats){
-    clearMaskLayers();
-    maskLayer=L.geoJSON(feats,{pane:"land",style:{fillColor:"#ffffff",fillOpacity:1,stroke:false},interactive:false}).addTo(map);
-    outlineLayer=L.geoJSON(feats,{pane:"border",style:{color:"#bcd6c7",weight:1,opacity:1,fill:false},interactive:false}).addTo(map);
-    return outlineLayer.getBounds();
-  }
   // 地方を選んだあと：詳細タイルを出し、選んだ地方の「外側だけ」をベールで覆う。
   // 外周に世界全体のリング、穴として地方の県境を渡す。Leaflet の Path は既定で
   // fill-rule:evenodd なので、GeoJSON の巻き方向に関係なく穴が抜ける。
@@ -652,22 +741,6 @@
     }).addTo(map);
     return outlineLayer.getBounds();
   }
-  // 地方ごとの中心座標（ピンのある拠点の平均。地方バブルの表示位置に使う）
-  var REGION_CENTROID=(function(){
-    var acc={},cnt={};
-    DATA.forEach(function(r){
-      if(r.lat==null||r.region==="全国オンライン")return;
-      acc[r.region]=acc[r.region]||[0,0]; acc[r.region][0]+=r.lat; acc[r.region][1]+=r.lng;
-      cnt[r.region]=(cnt[r.region]||0)+1;
-    });
-    var c={}; Object.keys(acc).forEach(function(g){c[g]=[acc[g][0]/cnt[g],acc[g][1]/cnt[g]];});
-    return c;
-  })();
-  // 地方バブルの表示位置（重なり回避のため手調整。沖縄は九州南西の海上に寄せる）
-  var REGION_LABEL_POS={
-    "北海道":[43.4,142.9],"東北":[39.4,141.6],"関東":[35.4,142.0],"中部":[37.3,137.1],
-    "近畿":[34.4,136.9],"中国":[35.3,131.8],"四国":[32.7,133.4],"九州":[32.0,130.0],"沖縄":[29.5,129.1]
-  };
   function esc(s){return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
   function markerIcon(cv){
@@ -677,16 +750,40 @@
       className:"", iconSize:[32,32], iconAnchor:[16,16], popupAnchor:[0,-16]
     });
   }
+  function overviewProject(point){return [20+(point[0]-122)*18,20+(46-point[1])*22];}
+  function overviewRing(ring){return ring.map(function(point,index){var p=overviewProject(point);return (index?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1);}).join(" ")+" Z";}
+  function overviewPath(geometry){var polys=geometry.type==="Polygon"?[geometry.coordinates]:geometry.coordinates;return polys.map(function(poly){return poly.map(overviewRing).join(" ");}).join(" ");}
+  function overviewEl(name,attrs){var node=document.createElementNS(SVG_NS,name);Object.keys(attrs||{}).forEach(function(key){node.setAttribute(key,attrs[key]);});return node;}
+  function renderSearchOverview(list){
+    overviewMount.textContent="";
+    var counts={};list.forEach(function(record){if(record.region!=="全国オンライン")counts[record.region]=(counts[record.region]||0)+1;});
+    var svg=overviewEl("svg",{viewBox:"50 20 500 420",role:"img","aria-labelledby":"searchMapTitle searchMapDesc"});
+    var title=overviewEl("title",{id:"searchMapTitle"});title.textContent="地方からさがす";svg.appendChild(title);
+    var desc=overviewEl("desc",{id:"searchMapDesc"});desc.textContent="地方ごとに色分けした日本地図です。沖縄は右下の挿入図に表示しています。地方を選ぶと、その地方の拠点地図に切り替わります。";svg.appendChild(desc);
+    svg.appendChild(overviewEl("rect",{class:"home-map-inset",x:"295",y:"328",width:"230",height:"108",rx:"18","aria-hidden":"true"}));
+    REGION_ORDER.forEach(function(region){
+      if(region==="全国オンライン")return;
+      var link=overviewEl("a",{href:"search.html?view=map&region="+encodeURIComponent(region),"aria-label":region+"、"+(counts[region]||0)+"件を表示","data-region":REGION_KEYS[region]});
+      link.classList.add("home-map-region","search-map-region");
+      link.addEventListener("click",function(event){event.preventDefault();selectRegion(region);});
+      var shape=overviewEl("g",region==="沖縄"?{transform:"matrix(1.35 0 0 1.35 263 -245)"}:{});
+      (GEO_BY_REGION[region]||[]).forEach(function(feature){shape.appendChild(overviewEl("path",{d:overviewPath(feature.geometry),"fill-rule":"evenodd"}));});
+      link.appendChild(shape);
+      var loc=SEARCH_MAP_LABELS[region],p=region==="沖縄"?[325,350]:overviewProject(loc),label=overviewEl("g",{class:"home-map-label",transform:"translate("+p[0].toFixed(1)+" "+p[1].toFixed(1)+")"});
+      var text=overviewEl("text",{"text-anchor":"middle",y:"-3"});text.textContent=region;label.appendChild(text);
+      var count=overviewEl("text",{"text-anchor":"middle",y:"14",class:"home-map-count"});count.textContent=(counts[region]||0)+"件";label.appendChild(count);link.appendChild(label);svg.appendChild(link);
+    });
+    overviewMount.appendChild(svg);
+  }
   function popupHtml(r){
     var cv=coverOf(r);
-    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var photo=(r.image||getPhotoUrl(cv));
     var popupFallback=getPhotoUrl(cv);
     var place=[r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
     var h='<div class="ys-pop">';
     h+='<div class="ys-pop-photo"><img src="'+esc(photo)+'" alt="'+esc(photoAlt(r,cv))+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="if(!this.dataset.fallback){this.dataset.fallback=\'1\';this.src=\''+esc(popupFallback)+'\';this.alt=\'イメージ写真\';this.removeAttribute(\'referrerpolicy\');this.nextElementSibling.textContent=\'イメージ写真\';this.nextElementSibling.className=\'photo-credit is-image\'}else{this.style.display=\'none\'}">'
       +'<span class="photo-credit '+(hasOfficialPhoto(r)?'is-official':'is-image')+'">'+photoCredit(r)+'</span>'
-      +'<div class="ys-pop-pills"><span class="pill">'+esc(cv.emoji+" "+cv.label)+'</span><span class="pill">'+esc(sm.label)+'</span></div></div>';
+      +'<div class="ys-pop-pills"><span class="pill">'+esc(cv.emoji+" "+cv.label)+'</span>'+audiencePillsHtml(r)+'</div></div>';
     h+='<div class="ys-pop-body">';
     h+='<h4>'+esc(r.name)+'</h4>';
     h+='<div class="ys-pop-place">'+esc(place)+'</div>';
@@ -698,12 +795,11 @@
   }
   function initMap(){
     map=L.map("map",{scrollWheelZoom:true,zoomControl:true,minZoom:4,maxZoom:MAP_ZOOM_PICK,maxBounds:JAPAN_MAXBOUNDS,maxBoundsViscosity:1.0}).fitBounds(JAPAN_BOUNDS);
-    map.createPane("land"); map.getPane("land").style.zIndex=250;      // 陸地（影つき）
     map.createPane("dim"); map.getPane("dim").style.zIndex=260;        // 地方の外を覆うベール
     map.getPane("dim").style.pointerEvents="none";
     map.createPane("border"); map.getPane("border").style.zIndex=350;  // 県境ライン
     map.attributionControl.setPrefix("").addAttribution('境界: <a href="https://github.com/dataofjapan/land" target="_blank" rel="noopener">dataofjapan/land</a>');
-    // 地方を選んだあとだけ addLayer する。地方えらびの段階では白いシルエットのままにしたい。
+    // 地方を選んだあとだけ、詳細用の地図タイルを表示する。
     tiles=L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{
       maxZoom:19,subdomains:"abcd",
       attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'
@@ -721,33 +817,20 @@
     cluster.clearLayers(); regionLayer.clearLayers();
     var hint=$("#mapHint");
 
-    // ---- STEP 1: 地方えらび（地方・都道府県が未選択のとき）＝ 日本の陸地だけ表示 ----
+    // ---- STEP 1: 地方えらび＝ホームと同じ地方別カラーの全国地図 ----
     if(!state.region && !state.pref){
       if(map.hasLayer(tiles)) map.removeLayer(tiles);
       map.setMaxZoom(MAP_ZOOM_PICK);
-      applyMask(GEO.features);
       map.setMaxBounds(JAPAN_MAXBOUNDS);
-      var byReg={};
-      list.forEach(function(r){ if(r.lat!=null&&r.region!=="全国オンライン") byReg[r.region]=(byReg[r.region]||0)+1; });
-      var used=[];
-      REGION_ORDER.forEach(function(g){
-        if(g==="全国オンライン") return;
-        var c=REGION_LABEL_POS[g]||REGION_CENTROID[g], n=byReg[g]||0;
-        if(!c||!n) return;
-        var icon=L.divIcon({html:'<div class="ys-region">'+g+'<span class="rc">'+n+'</span></div>',className:"ys-region-marker",iconSize:[1,1],iconAnchor:[0,0]});
-        var m=L.marker(c,{icon:icon,title:g+"をえらぶ"});
-        m.on("click",function(){ selectRegion(g); });
-        regionLayer.addLayer(m); used.push(c);
-      });
-      map.invalidateSize();
-      if(used.length) map.fitBounds(used,{padding:[60,70]}); else map.fitBounds(JAPAN_BOUNDS);
-      hint.innerHTML='まずは地図で見たい <b>地方</b> をタップしてください。えらぶと、その地方だけの地図になります。';
+      clearMaskLayers();mapElement.hidden=true;overviewMount.hidden=false;renderSearchOverview(list);
+      hint.innerHTML='まずは色分けした日本地図から、見たい <b>地方</b> をタップしてください。';
       return;
     }
 
     // ---- STEP 2: 選んだ地方だけ表示＋各拠点 ----
     // 都道府県まで絞られているならその県だけを、地方どまりなら地方全体を焦点にする。
     // ベールが「いま見ている範囲」を示すので、見出しの地名と一致させる。
+    overviewMount.hidden=true;mapElement.hidden=false;map.invalidateSize();
     var feats=(state.pref&&GEO_BY_PREF[state.pref])
       || GEO_BY_REGION[state.region||PREF_TO_REGION[state.pref]||""] || [];
     var rbounds=null;
@@ -802,6 +885,7 @@
   });
 
   function render(){
+    syncFilterSummary();
     var list=DATA.filter(matches);
     countEl.textContent=list.length.toLocaleString();
     // 現在地から近い順
@@ -815,7 +899,11 @@
     if(state.view==="map"){ updateMap(list); return; }
     if(loadObserver){var prior=document.getElementById("loadMoreResults");if(prior)loadObserver.unobserve(prior);}
     grid.innerHTML="";
-    if(!list.length){empty.style.display="";return;}
+    if(!list.length){
+      var emptyMessage=$("#emptyMessage");
+      emptyMessage.innerHTML=state.sharedIds?'<b>共有リストの場所を表示できませんでした。</b><br>リンクが途中で切れていないかご確認ください。':state.favoritesOnly?'<b>まだ気になる場所がありません。</b><br>カードのハートを押すと、ここに保存できます。':'<b>条件に合う拠点がみつかりませんでした。</b><br>キーワードや絞り込みを少なくして、もう一度おためしください。';
+      empty.style.display="";return;
+    }
     empty.style.display="none";
     currentList=list;renderedCount=0;appendNextPage();
   }
@@ -827,7 +915,6 @@
   function showToast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(function(){t.classList.remove("show");},1800);}
 
   function buildDetail(r){
-    var sm=STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var cv=coverOf(r);
     var place=[r.region,r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
     var heroSrc=r.image||getPhotoUrl(cv);
@@ -835,7 +922,7 @@
     var h='<div class="detail-hero">'+hero
       +'<div class="detail-hero-grad"></div>'
       +'<button class="detail-close" id="detailClose" aria-label="閉じる">✕</button>'
-      +'<div class="detail-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span><span class="pill">'+esc(sm.label)+'</span></div>'
+      +'<div class="detail-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span>'+audiencePillsHtml(r)+'</div>'
       +'<span class="photo-credit '+(hasOfficialPhoto(r)?'is-official':'is-image')+'">'+photoCredit(r)+'</span>'
       +'</div>';
     h+='<div class="detail-body">';
@@ -845,8 +932,6 @@
     h+='<p class="detail-intro">'+esc(r.intro)+'</p>';
     if(hasOfficialPhoto(r)) h+='<p class="photo-source-note">写真候補：<a href="'+esc(r.imageSourceUrl)+'" target="_blank" rel="noopener">団体公式サイト</a><span>公開前に利用条件を確認してください</span></p>';
     else h+='<p class="photo-source-note">写真：活動分野を表す生成イメージ</p>';
-    if(r.status==="条件付き掲載") h+='<div class="detail-note">利用に条件がある場合があります。参加前に公式サイトでご確認ください。</div>';
-    else if(r.status==="掲載保留"||r.status==="参考情報") h+='<div class="detail-note">情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。</div>';
     if(r.fieldTags&&r.fieldTags.length){
       h+='<div class="detail-sec"><h3>やってみたいこと</h3><div class="detail-tags">'+
          r.fieldTags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('')+'</div></div>';
@@ -864,6 +949,8 @@
     h+='<div class="detail-actions">';
     if(r.url) h+='<a class="da-primary" href="'+esc(r.url)+'" target="_blank" rel="noopener">'+SVG_EXT+'公式サイト</a>';
     if(r.address) h+='<a class="da-ghost" href="'+esc(mapUrl(r))+'" target="_blank" rel="noopener">'+SVG_MAP+'地図で開く</a>';
+    h+='<button class="da-ghost detail-favorite" data-favorite-id="'+esc(r.id)+'">'+window.YSFavorites.SVG_HEART+'<span data-favorite-label>気になる</span></button>';
+    h+='<button class="da-ghost detail-calendar" data-calendar-id="'+esc(r.id)+'">'+window.YSCalendar.SVG_CALENDAR+'<span>予定に入れる</span></button>';
     h+='<button class="da-ghost" id="detailShare">'+SVG_SHARE+'シェア</button>';
     h+='</div>';
     // related: same region, different spot
@@ -880,6 +967,7 @@
   function openDetail(r,push){
     if(!r) return;
     detailCard.innerHTML=buildDetail(r);
+    if(window.YSFavorites)window.YSFavorites.syncAll(detailCard);
     var modalPhoto=detailCard.querySelector(".detail-hero img");
     if(modalPhoto) modalPhoto.onerror=function(){
       var cv=coverOf(r), fallback=getPhotoUrl(cv);
@@ -991,11 +1079,9 @@
     $("#resultsWrap").scrollIntoView({behavior:"smooth",block:"start"});
     showToast("あなたに合う拠点を表示しました");
   }
-  $("#quizStart").onclick=openQuiz;
+  [$("#quizStart"),$("#quizStartTop")].forEach(function(button){if(button)button.onclick=openQuiz;});
   quizOverlay.onclick=function(e){ if(e.target===quizOverlay) closeQuiz(); };
   document.addEventListener("keydown",function(e){ if(e.key==="Escape"&&quizOverlay.classList.contains("open")) closeQuiz(); });
-
-  render();
 
   // URLパラメータで検索条件を反映（トップの導線から入れる）
   (function(){
@@ -1005,7 +1091,10 @@
     var cat=p.get("cat"); if(cat&&CAT_FIELD_MAP[cat]){ state.catFilter=cat; state.fields=CAT_FIELD_MAP[cat].slice(); syncCatCards(); syncMulti(fc,state.fields,"tag"); changed=true; }
     var fld=p.get("field"); if(fld){ if(state.fields.indexOf(fld)<0)state.fields.push(fld); syncMulti(fc,state.fields,"tag"); changed=true; }
     var q=p.get("q"); if(q){ state.q=q; qi.value=q; qc.classList.add("show"); changed=true; }
-    if(changed) render();
+    var shared=p.get("list");
+    if(shared){state.sharedIds=shared.split(",").map(function(id){return id.trim();}).filter(function(id,index,list){return BYID[id]&&list.indexOf(id)===index;}).slice(0,60);state.favoritesOnly=false;syncFavoritesUI();changed=true;}
+    else if(p.get("favorites")==="1"){state.favoritesOnly=true;syncFavoritesUI();changed=true;}
+    render();
     if(p.get("view")==="map"){ var mb=document.querySelector('#viewToggle .vt[data-view=map]'); if(mb) mb.click(); }
     if(p.get("quiz")==="1"){ openQuiz(); }
     if(p.get("near")==="1"){ nearBtn.click(); }

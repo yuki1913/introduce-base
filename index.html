@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260815a">
+<link rel="stylesheet" href="styles.css?v=20260817i">
 </head>
 <body>
 
@@ -29,6 +29,7 @@
     <nav class="site-nav">
       <a href="search.html">さがす</a>
       <a href="search.html?view=map">地図</a>
+      <a class="favorites-nav" href="search.html?favorites=1" aria-label="気になるリスト"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorites-nav-label">気になる</span><b data-favorite-count>0</b></a>
       <a href="guide.html">はじめての方</a>
       <a href="contact.html">お問い合わせ</a>
       <a href="search.html?quiz=1" class="cta">診断する</a>
@@ -84,8 +85,20 @@
       <span class="sh-en" aria-hidden="true">AREA</span>
     </h2>
     <div class="home-map-layout">
-      <div class="home-map" id="homeMap" aria-label="地方別の掲載件数を示す日本地図">
-        <p class="home-map-loading">日本地図を読み込んでいます…</p>
+      <div class="home-map-shell" id="homeMapShell">
+        <div class="home-map" id="homeMap" aria-label="地方別の掲載件数を示す日本地図">
+          <p class="home-map-loading">日本地図を読み込んでいます…</p>
+        </div>
+        <section class="map-pick-popover" id="mapPickDialog" role="dialog" aria-modal="false" aria-labelledby="mapPickTitle" hidden>
+          <div class="map-pick-popover-head">
+            <h3 id="mapPickTitle">地方のピックアップ</h3>
+            <span class="map-pick-popover-count" id="mapPickCount">3件</span>
+            <button type="button" class="map-pick-popover-close" id="mapPickClose" aria-label="ピックアップを閉じる">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </div>
+          <div class="map-pick-popover-list" id="mapPickCards"></div>
+        </section>
       </div>
       <div class="region-grid" id="regionGrid" aria-label="地方からさがす"></div>
     </div>
@@ -123,7 +136,6 @@
       <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
     <div class="foot-note">
-      <div class="legend"><span class="status s-rec">掲載推奨</span><span class="status s-cond">条件つき</span><span class="status s-ref">参考情報</span><span class="status s-hold">要確認</span></div>
       <p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。</p>
     </div>
     <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 P26年8月15日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
@@ -131,8 +143,9 @@
 </footer>
 
 <script src="data-home.js"></script>
-<script src="shared.js"></script>
-<script src="home-map.js"></script>
+<script src="favorites.js?v=20260817i"></script>
+<script src="shared.js?v=20260817i"></script>
+<script src="home-map.js?v=20260817g"></script>
 <script>
 (function(){
   var Y=window.YS, D=Y.DATA, COUNTS=window.YSHOME_COUNTS||{};
@@ -157,23 +170,6 @@
   var byRegion={};
   D.forEach(function(r){ (byRegion[r.region]=byRegion[r.region]||[]).push(r); });
 
-  // 掲載推奨を優先し、分野が偏らないよう catKey を散らして拾う。
-  // 分野が3種そろわない地方は同分野で埋める。
-  function picksFor(g){
-    var list=byRegion[g]||[];
-    var rec=list.filter(function(r){ return r.status==="掲載推奨"; });
-    var pool=rec.length?rec:list;
-    var out=[], seen={};
-    pool.forEach(function(r){
-      if(out.length>=3) return;
-      var k=Y.coverOf(r).catKey;
-      if(seen[k]) return;
-      seen[k]=1; out.push(r);
-    });
-    pool.forEach(function(r){ if(out.length<3 && out.indexOf(r)<0) out.push(r); });
-    return out.slice(0,3);
-  }
-
   Y.REGION_ORDER.forEach(function(g){
     var list=byRegion[g]||[]; if(!list.length) return;
     var grp=document.createElement("div"); grp.className="rp-group";
@@ -187,7 +183,7 @@
     more.setAttribute("aria-label",g+"の拠点をすべて見る");
     hd.appendChild(h3); hd.appendChild(more);
     var cards=document.createElement("div"); cards.className="rp-group-cards";
-    picksFor(g).forEach(function(r){ cards.appendChild(Y.card(r)); });
+    Y.regionPicks(g,3).forEach(function(r){ cards.appendChild(Y.card(r)); });
     grp.appendChild(hd); grp.appendChild(cards);
     rpRail.appendChild(grp);
   });

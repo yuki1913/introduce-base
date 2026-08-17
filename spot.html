@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="styles.css?v=20260815a">
+<link rel="stylesheet" href="styles.css?v=20260817j">
 </head>
 <body>
 
@@ -29,6 +29,7 @@
     <nav class="site-nav">
       <a href="search.html">さがす</a>
       <a href="search.html?view=map">地図</a>
+      <a class="favorites-nav" href="search.html?favorites=1" aria-label="気になるリスト"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="favorites-nav-label">気になる</span><b data-favorite-count>0</b></a>
       <a href="guide.html">はじめての方</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
@@ -55,7 +56,9 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="data-list.js"></script>
-<script src="shared.js"></script>
+<script src="favorites.js?v=20260817i"></script>
+<script src="calendar.js?v=20260817j"></script>
+<script src="shared.js?v=20260817i"></script>
 <script>
 (function(){
   var Y=window.YS, esc=Y.esc;
@@ -79,14 +82,18 @@
     if(r.url)structured.sameAs=r.url;
     schema.textContent=JSON.stringify(structured);
   }
+  function audiencePillsHtml(r){
+    var labels={junior:"中学生",high:"高校生",other:"その他"};
+    var detail=(r.targets||[]).join("・")||"対象を公式サイトで確認";
+    return '<span class="audience-pills" aria-label="'+esc("対象："+detail)+'" title="'+esc("対象："+detail)+'">'+Y.audienceKinds(r).map(function(kind){return '<span class="pill audience-pill audience-'+kind+'">'+labels[kind]+'</span>';}).join("")+'</span>';
+  }
   function render(r){
     setMeta(r);
-    var sm=Y.STATUS_META[r.status]||{cls:"s-ref",label:r.status};
     var cv=Y.coverOf(r);
     var place=[r.region,r.pref,r.city].filter(function(x,i,a){return x&&a.indexOf(x)===i;}).join(" · ");
     var heroSrc=r.image||Y.getPhotoUrl(cv);
     var hero='<img id="spotPhoto" src="'+esc(heroSrc)+'" alt="'+esc(Y.photoAlt(r,cv))+'" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">';
-    var h='<div class="spot-hero">'+hero+'<div class="spot-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span><span class="pill">'+esc(sm.label)+'</span></div><span id="spotPhotoCredit" class="photo-credit '+(Y.hasOfficialPhoto(r)?'is-official':'is-image')+'">'+Y.photoCredit(r)+'</span></div>';
+    var h='<div class="spot-hero">'+hero+'<div class="spot-hero-pills"><span class="pill">'+esc(r.region==="全国オンライン"?"オンライン":r.region)+'</span>'+audiencePillsHtml(r)+'</div><span id="spotPhotoCredit" class="photo-credit '+(Y.hasOfficialPhoto(r)?'is-official':'is-image')+'">'+Y.photoCredit(r)+'</span></div>';
     h+='<div class="detail-body spot-detail-body">';
     if(r.logo) h+='<img class="detail-logo" src="'+esc(r.logo)+'" alt="'+esc(r.name)+'のロゴ" onerror="this.remove()">';
     h+='<h1>'+esc(r.name)+'</h1>';
@@ -95,8 +102,6 @@
     if(r.summary) h+='<section class="detail-sec detail-summary"><h2>この拠点について</h2><p>'+esc(r.summary)+'</p></section>';
     if(Y.hasOfficialPhoto(r)) h+='<p class="photo-source-note" id="spotPhotoSource">写真候補：<a href="'+esc(r.imageSourceUrl)+'" target="_blank" rel="noopener">団体公式サイト</a><span>公開前に利用条件を確認してください</span></p>';
     else h+='<p class="photo-source-note" id="spotPhotoSource">写真：活動分野を表す生成イメージ</p>';
-    if(r.status==="条件付き掲載") h+='<div class="detail-note">利用に条件がある場合があります。参加前に公式サイトでご確認ください。</div>';
-    else if(r.status==="掲載保留"||r.status==="参考情報") h+='<div class="detail-note">情報が変わっている可能性があります。最新の内容は公式サイトでご確認ください。</div>';
     if(r.fieldTags&&r.fieldTags.length) h+='<section class="detail-sec"><h2>やってみたいこと</h2><div class="detail-tags">'+r.fieldTags.map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('')+'</div></section>';
     if(r.useTags&&r.useTags.length) h+='<section class="detail-sec"><h2>利用のしかた</h2><div class="detail-tags">'+r.useTags.map(function(t){return '<span class="tag use">'+esc(t)+'</span>';}).join('')+'</div></section>';
     var info='';
@@ -114,11 +119,15 @@
     h+='<div class="detail-actions">';
     if(r.url) h+='<a class="da-primary" href="'+esc(r.url)+'" target="_blank" rel="noopener">'+Y.SVG_EXT+'公式サイト</a>';
     if(r.address) h+='<a class="da-ghost" href="'+esc(Y.mapUrl(r))+'" target="_blank" rel="noopener">'+Y.SVG_MAP+'地図で開く</a>';
+    h+='<button class="da-ghost detail-favorite" data-favorite-id="'+esc(r.id)+'">'+window.YSFavorites.SVG_HEART+'<span data-favorite-label>気になる</span></button>';
+    h+='<button class="da-ghost detail-calendar" data-calendar-id="'+esc(r.id)+'">'+window.YSCalendar.SVG_CALENDAR+'<span>予定に入れる</span></button>';
     h+='<button class="da-ghost" id="shareBtn">シェア</button></div>';
     var rel=Y.DATA.filter(function(x){return x.region===r.region&&x.id!==r.id&&Y.DEFAULT_STATUS[x.status];}).slice(0,6);
     h+='</div>';
     if(rel.length) h+='<div class="detail-related"><h2>'+esc(r.region)+'のほかの拠点</h2><div class="grid" id="relGrid"></div></div>';
     box.innerHTML=h;
+    if(window.YSFavorites)window.YSFavorites.syncAll(box);
+    if(window.YSCalendar)window.YSCalendar.register([r]);
 
     var spotPhoto=document.getElementById("spotPhoto");
     spotPhoto.onerror=function(){
