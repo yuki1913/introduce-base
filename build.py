@@ -166,12 +166,22 @@ def write_outputs(recs):
         with open(os.path.join(detail_dir,r['id']+'.json'),'w',encoding='utf-8') as f:
             json.dump(r,f,ensure_ascii=False,separators=(',',':'))
 
-    updated=f'{date.today().year}年{date.today().month}月{date.today().day}日'
-    marker=re.compile(r'(<time\s+data-updated-at(?:\s+datetime="[^"]*")?>).*?(</time>)')
+    today=date.today()
+    updated=f'{today.year}年{today.month}月{today.day}日'
+    # datetime属性も一緒に打ち直す。表示だけ更新して機械可読な日付が古いままだと、
+    # 検索エンジンや読み上げに嘘の更新日を伝えてしまう。
+    marker=re.compile(r'<time\s+data-updated-at(?:\s+datetime="[^"]*")?\s*>.*?</time>')
+    replacement=f'<time data-updated-at datetime="{today.isoformat()}">{updated}</time>'
+    stamped=0
     for path in glob.glob(os.path.join(HERE,'*.html')):
         with open(path,encoding='utf-8') as f: html=f.read()
-        html=marker.sub(r'\1'+updated+r'\2',html)
+        html,hits=marker.subn(replacement,html)
+        stamped+=hits
         with open(path,'w',encoding='utf-8') as f: f.write(html)
+    if stamped:
+        print(f'最終更新日を {updated} に更新しました（{stamped}か所）。')
+    else:
+        print('注意: <time data-updated-at> が見つからず、最終更新日を更新できませんでした。')
 
     # 本番URLが分かる環境では、有効な絶対URLの sitemap も同時に作る。
     # SITE_ORIGIN 未設定時に推測したドメインを書かないことを優先する。

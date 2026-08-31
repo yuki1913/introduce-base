@@ -196,7 +196,7 @@
       <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
     <div class="foot-note"><p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。</p></div>
-    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 P26年8月15日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-08-15">2026年8月15日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
@@ -789,6 +789,10 @@
     var title=overviewEl("title",{id:"searchMapTitle"});title.textContent="地方からさがす";svg.appendChild(title);
     var desc=overviewEl("desc",{id:"searchMapDesc"});desc.textContent="地方ごとに色分けした日本地図です。沖縄は右下の挿入図に表示しています。地方を選ぶと、その地方の拠点地図に切り替わります。";svg.appendChild(desc);
     svg.appendChild(overviewEl("rect",{class:"home-map-inset",x:"295",y:"328",width:"230",height:"108",rx:"18","aria-hidden":"true"}));
+    // 地方の形はあとから描いたものが上に重なるため、ラベルを地方の中に置くと
+    // 隣の地方の塗りに件数が隠れる。ラベルはまとめて最前面の層に描く。
+    // （.home-map-label は pointer-events:none なので、クリックは下の地方に通る）
+    var labelLayer=overviewEl("g",{class:"home-map-labels","aria-hidden":"true"});
     REGION_ORDER.forEach(function(region){
       if(region==="全国オンライン")return;
       var link=overviewEl("a",{href:"search.html?view=map&region="+encodeURIComponent(region),"aria-label":region+"、"+(counts[region]||0)+"件を表示","data-region":REGION_KEYS[region]});
@@ -799,8 +803,9 @@
       link.appendChild(shape);
       var loc=SEARCH_MAP_LABELS[region],p=region==="沖縄"?[325,350]:overviewProject(loc),label=overviewEl("g",{class:"home-map-label",transform:"translate("+p[0].toFixed(1)+" "+p[1].toFixed(1)+")"});
       var text=overviewEl("text",{"text-anchor":"middle",y:"-3"});text.textContent=region;label.appendChild(text);
-      var count=overviewEl("text",{"text-anchor":"middle",y:"14",class:"home-map-count"});count.textContent=(counts[region]||0)+"件";label.appendChild(count);link.appendChild(label);svg.appendChild(link);
+      var count=overviewEl("text",{"text-anchor":"middle",y:"14",class:"home-map-count"});count.textContent=(counts[region]||0)+"件";label.appendChild(count);labelLayer.appendChild(label);svg.appendChild(link);
     });
+    svg.appendChild(labelLayer);
     overviewMount.appendChild(svg);
   }
   function popupHtml(r){
@@ -875,11 +880,19 @@
         .bindPopup(popupHtml(r),{maxWidth:280,minWidth:230});
       markerGroup.addLayer(marker);
     });
-    var off=list.length-pts.length;
+    // 地図に出せない件数の内訳。住所が無いオンライン・広域と、住所はあるが
+    // 座標が未取得の拠点は別物なので、まとめて「住所なし」と言い切らない。
+    var offline=list.filter(function(r){return r.lat==null;});
+    var offOnline=offline.filter(function(r){return r.region==="全国オンライン";}).length;
+    var offNoGeo=offline.length-offOnline;
+    var offParts=[];
+    if(offOnline) offParts.push('オンライン・広域の '+offOnline+' 件');
+    if(offNoGeo) offParts.push('位置を確認中の '+offNoGeo+' 件');
+    var offNote=offParts.length?'（'+offParts.join('と')+'は地図に出ません。リスト表示でご覧ください）':'';
     var where=state.pref||state.region||"";
     hint.innerHTML='<span class="map-back" id="mapBack">← 地方を選びなおす</span>　'
       +'<b>'+where+'</b> の地図：<b>'+pts.length+'</b> 拠点'
-      +(off>0?'（住所なしのオンライン・広域 '+off+' 件は非表示）':'')+'／ピンをタップで詳細・地図は拡大できます';
+      +offNote+'／ピンをタップで詳細・地図は拡大できます';
     var back=document.getElementById("mapBack");
     if(back) back.onclick=function(){ state.region=""; state.pref=""; ps.value=""; syncRegionChips(); render(); };
 
@@ -976,6 +989,12 @@
     if(r.station) info+='<div><b>アクセス</b>'+esc(r.station)+'</div>';
     if(r.address) info+='<div><b>住所</b>'+esc(r.address)+'</div>';
     if(info) h+='<div class="detail-sec"><h3>基本情報</h3><div class="detail-info">'+info+'</div></div>';
+    if(r.infoUrl||r.url){
+      h+='<div class="detail-sec detail-sources"><h3>この情報の出どころ</h3><div class="source-links">';
+      if(r.infoUrl) h+='<a href="'+esc(r.infoUrl)+'" target="_blank" rel="noopener">'+SVG_EXT+'掲載内容の参照元</a>';
+      if(r.url&&r.url!==r.infoUrl) h+='<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+SVG_EXT+'団体・施設の公式サイト</a>';
+      h+='</div></div>';
+    }
     if(r.lat!=null) h+='<div class="detail-sec"><h3>地図</h3><div id="detailMap"></div></div>';
     h+='<div class="detail-actions">';
     if(r.url) h+='<a class="da-primary" href="'+esc(r.url)+'" target="_blank" rel="noopener">'+SVG_EXT+'公式サイト</a>';
@@ -995,8 +1014,18 @@
     return h;
   }
 
-  function openDetail(r,push){
-    if(!r) return;
+  // 一覧用データ(data-list.js)には公式サイト・住所・アクセスが入っていないため、
+  // モーダルは spot.html と同じ詳細JSONを取りに行き、届いたら描き直す。
+  var DETAILS={}, detailToken=0;
+  function loadDetail(id,done){
+    if(DETAILS[id]){done(DETAILS[id]);return;}
+    fetch("data-details/"+encodeURIComponent(id)+".json")
+      .then(function(res){if(!res.ok)throw new Error("not found");return res.json();})
+      .then(function(full){DETAILS[id]=full;done(full);})
+      .catch(function(){});   // 取れなければ一覧データのままで十分読める
+  }
+
+  function paintDetail(r,resetScroll){
     detailCard.innerHTML=buildDetail(r);
     if(window.YSFavorites)window.YSFavorites.syncAll(detailCard);
     var modalPhoto=detailCard.querySelector(".detail-hero img");
@@ -1008,10 +1037,7 @@
         var note=detailCard.querySelector(".photo-source-note"); if(note) note.textContent="写真：活動分野を表す生成イメージ";
       }else this.style.display="none";
     };
-    detailCard.scrollTop=0;
-    overlay.classList.add("open");
-    document.body.style.overflow="hidden";
-    if(push){ try{history.pushState({id:r.id},"","?id="+encodeURIComponent(r.id));}catch(e){} }
+    if(resetScroll) detailCard.scrollTop=0;
     // wire
     $("#detailClose").onclick=function(){ closeDetail(true); };
     var sh=$("#detailShare");
@@ -1025,13 +1051,25 @@
     });
     // mini map
     if(detailMapObj){ detailMapObj.remove(); detailMapObj=null; }
-    if(r.lat!=null){
+    if(r.lat!=null&&window.L){
       detailMapObj=L.map("detailMap",{scrollWheelZoom:false,attributionControl:false}).setView([r.lat,r.lng],14);
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd"}).addTo(detailMapObj);
       var cv2=coverOf(r);
       L.marker([r.lat,r.lng],{icon:markerIcon(cv2,null,r.name)}).addTo(detailMapObj);
       setTimeout(function(){detailMapObj&&detailMapObj.invalidateSize();},80);
     }
+  }
+
+  function openDetail(r,push){
+    if(!r) return;
+    var token=++detailToken, id=r.id;
+    paintDetail(DETAILS[id]||r,true);
+    overlay.classList.add("open");
+    document.body.style.overflow="hidden";
+    if(push){ try{history.pushState({id:id},"","?id="+encodeURIComponent(id));}catch(e){} }
+    if(!DETAILS[id]) loadDetail(id,function(full){
+      if(token===detailToken&&overlay.classList.contains("open")) paintDetail(full,false);
+    });
   }
   function closeDetail(push){
     overlay.classList.remove("open");
@@ -1127,6 +1165,9 @@
     else if(p.get("favorites")==="1"){state.favoritesOnly=true;syncFavoritesUI();changed=true;}
     render();
     if(p.get("view")==="map"){ var mb=document.querySelector('#viewToggle .vt[data-view=map]'); if(mb) mb.click(); }
+    // モーダルの「シェア」は ?id= のURLを配るので、読み込み時にも開けるようにする。
+    // これが無いと、共有されたリンクが素の一覧になってしまう。
+    var openId=p.get("id"); if(openId&&BYID[openId]) openDetail(BYID[openId],false);
     if(p.get("quiz")==="1"){ openQuiz(); }
     if(p.get("near")==="1"){ nearBtn.click(); }
   })();
