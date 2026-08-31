@@ -749,10 +749,10 @@
     sports:'<circle cx="12" cy="12" r="9"/><path d="m8.5 9 3.5-2.5L15.5 9l-1.3 4H9.8L8.5 9ZM12 6.5V3M15.5 9l3.3-1.1M14.2 13l2.2 3M9.8 13l-2.2 3M8.5 9 5.2 7.9"/>'
   };
   function mapIconSvg(key){return '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+(MAP_ICON_PATHS[key]||MAP_ICON_PATHS.community)+'</svg>';}
-  function markerIcon(cv,offset){
+  function markerIcon(cv,offset,name){
     var key=cv.catKey||"community",dx=offset?offset.x:0,dy=offset?offset.y:0;
     return L.divIcon({
-      html:'<div class="ys-pin-offset" style="--pin-x:'+dx+'px;--pin-y:'+dy+'px"><div class="ys-place-pin" data-cat="'+key+'"><span>'+mapIconSvg(key)+'</span></div></div>',
+      html:'<div class="ys-pin-offset" style="--pin-x:'+dx+'px;--pin-y:'+dy+'px"><div class="ys-place-pin" data-cat="'+key+'" role="img" aria-label="'+esc(name||CAT_LABELS[key]||"")+'"><span aria-hidden="true">'+mapIconSvg(key)+'</span></div></div>',
       className:"ys-place-marker",iconSize:[44,48],iconAnchor:[22,46],popupAnchor:[dx,dy-42]
     });
   }
@@ -869,7 +869,8 @@
     var pts=list.filter(function(r){return r.lat!=null&&r.lng!=null;});
     spreadMarkerOffsets(pts).forEach(function(item){
       var r=item.record,o=item.offset;
-      var marker=L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r),o),title:r.name,riseOnHover:true})
+      // title 属性はブラウザ標準のツールチップと二重に出てしまうので付けない（読み上げ用の名前はピン側に持たせる）
+      var marker=L.marker([r.lat,r.lng],{icon:markerIcon(coverOf(r),o,r.name),riseOnHover:true})
         .bindTooltip(r.name,{direction:"top",offset:[o.x,o.y-43],opacity:.98,className:"ys-place-tooltip"})
         .bindPopup(popupHtml(r),{maxWidth:280,minWidth:230});
       markerGroup.addLayer(marker);
@@ -1028,7 +1029,7 @@
       detailMapObj=L.map("detailMap",{scrollWheelZoom:false,attributionControl:false}).setView([r.lat,r.lng],14);
       L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd"}).addTo(detailMapObj);
       var cv2=coverOf(r);
-      L.marker([r.lat,r.lng],{icon:markerIcon(cv2)}).addTo(detailMapObj);
+      L.marker([r.lat,r.lng],{icon:markerIcon(cv2,null,r.name)}).addTo(detailMapObj);
       setTimeout(function(){detailMapObj&&detailMapObj.invalidateSize();},80);
     }
   }
