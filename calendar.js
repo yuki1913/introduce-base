@@ -16,8 +16,9 @@
   function utcStamp(date){return date.getUTCFullYear()+pad(date.getUTCMonth()+1)+pad(date.getUTCDate())+"T"+pad(date.getUTCHours())+pad(date.getUTCMinutes())+pad(date.getUTCSeconds())+"Z";}
   function escapeIcs(value){return String(value||"").replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\\;");}
   function eventUrl(record){
-    if(location.protocol==="http:"||location.protocol==="https:")return location.origin+location.pathname.replace(/[^/]*$/,"")+"spot.html?id="+encodeURIComponent(record.id);
-    return "spot.html?id="+encodeURIComponent(record.id);
+    // 拠点ページの相対パス。spot/<ID>.html の中からでも <base> 基準で正しく解決する。
+    var rel="spot/"+encodeURIComponent(record.id)+".html";
+    try{ return new URL(rel,document.baseURI).href; }catch(e){ return rel; }
   }
   function buildIcs(record,values){
     var dateParts=values.date.split("-").map(Number),allDay=!values.time;

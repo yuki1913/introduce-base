@@ -121,6 +121,14 @@
   <div class="view-toggle" id="viewToggleLegacy" hidden></div>
 
   <div class="toolbar-r">
+    <label class="sort-field">
+      <span class="sort-label">並び替え</span>
+      <select id="sortSel" aria-label="結果の並び替え">
+        <option value="recommend">おすすめ順</option>
+        <option value="region">地域順（北から）</option>
+        <option value="near">近い順（現在地）</option>
+      </select>
+    </label>
     <button class="favorites-filter-btn" id="favoritesFilter" type="button" aria-pressed="false">
       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
       <span>気になる</span><b id="favoritesCount">0</b>
@@ -196,7 +204,7 @@
       <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
     <div class="foot-note"><p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。</p></div>
-    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-08-15">2026年8月15日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-08-31">2026年8月31日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
@@ -282,11 +290,13 @@
     return {emoji:"🌱",hue:"green",catKey:"nature",label:tags[0]||"活動"};
   }
 
-  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:"list",userLoc:null,sortByDist:false,favoritesOnly:false,sharedIds:null};
+  var state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:"list",userLoc:null,sort:"recommend",favoritesOnly:false,sharedIds:null};
 
   function distKm(a,b,c,d){var R=6371,dLa=(c-a)*Math.PI/180,dLo=(d-b)*Math.PI/180,la1=a*Math.PI/180,la2=c*Math.PI/180;var x=Math.sin(dLa/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dLo/2)**2;return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));}
   function fmtDist(km){return km<1?Math.round(km*1000)+"m":(km<10?km.toFixed(1):Math.round(km))+"km";}
 
+  // 拠点ページは spot/<ID>.html として静的生成している（SNSの共有カードと検索対策）。
+  function spotUrl(id){ return "spot/"+encodeURIComponent(id)+".html"; }
   var $=function(s){return document.querySelector(s)};
   function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e;}
   function norm(s){return (s||"").toLowerCase();}
@@ -395,15 +405,18 @@
   qi.addEventListener("keydown",function(e){if(e.key==="Enter"&&!e.nativeEvent?.isComposing&&e.keyCode!==229){e.preventDefault();}});
 
   // ===== 近くをさがす（現在地） =====
-  var nearBtn=$("#nearBtn");
-  function setNear(on){
-    state.sortByDist=on;
-    nearBtn.classList.toggle("active",on);
-    $("#nearBanner").style.display=on?"":"none";
+  var nearBtn=$("#nearBtn"), sortSel=$("#sortSel");
+  // 「近くをさがす」ボタンと並び替えの「近い順」は同じ状態を指すので、片方を
+  // 押したらもう片方の見た目も合わせる。
+  function syncSortUI(){
+    var near=state.sort==="near";
+    if(sortSel) sortSel.value=state.sort;
+    nearBtn.classList.toggle("active",near);
+    $("#nearBanner").style.display=near?"":"none";
   }
-  nearBtn.onclick=function(){
-    if(state.sortByDist){ setNear(false); render(); return; }
-    if(!navigator.geolocation){ showToast("この端末では位置情報が使えません"); return; }
+  function setNear(on){ state.sort=on?"near":"recommend"; syncSortUI(); }
+  function requestNear(done){
+    if(!navigator.geolocation){ showToast("この端末では位置情報が使えません"); return false; }
     nearBtn.classList.add("loading");
     navigator.geolocation.getCurrentPosition(function(pos){
       nearBtn.classList.remove("loading");
@@ -411,17 +424,33 @@
       setNear(true);
       if(state.view==="map"){ var lb=document.querySelector('#viewToggle .vt[data-view=list]'); if(lb) lb.click(); } else { render(); }
       showToast("現在地から近い順に並べました");
+      if(done) done();
     },function(){
       nearBtn.classList.remove("loading");
+      setNear(false);
       showToast("位置情報を取得できませんでした");
     },{enableHighAccuracy:true,timeout:8000,maximumAge:60000});
+    return true;
+  }
+  nearBtn.onclick=function(){
+    if(state.sort==="near"){ setNear(false); render(); return; }
+    requestNear();
+  };
+  if(sortSel) sortSel.onchange=function(){
+    var value=this.value;
+    if(value==="near"){
+      if(state.userLoc){ setNear(true); render(); }
+      else if(!requestNear()){ syncSortUI(); }   // 位置情報が使えない端末は元に戻す
+      return;
+    }
+    state.sort=value; syncSortUI(); render();
   };
   $("#nearClear").onclick=function(){ setNear(false); render(); };
 
   $("#clearAll").onclick=function(){
-    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:state.view,userLoc:state.userLoc,sortByDist:false,favoritesOnly:false,sharedIds:null};
+    state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:state.view,userLoc:state.userLoc,sort:"recommend",favoritesOnly:false,sharedIds:null};
     qi.value="";qc.classList.remove("show");ps.value="";
-    nearBtn.classList.remove("active");$("#nearBanner").style.display="none";syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
+    syncSortUI();syncRegionChips();syncMulti(fc,[],"tag");syncMulti(tc,[],"tag");syncMulti(cc,[],"tag");syncMulti(uc,[],"tag");
     syncCatCards();syncFavoritesUI();
     render();
   };
@@ -513,7 +542,7 @@
     }
     if(state.q){
       var q=norm(state.q);
-      var hay=norm([r.name,r.intro,r.summary,r.city,r.pref,r.region,(r.fieldTags||[]).join(" "),(r.useTags||[]).join(" ")].join(" "));
+      var hay=norm([r.name,r.intro,r.summary,r.city,r.pref,r.region,r.address,r.station,(r.fieldTags||[]).join(" "),(r.useTags||[]).join(" ")].join(" "));
       if(hay.indexOf(q)<0) return false;
     }
     return true;
@@ -656,7 +685,7 @@
     if(act.children.length)body.appendChild(act);
 
     c.appendChild(body);
-    c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href="spot.html?id="+encodeURIComponent(r.id); };
+    c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href=spotUrl(r.id); };
     return c;
   }
 
@@ -822,7 +851,7 @@
     h+='<div class="ys-pop-place">'+esc(place)+'</div>';
     if(r.intro) h+='<p class="ys-pop-intro">'+esc(r.intro)+'</p>';
     h+='<div class="ys-pop-act">';
-    h+='<a class="p1" href="spot.html?id='+encodeURIComponent(r.id)+'">詳しく見る</a>';
+    h+='<a class="p1" href="'+esc(spotUrl(r.id))+'">詳しく見る</a>';
     h+='</div></div></div>';
     return h;
   }
@@ -880,15 +909,10 @@
         .bindPopup(popupHtml(r),{maxWidth:280,minWidth:230});
       markerGroup.addLayer(marker);
     });
-    // 地図に出せない件数の内訳。住所が無いオンライン・広域と、住所はあるが
-    // 座標が未取得の拠点は別物なので、まとめて「住所なし」と言い切らない。
-    var offline=list.filter(function(r){return r.lat==null;});
-    var offOnline=offline.filter(function(r){return r.region==="全国オンライン";}).length;
-    var offNoGeo=offline.length-offOnline;
-    var offParts=[];
-    if(offOnline) offParts.push('オンライン・広域の '+offOnline+' 件');
-    if(offNoGeo) offParts.push('位置を確認中の '+offNoGeo+' 件');
-    var offNote=offParts.length?'（'+offParts.join('と')+'は地図に出ません。リスト表示でご覧ください）':'';
+    // 座標が無いのは「決まった会場がない」拠点（オンライン中心・県内各地を巡回など）。
+    // データの取りこぼしではないので、探せば地図に出るかのような書き方にしない。
+    var off=list.length-pts.length;
+    var offNote=off>0?'（決まった会場がないオンライン・広域の '+off+' 件は地図に出ません。リスト表示でご覧ください）':'';
     var where=state.pref||state.region||"";
     hint.innerHTML='<span class="map-back" id="mapBack">← 地方を選びなおす</span>　'
       +'<b>'+where+'</b> の地図：<b>'+pts.length+'</b> 拠点'
@@ -928,18 +952,65 @@
     };
   });
 
+  // ===== 絞り込み条件を URL に映す =====
+  // replaceState を使う。1文字打つたびに履歴が増えると「戻る」が壊れるため。
+  // これで共有・ブックマーク・再読み込みのいずれでも同じ結果に戻れる。
+  var urlReady=false;
+  function syncUrl(){
+    if(!urlReady) return;
+    // ?id= で拠点を表示している間は、そのURLを尊重して触らない。
+    if(overlay&&overlay.classList.contains("open")) return;
+    var p=new URLSearchParams();
+    if(state.q) p.set("q",state.q);
+    if(state.region) p.set("region",state.region);
+    if(state.pref) p.set("pref",state.pref);
+    // カテゴリーカードで選んだ状態そのままなら cat= だけで表せる。
+    // そこから分野チップを足し引きしていたら、実際の分野を並べる。
+    var catFields=state.catFilter?(CAT_FIELD_MAP[state.catFilter]||[]):null;
+    var isPlainCat=!!catFields&&catFields.length===state.fields.length
+      &&catFields.every(function(f){return state.fields.indexOf(f)>=0;});
+    if(isPlainCat) p.set("cat",state.catFilter);
+    else state.fields.forEach(function(f){p.append("field",f);});
+    state.targets.forEach(function(t){p.append("target",t);});
+    state.cats.forEach(function(c){p.append("type",c);});
+    state.uses.forEach(function(u){p.append("use",u);});
+    if(state.view==="map") p.set("view","map");
+    if(state.sort!=="recommend") p.set("sort",state.sort);
+    if(state.favoritesOnly) p.set("favorites","1");
+    if(state.sharedIds&&state.sharedIds.length) p.set("list",state.sharedIds.join(","));
+    var qs=p.toString();
+    try{ history.replaceState(history.state,"",location.pathname+(qs?"?"+qs:"")); }catch(e){}
+  }
+
+  var REGION_RANK={},PREF_RANK={};
+  REGION_ORDER.forEach(function(r,i){REGION_RANK[r]=i;});
+  PREF_ORDER.forEach(function(p,i){PREF_RANK[p]=i;});
+  function sortList(list){
+    if(state.sort==="near"&&state.userLoc){
+      var u=state.userLoc;
+      list.forEach(function(r){ r._dist=(r.lat!=null)?distKm(u.lat,u.lng,r.lat,r.lng):null; });
+      // 会場が決まっていない拠点は距離が出せないので、最後にまとめる。
+      list.sort(function(a,b){ if(a._dist==null&&b._dist==null)return 0; if(a._dist==null)return 1; if(b._dist==null)return -1; return a._dist-b._dist; });
+      return;
+    }
+    list.forEach(function(r){ r._dist=undefined; });
+    if(state.sort==="region"){
+      list.sort(function(a,b){
+        var d=(REGION_RANK[a.region]==null?99:REGION_RANK[a.region])-(REGION_RANK[b.region]==null?99:REGION_RANK[b.region]);
+        if(d) return d;
+        d=(PREF_RANK[a.pref]==null?99:PREF_RANK[a.pref])-(PREF_RANK[b.pref]==null?99:PREF_RANK[b.pref]);
+        if(d) return d;
+        return (a.city||"").localeCompare(b.city||"","ja");
+      });
+    }
+  }
+
   function render(){
     syncFilterSummary();
     var list=DATA.filter(matches);
     countEl.textContent=list.length.toLocaleString();
-    // 現在地から近い順
-    if(state.sortByDist && state.userLoc){
-      var u=state.userLoc;
-      list.forEach(function(r){ r._dist=(r.lat!=null)?distKm(u.lat,u.lng,r.lat,r.lng):null; });
-      list.sort(function(a,b){ if(a._dist==null&&b._dist==null)return 0; if(a._dist==null)return 1; if(b._dist==null)return -1; return a._dist-b._dist; });
-    } else {
-      list.forEach(function(r){ r._dist=undefined; });
-    }
+    sortList(list);
+    syncUrl();
     if(state.view==="map"){ updateMap(list); return; }
     if(loadObserver){var prior=document.getElementById("loadMoreResults");if(prior)loadObserver.unobserve(prior);}
     grid.innerHTML="";
@@ -1042,7 +1113,8 @@
     $("#detailClose").onclick=function(){ closeDetail(true); };
     var sh=$("#detailShare");
     if(sh) sh.onclick=function(){
-      var url=location.origin+location.pathname+"?id="+encodeURIComponent(r.id);
+      // 共有先は静的生成した拠点ページ。SNSのカードに拠点名と写真が出る。
+      var url=new URL(spotUrl(r.id),location.href).href;
       if(navigator.share){ navigator.share({title:r.name,text:r.name+"｜いばしょ・きっかけ MAP",url:url}).catch(function(){}); }
       else { navigator.clipboard&&navigator.clipboard.writeText(url); showToast("リンクをコピーしました"); }
     };
@@ -1158,7 +1230,16 @@
     var rg=p.get("region"); if(rg&&REGION_ORDER.indexOf(rg)>=0){ state.region=rg; syncRegionChips(); changed=true; }
     var pr=p.get("pref"); if(pr){ state.pref=pr; if(ps) ps.value=pr; changed=true; }
     var cat=p.get("cat"); if(cat&&CAT_FIELD_MAP[cat]){ state.catFilter=cat; state.fields=CAT_FIELD_MAP[cat].slice(); syncCatCards(); syncMulti(fc,state.fields,"tag"); changed=true; }
-    var fld=p.get("field"); if(fld){ if(state.fields.indexOf(fld)<0)state.fields.push(fld); syncMulti(fc,state.fields,"tag"); changed=true; }
+    // field / target / type / use は複数指定できる（syncUrl が append する形と対）
+    p.getAll("field").forEach(function(f){ if(state.fields.indexOf(f)<0){state.fields.push(f);changed=true;} });
+    if(state.fields.length) syncMulti(fc,state.fields,"tag");
+    p.getAll("target").forEach(function(t){ if(state.targets.indexOf(t)<0){state.targets.push(t);changed=true;} });
+    if(state.targets.length) syncMulti(tc,state.targets,"tag");
+    p.getAll("type").forEach(function(c){ if(CATS.indexOf(c)>=0&&state.cats.indexOf(c)<0){state.cats.push(c);changed=true;} });
+    if(state.cats.length) syncMulti(cc,state.cats,"tag");
+    p.getAll("use").forEach(function(u){ if(state.uses.indexOf(u)<0){state.uses.push(u);changed=true;} });
+    if(state.uses.length) syncMulti(uc,state.uses,"tag");
+    var sort=p.get("sort"); if(sort==="region"){ state.sort="region"; syncSortUI(); changed=true; }
     var q=p.get("q"); if(q){ state.q=q; qi.value=q; qc.classList.add("show"); changed=true; }
     var shared=p.get("list");
     if(shared){state.sharedIds=shared.split(",").map(function(id){return id.trim();}).filter(function(id,index,list){return BYID[id]&&list.indexOf(id)===index;}).slice(0,60);state.favoritesOnly=false;syncFavoritesUI();changed=true;}
@@ -1169,7 +1250,11 @@
     // これが無いと、共有されたリンクが素の一覧になってしまう。
     var openId=p.get("id"); if(openId&&BYID[openId]) openDetail(BYID[openId],false);
     if(p.get("quiz")==="1"){ openQuiz(); }
-    if(p.get("near")==="1"){ nearBtn.click(); }
+    // 近い順は位置情報の許可が要るので、URL から復元するときも同じ導線を通す。
+    if(p.get("near")==="1"||sort==="near"){ nearBtn.click(); }
+    // ここまでの読み取りが済んでから URL の書き戻しを解禁する。
+    urlReady=true;
+    syncUrl();
   })();
 })();
 </script>

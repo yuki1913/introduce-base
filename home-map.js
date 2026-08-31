@@ -33,7 +33,7 @@
   function compactRow(record){
     var Y=window.YS, cover=Y.coverOf(record), fallback=Y.getPhotoUrl(cover);
     var row=Y.el("a","map-pick-row");
-    row.href="spot.html?id="+encodeURIComponent(record.id);
+    row.href=window.YS.spotUrl(record.id);
     row.dataset.cat=cover.catKey;
     var image=document.createElement("img");
     image.src=record.image||fallback; image.alt=Y.photoAlt(record,cover);

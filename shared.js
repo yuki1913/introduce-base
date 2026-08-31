@@ -116,6 +116,8 @@
     var key=cv.catKey||"community",svg='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+(MAP_ICON_PATHS[key]||MAP_ICON_PATHS.community)+'</svg>';
     return L.divIcon({html:'<div class="ys-pin-offset"><div class="ys-place-pin" data-cat="'+key+'"><span>'+svg+'</span></div></div>',className:"ys-place-marker",iconSize:[44,48],iconAnchor:[22,46],popupAnchor:[0,-42]});
   }
+  // 拠点ページは spot/<ID>.html として静的生成している（SNSの共有カードと検索対策）。
+  function spotUrl(id){ return "spot/"+encodeURIComponent(id)+".html"; }
   var SVG_EXT='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
   var SVG_MAP='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
   var SVG_PIN='<svg aria-hidden="true" class="pin-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.7-6-10a6 6 0 0 1 12 0c0 4.3-6 10-6 10Z"/><circle cx="12" cy="11" r="2"/></svg>';
@@ -179,7 +181,7 @@
     if(r.address){var mb=el("a","btn btn-ghost");mb.href=mapUrl(r);mb.target="_blank";mb.rel="noopener";mb.innerHTML=SVG_MAP+"地図";act.appendChild(mb);}
     if(act.children.length)body.appendChild(act);
     c.appendChild(body);
-    c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href="spot.html?id="+encodeURIComponent(r.id); };
+    c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href=spotUrl(r.id); };
     return c;
   }
 
@@ -187,6 +189,6 @@
     DATA:DATA, BYID:BYID, REGION_ORDER:REGION_ORDER, CATS:CATS, STATUS_META:STATUS_META, DEFAULT_STATUS:DEFAULT_STATUS,
     FIELD_STYLE:FIELD_STYLE, CAT_KEYS:CAT_KEYS, CAT_IMGS:CAT_IMGS, CAT_LABELS:CAT_LABELS, CAT_EMOJIS:CAT_EMOJIS, CAT_FIELD_MAP:CAT_FIELD_MAP,
     esc:esc, el:el, coverOf:coverOf, regionPicks:regionPicks, getPhotoUrl:getPhotoUrl, hasOfficialPhoto:hasOfficialPhoto, photoAlt:photoAlt, photoCredit:photoCredit, audienceKinds:audienceKinds, audiencePills:audiencePills, mapUrl:mapUrl, markerIcon:markerIcon, card:card,
-    SVG_EXT:SVG_EXT, SVG_MAP:SVG_MAP, SVG_PIN:SVG_PIN
+    SVG_EXT:SVG_EXT, SVG_MAP:SVG_MAP, SVG_PIN:SVG_PIN, spotUrl:spotUrl
   };
 })();

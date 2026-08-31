@@ -49,7 +49,7 @@
       <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
     <div class="foot-note"><p>掲載情報は各拠点の公式サイト等をもとに整理したものです。参加前に必ず公式サイトや各拠点でご確認ください。</p></div>
-    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-08-15">2026年8月15日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-08-31">2026年8月31日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 <div class="toast" id="toast"></div>
@@ -62,7 +62,10 @@
 <script>
 (function(){
   var Y=window.YS, esc=Y.esc;
-  var id=(new URLSearchParams(location.search)).get("id");
+  // 静的に生成した spot/<ID>.html は window.YSSPOTID でIDを渡してくる。
+  // 旧来の spot.html?id=… のリンクも引き続き動くようにしておく。
+  var isStatic=!!window.YSSPOTID;
+  var id=window.YSSPOTID||(new URLSearchParams(location.search)).get("id");
   var box=document.getElementById("spot");
   function missing(){box.innerHTML='<div class="detail-body spot-empty"><h1>拠点が見つかりませんでした</h1><p>URLをご確認いただくか、一覧からおさがしください。</p></div>';}
   function setMeta(r){
@@ -72,7 +75,9 @@
     var ot=document.querySelector('meta[property="og:title"]');if(ot)ot.content=document.title;
     var od=document.querySelector('meta[property="og:description"]');if(od)od.content=description;
     var oi=document.querySelector('meta[property="og:image"]');if(oi&&r.image)oi.content=r.image;
-    var canonical=document.querySelector('link[rel="canonical"]');if(canonical)canonical.href="spot.html?id="+encodeURIComponent(r.id);
+    // 静的ページ側は正しい canonical を焼き込み済み。?id= で来たときだけ、
+    // 検索エンジンの評価が静的ページに集まるよう向き先を書き換える。
+    if(!isStatic){var canonical=document.querySelector('link[rel="canonical"]');if(canonical)canonical.href=Y.spotUrl(r.id);}
     var schema=document.getElementById("spotStructuredData");
     if(!schema){schema=document.createElement("script");schema.id="spotStructuredData";schema.type="application/ld+json";document.head.appendChild(schema);}
     var structured={"@context":"https://schema.org","@type":r.address?"Place":"Organization",name:r.name,description:description,url:location.href};

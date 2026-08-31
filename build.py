@@ -14,8 +14,11 @@ build.py — スプレッドシート(xlsx)から data.js / data.json を再生�
     住所が変わっていない拠点は再ジオコーディングしません（速い・手動補正も保持）。
   - 写真URL / ロゴURL 列があれば image / logo として取り込みます。
   - 写真URLが空の場合は image-sources.json の公式サイト調査結果を引き継ぎます。
+  - 拠点ごとの静的ページを spot/<ID>.html に生成します（SNSの共有カードと検索対策）。
+    SITE_ORIGIN を設定しておくと、og:url・canonical・sitemap が絶対URLになります。
+      例) SITE_ORIGIN=https://example.jp python3 build.py
 """
-import json, re, sys, glob, os, time, urllib.parse, urllib.request
+import json, re, sys, glob, os, time, html, shutil, urllib.parse, urllib.request
 from datetime import date
 import openpyxl
 
@@ -26,9 +29,11 @@ DEFAULT_STATUS={'掲載推奨','条件付き掲載'}
 
 # 一覧・ホームでは詳細原稿や出典URLを送らない。詳細ページだけが
 # data-details/<ID>.json を読むため、トップと検索の初期転送量を抑えられる。
+# 一覧・検索インデックス用の項目。address / station はキーワード検索で
+# 「〇〇駅」「〇〇ビル」と打つ人が多いので入れている（合わせて +45KB 程度）。
 LIST_FIELDS=(
     'id','region','pref','city','name','cats','targets','intro','fieldTags',
-    'useTags','status','lat','lng','image'
+    'useTags','status','lat','lng','image','address','station'
 )
 CAT_FIELD_MAP={
     'nature':['自然体験','キャンプ','宿泊研修','地域活動','農業体験','環境学習'],
@@ -145,6 +150,97 @@ def home_records(recs):
     counts={region:sum(1 for r in visible if r.get('region')==region) for region in PREF.values()}
     return list(unique.values()),counts
 
+# ---------------------------------------------------------------------------
+# 拠点ページの静的生成
+# ---------------------------------------------------------------------------
+# spot.html はJSでタイトルとOGタグを書き換えているが、LINE・X・Slack などの
+# クローラはJSを実行しないため、共有カードが全拠点で同じ汎用表示になってしまう。
+# そこで spot.html をひな形に、拠点ごとの <head> を焼き込んだページを
+# spot/<ID>.html として書き出す。本文の描画ロジックは spot.html のまま使い、
+# <base href="../"> で相対パスをルート基準に揃える（二重管理を避けるため）。
+
+def _esc(value):
+    return html.escape(str(value or ''), quote=True)
+
+def spot_page(template, r, origin):
+    rid=r['id']
+    title=f"{r['name']}｜いばしょ・きっかけ MAP"
+    description=(r.get('intro') or r.get('summary') or '')[:120]
+    path=f"spot/{rid}.html"
+    page_url=f"{origin}/{path}" if origin else path
+    image=r.get('image') or '/img/editorial/hero-home.jpg'
+    if origin and image.startswith('/'):
+        image=origin+image
+
+    structured={'@context':'https://schema.org',
+                '@type':'Place' if r.get('address') else 'Organization',
+                'name':r['name'],'description':description,'url':page_url}
+    if r.get('image'): structured['image']=r['image']
+    if r.get('address'):
+        structured['address']={'@type':'PostalAddress','streetAddress':r['address'],
+                               'addressRegion':r.get('pref'),'addressLocality':r.get('city'),
+                               'addressCountry':'JP'}
+    if r.get('lat') is not None:
+        structured['geo']={'@type':'GeoCoordinates','latitude':r['lat'],'longitude':r['lng']}
+    if r.get('url'): structured['sameAs']=r['url']
+
+    out=template
+    out=out.replace('<meta charset="utf-8">',
+                    '<meta charset="utf-8">\n<base href="../">',1)
+    out=re.sub(r'<title>.*?</title>', f'<title>{_esc(title)}</title>', out, count=1)
+    out=re.sub(r'<meta name="description" content="[^"]*">',
+               f'<meta name="description" content="{_esc(description)}">', out, count=1)
+    out=re.sub(r'<link rel="canonical" href="[^"]*">',
+               f'<link rel="canonical" href="{_esc(page_url)}">', out, count=1)
+    out=re.sub(r'<meta property="og:title" content="[^"]*">',
+               f'<meta property="og:title" content="{_esc(title)}">', out, count=1)
+    out=re.sub(r'<meta property="og:description" content="[^"]*">',
+               f'<meta property="og:description" content="{_esc(description)}">', out, count=1)
+    out=re.sub(r'<meta property="og:image" content="[^"]*">',
+               f'<meta property="og:image" content="{_esc(image)}">'
+               + (f'\n<meta property="og:url" content="{_esc(page_url)}">' if origin else ''),
+               out, count=1)
+    out=out.replace('</head>',
+        '<script type="application/ld+json">'
+        + json.dumps(structured,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
+        + '</script>\n</head>',1)
+
+    # JSが動かない環境でも、何の拠点なのかと公式サイトへの導線だけは残す。
+    place=' · '.join(dict.fromkeys([x for x in (r.get('region'),r.get('pref'),r.get('city')) if x]))
+    noscript=('<noscript><div class="detail-body">'
+              f'<h1>{_esc(r["name"])}</h1>'
+              f'<p>{_esc(place)}</p>'
+              f'<p>{_esc(r.get("intro") or r.get("summary") or "")}</p>'
+              + (f'<p><a href="{_esc(r["url"])}" target="_blank" rel="noopener">公式サイトを見る</a></p>' if r.get('url') else '')
+              + '</div></noscript>')
+    out=out.replace('<div id="spot"></div>', noscript+'\n  <div id="spot"></div>',1)
+
+    # 本文の描画は spot.html と同じスクリプトに任せ、IDだけ先に渡す。
+    out=out.replace('<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"',
+                    f'<script>window.YSSPOTID={json.dumps(rid)};</script>\n'
+                    '<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"',1)
+    return out
+
+def write_spot_pages(recs, origin):
+    template_path=os.path.join(HERE,'spot.html')
+    if not os.path.exists(template_path):
+        print('注意: spot.html が無いため拠点ページを生成できませんでした。')
+        return []
+    with open(template_path,encoding='utf-8') as f: template=f.read()
+    out_dir=os.path.join(HERE,'spot')
+    # 掲載をやめた拠点のページが残り続けないよう、毎回作り直す。
+    if os.path.isdir(out_dir): shutil.rmtree(out_dir)
+    os.makedirs(out_dir,exist_ok=True)
+    written=[]
+    for r in recs:
+        if r.get('status') not in DEFAULT_STATUS: continue
+        with open(os.path.join(out_dir,r['id']+'.html'),'w',encoding='utf-8') as f:
+            f.write(spot_page(template,r,origin))
+        written.append(r['id'])
+    print(f'拠点ページを {len(written)} 件生成しました（spot/）。')
+    return written
+
+
 def write_outputs(recs):
     with open(os.path.join(HERE,'data.json'),'w',encoding='utf-8') as f:
         json.dump(recs,f,ensure_ascii=False,indent=1)
@@ -186,15 +282,26 @@ def write_outputs(recs):
     # 本番URLが分かる環境では、有効な絶対URLの sitemap も同時に作る。
     # SITE_ORIGIN 未設定時に推測したドメインを書かないことを優先する。
     origin=os.environ.get('SITE_ORIGIN','').strip().rstrip('/')
-    if re.match(r'^https://[^/]+',origin):
+    if not re.match(r'^https://[^/]+',origin):
+        origin=''
+
+    # 拠点ページは日付の打ち直しが済んだ spot.html をひな形にするので、この位置で生成する。
+    spot_ids=write_spot_pages(recs, origin)
+
+    if origin:
         pages=['','search.html','guide.html','faq.html','teachers.html','contact.html']
         urls=''.join(f'<url><loc>{origin}/{page}</loc></url>' for page in pages)
+        # 拠点ページも載せる。ここに無いとクローラは1件も見つけられない。
+        urls+=''.join(f'<url><loc>{origin}/spot/{rid}.html</loc><lastmod>{today.isoformat()}</lastmod></url>'
+                      for rid in spot_ids)
         with open(os.path.join(HERE,'sitemap.xml'),'w',encoding='utf-8') as f:
             f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls+'</urlset>\n')
         with open(os.path.join(HERE,'robots.txt'),'w',encoding='utf-8') as f:
             f.write(f'User-agent: *\nAllow: /\nSitemap: {origin}/sitemap.xml\n')
+        print(f'sitemap.xml を書き出しました（固定 {len(pages)} ページ＋拠点 {len(spot_ids)} ページ）。')
     else:
         print('注意: SITE_ORIGIN 未設定のため sitemap.xml は生成していません。')
+        print('      拠点ページの og:url / canonical も相対パスになります。')
 
     return list_recs,home_recs
 
