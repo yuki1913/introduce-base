@@ -33,7 +33,7 @@
   function compactRow(record){
     var Y=window.YS, cover=Y.coverOf(record), fallback=Y.getPhotoUrl(cover);
     var row=Y.el("a","map-pick-row");
-    row.href="spot.html?id="+encodeURIComponent(record.id);
+    row.href=window.YS.spotUrl(record.id);
     row.dataset.cat=cover.catKey;
     var image=document.createElement("img");
     image.src=record.image||fallback; image.alt=Y.photoAlt(record,cover);
@@ -110,6 +110,10 @@
     var title=svgEl("title",{id:"homeMapTitle"});title.textContent="地方別の掲載件数";svg.appendChild(title);
     var desc=svgEl("desc",{id:"homeMapDesc"});desc.textContent="地方ごとに色分けした日本地図です。沖縄は右下の挿入図に表示しています。地方を選ぶと、その地方からおすすめの場所を3件表示します。";svg.appendChild(desc);
     svg.appendChild(svgEl("rect",{class:"home-map-inset",x:"295",y:"328",width:"230",height:"108",rx:"18","aria-hidden":"true"}));
+    // 地方の形はあとから描いたものが上に重なるので、ラベルを地方の中に置くと
+    // 隣の地方の塗りに件数が隠れてしまう。ラベルはまとめて最前面の層に描く。
+    // （.home-map-label は pointer-events:none なので、クリックは下の地方に通る）
+    var labelLayer=svgEl("g",{class:"home-map-labels","aria-hidden":"true"});
     ORDER.forEach(function(region){
       var attrs={href:"search.html?region="+encodeURIComponent(region),"aria-label":region+"、おすすめを3件表示","aria-haspopup":"dialog","aria-controls":"mapPickDialog","aria-expanded":"false","data-region":REGION_KEYS[region]};
       var link=svgEl("a",attrs);
@@ -125,10 +129,11 @@
         var p=region==="沖縄"?[325,350]:project(loc), label=svgEl("g",{class:"home-map-label",transform:"translate("+p[0].toFixed(1)+" "+p[1].toFixed(1)+")"});
         var text=svgEl("text",{"text-anchor":"middle",y:"-3"});text.textContent=region;label.appendChild(text);
         var count=svgEl("text",{"text-anchor":"middle",y:"14",class:"home-map-count"});count.textContent=(counts[region]||0)+"件";label.appendChild(count);
-        link.appendChild(label);
+        labelLayer.appendChild(label);
       }
       svg.appendChild(link);
     });
+    svg.appendChild(labelLayer);
     mount.appendChild(svg);
   }
   function load(){
