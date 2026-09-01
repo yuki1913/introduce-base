@@ -18,7 +18,7 @@ build.py — スプレッドシート(xlsx)から data.js / data.json を再生�
     SITE_ORIGIN を設定しておくと、og:url・canonical・sitemap が絶対URLになります。
       例) SITE_ORIGIN=https://example.jp python3 build.py
 """
-import json, re, sys, glob, os, time, html, shutil, urllib.parse, urllib.request
+import json, re, sys, glob, os, time, html, shutil, hashlib, urllib.parse, urllib.request
 from datetime import date
 import openpyxl
 
@@ -241,6 +241,30 @@ def write_spot_pages(recs, origin):
     return written
 
 
+# ?v= を付けて配信するファイル。ここに無いものは素のパスのまま。
+CACHE_BUSTED=('styles.css','tokens.css','shared.js','home-map.js','favorites.js',
+              'calendar.js','data-list.js','data-home.js')
+
+def stamp_asset_versions():
+    """CSS/JS の ?v= を中身のハッシュに揃える（更新が再訪者に届かない事故を防ぐ）。"""
+    digests={}
+    for name in CACHE_BUSTED:
+        path=os.path.join(HERE,name)
+        if not os.path.exists(path): continue
+        with open(path,'rb') as f:
+            digests[name]=hashlib.sha1(f.read()).hexdigest()[:8]
+    if not digests: return
+    pattern=re.compile(r'(href|src)="(' + '|'.join(re.escape(n) for n in digests) + r')(\?v=[^"]*)?"')
+    changed=0
+    for path in glob.glob(os.path.join(HERE,'*.html')):
+        with open(path,encoding='utf-8') as f: text=f.read()
+        new,hits=pattern.subn(lambda m: f'{m.group(1)}="{m.group(2)}?v={digests[m.group(2)]}"', text)
+        if new!=text:
+            with open(path,'w',encoding='utf-8') as f: f.write(new)
+            changed+=1
+    print(f'CSS/JS のキャッシュ番号を中身に合わせました（{changed} ページ更新）。')
+
+
 def write_outputs(recs):
     with open(os.path.join(HERE,'data.json'),'w',encoding='utf-8') as f:
         json.dump(recs,f,ensure_ascii=False,indent=1)
@@ -278,6 +302,11 @@ def write_outputs(recs):
         print(f'最終更新日を {updated} に更新しました（{stamped}か所）。')
     else:
         print('注意: <time data-updated-at> が見つからず、最終更新日を更新できませんでした。')
+
+    # CSS/JS の ?v= を中身のハッシュで打ち直す。
+    # 手で上げるルールだと必ず上げ忘れが起きる。実際、styles.css は
+    # ページによって ?v= がずれていて、再訪した人に古いCSSが配られていた。
+    stamp_asset_versions()
 
     # 本番URLが分かる環境では、有効な絶対URLの sitemap も同時に作る。
     # SITE_ORIGIN 未設定時に推測したドメインを書かないことを優先する。
