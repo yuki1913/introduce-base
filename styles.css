@@ -1114,6 +1114,22 @@ a.doc-step:hover{box-shadow:var(--shadow-lift)}
 .doc-callout a{color:var(--color-accent-text);text-decoration:underline;font-weight:700;text-underline-offset:3px}
 .doc-callout.amber{background:var(--color-paper-2)}
 .doc-callout.amber a{color:var(--color-accent-text)}
+/* --- プライバシーポリシー等の長文ページ用 --- */
+.doc-meta{font-size:var(--text-sm);color:var(--color-muted);margin-top:var(--space-2xs)}
+/* ヒーローは濃色地なので、本文と同じ薄墨だと読めない（.doc-crumb と同じ扱いにする）。 */
+.doc-hero .doc-meta{color:var(--color-accent-ink);opacity:.8}
+.doc-note{font-size:var(--text-sm);color:var(--color-muted);line-height:1.9;max-width:var(--measure)}
+/* 公開前に実際の値へ差し替える箇所。design.md のマーカー装置と同じ帯を使う。 */
+.doc-todo{background:var(--marker);color:var(--color-ink);font-weight:700;padding:0 var(--space-3xs);border-radius:var(--radius-ctl);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.doc-table-wrap{overflow-x:auto;max-width:var(--measure);margin-bottom:var(--space-sm)}
+.doc-table{border-collapse:collapse;width:100%;font-size:var(--text-sm);line-height:1.8}
+.doc-table th,.doc-table td{border:var(--rule-hair) solid var(--color-rule);padding:var(--space-2xs) var(--space-xs);text-align:left;vertical-align:top}
+.doc-table thead th{background:var(--color-paper-2);color:var(--color-ink)}
+.doc-table tbody th{background:var(--color-paper-2);color:var(--color-ink);font-weight:700;width:34%;white-space:nowrap}
+.doc-table a{color:var(--color-accent-text);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:35rem){
+  .doc-table tbody th{width:auto;white-space:normal}
+}
 .doc-cols{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-md)}
 @media(min-width:51.25rem){.doc-cols{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:var(--space-xl);align-items:start}}
 .doc-card{background:var(--color-paper);border:none;border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:var(--space-md)}

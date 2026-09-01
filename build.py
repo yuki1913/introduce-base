@@ -318,7 +318,7 @@ def write_outputs(recs):
     spot_ids=write_spot_pages(recs, origin)
 
     if origin:
-        pages=['','search.html','guide.html','faq.html','teachers.html','contact.html']
+        pages=['','search.html','guide.html','faq.html','teachers.html','contact.html','privacy.html']
         urls=''.join(f'<url><loc>{origin}/{page}</loc></url>' for page in pages)
         # 拠点ページも載せる。ここに無いとクローラは1件も見つけられない。
         urls+=''.join(f'<url><loc>{origin}/spot/{rid}.html</loc><lastmod>{today.isoformat()}</lastmod></url>'
