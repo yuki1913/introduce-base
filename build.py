@@ -23,6 +23,14 @@ from datetime import date
 import openpyxl
 
 HERE=os.path.dirname(os.path.abspath(__file__))
+
+# 本番URL。sitemap.xml と、拠点ページの canonical / og:url を絶対URLにするために使う。
+# 独自ドメインを取ったらここを書き換える（末尾のスラッシュは不要）。
+# 環境変数 SITE_ORIGIN を渡すと、そちらが優先される。
+# ここが空だと sitemap は作られず、canonical / og:url は相対パスのままになる。
+# 間違ったドメインを書くと canonical が別サイトを指してしまうので、推測で埋めないこと。
+SITE_ORIGIN=''
+
 PREF={'HK-':'北海道','TH-':'東北','KT-':'関東','CH-':'中部','KN-':'近畿','CG-':'中国','SK-':'四国','KY-':'九州','OK-':'沖縄','ON-':'全国オンライン'}
 CATCOLS=['支援団体','プログラム','活動拠点','使用できる施設']
 DEFAULT_STATUS={'掲載推奨','条件付き掲載'}
@@ -168,7 +176,7 @@ def spot_page(template, r, origin):
     description=(r.get('intro') or r.get('summary') or '')[:120]
     path=f"spot/{rid}.html"
     page_url=f"{origin}/{path}" if origin else path
-    image=r.get('image') or '/img/editorial/hero-home.jpg'
+    image=r.get('image') or '/img/og-home.jpg'   # 写真が無い拠点はサイト共通の共有カード
     if origin and image.startswith('/'):
         image=origin+image
 
@@ -308,10 +316,12 @@ def write_outputs(recs):
     # ページによって ?v= がずれていて、再訪した人に古いCSSが配られていた。
     stamp_asset_versions()
 
-    # 本番URLが分かる環境では、有効な絶対URLの sitemap も同時に作る。
-    # SITE_ORIGIN 未設定時に推測したドメインを書かないことを優先する。
-    origin=os.environ.get('SITE_ORIGIN','').strip().rstrip('/')
-    if not re.match(r'^https://[^/]+',origin):
+    # 本番URLが分かる場合だけ、絶対URLの sitemap と canonical / og:url を作る。
+    # 推測したドメインを書き込まないことを優先する。
+    origin=(os.environ.get('SITE_ORIGIN') or SITE_ORIGIN).strip().rstrip('/')
+    if not re.match(r'^https://[^/]+$',origin):
+        if origin:
+            print(f'注意: 本番URLの形式が不正なため無視しました（{origin}）。https://ホスト名 の形で指定してください。')
         origin=''
 
     # 拠点ページは日付の打ち直しが済んだ spot.html をひな形にするので、この位置で生成する。
@@ -327,7 +337,18 @@ def write_outputs(recs):
             f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls+'</urlset>\n')
         with open(os.path.join(HERE,'robots.txt'),'w',encoding='utf-8') as f:
             f.write(f'User-agent: *\nAllow: /\nSitemap: {origin}/sitemap.xml\n')
+        # og:image はほとんどのSNSクローラが絶対URLしか解決しないため、
+        # 本番URLが分かるときにルート相対から書き換える。
+        abs_og=0
+        for path in glob.glob(os.path.join(HERE,'*.html')):
+            with open(path,encoding='utf-8') as f: text=f.read()
+            fixed,hits=re.subn(r'(<meta property="og:image" content=")(/[^"]*)(">)',
+                               lambda m: m.group(1)+origin+m.group(2)+m.group(3), text)
+            if hits:
+                with open(path,'w',encoding='utf-8') as f: f.write(fixed)
+                abs_og+=hits
         print(f'sitemap.xml を書き出しました（固定 {len(pages)} ページ＋拠点 {len(spot_ids)} ページ）。')
+        print(f'og:image を絶対URLに直しました（{abs_og}か所）。')
     else:
         print('注意: SITE_ORIGIN 未設定のため sitemap.xml は生成していません。')
         print('      拠点ページの og:url / canonical も相対パスになります。')

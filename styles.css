@@ -117,6 +117,14 @@ h1,h2,h3,h4{font-style:normal;overflow-wrap:anywhere;min-width:0;line-height:var
   .brand-pin{width:1.25rem;height:1.25rem}
   .site-nav a{padding:var(--space-2xs) var(--space-3xs);font-size:var(--text-xs)}
   .favorites-nav-label{display:none}
+  /* スマホではナビが横スクロールになるが、端でスパッと切れるため
+     「はじめての方」「お問い合わせ」の存在に気づけなかった。
+     右端をぼかして、続きがあることを見せる。 */
+  .site-nav{
+    -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 2rem),transparent);
+    mask-image:linear-gradient(to right,#000 calc(100% - 2rem),transparent);
+    padding-right:1.25rem;
+  }
 }
 
 /* ============================================================
@@ -543,28 +551,16 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 .tagline{display:flex;flex-wrap:wrap;gap:var(--space-3xs) var(--space-2xs)}
 .tag{font-size:var(--text-xs);color:var(--color-muted);background:none;border:none;border-radius:0;padding:0;font-weight:700}
 .tag::before{content:"#"}
-/* 支援団体 / プログラム / 活動拠点 / 使用できる施設 のどれに当たるかを、
-   1枚ごとに同じ4枠で示す。該当ぶんだけを並べるとカード間で項目の位置が
-   ずれて見比べられないので、枠は常に4つ出してチェックの有無で伝える。 */
-/* すぐ下に年齢層の「対象」行があるため、ラベル無しだと2つの対象が並んで読めない。 */
-.ctypes-label{display:block;font-size:var(--text-xs);font-weight:700;color:var(--color-muted);margin-top:var(--space-3xs)}
-.ctypes{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3xs) var(--space-2xs);margin-top:var(--space-3xs)}
+/* 支援団体 / プログラム / 活動拠点 / 使用できる施設 のどれに当たるか。
+   もとは4枠すべてを2列のチェックボックスで出していたが、半数の拠点が4つ全部に
+   該当していて（434件中214件）、カード1枚あたり5行を使って識別にほとんど効いて
+   いなかった。該当ぶんだけを控えめなチップで1行に置く。並び順は CATS 固定なので、
+   位置がそろわなくてもカード間で見比べられる。 */
+.ctypes{display:flex;flex-wrap:wrap;gap:var(--space-3xs)}
 .ctype{
-  display:flex;align-items:center;gap:var(--space-3xs);min-width:0;
-  font-size:var(--text-xs);font-weight:700;color:var(--color-muted);
-}
-.ctype::before{
-  content:"";flex:none;width:.9375rem;height:.9375rem;border-radius:3px;
-  border:var(--rule-hair) solid var(--color-border-ctl);background:var(--color-paper);
-}
-.ctype.is-on{color:var(--color-ink)}
-/* チェックは形（✓）で伝える。色だけに頼らないので色覚特性に依存しない。
-   塗りは明るいブランドオレンジ。それ単体では背景との境界が 2.92:1 で 3:1 に
-   届かないので、枠線に濃いオレンジ(5.43:1)を残して境界を担保している。 */
-.ctype.is-on::before{
-  border-color:var(--color-accent-text);background-color:var(--color-accent);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4.5 4.5L19 7'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:center;background-size:.6875rem;
+  font-size:var(--text-xs);font-weight:700;color:var(--color-ink-2);
+  background:var(--color-paper-2);border-radius:var(--radius-ctl);
+  padding:var(--space-3xs) var(--space-2xs);white-space:nowrap;
 }
 .meta{display:flex;flex-direction:column;gap:var(--space-3xs);font-size:var(--text-sm);color:var(--color-ink-2)}
 .meta .mrow{display:flex;gap:var(--space-2xs)}
@@ -629,7 +625,10 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 .home-map-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-lg);align-items:center}
 .home-map-shell{position:relative;min-width:0}
 .home-map{min-width:0;min-height:15rem;display:grid;place-items:center;color:var(--color-muted);font-size:var(--text-sm)}
-.home-map svg{display:block;width:min(100%,35rem);height:auto;max-height:30rem;overflow:visible}
+/* viewBox を中身に合わせた結果、地図は横より縦が長い比率になる。
+   width と max-height の両方で頭打ちにすると内側で letterbox して小さく見えるので、
+   幅だけを上限にして高さは比率に任せる。 */
+.home-map svg{display:block;width:min(100%,32rem);height:auto;margin-inline:auto;overflow:visible}
 .home-map-region path{
   fill:var(--color-paper-3);stroke:var(--color-paper);stroke-width:1.1;vector-effect:non-scaling-stroke;
   transition:fill var(--dur-fast) var(--ease-out),stroke var(--dur-fast) var(--ease-out),filter var(--dur-fast) var(--ease-out);
@@ -654,7 +653,9 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 .region-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2xs)}
 @media(min-width:40rem){.region-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:60rem){
-  .home-map-layout{grid-template-columns:minmax(0,1.35fr) minmax(20rem,.65fr);gap:var(--space-xl)}
+  /* 地図の幅上限が 32rem なので、列を 1.35fr にすると余白だけが広がる。
+     列幅を寄せて、地図と地方一覧の見た目の重さをそろえる。 */
+  .home-map-layout{grid-template-columns:minmax(0,1fr) minmax(20rem,1fr);gap:var(--space-xl)}
   .region-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 .region-tile{
@@ -890,8 +891,8 @@ footer{border-top:var(--rule-hair) solid var(--color-rule);background:var(--colo
   border-radius:var(--radius-card);background:var(--color-paper-2);box-shadow:var(--shadow-card);
   padding:var(--space-sm);overflow:hidden;
 }
-.search-map-overview svg{display:block;width:min(100%,44rem);height:auto;max-height:36rem;overflow:visible}
-@media(max-width:35rem){.search-map-overview{min-height:27rem;padding:var(--space-2xs)}.search-map-overview svg{width:100%;max-height:26rem}}
+.search-map-overview svg{display:block;width:min(100%,30rem);height:auto;margin-inline:auto;overflow:visible}
+@media(max-width:35rem){.search-map-overview{min-height:24rem;padding:var(--space-2xs)}.search-map-overview svg{width:100%}}
 .map-legend{
   display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-2xs) var(--space-sm);
   margin:calc(-1 * var(--space-2xs)) 0 var(--space-sm);padding:var(--space-2xs) var(--space-sm);
