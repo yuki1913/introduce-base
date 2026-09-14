@@ -102,6 +102,19 @@
     Object.keys(attrs||{}).forEach(function(key){node.setAttribute(key,attrs[key]);});
     return node;
   }
+  // SVGの viewBox は手書きの固定値で、実際に描かれる範囲とずれている
+  // （左に約17%の余白、下は約38単位はみ出し）。そのぶん地図が小さく左に寄って
+  // 見えるので、描いたあとに中身の実寸へ合わせ直す。
+  function fitViewBox(svg,pad){
+    try{
+      var box=svg.getBBox();
+      if(!box||!(box.width>0)||!(box.height>0)) return;   // 非表示などで測れないときは既定値のまま
+      var p=pad||6;
+      svg.setAttribute("viewBox",
+        (box.x-p).toFixed(1)+" "+(box.y-p).toFixed(1)+" "+
+        (box.width+p*2).toFixed(1)+" "+(box.height+p*2).toFixed(1));
+    }catch(e){}
+  }
   function render(){
     var geo=window.JAPANGEO;
     if(!geo||!geo.features){mount.textContent="地図を読み込めませんでした。地方一覧からお選びください。";return;}
@@ -135,6 +148,7 @@
     });
     svg.appendChild(labelLayer);
     mount.appendChild(svg);
+    fitViewBox(svg);
   }
   function load(){
     if(started) return; started=true;
