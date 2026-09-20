@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<link rel="stylesheet" href="styles.css?v=c06b0c42">
+<link rel="stylesheet" href="styles.css?v=cf7c207e">
 </head>
 <body>
 
@@ -156,6 +156,9 @@
     <span class="sh-ja" id="resultsTitle">すべての拠点・プログラム</span>
     <span class="sh-en" id="resultsTitleEn" aria-hidden="true">ALL SPOTS</span>
   </h1>
+  <div class="near-banner cat-banner" id="catBanner" hidden>
+    <span class="nb"><span class="cat-banner-dot" aria-hidden="true"></span><b id="catBannerLabel"></b> で絞り込み中 <button type="button" id="catClear">解除</button></span>
+  </div>
   <div class="near-banner" id="nearBanner" style="display:none"><span class="nb">現在地から近い順に表示中 <button id="nearClear">解除</button></span></div>
   <div class="grid" id="grid"></div>
   <div class="empty" id="empty" style="display:none">
@@ -442,6 +445,7 @@
     state.sort=value; syncSortUI(); render();
   };
   $("#nearClear").onclick=function(){ setNear(false); render(); };
+  $("#catClear").onclick=function(){ clearCatFilter(); };
 
   $("#clearAll").onclick=function(){
     state={q:"",region:"",fields:[],pref:"",targets:[],cats:[],uses:[],catFilter:"",view:state.view,userLoc:state.userLoc,sort:"recommend",favoritesOnly:false,sharedIds:null};
@@ -457,10 +461,6 @@
     favoritesCount.textContent=n;
     favoritesFilter.classList.toggle("active",state.favoritesOnly);
     favoritesFilter.setAttribute("aria-pressed",String(state.favoritesOnly));
-    var title=$("#resultsTitle"),titleEn=$("#resultsTitleEn");
-    if(state.sharedIds){if(title)title.textContent="共有された気になるリスト";if(titleEn)titleEn.textContent="SHARED LIST";}
-    else if(state.favoritesOnly){if(title)title.textContent="気になるリスト";if(titleEn)titleEn.textContent="FAVORITES";}
-    else{if(title)title.textContent="すべての拠点・プログラム";if(titleEn)titleEn.textContent="ALL SPOTS";}
     var shareIds=state.sharedIds||(state.favoritesOnly&&window.YSFavorites?window.YSFavorites.ids():[]);
     shareFavorites.hidden=!shareIds||!shareIds.length;
   }
@@ -498,14 +498,19 @@
     "sports":["スポーツ"]
   };
   CAT_KEYS.forEach(function(key){
+    // div + onclick だとキーボードから押せず、選択状態も読み上げに伝わらない。
+    // ボタンとして扱い、aria-pressed で入・切を伝える。
     var div=el("div","cat-card"); div.dataset.cat=key;
     div.dataset.catkey=key;
+    div.setAttribute("role","button");
+    div.tabIndex=0;
+    div.setAttribute("aria-pressed","false");
     var img=document.createElement("img");
-    img.src=CAT_IMGS[key];img.alt=CAT_LABELS[key];img.loading="lazy";
+    img.src=CAT_IMGS[key];img.alt="";img.loading="lazy";   // 名前は下のラベルが持つ
     div.appendChild(img);
     var label=el("div","cat-card-label",CAT_LABELS[key]);
     div.appendChild(label);
-    div.onclick=function(){
+    function toggleCat(){
       if(state.catFilter===key){
         state.catFilter="";state.fields=[];
       } else {
@@ -513,13 +518,58 @@
         state.fields=CAT_FIELD_MAP[key]||[];
       }
       syncCatCards();syncMulti(fc,state.fields,"tag");render();
-    };
+      // カテゴリーの一覧はページの一番下にあるので、押しても結果の変化が見えない。
+      // 結果の先頭まで連れていく。
+      if(state.catFilter) scrollToResults();
+    }
+    div.onclick=toggleCat;
+    div.addEventListener("keydown",function(event){
+      if(event.key==="Enter"||event.key===" "){ event.preventDefault(); toggleCat(); }
+    });
     catCardContainer.appendChild(div);
   });
   function syncCatCards(){
     [].forEach.call(catCardContainer.children,function(c){
-      c.classList.toggle("active",c.dataset.catkey===state.catFilter);
+      var on=c.dataset.catkey===state.catFilter;
+      c.classList.toggle("active",on);
+      c.setAttribute("aria-pressed",String(on));
     });
+  }
+  function scrollToResults(){
+    var target=state.view==="map"?$("#mapSection"):$("#resultsWrap");
+    if(target) target.scrollIntoView({behavior:"smooth",block:"start"});
+  }
+
+  // ===== 結果の見出しと「絞り込み中」の表示 =====
+  // カテゴリーを選んでも見出しが「すべての拠点・プログラム」のままで、
+  // しかもカテゴリーの一覧はページの一番下にあるため、何で絞られているのかが
+  // 分からなかった。状態から毎回作り直して、結果の真上に出す。
+  var titleOnce=null;   // 診断の直後だけ使う見出し
+  function syncResultsTitle(){
+    var title=$("#resultsTitle"),titleEn=$("#resultsTitleEn");
+    var banner=$("#catBanner"),bannerLabel=$("#catBannerLabel");
+    var ja,en;
+    if(titleOnce){ ja=titleOnce; en="FOR YOU"; titleOnce=null; }
+    else if(state.sharedIds){ ja="共有された気になるリスト"; en="SHARED LIST"; }
+    else if(state.favoritesOnly){ ja="気になるリスト"; en="FAVORITES"; }
+    else if(state.catFilter&&CAT_LABELS[state.catFilter]){
+      ja=CAT_LABELS[state.catFilter]+" の拠点・プログラム";
+      en=state.catFilter.toUpperCase();
+    }
+    else { ja="すべての拠点・プログラム"; en="ALL SPOTS"; }
+    if(title)title.textContent=ja;
+    if(titleEn)titleEn.textContent=en;
+
+    var showBanner=!!(state.catFilter&&CAT_LABELS[state.catFilter]&&!state.sharedIds&&!state.favoritesOnly);
+    if(banner){
+      banner.hidden=!showBanner;
+      banner.dataset.cat=showBanner?state.catFilter:"";
+      if(showBanner&&bannerLabel) bannerLabel.textContent=CAT_LABELS[state.catFilter];
+    }
+  }
+  function clearCatFilter(){
+    state.catFilter=""; state.fields=[];
+    syncCatCards(); syncMulti(fc,state.fields,"tag"); render();
   }
 
   // ===== Filtering =====
@@ -1011,6 +1061,7 @@
 
   function render(){
     syncFilterSummary();
+    syncResultsTitle();
     var list=DATA.filter(matches);
     countEl.textContent=list.length.toLocaleString();
     sortList(list);
@@ -1265,8 +1316,8 @@
     syncMulti(fc,state.fields,"tag"); syncMulti(tc,state.targets,"tag");
     closeQuiz();
     if(state.view!=="list"){ var lb=document.querySelector('#viewToggle .vt[data-view=list]'); if(lb) lb.click(); }
+    titleOnce="あなたにおすすめの拠点";
     render();
-    var rt=$("#resultsTitle"); if(rt) rt.textContent="あなたにおすすめの拠点";
     $("#resultsWrap").scrollIntoView({behavior:"smooth",block:"start"});
     showToast("あなたに合う拠点を表示しました");
   }

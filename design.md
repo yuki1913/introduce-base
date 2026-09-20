@@ -161,6 +161,16 @@ space empty.
   and never adds a page-wide backdrop. It supports keyboard focus, Escape, a
   visible close control, outside-click dismissal, and selected-region state.
 
+## Category chooser
+
+Six categories read as one set, so they stay on a single row (six equal columns
+on wide screens, a touch-scrolling strip below that). Selecting one is a filter,
+not navigation: the results heading becomes the category name, a labelled
+"…で絞り込み中" bar with a clear button sits directly above the grid, and the
+page scrolls to the results — the chooser lives below the grid, so without the
+scroll the change happens off-screen. The cards are buttons with `aria-pressed`,
+reachable by keyboard.
+
 ## Search filters
 
 - Keyword search is the primary control. All structured filters live in one

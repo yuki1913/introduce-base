@@ -480,13 +480,12 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 .cat-card-label .emoji{display:none}
 .cat-card.active{outline:var(--rule-bold) solid var(--cat);outline-offset:-2px}
 .cat-card.active .cat-card-label{color:var(--cat)}
-/* 広い画面では6枚を横一列に詰めるため写真が小さく、せっかくの写真が効いて
-   いなかった。3×2 に組み替えて大きく見せる（スマホは指で送れる横スクロールのまま）。 */
+/* 6つを一列に並べたほうが、6分類であることが一目で分かる。
+   3×2 を試したが、カテゴリーの全体像が掴みづらくなったので戻した。
+   広い画面では列を等分して、横スクロールなしで6枚が収まるようにする。 */
 @media(min-width:62rem){
-  .cat-scroll{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-md);overflow:visible;padding-bottom:0}
+  .cat-scroll{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--space-sm);overflow:visible;padding-bottom:0}
   .cat-card{width:auto}
-  .cat-card img{height:11rem}
-  .cat-card-label{font-size:var(--text-base);padding:var(--space-xs)}
 }
 
 /* ============================================================
@@ -504,7 +503,7 @@ select:focus{outline:none;border-color:var(--color-accent-text)}
 /* ============================================================
    RESULTS / CARDS
    ============================================================ */
-.results-wrap{max-width:var(--shell);margin:0 auto;padding:var(--space-2xs) var(--gutter) var(--space-2xl)}
+.results-wrap{max-width:var(--shell);margin:0 auto;padding:var(--space-2xs) var(--gutter) var(--space-2xl);scroll-margin-top:5rem}
 .grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-md)}
 @media(min-width:37.5rem){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:60rem){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -929,7 +928,7 @@ footer{border-top:var(--rule-hair) solid var(--color-rule);background:var(--colo
 /* ============================================================
    MAP
    ============================================================ */
-.map-section{max-width:var(--shell);margin:var(--space-2xs) auto 0;padding:0 var(--gutter) var(--space-2xl)}
+.map-section{max-width:var(--shell);margin:var(--space-2xs) auto 0;padding:0 var(--gutter) var(--space-2xl);scroll-margin-top:5rem}
 .map-hint{
   font-size:var(--text-sm);color:var(--color-ink-2);background:var(--tint-warm);
   border-radius:var(--radius-ctl);padding:var(--space-2xs) var(--space-sm);
@@ -1058,6 +1057,21 @@ footer{border-top:var(--rule-hair) solid var(--color-rule);background:var(--colo
   padding:var(--space-3xs) var(--space-sm);font-size:var(--text-sm);font-weight:700;
 }
 .near-banner .nb button{background:none;border:none;color:var(--color-accent-text);font-weight:700;text-decoration:underline;min-height:44px}
+/* いま何で絞り込んでいるかを結果の真上に出す。カテゴリーの一覧はページの
+   一番下にあるので、選んだ状態がそこだけにあると気づけない。 */
+.cat-banner[hidden]{display:none}
+.cat-banner .nb{background:var(--color-paper-2)}
+.cat-banner-dot{width:.625rem;height:.625rem;border-radius:50%;background:var(--cat,var(--color-accent));flex:none}
+.cat-banner[data-cat="nature"]   {--cat:var(--cat-nature)}
+.cat-banner[data-cat="science"]  {--cat:var(--cat-science)}
+.cat-banner[data-cat="community"]{--cat:var(--cat-community)}
+.cat-banner[data-cat="arts"]     {--cat:var(--cat-arts)}
+.cat-banner[data-cat="startup"]  {--cat:var(--cat-startup)}
+.cat-banner[data-cat="sports"]   {--cat:var(--cat-sports)}
+/* カード側の選択状態も、枠線だけでなくラベルで分かるようにする。 */
+.cat-card{cursor:pointer}
+.cat-card:focus-visible{outline:var(--rule-bold) solid var(--color-focus);outline-offset:2px}
+.cat-card.active .cat-card-label::after{content:" ✓";color:var(--cat);font-weight:900}
 
 /* ============================================================
    LONG DOCUMENT — content pages
