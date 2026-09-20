@@ -251,7 +251,7 @@ def write_spot_pages(recs, origin):
 
 # ?v= を付けて配信するファイル。ここに無いものは素のパスのまま。
 CACHE_BUSTED=('styles.css','tokens.css','shared.js','home-map.js','favorites.js',
-              'calendar.js','data-list.js','data-home.js')
+              'calendar.js','nav.js','data-list.js','data-home.js')
 
 def stamp_asset_versions():
     """CSS/JS の ?v= を中身のハッシュに揃える（更新が再訪者に届かない事故を防ぐ）。"""
@@ -310,6 +310,18 @@ def write_outputs(recs):
         print(f'最終更新日を {updated} に更新しました（{stamped}か所）。')
     else:
         print('注意: <time data-updated-at> が見つからず、最終更新日を更新できませんでした。')
+
+    # トップに出している掲載件数を打ち直す。手で直すと必ず実数とずれる。
+    shown=sum(1 for r in recs if r.get('status') in DEFAULT_STATUS)
+    count_marker=re.compile(r'(<b data-spot-count>).*?(</b>)')
+    counted=0
+    for path in glob.glob(os.path.join(HERE,'*.html')):
+        with open(path,encoding='utf-8') as f: text=f.read()
+        fixed,hits=count_marker.subn(r'\g<1>'+str(shown)+r'\g<2>',text)
+        counted+=hits
+        if hits:
+            with open(path,'w',encoding='utf-8') as f: f.write(fixed)
+    if counted: print(f'掲載件数の表示を {shown} 件に更新しました（{counted}か所）。')
 
     # CSS/JS の ?v= を中身のハッシュで打ち直す。
     # 手で上げるルールだと必ず上げ忘れが起きる。実際、styles.css は

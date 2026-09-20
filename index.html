@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=36209438">
+<link rel="stylesheet" href="styles.css?v=c06b0c42">
 </head>
 <body>
 
@@ -49,6 +49,9 @@
       <a class="p1" href="search.html">拠点をさがす</a>
       <a class="p2" href="search.html?quiz=1">かんたん診断</a>
     </div>
+    <!-- 件数は build.py が data-spot-count を見て打ち直す。
+         JSに頼らないので、クローラや JS 無効の環境でも規模が伝わる。 -->
+    <p class="hero-stat">全国 <b data-spot-count>434</b> の居場所・プログラムを掲載中</p>
   </div>
   <span class="hero-photo-note">イメージ写真</span>
 </section>
@@ -123,6 +126,36 @@
   </section>
 </div>
 
+<!-- 先生・保護者の方へ -->
+<!-- teachers.html がヘッダーとフッターの奥にしか無く、学校に紹介されて
+     来た先生がたどり着けなかったため、トップに入口を置く。 -->
+<div class="band">
+  <section class="home-section home-adults">
+    <h2 class="section-head">
+      <span class="sh-ja">先生・保護者の方へ</span>
+      <span class="sh-en" aria-hidden="true">FOR ADULTS</span>
+    </h2>
+    <p class="home-lead">探究学習・キャリア教育・居場所づくり・課外活動の入口としてお使いいただけます。掲載情報は各拠点の公式情報をもとに整理し、出どころのリンクを添えています。</p>
+    <div class="home-adults-grid">
+      <a class="doc-step" href="teachers.html">
+        <div class="t">活用のヒント</div>
+        <div class="d">目的別のさがし方、生徒・ご家庭への共有のしかた、ご利用前にお願いしたいことをまとめています。</div>
+        <div class="go">先生・保護者の方へ →</div>
+      </a>
+      <a class="doc-step" href="faq.html">
+        <div class="t">安全に使うために</div>
+        <div class="d">位置情報の扱い、ひとりで行くときの確認事項など、よくある質問に答えています。</div>
+        <div class="go">よくある質問を見る →</div>
+      </a>
+      <a class="doc-step" href="contact.html">
+        <div class="t">掲載のご相談</div>
+        <div class="d">拠点の掲載依頼、掲載内容の修正・削除のご連絡はこちらから。掲載料はいただいていません。</div>
+        <div class="go">お問い合わせ →</div>
+      </a>
+    </div>
+  </section>
+</div>
+
 <!-- 全部見る -->
 <div class="band band-ink">
   <div class="home-foot-cta"><a href="search.html">すべての拠点・プログラムをさがす →</a></div>
@@ -138,12 +171,13 @@
     <div class="foot-note">
       <p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。</p>
     </div>
-    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-09-06">2026年9月6日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-09-20">2026年9月20日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
 <script src="data-home.js?v=1d3f28f8"></script>
 <script src="favorites.js?v=9e6410da"></script>
+<script src="nav.js?v=ce4aaf49"></script>
 <script src="shared.js?v=af5cc647"></script>
 <script src="home-map.js?v=e22c4122"></script>
 <script>
