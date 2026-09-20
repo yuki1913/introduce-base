@@ -58,6 +58,10 @@ Primary job: 「やってみたいこと」と地域から絞り込み、1件の
    yellow band drawn at x-height, never at the baseline. Measured 12.74:1.
 5. **Card category tab** (mirai) — a 4px bar in the card's category colour
    across the top of its photo.
+   Result cards list **only the `cats` that apply**, as quiet chips in fixed
+   `CATS` order (amended). They previously showed all four slots with checkbox
+   ticks so positions lined up between cards, but 214 of 434 records match all
+   four — five lines per card carrying almost no distinguishing signal.
 6. **Hashtag tag row** (qulii) — field tags render as `#tag` in the category
    colour, no chip boxes.
 
@@ -121,7 +125,12 @@ buttons (qulii's register). Elevation is a **soft lift** (`--shadow-card` /
 
 The shared page shell is 1280px. Long-form prose remains capped at 68ch, while
 photography, result grids, document components and form layouts may use the
-available shell width. Organization detail pages use the 64rem wide measure.
+available shell width. **Organization detail pages use the full shell in two
+columns** (amended): prose keeps the 68ch measure on the left, and a 20rem
+sticky card on the right carries the outward actions (official site, open in
+maps, save, calendar, share) together with the basic facts. Below 62rem the two
+columns stack. The former single 64rem column left the right half of a 1440px
+screen empty while the page ran long vertically.
 This separation keeps reading lines comfortable without leaving useful desktop
 space empty.
 
@@ -168,6 +177,22 @@ space empty.
 Primary = orange pill, cream text. Secondary = cream pill, ink text. Tertiary =
 underlined text link. Buttons and nav links never wrap (`white-space: nowrap`),
 and every control is ≥44px tall.
+
+## Mobile navigation
+
+The header is sticky, so the nav cannot grow to two rows. Below 40rem `nav.js`
+turns the link row into a disclosure menu: a labelled toggle in the bar, the
+full list as a panel under the header, Escape and outside-click to close, focus
+returned to the toggle. The panel CSS is scoped to the `has-nav-toggle` class
+the script adds, so with JavaScript off the nav stays a scrolling row with a
+faded right edge rather than disappearing.
+
+## Modal focus
+
+Dialogs move focus inside on open, keep Tab within the dialog, and return focus
+to the element that opened them. Re-rendering a dialog's contents (the detail
+JSON arriving, the quiz advancing a step) re-places focus — replacing the markup
+otherwise drops it to `body`.
 
 ## What pages MUST share
 

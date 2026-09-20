@@ -10,12 +10,12 @@
 <meta property="og:type" content="website"><meta property="og:site_name" content="いばしょ・きっかけ MAP">
 <meta property="og:title" content="拠点・プログラムをさがす｜いばしょ・きっかけ MAP">
 <meta property="og:description" content="地域、活動分野、利用条件から、中高生向けの拠点やプログラムをさがせます。">
-<meta property="og:image" content="/img/editorial/hero-home.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="/img/og-home.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<link rel="stylesheet" href="styles.css?v=9d9a6b17">
+<link rel="stylesheet" href="styles.css?v=c06b0c42">
 </head>
 <body>
 
@@ -204,12 +204,13 @@
       <section><h2>このサイトについて</h2><nav><a href="index.html">サイトのトップ</a><a href="contact.html">掲載依頼・お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a><a href="https://fops.studymeter.jp/" target="_blank" rel="noopener noreferrer">運営元：First off Projects ↗</a></nav></section>
     </div>
     <div class="foot-note"><p>掲載情報は各拠点の公式サイト等をもとに整理したものです。利用条件・対象年齢・料金・予約の要否は変わることがあります。参加前に必ず公式サイトや各拠点でご確認ください。</p></div>
-    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-09-01">2026年9月1日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
+    <p class="foot-colophon">いばしょ・きっかけ MAP — 中高生の活動さがし。最終更新 <time data-updated-at datetime="2026-09-20">2026年9月20日</time>。記載の誤りや掲載のご相談は<a href="contact.html">お問い合わせ</a>から。</p>
   </div>
 </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="favorites.js?v=9e6410da"></script>
+<script src="nav.js?v=ce4aaf49"></script>
 <script src="calendar.js?v=7d26d3c9"></script>
 <script src="data-list.js?v=27e27489"></script>
 <script>
@@ -242,24 +243,19 @@
   };
   var CAT_FALLBACK={"支援団体":["🤝","pink","community"],"プログラム":["✨","orange","arts"],"活動拠点":["📍","green","nature"],"使用できる施設":["🏢","blue","science"]};
   function ctypeRow(r){
+    // もとは4種類ぶんの枠を常に出してチェックの有無で示していたが、半数の拠点が
+    // 4つ全部に該当し（434件中214件）、カード1枚につき5行を使って識別にほとんど
+    // 効いていなかった。該当する種類だけを短いチップで並べ、1行に収める。
     var have=r.cats||[];
-    var box=document.createDocumentFragment();
-    box.appendChild(el("span","ctypes-label","あてはまるもの"));
     var wrap=el("div","ctypes");
-    wrap.setAttribute("role","list");
-    wrap.setAttribute("aria-label","あてはまるもの");
-    // カードでは常に CATS の4枠を出し、該当ぶんにチェックを入れる
-    CATS.forEach(function(t){
-      var on=have.indexOf(t)>=0;
-      var sp=el("span","ctype"+(on?" is-on":""),t);
-      sp.setAttribute("role","listitem");
-      sp.setAttribute("aria-label",t+"："+(on?"対象":"対象外"));
-      wrap.appendChild(sp);
+    if(!have.length) return wrap;
+    wrap.setAttribute("aria-label","種類："+have.join("・"));
+    CATS.forEach(function(t){          // 並び順は CATS 固定なのでカード間で見比べられる
+      if(have.indexOf(t)<0) return;
+      wrap.appendChild(el("span","ctype",t));
     });
-    box.appendChild(wrap);
-    return box;
+    return wrap;
   }
-
   // Category images
   var CAT_IMGS={
     "nature":"img/editorial/field-nature.jpg",
@@ -675,14 +671,8 @@
     }
     if(meta.children.length)body.appendChild(meta);
 
-    var act=el("div","actions");
-    if(r.url){
-      var a=el("a","btn btn-primary");a.href=r.url;a.target="_blank";a.rel="noopener";a.innerHTML=SVG_EXT+"公式サイト";act.appendChild(a);
-    }
-    if(r.address){
-      var mb=el("a","btn btn-ghost");mb.href=mapUrl(r);mb.target="_blank";mb.rel="noopener";mb.innerHTML=SVG_MAP+"地図";act.appendChild(mb);
-    }
-    if(act.children.length)body.appendChild(act);
+    // 一覧データに url が無いため、ここは「地図」だけが全幅で伸びた1個のボタンに
+    // なっていた。同じ導線は詳細ページ側にそろっているので、カードには置かない。
 
     c.appendChild(body);
     c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href=spotUrl(r.id); };
@@ -811,6 +801,19 @@
   function overviewRing(ring){return ring.map(function(point,index){var p=overviewProject(point);return (index?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1);}).join(" ")+" Z";}
   function overviewPath(geometry){var polys=geometry.type==="Polygon"?[geometry.coordinates]:geometry.coordinates;return polys.map(function(poly){return poly.map(overviewRing).join(" ");}).join(" ");}
   function overviewEl(name,attrs){var node=document.createElementNS(SVG_NS,name);Object.keys(attrs||{}).forEach(function(key){node.setAttribute(key,attrs[key]);});return node;}
+  // SVGの viewBox は手書きの固定値で、実際に描かれる範囲とずれている
+  // （左に約17%の余白、下は約38単位はみ出し）。そのぶん地図が小さく左に寄って
+  // 見えるので、描いたあとに中身の実寸へ合わせ直す。
+  function fitOverviewViewBox(svg,pad){
+    try{
+      var box=svg.getBBox();
+      if(!box||!(box.width>0)||!(box.height>0)) return;   // 非表示などで測れないときは既定値のまま
+      var p=pad||6;
+      svg.setAttribute("viewBox",
+        (box.x-p).toFixed(1)+" "+(box.y-p).toFixed(1)+" "+
+        (box.width+p*2).toFixed(1)+" "+(box.height+p*2).toFixed(1));
+    }catch(e){}
+  }
   function renderSearchOverview(list){
     overviewMount.textContent="";
     var counts={};list.forEach(function(record){if(record.region!=="全国オンライン")counts[record.region]=(counts[record.region]||0)+1;});
@@ -836,6 +839,7 @@
     });
     svg.appendChild(labelLayer);
     overviewMount.appendChild(svg);
+    fitOverviewViewBox(svg);
   }
   function popupHtml(r){
     var cv=coverOf(r);
@@ -1023,6 +1027,47 @@
     currentList=list;renderedCount=0;appendNextPage();
   }
 
+  // ===== モーダルのフォーカス管理 =====
+  // これまで Escape で閉じられるだけで、開いた瞬間もフォーカスは背後のカードに
+  // 残ったままだった。キーボードと読み上げの利用者は、開いているモーダルに
+  // たどり着けず、Tab で背後の一覧を延々たどることになる。
+  var FOCUSABLE='a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+  var focusReturn=null;
+  function focusablesIn(root){
+    return [].filter.call(root.querySelectorAll(FOCUSABLE),function(el){
+      return el.offsetWidth||el.offsetHeight||el.getClientRects().length;   // 非表示は除く
+    });
+  }
+  function focusFirstIn(root){
+    var items=focusablesIn(root);
+    (items[0]||root).focus({preventScroll:true});
+  }
+  function openModal(overlay){
+    focusReturn=document.activeElement;
+    overlay.classList.add("open");
+    document.body.style.overflow="hidden";
+    focusFirstIn(overlay);
+  }
+  function closeModal(overlay){
+    overlay.classList.remove("open");
+    document.body.style.overflow="";
+    // 開く前に触っていた要素へ戻す。消えていたら何もしない。
+    if(focusReturn&&document.contains(focusReturn)) focusReturn.focus({preventScroll:true});
+    focusReturn=null;
+  }
+  // Tab がモーダルの外へ出ないよう端で折り返す。
+  document.addEventListener("keydown",function(event){
+    if(event.key!=="Tab") return;
+    var overlay=document.querySelector(".detail-overlay.open");
+    if(!overlay) return;
+    var items=focusablesIn(overlay);
+    if(!items.length){ event.preventDefault(); return; }
+    var first=items[0],last=items[items.length-1];
+    if(event.shiftKey&&document.activeElement===first){ event.preventDefault(); last.focus(); }
+    else if(!event.shiftKey&&document.activeElement===last){ event.preventDefault(); first.focus(); }
+    else if(!overlay.contains(document.activeElement)){ event.preventDefault(); first.focus(); }
+  });
+
   // ===== DETAIL (spot page) =====
   var overlay=$("#detailOverlay"), detailCard=$("#detailCard"), detailMapObj=null;
   var SVG_SHARE='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>';
@@ -1136,16 +1181,18 @@
     if(!r) return;
     var token=++detailToken, id=r.id;
     paintDetail(DETAILS[id]||r,true);
-    overlay.classList.add("open");
-    document.body.style.overflow="hidden";
+    openModal(overlay);
     if(push){ try{history.pushState({id:id},"","?id="+encodeURIComponent(id));}catch(e){} }
     if(!DETAILS[id]) loadDetail(id,function(full){
-      if(token===detailToken&&overlay.classList.contains("open")) paintDetail(full,false);
+      if(token!==detailToken||!overlay.classList.contains("open")) return;
+      // 描き直すと中のDOMが入れ替わり、フォーカスが body に落ちる。
+      var hadFocus=overlay.contains(document.activeElement);
+      paintDetail(full,false);
+      if(hadFocus) focusFirstIn(overlay);
     });
   }
   function closeDetail(push){
-    overlay.classList.remove("open");
-    document.body.style.overflow="";
+    closeModal(overlay);
     if(detailMapObj){ detailMapObj.remove(); detailMapObj=null; }
     if(push){ try{history.pushState({},"",location.pathname);}catch(e){} }
   }
@@ -1203,9 +1250,12 @@
     }
     var bk=$("#quizBack"); if(bk) bk.onclick=function(){ if(quizStep>0)quizStep--; renderQuiz(); };
     $("#quizClose").onclick=function(){ closeQuiz(); };
+    // 設問を進めるたびにカードを作り直すので、開いている間はフォーカスを
+    // 新しい選択肢へ移し直す（そうしないと毎回 body に落ちる）。
+    if(quizOverlay.classList.contains("open")) focusFirstIn(quizCard);
   }
-  function openQuiz(){ quizAns={}; quizStep=0; renderQuiz(); quizOverlay.classList.add("open"); document.body.style.overflow="hidden"; }
-  function closeQuiz(){ quizOverlay.classList.remove("open"); document.body.style.overflow=""; }
+  function openQuiz(){ quizAns={}; quizStep=0; renderQuiz(); openModal(quizOverlay); }
+  function closeQuiz(){ closeModal(quizOverlay); }
   function applyQuiz(ans){
     state.targets = ans.target?[ans.target]:[];
     state.catFilter = ans.cat||"";

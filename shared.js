@@ -24,22 +24,17 @@
   };
   var CAT_FALLBACK={"支援団体":["🤝","pink","community"],"プログラム":["✨","orange","arts"],"活動拠点":["📍","green","nature"],"使用できる施設":["🏢","blue","science"]};
   function ctypeRow(r){
+    // search.html 側と同じ方針。4種類ぶんの枠を常に出すのはやめ、該当する種類だけを
+    // 短いチップで並べる（半数の拠点が4つ全部に該当していて識別に効いていなかった）。
     var have=r.cats||[];
-    var box=document.createDocumentFragment();
-    box.appendChild(el("span","ctypes-label","あてはまるもの"));
     var wrap=el("div","ctypes");
-    wrap.setAttribute("role","list");
-    wrap.setAttribute("aria-label","あてはまるもの");
-    // カードでは常に CATS の4枠を出し、該当ぶんにチェックを入れる
-    CATS.forEach(function(t){
-      var on=have.indexOf(t)>=0;
-      var s=el("span","ctype"+(on?" is-on":""),t);
-      s.setAttribute("role","listitem");
-      s.setAttribute("aria-label",t+"："+(on?"対象":"対象外"));
-      wrap.appendChild(s);
+    if(!have.length) return wrap;
+    wrap.setAttribute("aria-label","種類："+have.join("・"));
+    CATS.forEach(function(t){          // 並び順は CATS 固定なのでカード間で見比べられる
+      if(have.indexOf(t)<0) return;
+      wrap.appendChild(el("span","ctype",t));
     });
-    box.appendChild(wrap);
-    return box;
+    return wrap;
   }
   var CAT_KEYS=["nature","science","community","arts","startup","sports"];
   var CAT_IMGS={nature:"img/editorial/field-nature.jpg",science:"img/editorial/field-science.jpg",community:"img/editorial/field-community.jpg",arts:"img/editorial/field-arts.jpg",startup:"img/editorial/field-startup.jpg",sports:"img/editorial/field-sports.jpg"};
@@ -176,10 +171,6 @@
     var meta=el("div","meta");
     if(r.station){var m2=el("div","mrow");m2.appendChild(el("span","mk","アクセス"));m2.appendChild(el("span",null,r.station));meta.appendChild(m2);}
     if(meta.children.length)body.appendChild(meta);
-    var act=el("div","actions");
-    if(r.url){var a=el("a","btn btn-primary");a.href=r.url;a.target="_blank";a.rel="noopener";a.innerHTML=SVG_EXT+"公式サイト";act.appendChild(a);}
-    if(r.address){var mb=el("a","btn btn-ghost");mb.href=mapUrl(r);mb.target="_blank";mb.rel="noopener";mb.innerHTML=SVG_MAP+"地図";act.appendChild(mb);}
-    if(act.children.length)body.appendChild(act);
     c.appendChild(body);
     c.onclick=function(e){ if(e.target.closest("a,button")) return; location.href=spotUrl(r.id); };
     return c;
